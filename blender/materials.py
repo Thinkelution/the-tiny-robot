@@ -66,8 +66,8 @@ class G:
         """smoothstep-ish remap of val from [lo, hi] to [0, 1]."""
         nd = self.node("ShaderNodeMapRange", _interpolation_type="SMOOTHSTEP", _clamp=True)
         self.set(nd.inputs["Value"], val)
-        nd.inputs["From Min"].default_value = lo
-        nd.inputs["From Max"].default_value = hi
+        self.set(nd.inputs["From Min"], lo)
+        self.set(nd.inputs["From Max"], hi)
         return nd.outputs["Result"]
 
 

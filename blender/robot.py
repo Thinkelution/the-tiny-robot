@@ -45,7 +45,7 @@ def _box_uv(bm, uv):
             loop[uv].uv = (co[u_i], co[v_i])
 
 
-def mesh_box(name, size, shape="box", coll=None, mat=None, bevel=0.01, segs=3):
+def mesh_box(name, size, shape="box", coll=None, mat=None, bevel=0.01, segs=3, seams=0.0):
     me = bpy.data.meshes.new(name)
     bm = bmesh.new()
     sx, sy, sz = size
@@ -66,6 +66,13 @@ def mesh_box(name, size, shape="box", coll=None, mat=None, bevel=0.01, segs=3):
     else:
         bmesh.ops.create_cube(bm, size=1.0)
         bmesh.ops.scale(bm, vec=(sx, sy, sz), verts=bm.verts)
+        if seams > 0:
+            # recessed panels on the large faces: a thin groove that catches highlights, like a manufactured shell
+            bm.normal_update()
+            faces = [f for f in bm.faces if f.calc_area() > (seams * 4) ** 2]
+            if faces:
+                bmesh.ops.inset_individual(bm, faces=faces, thickness=seams, depth=-seams * 0.35,
+                                           use_even_offset=True)
     uv = bm.loops.layers.uv.new("UVMap")
     bm.normal_update()
     _box_uv(bm, uv)
@@ -174,8 +181,14 @@ def build(spec: dict, coll=None, at=(0, 0, 0)) -> bpy.types.Object:
         j.rotation_euler = [math.radians(a) for a in p.get("rest_rot", (0, 0, 0))]   # resting joint pose
         j["role"] = p.get("role", "extra")
         joints[p["name"]] = j
-        m = mesh_box(f"{rid}:{p['name']}.mesh", p["size"], p.get("shape", "box"), coll,
-                     mats.get(p.get("material")), p.get("bevel", 0.01))
+        size = p["size"]
+        main = p.get("role") in ("body", "head") or min(size) >= spec.get("height_m", 1.0) * 0.18
+        bevel = p.get("bevel", 0.01)
+        if main and p.get("shape", "box") in ("box", "rounded_box"):
+            bevel = max(bevel, min(size) * 0.07)        # softer, more appealing primary shapes
+        seams = min(size) * 0.035 if main and p.get("shape", "box") == "box" and min(size) > 0.06 else 0.0
+        m = mesh_box(f"{rid}:{p['name']}.mesh", size, p.get("shape", "box"), coll,
+                     mats.get(p.get("material")), bevel, seams=seams)
         m.parent = j
         m.location = p.get("offset", (0, 0, 0))
         m.rotation_euler = [math.radians(a) for a in p.get("rotate", (0, 0, 0))]

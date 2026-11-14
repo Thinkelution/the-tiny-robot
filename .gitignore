@@ -7,3 +7,10 @@ films/*/cast/review/_*.png
 films/*/teaser/shots/
 films/*/teaser/frames/
 films/*/teaser/music.mp3
+films/*/teaser/shots-*/
+films/*/teaser/preview-frames/
+films/*/teaser/preview-*.mp4
+films/*/teaser/*.mp4
+films/*/teaser/music*.mp3
+films/*/lookdev/*/
+site/video/

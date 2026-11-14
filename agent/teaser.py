@@ -7,6 +7,7 @@ music   Eleven Music bed following the sections in teaser.json (ElevenLabs2 key)
 post    captions composited on every frame (Pillow), end card, then ffmpeg -> teaser/the-tiny-robot-teaser.mp4
 """
 import json
+import os
 import subprocess
 import sys
 import textwrap
@@ -19,42 +20,61 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 BLENDER = r"C:\Program Files\Blender Foundation\Blender 5.3\blender.exe"
 KEYS = Path("F:/work/keys.txt")
-FONT_NAME = "C:/Windows/Fonts/bahnschrift.ttf"
-FONT_TEXT = "C:/Windows/Fonts/seguisb.ttf" if Path("C:/Windows/Fonts/seguisb.ttf").exists() else "C:/Windows/Fonts/segoeuib.ttf"
+FONTS = ROOT / "assets" / "fonts"
+FONT_NAME = str(FONTS / "LilitaOne-Regular.ttf")      # playful chunky titles (SIL OFL)
+FONT_TEXT = str(FONTS / "Fredoka[wdth,wght].ttf")     # rounded friendly text (SIL OFL)
 GLOW, AMBER, WHITE, SOFT = (156, 255, 176), (242, 183, 5), (255, 255, 255), (214, 220, 228)
 
 
 def bahn(size, style="Bold"):
-    f = ImageFont.truetype(FONT_NAME, size)
+    """Title font (Lilita One). `style` is kept for call compatibility."""
+    return ImageFont.truetype(FONT_NAME, size)
+
+
+def text_font(size, weight=600):
+    f = ImageFont.truetype(FONT_TEXT, size)
     try:
-        f.set_variation_by_name(style)
+        f.set_variation_by_axes([weight, 100])        # axes in file order: Weight, Width
     except Exception:
         pass
     return f
 
 
 class Teaser:
-    def __init__(self, film):
+    def __init__(self, film, variant="vertical"):
         self.film = Path(film).resolve()
         self.dir = self.film / "teaser"
         self.cfg = json.loads((self.dir / "teaser.json").read_text(encoding="utf-8"))
-        self.W, self.H = self.cfg["size"]
+        self.variant = variant
+        v = self.cfg.get("variants", {}).get(variant, {})
+        self.W, self.H = v.get("size", self.cfg["size"])
+        self.suffix = "" if variant == "vertical" else f"-{variant}"
+        self.shots = self.dir / f"shots{self.suffix}"
+        self.video_name = v.get("video", "the-tiny-robot-teaser.mp4")
 
     # ------------------------------------------------------------ render
     def render(self, only=None, samples=40):
         for s in self.cfg["shots"]:
             if s["mode"] == "card" or (only and s["id"] not in only):
                 continue
-            out = self.dir / "shots" / s["id"]
-            if out.exists() and len(list(out.glob("[0-9]*.png"))) >= s["frames"]:
+            out = self.shots / s["id"]
+            have = len(list(out.glob("[0-9]*.png"))) if out.exists() else 0
+            if have >= s["frames"]:
                 print("  done already:", s["id"])
                 continue
             robots = s.get("robots") or [s["robot"]]
             specs = [str(self.film / "cast" / f"{r}.json") for r in robots]
-            cmd = [BLENDER, "-b", "--factory-startup", "-P", str(ROOT / "blender" / "teaser.py"), "--",
-                   str(out), s["mode"], *specs, "--frames", str(s["frames"]), "--samples", str(samples),
-                   "--res", f"{self.W}x{self.H}"]
-            print("  rendering", s["id"], flush=True)
+            if s["mode"] == "ident":
+                cmd = [BLENDER, "-b", "--factory-startup", "-P", str(ROOT / "blender" / "intro.py"), "--",
+                       str(out), specs[0], "--frames", str(s["frames"]), "--samples", str(samples),
+                       "--res", f"{self.W}x{self.H}"]
+            else:
+                cmd = [BLENDER, "-b", "--factory-startup", "-P", str(ROOT / "blender" / "teaser.py"), "--",
+                       str(out), s["mode"], *specs, "--frames", str(s["frames"]), "--samples", str(samples),
+                       "--res", f"{self.W}x{self.H}", "--time", self.cfg.get("time", "dusk")]
+            if have:
+                cmd += ["--start", str(have + 1)]       # resume after the last finished frame
+            print("  rendering", s["id"], f"from frame {have + 1}" if have else "", flush=True)
             r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
             if r.returncode != 0 or "Traceback" in r.stdout + r.stderr:
                 print((r.stdout + r.stderr)[-3000:])
@@ -88,14 +108,18 @@ class Teaser:
         """Draw text with a soft dark shadow so it reads on any frame."""
         shadow = Image.new("RGBA", img.size, (0, 0, 0, 0))
         sd = ImageDraw.Draw(shadow)
-        for (x, y), text, font, fill, alpha in xy_text_font_fill:
-            sd.multiline_text((x, y + 4), text, font=font, fill=(0, 0, 0, int(200 * alpha)), anchor=anchor,
-                              align="center", spacing=int(font.size * 0.22))
+        for it in xy_text_font_fill:
+            (x, y), text, font, fill, alpha = it[:5]
+            anc, al = (it[5], it[6]) if len(it) > 5 else (anchor, "center")
+            sd.multiline_text((x, y + 4), text, font=font, fill=(0, 0, 0, int(200 * alpha)), anchor=anc,
+                              align=al, spacing=int(font.size * 0.22))
         shadow = shadow.filter(ImageFilter.GaussianBlur(10))
         img.alpha_composite(shadow)
         d = ImageDraw.Draw(img)
-        for (x, y), text, font, fill, alpha in xy_text_font_fill:
-            d.multiline_text((x, y), text, font=font, fill=fill + (int(255 * alpha),), anchor=anchor, align="center",
+        for it in xy_text_font_fill:
+            (x, y), text, font, fill, alpha = it[:5]
+            anc, al = (it[5], it[6]) if len(it) > 5 else (anchor, "center")
+            d.multiline_text((x, y), text, font=font, fill=fill + (int(255 * alpha),), anchor=anc, align=al,
                              spacing=int(font.size * 0.22))
 
     def _fade(self, f, a, b, n=8):
@@ -104,6 +128,8 @@ class Teaser:
         return min(1.0, (f - a + 1) / n, (b - f) / n)
 
     def caption_layers(self, shot, f):
+        if self.W > self.H:
+            return self.caption_layers_wide(shot, f)
         W, H = self.W, self.H
         items = []
         top = int(H * 0.115)
@@ -112,30 +138,70 @@ class Teaser:
             if al > 0:
                 items.append(((W // 2, top), shot["name"], bahn(104), WHITE, al))
                 logic = "\n".join(textwrap.wrap(f"“{shot['logic']}”", 26))
-                items.append(((W // 2, top + 150), logic, ImageFont.truetype(FONT_TEXT, 54), SOFT, al))
+                items.append(((W // 2, top + 150), logic, text_font(54), SOFT, al))
         for c in shot.get("captions", []):
             al = self._fade(f, c["from"], c["to"], 10)
             if al <= 0:
                 continue
             k = c["kind"]
             if k == "question":
-                items.append(((W // 2, top), "\n".join(textwrap.wrap(c["text"], 24)), ImageFont.truetype(FONT_TEXT, 66),
+                items.append(((W // 2, top), "\n".join(textwrap.wrap(c["text"], 24)), text_font(66),
                               WHITE, al))
             elif k == "sub":
                 items.append(((W // 2, top + 330), c["text"], bahn(92), GLOW, al))
             elif k == "big":
                 items.append(((W // 2, int(H * 0.2)), c["text"], bahn(150), AMBER, al))
+            elif k == "title":
+                items.append(((W // 2, top), c["text"], bahn(130), WHITE, al))
+            elif k == "tagline":
+                items.append(((W // 2, top + 170), c["text"], text_font(56), GLOW, al))
             elif k == "end":
                 items.append(((W // 2, int(H * 0.36)), "\n".join(textwrap.wrap(c["text"], 22)),
-                              ImageFont.truetype(FONT_TEXT, 70), WHITE, al))
+                              text_font(70), WHITE, al))
             elif k == "credit":
                 items.append(((W // 2, int(H * 0.62)), c["text"].replace(" · ", "\n"), bahn(44, "SemiBold"),
                               SOFT, al))
         return items
 
+    def caption_layers_wide(self, shot, f):
+        """16:9: names, logics and the opening question sit in a left column; the robot stands on the right."""
+        W, H = self.W, self.H
+        x = int(W * 0.07)
+        items = []
+        if shot["mode"] == "intro":
+            al = self._fade(f, 14, shot["frames"], 8)
+            if al > 0:
+                items.append(((x, int(H * 0.34)), shot["name"], bahn(92), WHITE, al, "la", "left"))
+                logic = "\n".join(textwrap.wrap(f"“{shot['logic']}”", 24))
+                items.append(((x, int(H * 0.34) + 130), logic, text_font(46), SOFT, al, "la", "left"))
+        for c in shot.get("captions", []):
+            al = self._fade(f, c["from"], c["to"], 10)
+            if al <= 0:
+                continue
+            k = c["kind"]
+            if k == "question" and shot["mode"] == "hook":
+                items.append(((x, int(H * 0.28)), "\n".join(textwrap.wrap(c["text"], 22)),
+                              text_font(58), WHITE, al, "la", "left"))
+            elif k == "sub":
+                items.append(((x, int(H * 0.62)), c["text"], bahn(80), GLOW, al, "la", "left"))
+            elif k == "question":
+                items.append(((W // 2, int(H * 0.1)), c["text"], text_font(60), WHITE, al))
+            elif k == "big":
+                items.append(((W // 2, int(H * 0.08)), c["text"], bahn(130), AMBER, al))
+            elif k == "title":
+                items.append(((W // 2, int(H * 0.07)), c["text"], bahn(120), WHITE, al))
+            elif k == "tagline":
+                items.append(((W // 2, int(H * 0.07) + 140), c["text"], text_font(50), GLOW, al))
+            elif k == "end":
+                items.append(((W // 2, int(H * 0.36)), "\n".join(textwrap.wrap(c["text"], 34)),
+                              text_font(64), WHITE, al))
+            elif k == "credit":
+                items.append(((W // 2, int(H * 0.66)), c["text"], bahn(40, "SemiBold"), SOFT, al))
+        return items
+
     # ------------------------------------------------------------ post
     def post(self):
-        out = self.dir / "frames"
+        out = self.dir / f"frames{self.suffix}"
         out.mkdir(exist_ok=True)
         for old in out.glob("*.png"):
             old.unlink()
@@ -150,7 +216,7 @@ class Teaser:
                         base = Image.alpha_composite(base, dark)
                     img = base.copy()
                 else:
-                    img = Image.open(self.dir / "shots" / s["id"] / f"{f + 1:04d}.png").convert("RGBA")
+                    img = Image.open(self.shots / s["id"] / f"{f + 1:04d}.png").convert("RGBA")
                     if img.size != (self.W, self.H):
                         img = img.resize((self.W, self.H), Image.LANCZOS)
                     last = img
@@ -163,8 +229,8 @@ class Teaser:
                 n += 1
                 img.convert("RGB").save(out / f"{n:05d}.png", compress_level=1)
             print("  post:", s["id"], flush=True)
-        video = self.dir / "the-tiny-robot-teaser.mp4"
-        cmd = ["ffmpeg", "-y", "-framerate", str(self.cfg["fps"]), "-i", str(out / "%05d.png")]
+        video = self.dir / self.video_name
+        cmd = [os.environ.get("FFMPEG", "ffmpeg"), "-y", "-framerate", str(self.cfg["fps"]), "-i", str(out / "%05d.png")]
         music = self.dir / "music.mp3"
         if music.exists():
             cmd += ["-i", str(music), "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st={:.2f}:d=1.2".format(
@@ -178,7 +244,7 @@ class Teaser:
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     opt = {sys.argv[i][2:]: sys.argv[i + 1] for i in range(len(sys.argv) - 1) if sys.argv[i].startswith("--")}
-    t = Teaser(args[0])
+    t = Teaser(args[0], opt.get("variant", "vertical"))
     step = args[1] if len(args) > 1 else "all"
     only = opt["only"].split(",") if "only" in opt else None
     if step in ("render", "all"):

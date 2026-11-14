@@ -5,15 +5,13 @@
 > In a world of robots, each programmed with one logic, there is a tiny old robot: just a head, two small hands and
 > two small feet. Its one logic: *"Do things, but do not cause harm to anyone or hurt anyone knowingly."*
 > It also knows that trees and plants are living things, so it won't hurt them either.
->
-> Tag: **Truthful**
 
 ![The cast at true scale](films/the-tiny-robot/cast/review/lineup.png)
 
 ## The experiment
 
 Can a small team make a studio-quality animated short film with **Blender + Claude**, with no manual modelling,
-texturing or animation, on a budget closer to a $20 AI plan than a studio's? We don't know yet. Worth a shot.
+texturing or animation, on a budget closer to a $100 Claude plan than a studio's? We don't know yet. Worth a shot.
 
 Everything is in this repository: the pipeline code, every prompt, the generated script, the robot designs, the
 texture library and the renders, plus a production diary with what each step cost and what went wrong
@@ -26,7 +24,7 @@ texture library and the renders, plus a production diary with what each step cos
 | Script (33 min, 31 scenes, 3 acts) | Done: [script.md](films/the-tiny-robot/script.md) |
 | Robot characters (8, with their logics) | Done: [cast.md](films/the-tiny-robot/cast.md) |
 | Studio texture library | Done: [textures/](textures/) |
-| Teaser reel | In progress |
+| Teaser reel (40.9 s, 16:9 + 9:16) | Done: [watch on thetinyrobot.online](https://thetinyrobot.online/#teaser) |
 | World (boxy city, the Old Grove) | Next |
 | Shots, animation, voices, music | Later |
 | Final film | Later |

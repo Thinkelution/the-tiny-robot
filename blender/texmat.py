@@ -160,8 +160,9 @@ def build(mat, g, spec, bsdf, hex_rgb):
     r = g.mixf(g.math("MULTIPLY", scr, wear * 0.8, clamp=True), r, 0.22)
     r = g.mixf(g.math("MULTIPLY", cav, dirt), r, 0.85)
     g.set(bsdf.inputs["Roughness"], r)
-    if kind == "plastic":
-        bsdf.inputs["Coat Weight"].default_value = 0.25
+    # clear coat: the glossy lacquer layer that makes painted surfaces read as finished objects
+    bsdf.inputs["Coat Weight"].default_value = 0.25 if kind == "plastic" else 0.35
+    bsdf.inputs["Coat Roughness"].default_value = 0.12
 
     nm = g.node("ShaderNodeNormalMap", Color=_img(g, tid, "normal", co, True).outputs["Color"], Strength=0.6)
     chip_step = g.node("ShaderNodeBump", Strength=0.35, Distance=0.0015, Height=g.math("SUBTRACT", 1.0, worn),

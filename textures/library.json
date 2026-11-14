@@ -60,6 +60,42 @@
       "tint": false,
       "seed": 121,
       "prompt": "Chipped and flaking white paint on dark grey steel: irregular small and medium chips and flakes scattered across the surface, crisp jagged chip edges, mostly intact white paint."
+    },
+    {
+      "id": "concrete",
+      "tint": true,
+      "seed": 211,
+      "prompt": "Weathered light grey poured concrete wall. Fine pores and pits, faint formwork marks, subtle stains and patchy tone. Neutral grey."
+    },
+    {
+      "id": "asphalt",
+      "tint": false,
+      "seed": 221,
+      "prompt": "Old dark grey asphalt road surface. Small embedded gravel, fine cracks, faded patches, a few oil stains."
+    },
+    {
+      "id": "corrugated",
+      "tint": true,
+      "seed": 231,
+      "prompt": "Painted corrugated sheet metal, vertical ribs evenly spaced, light grey paint, scuffs and small rust spots along the ribs."
+    },
+    {
+      "id": "metal_plate",
+      "tint": true,
+      "seed": 241,
+      "prompt": "Industrial painted steel floor plate with a raised diamond tread pattern, light grey paint worn on the raised parts."
+    },
+    {
+      "id": "leaves",
+      "tint": false,
+      "seed": 251,
+      "prompt": "Dense green leaf canopy seen up close, many small fresh leaves of different greens, soft natural light, fills the frame."
+    },
+    {
+      "id": "bark",
+      "tint": false,
+      "seed": 261,
+      "prompt": "Brown tree bark close-up, vertical fibrous grooves, mossy green patches in the cracks."
     }
   ]
 }

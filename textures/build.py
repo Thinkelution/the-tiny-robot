@@ -27,6 +27,12 @@ PICKS = {
     "scratches": ("scratches__1", 0.0, 0),
     "glass_smudge": ("glass_smudge__0", 0.0, 0),
     "chips": ("chips__v2_1", 0.0, 0),
+    "concrete": ("concrete__2", 2.0, 6),
+    "asphalt": ("asphalt__0", 2.5, 4),
+    "corrugated": ("corrugated__2", 3.0, 10),
+    "metal_plate": ("metal_plate__1", 3.0, 8),
+    "leaves": ("leaves__1", 2.5, 5),
+    "bark": ("bark__0", 3.0, 6),
 }
 
 
@@ -89,7 +95,11 @@ def save16(a, p):
 
 def main():
     tiles = []
+    meta = {}
     for tid, (src, strength, sigma) in PICKS.items():
+        if not (RAW / f"{src}.png").exists():
+            print("missing", src)
+            continue
         out = LIB / tid
         out.mkdir(parents=True, exist_ok=True)
         col = tileable(flatten(load(src)))
@@ -102,7 +112,12 @@ def main():
             save8(nrm, out / "normal.png")
             row += [np.repeat(hgt[..., None], 3, -1), nrm]
         tiles.append((tid, row))
+        l = lum(col)
+        meta[tid] = {"mean_lum": round(float(l.mean()), 4), "p95": round(float(np.percentile(l, 95)), 4),
+                     "p5": round(float(np.percentile(l, 5)), 4)}
         print("built", tid)
+    import json
+    (LIB / "meta.json").write_text(json.dumps(meta, indent=1))
     # 2x2 tiled preview of every map, so seams would be visible
     t = 220
     sheet = Image.new("RGB", (t * 2 * 3, t * 2 * len(tiles)), "white")

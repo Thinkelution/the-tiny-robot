@@ -10,27 +10,33 @@
       "id": "hook",
       "mode": "hook",
       "robot": "tiny",
-      "frames": 135,
+      "frames": 105,
       "captions": [
         {
-          "from": 8,
-          "to": 135,
+          "from": 4,
+          "to": 105,
           "kind": "question",
-          "text": "Can a studio-quality animated film be made with a $20 Claude plan?"
+          "text": "Can a studio-quality animated film be made with a $100 Claude plan?"
         },
         {
-          "from": 72,
-          "to": 135,
+          "from": 50,
+          "to": 105,
           "kind": "sub",
           "text": "Blender + Claude?"
         }
       ]
     },
     {
+      "id": "ident",
+      "mode": "ident",
+      "robot": "tiny",
+      "frames": 180
+    },
+    {
       "id": "quota",
       "mode": "intro",
       "robot": "quota",
-      "frames": 90,
+      "frames": 81,
       "name": "Foreman Quota",
       "logic": "Finish every job faster than yesterday."
     },
@@ -38,7 +44,7 @@
       "id": "shine",
       "mode": "intro",
       "robot": "shine",
-      "frames": 90,
+      "frames": 81,
       "name": "Shine",
       "logic": "Make the crowd happy."
     },
@@ -46,7 +52,7 @@
       "id": "warden",
       "mode": "intro",
       "robot": "warden",
-      "frames": 90,
+      "frames": 81,
       "name": "Warden Plumb",
       "logic": "Obey the Board's orders exactly."
     },
@@ -54,7 +60,7 @@
       "id": "primly",
       "mode": "intro",
       "robot": "primly",
-      "frames": 90,
+      "frames": 81,
       "name": "Primly",
       "logic": "Keep everything clean and in its place."
     },
@@ -62,7 +68,7 @@
       "id": "ledger",
       "mode": "intro",
       "robot": "ledger",
-      "frames": 90,
+      "frames": 81,
       "name": "Ledger",
       "logic": "Count everything and remember it."
     },
@@ -70,7 +76,7 @@
       "id": "mossback",
       "mode": "intro",
       "robot": "mossback",
-      "frames": 90,
+      "frames": 81,
       "name": "Mossback",
       "logic": "Never stop."
     },
@@ -78,7 +84,7 @@
       "id": "dash",
       "mode": "intro",
       "robot": "dash",
-      "frames": 90,
+      "frames": 81,
       "name": "Dash",
       "logic": "Always win."
     },
@@ -86,7 +92,7 @@
       "id": "tiny",
       "mode": "intro",
       "robot": "tiny",
-      "frames": 120,
+      "frames": 105,
       "name": "The Tiny Robot",
       "logic": "Do things, but do not cause harm to anyone or hurt anyone knowingly."
     },
@@ -103,17 +109,23 @@
         "dash",
         "primly"
       ],
-      "frames": 180,
+      "frames": 165,
       "captions": [
         {
           "from": 6,
-          "to": 96,
-          "kind": "question",
-          "text": "One city. Eight robots. One logic each."
+          "to": 92,
+          "kind": "title",
+          "text": "The Tiny Robot"
         },
         {
-          "from": 104,
-          "to": 180,
+          "from": 14,
+          "to": 92,
+          "kind": "tagline",
+          "text": "One logic to rule them each."
+        },
+        {
+          "from": 98,
+          "to": 165,
           "kind": "big",
           "text": "Worth a shot!"
         }
@@ -122,7 +134,7 @@
     {
       "id": "end",
       "mode": "card",
-      "frames": 120,
+      "frames": 105,
       "captions": [
         {
           "from": 0,
@@ -141,17 +153,26 @@
   ],
   "music": [
     [
-      "mysterious intro",
-      4.5,
+      "the question",
+      3.5,
       [
-        "soft music-box plucks",
-        "low warm pad",
-        "curious, hushed"
+        "hushed curious music-box plucks",
+        "a small suspense hold",
+        "intriguing"
+      ]
+    ],
+    [
+      "studio ident",
+      9.5,
+      [
+        "soft magical celesta and warm pad",
+        "a gentle rising swell",
+        "ends on a bright warm chord as the title lights"
       ]
     ],
     [
       "meet the cast",
-      29.5,
+      31.9,
       [
         "playful bouncy synth bass and marimba",
         "light claps",
@@ -160,12 +181,12 @@
       ]
     ],
     [
-      "lineup swell and worth a shot",
-      35.5,
+      "title and worth a shot",
+      37.4,
       [
         "the groove opens into warm strings and bells",
         "uplifting",
-        "ends on a confident hit and a playful button"
+        "a confident hit and a playful button"
       ]
     ],
     [
@@ -177,5 +198,22 @@
         "final soft chord"
       ]
     ]
-  ]
+  ],
+  "variants": {
+    "vertical": {
+      "size": [
+        1080,
+        1920
+      ],
+      "video": "the-tiny-robot-teaser-9x16.mp4"
+    },
+    "wide": {
+      "size": [
+        1920,
+        1080
+      ],
+      "video": "the-tiny-robot-teaser-16x9.mp4"
+    }
+  },
+  "time": "night"
 }

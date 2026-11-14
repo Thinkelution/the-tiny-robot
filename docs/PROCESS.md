@@ -85,7 +85,7 @@ Bugs on the way:
   (`site/deploy.py` creates the bucket, the custom domain, a www-to-apex redirect and the folder rule). Images on
   the page are made from the latest renders.
 - **Teaser** (`films/the-tiny-robot/teaser/teaser.json`, `agent/teaser.py`, `blender/teaser.py`): 9:16, 39.5 s.
-  1. A hook that asks the $20-plan question.
+  1. A hook that asks the $100-plan question.
   2. Each robot enters a pool of light on a dark stage with its name and logic.
   3. A group shot, then "Worth a shot!".
   4. An end card pointing to thetinyrobot.online and thinkelution.com.
@@ -95,3 +95,79 @@ Bugs on the way:
   - Framing bugs fixed on the way: a 9:16 frame is narrow, so fit by the horizontal field of view; Blender's
     vertical sensor fit uses the sensor height (24 mm by default), not 36 mm. A side-by-side lineup can't work in
     portrait, so the closing shot is a group shot.
+
+## Step 6 · Look development: toward feature-film quality (2026-11-14)
+The first teaser renders were clean but looked like a game, not a film. The owner said so, and asked for Pixar /
+DreamWorks level. The honest gap list we worked from:
+- animation acting (still the biggest gap);
+- hand-crafted lighting and atmosphere;
+- shape appeal;
+- surface detail;
+- set dressing;
+- grading.
+
+We judged every change on three hero frames: a Tiny close-up, Quota, and the full lineup (`films/the-tiny-robot/lookdev/`).
+
+What changed, in order:
+1. **Atmosphere and grade** (`blender/look.py`):
+   - volumetric haze;
+   - rim lights light-linked to each robot;
+   - a compositor grade (bloom, slight lens distortion, warm highlights / cool shadows, vignette);
+   - clear-coat on painted surfaces.
+2. **Time of day presets** (`world.TOD`): dusk, night, morning (and a rainy night that was dropped: the owner
+   preferred dry). **Night was chosen** for the teaser.
+3. **A planned city** instead of scattered boxes:
+   - the square, ring roads with lane markings and kerbs, sidewalks;
+   - a street running to the horizon for depth;
+   - buildings set back with alleys between them;
+   - lamps on sidewalks, trees clear of walls, crates that rest on each other;
+   - a `Plan` that refuses to place any prop inside a building or another prop.
+4. **Real facades** (`blender/facade.py`):
+   - recessed windows with reveals and sills, storey bands, shopfronts with awnings, AC units, balconies, parapets;
+   - fewer, larger windows and several building types;
+   - each window has its own random value, so night rooms vary (warm/cool, blinds, brightness) and day windows show
+     curtains, sky reflections or dark rooms.
+5. **Sky**: a gradient with clouds by day and stars by night.
+6. **The studio ident** (`blender/intro.py`), starring the Tiny Robot:
+   - eyes blink on, it checks left and right, hops to a button and presses it;
+   - giant THINKELUTION letters light one by one (one flickers);
+   - the camera racks focus and cranes back to the title on a plinth: "STUDIO", "presents". Poppins (SIL OFL), no logo.
+
+Bugs worth remembering:
+- A **world volume** stretches to infinity, so it absorbed all sunlight: the sun stopped working. Haze now lives in
+  a finite box near the ground.
+- The world shader's **Generated** coordinate is a direction from -1 to 1, not 0 to 1: the sky gradient sat 30-40
+  degrees too high and the visible sky came out pale grey.
+- Fill and rim lights scattered in the haze and turned the lineup milky; only motivated lights (lamps, key spots)
+  scatter now.
+- Blender's vertical sensor fit uses the 24 mm sensor height unless set; framing maths assumed 36 mm.
+- A 9:16 frame can't hold a side-by-side lineup: portrait uses a group shot, 16:9 the row.
+- download.blender.org refuses AWS addresses; Blender reaches the cloud GPU through our S3 bucket. Blender also
+  crashes at start-up without `HOME` set (SSM runs jobs without it).
+
+Honest status: close-ups and the ident are the closest to feature quality. Wide shots read as a believable stylised
+city. Character animation is still simple; acting is the next big piece of work.
+
+| Cost item | Amount |
+|---|---|
+| Cloud GPU (textures, world textures, teaser renders) | about $10 so far |
+| Eleven Music (two teaser beds) | from the existing subscription |
+
+## Step 7 · Teaser release (2026-11-15)
+- **Order:** the question comes first ("Can a studio-quality animated film be made with a $100 Claude plan? Blender +
+  Claude?"), then the studio ident, the eight robot intros, the lineup with "The Tiny Robot · One logic to rule
+  them each." and "Worth a shot!", and an end card. 1227 frames, 40.9 s at 30 fps. The music was regenerated to fit
+  this order.
+- **Two variants:** 9:16 for reels (a group shot to close) and 16:9 for the websites (a staggered row).
+- **Where it rendered:**
+  - 9:16 on the local RX 7600, about 23 s per frame after speed settings (persistent data, fewer bounces, adaptive
+    sampling). Renders resume from the last finished frame.
+  - 16:9 on the cloud L40S at 12-14 s per frame. The finished video was built on the server too
+    (`gpu-worker/worker/preview.py ... final` runs `Teaser.post()` with a bundled ffmpeg), so no frames were
+    downloaded.
+- **Fix found in review:** the Tiny Robot reached across its body to press the ident button. The button now sits on
+  its camera side and it presses with the near hand.
+- **Captions are post-only:** changing the question from "$20" to "$100" only needed a new post step, not a
+  re-render.
+- **Released** on [thetinyrobot.online](https://thetinyrobot.online/#teaser) and in a new "Open movie" section on
+  [thinkelution.com](https://thinkelution.com/#movie). Videos are hosted on the site, not in git.
