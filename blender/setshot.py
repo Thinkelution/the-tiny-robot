@@ -41,20 +41,28 @@ OUT.mkdir(parents=True, exist_ok=True)
 RES = tuple(int(v) for v in opts.get("res", "1920x1080").split("x"))
 SAMPLES = int(opts.get("samples", 64))
 
-# camera: (location, target, lens mm, f-stop or None); robots: (id, x, y, yaw toward "cam" + offset deg, or deg)
+# camera: (location, target, lens mm, f-stop or None)
+# robots: (id, x, y, yaw) with yaw = degrees, or ("cam", offset) to face the camera then turn by the offset;
+#         x = "loop" puts the robot on Mossback's loop at the first angle (from y degrees, stepping 6) where the
+#         camera can see it
+# clear: (x, y, r) spots kept free of trees, so a camera or a staging spot is not inside a trunk
 SHOTS = {
     # S02 "Mossback's Loop": low at Tiny's height, trees towering like friendly giants, the sapling Tiny's equal
-    "grove_s02_morning": dict(set="grove", tod="morning", water=0.85, haze=0.0015,
-                              cam=((-3.4, -6.0, 0.3), (1.0, 2.0, 2.4), 22, 4.0),
-                              robots=[("tiny", -1.6, -4.4, ("cam", 40)), ("mossback", 3.8, 21.7, 170)]),
+    "grove_s02_morning": dict(set="grove", tod="morning", water=0.85, haze=0.0012,
+                              cam=((-3.4, -6.0, 0.3), (1.0, 2.0, 2.4), 22, 4.0), clear=[(-3.4, -6.0, 3.0)],
+                              robots=[("tiny", -1.6, -4.4, ("cam", 40)), ("mossback", "loop", 70, ("cam", 75))]),
     # S07 "Amber Lights": the same master, days later, the drought showing
-    "grove_s07_drought": dict(set="grove", tod="morning", water=0.12, haze=0.0025,
-                              cam=((-3.4, -6.0, 0.3), (1.0, 2.0, 2.4), 22, 4.0),
+    "grove_s07_drought": dict(set="grove", tod="morning", water=0.12, haze=0.002,
+                              cam=((-3.4, -6.0, 0.3), (1.0, 2.0, 2.4), 22, 4.0), clear=[(-3.4, -6.0, 3.0)],
                               robots=[("tiny", -1.6, -4.4, ("cam", 40))]),
-    # S31 "Check... No Harm. Go.": wide on the fully green Grove, gauges green, blossoms open, golden light
-    "grove_s31_golden": dict(set="grove", tod="golden_morning", water=1.0, haze=0.0018,
-                             cam=((-4.0, -47.0, 10.5), (3.0, 4.0, 1.5), 26, None),
-                             robots=[("tiny", -0.9, -1.5, ("cam", 10)), ("mossback", -15.6, -15.6, -45)]),
+    # S26 "Sunrise": low from the bent pipe as the sunrise comes down Grove Boulevard; the gauges turning green
+    "grove_s26_sunrise": dict(set="grove", tod="sunrise", water=0.62, haze=0.0022, pipe=True,
+                              cam=((9.6, 18.0, 0.6), (30.0, 6.0, 2.2), 24, 5.6), clear=[(9.6, 18.0, 3.0)],
+                              robots=[("tiny", 12.4, 16.2, ("cam", -40))]),
+    # S31 "Check... No Harm. Go.": wide on the fully green Grove: sapling, gauges, the bent pipe and blossom
+    "grove_s31_golden": dict(set="grove", tod="golden_morning", water=1.0, haze=0.0007, pipe=True,
+                             cam=((-13.0, -1.0, 3.4), (12.0, 10.0, 1.2), 24, None), clear=[(-13.0, -1.0, 5.0)],
+                             robots=[("tiny", 0.8, -1.2, ("cam", 20)), ("mossback", "loop", 150, ("cam", 70))]),
 }
 
 
@@ -117,13 +125,37 @@ def place(sc, rid, x, y, yaw, cam):
     return root, spec
 
 
+def seen(sc, cam, point):
+    """True when the point is inside the frame and nothing stands between it and the camera."""
+    from bpy_extras.object_utils import world_to_camera_view
+    v = world_to_camera_view(sc, cam, Vector(point))
+    if not (0.08 < v.x < 0.92 and 0.05 < v.y < 0.95 and v.z > 0):
+        return False
+    dg = bpy.context.evaluated_depsgraph_get()
+    d = Vector(point) - cam.location
+    hit, loc, *_ = sc.ray_cast(dg, cam.location, d.normalized(), distance=d.length - 0.6)
+    return not hit
+
+
 def shoot(name):
     sh = SHOTS[name]
     sc = setup()
-    parts = grove.build(sc, tod=sh["tod"], water=sh["water"])
+    parts = grove.build(sc, tod=sh["tod"], water=sh["water"], pipe=sh.get("pipe", False),
+                       clear=sh.get("clear", []))
     cam = camera(sc, *sh["cam"])
+    bpy.context.view_layer.update()
     roots = []
     for (rid, x, y, yaw) in sh["robots"]:
+        if x == "loop":
+            for k in range(60):
+                a = math.radians(y + 6 * k)
+                px, py = math.cos(a) * grove.LOOP_R, math.sin(a) * grove.LOOP_R
+                far = (Vector((px, py, 0)) - cam.location).length > 7.0
+                if far and seen(sc, cam, (px, py, 0.8)) and seen(sc, cam, (px, py, 0.25)):
+                    break
+            else:
+                print("no clear view of", rid, "on the loop", flush=True)
+            x, y = px, py
         roots.append(place(sc, rid, x, y, yaw, cam))
     if sh["cam"][3]:
         # focus on the first robot

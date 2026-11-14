@@ -37,7 +37,7 @@ def _on_line(x, y, pad):
 
 def _ground(coll, rnd, ctrl):
     # soil and moss over the whole clearing, a leafy ground cover in patches, the worn loop path
-    turf = plants.leaf_mat("#6a9a48", ctrl)
+    turf = plants.turf_mat(ctrl)
     moss = plants.leaf_mat("#3f7232", ctrl)
     path = world.tex_mat("loop_path", "concrete", "#a08c6a", tile=2.0, rough=0.95, bump=0.3)
     world.box(coll, "grove_turf", (2 * HALF, 2 * HALF, 0.2), (0, 0, -0.1), turf, 0)
@@ -50,7 +50,7 @@ def _ground(coll, rnd, ctrl):
             continue
         s = rnd.uniform(1.2, 3.2)
         cover.append(((x, y, 0.03), (s, s * rnd.uniform(0.6, 1.0), 0.12), rnd.uniform(0, 1.6)))
-    plants._merged("groundcover", coll, moss, cover, (0, 0, 0))
+    # (flat ground-cover slabs read as puddles from low angles; the turf's soil patches do this job now)
     # the loop: segments of a worn ring, slightly sunk
     n = 72
     for k in range(n):
@@ -111,6 +111,31 @@ def _water_line(coll, ctrl):
         world.box(coll, "gauge_lamp", (0.16, 0.16, 0.05), (x + 0.42, y, 0.53), gauge, 0.02)
 
 
+def _crew_pipe(coll):
+    """The pipe the crew lays in S21-S24: on short supports along the water line from the north-east gate to the
+    sapling, with the bend that rises over the great root instead of cutting it."""
+    pm = world.mat("crew_pipe", "painted_metal", "#4f7fa8", wear=0.45, dirt=0.6, tile=1.0)
+    sup = world.mat("pipe_support", "painted_metal", "#3c4248", wear=0.5, dirt=0.7, tile=1.0)
+    d = 1 / math.sqrt(2)
+    # (distance along the line from the gate, height): the line meets the root about 18 m from the gate
+    prof = [(-3.0, 0.35), (16.0, 0.35), (17.6, 1.25), (20.4, 1.25), (22.0, 0.35), (40.8, 0.35)]
+    ax, ay = PIPE_LINE[0]
+    for (s0, z0), (s1, z1) in zip(prof, prof[1:]):
+        x0, y0 = ax - s0 * d, ay - s0 * d
+        x1, y1 = ax - s1 * d, ay - s1 * d
+        L = math.dist((x0, y0, z0), (x1, y1, z1))
+        seg = world.box(coll, "crew_pipe", (L + 0.12, 0.34, 0.34), ((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2),
+                        pm, 0.05, shape="cylinder_x")
+        seg.rotation_euler = (0, -math.atan2(z1 - z0, math.hypot(x1 - x0, y1 - y0)), math.atan2(y1 - y0, x1 - x0))
+        world.box(coll, "pipe_collar", (0.18, 0.44, 0.44), (x1, y1, z1), sup, 0.03, shape="cylinder_x",
+                  rot=math.atan2(y1 - y0, x1 - x0))
+    for s_ in range(0, 41, 3):
+        if 15.5 < s_ < 22.5:
+            continue
+        x, y = ax - s_ * d, ay - s_ * d
+        world.box(coll, "pipe_support", (0.5, 0.12, 0.2), (x, y, 0.1), sup, 0.02, rot=math.pi / 4)
+
+
 def _great_tree(coll, rnd, ctrl):
     """The great old tree on the north-east side; one big root arches across the water line."""
     gx, gy = GREAT_TREE
@@ -127,7 +152,7 @@ def _great_tree(coll, rnd, ctrl):
                             math.atan2(b[1] - a[1], b[0] - a[0]))
 
 
-def _trees(coll, rnd, ctrl):
+def _trees(coll, rnd, ctrl, clear=()):
     spots = []
 
     def free(x, y, r):
@@ -141,6 +166,8 @@ def _trees(coll, rnd, ctrl):
             return False
         if max(abs(x), abs(y)) > HALF - 1.8 - r:
             return False
+        if any(math.hypot(x - cx, y - cy) < cr + r * 0.6 for (cx, cy, cr) in clear):
+            return False
         return all(math.hypot(x - sx, y - sy) > (r + sr) * 0.8 + 1.0 for (sx, sy, sr) in spots)
 
     tries = 0
@@ -151,8 +178,14 @@ def _trees(coll, rnd, ctrl):
         r = h * 0.28
         if free(x, y, r):
             spots.append((x, y, r))
-            plants.tree(coll, rnd, x, y, ctrl, height=h, girth=rnd.uniform(0.45, 0.75),
-                        bark=rnd.choice(["#7a5a42", "#6e5444", "#82654a"]))
+            kind = rnd.random()
+            bark = rnd.choice(["#7a5a42", "#6e5444", "#82654a"])
+            if kind < 0.18:
+                plants.column(coll, rnd, x, y, ctrl, height=h * 1.1, girth=rnd.uniform(0.35, 0.5), bark=bark)
+            elif kind < 0.36:
+                plants.wide(coll, rnd, x, y, ctrl, height=h * 0.8, girth=rnd.uniform(0.5, 0.75), bark=bark)
+            else:
+                plants.tree(coll, rnd, x, y, ctrl, height=h, girth=rnd.uniform(0.45, 0.75), bark=bark)
     return spots
 
 
@@ -173,7 +206,7 @@ def _undergrowth(coll, rnd, ctrl, spots):
     pts = []
     while len(pts) < 2600:
         x, y = rnd.uniform(-HALF + 0.6, HALF - 0.6), rnd.uniform(-HALF + 0.6, HALF - 0.6)
-        if abs(math.hypot(x, y) - LOOP_R) < 1.1 or _on_line(x, y, 0.7):
+        if abs(math.hypot(x, y) - LOOP_R) < 1.1 or _on_line(x, y, 0.7) or math.hypot(x, y) < 1.15:
             continue
         pts.append((x, y, rnd.uniform(0.7, 1.4)))
     plants.grass(coll, rnd, ctrl, pts, blades=10)
@@ -267,7 +300,7 @@ def _city(coll, rnd):
         world.box(coll, "barrier", (0.5, 2.6, 1.0), (x_end - 0.8, py + 0.5, 3.3), barrier, 0.05)
 
 
-def build(sc, tod="morning", water=1.0, seed=11, city=True):
+def build(sc, tod="morning", water=1.0, seed=11, city=True, pipe=False, clear=()):
     world.CFG = world.TOD[tod]
     world.HAZE = world.CFG["haze"]
     rnd = random.Random(seed)
@@ -279,7 +312,9 @@ def build(sc, tod="morning", water=1.0, seed=11, city=True):
     _wall(coll)
     _water_line(coll, ctrl)
     _great_tree(coll, rnd, ctrl)
-    spots = _trees(coll, rnd, ctrl)
+    if pipe:
+        _crew_pipe(coll)
+    spots = _trees(coll, rnd, ctrl, clear)
     plants.sapling(coll, rnd, SAPLING[0], SAPLING[1], ctrl)
     _undergrowth(coll, rnd, ctrl, spots)
     if city:

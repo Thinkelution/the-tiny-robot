@@ -196,3 +196,8 @@ Bugs worth remembering:
   drivers move as a unit.
 - A low sun behind 30 m towers leaves the whole Grove in shadow. Golden morning now comes in higher from the east,
   and the sunrise runs straight down Grove Boulevard, the one long gap in the skyline.
+- **Polish pass** (same day): turf with soil patches instead of a flat leaf texture; per-cluster colour variation;
+  three tree shapes (round, column, umbrella); the sapling taller and brighter in a ring of pale stones; the crew's
+  pipe from S21 on, with the bend that rises over the great root; shots keep trees away from their camera, and
+  background robots are moved along Mossback's loop until a ray from the camera actually reaches them. New
+  frame: S26 sunrise. Flat ground-cover slabs were dropped because from Tiny's height they read as puddles.

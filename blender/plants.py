@@ -88,6 +88,10 @@ def leaf_mat(shade, ctrl):
     mid = cr.elements.new(0.35)
     mid.color = materials.hex_rgb(DRY)
     base = texmat._mul(g, ramp.outputs["Color"], det)
+    rnd_o = g.node("ShaderNodeObjectInfo").outputs["Random"]
+    base = texmat._mul(g, base, g.math("ADD", 0.82, g.math("MULTIPLY", rnd_o, 0.36)))
+    hsv = g.node("ShaderNodeHueSaturation", Color=base, Hue=g.math("ADD", 0.48, g.math("MULTIPLY", rnd_o, 0.05)))
+    base = hsv.outputs["Color"]
     g.set(bsdf.inputs["Base Color"], base)
     g.set(bsdf.inputs["Roughness"], g.math("ADD", 0.45, g.math("MULTIPLY", g.math("SUBTRACT", 1.0, w), 0.35)))
     bsdf.inputs["Subsurface Weight"].default_value = 0.25
@@ -96,6 +100,38 @@ def leaf_mat(shade, ctrl):
     bsdf.inputs["Coat Weight"].default_value = 0.0
     nm = g.node("ShaderNodeNormalMap", Color=texmat._img(g, "leaves", "normal", co, True).outputs["Color"],
                 Strength=0.8)
+    g.set(bsdf.inputs["Normal"], nm.outputs[0])
+    return world._haze(m)
+
+
+def turf_mat(ctrl, shade="#86ad56", soil="#8a7350"):
+    """Ground: clover-like ground cover with bare soil patches; dries to straw and dust with the water."""
+    name = f"p_turf_{ctrl.name}"
+    if name in bpy.data.materials:
+        return bpy.data.materials[name]
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    g = materials.G(m)
+    bsdf = next(n for n in g.n if n.type == "BSDF_PRINCIPLED")
+    co = texmat._uv(g, 1.4)
+    col = texmat._img(g, "leaves", "color", co).outputs["Color"]
+    det = texmat._detail(g, col, "leaves", 1.6)
+    w = _water_node(g, ctrl)
+    ramp = g.node("ShaderNodeValToRGB", Fac=w)
+    cr = ramp.color_ramp
+    cr.elements[0].position, cr.elements[0].color = 0.0, materials.hex_rgb("#a08a58")
+    cr.elements[1].position, cr.elements[1].color = 0.75, materials.hex_rgb(shade)
+    green = texmat._mul(g, ramp.outputs["Color"], det)
+    pos = g.node("ShaderNodeTexCoord").outputs["Object"]
+    nz = g.node("ShaderNodeTexNoise", Vector=pos, Scale=0.09, Detail=5.0, Roughness=0.6).outputs["Fac"]
+    patch = g.ramp(nz, 0.56, 0.66)
+    sco = texmat._uv(g, 2.0, (3.1, 7.7))
+    scol = texmat._img(g, "concrete", "color", sco).outputs["Color"]
+    dirt = texmat._mul(g, materials.hex_rgb(soil), texmat._detail(g, scol, "concrete", 3.0))
+    g.set(bsdf.inputs["Base Color"], g.mix(patch, green, dirt))
+    g.set(bsdf.inputs["Roughness"], g.mixf(patch, 0.6, 0.92))
+    nm = g.node("ShaderNodeNormalMap", Color=texmat._img(g, "leaves", "normal", co, True).outputs["Color"],
+                Strength=0.5)
     g.set(bsdf.inputs["Normal"], nm.outputs[0])
     return world._haze(m)
 
@@ -256,6 +292,45 @@ def grass_mat(ctrl):
     return world._haze(m)
 
 
+def column(coll, rnd, x, y, ctrl, height=9.0, girth=0.4, bark="#7a5a42", shades=None):
+    """A tall narrow tree: short trunk, clusters stacked up a central stem, getting smaller toward the top."""
+    shades = shades or GREENS
+    bm = bark_mat(bark)
+    _box(coll, "trunk", (girth, girth, height * 0.85), (x, y, height * 0.425), bm, girth * 0.12)
+    n = 6
+    for k in range(n):
+        t = k / (n - 1)
+        z = height * (0.22 + 0.7 * t)
+        size = height * 0.2 * (1.0 - 0.55 * t)
+        a = rnd.uniform(0, 6.28)
+        _cluster(coll, rnd, ctrl, (x + math.cos(a) * 0.15, y + math.sin(a) * 0.15, z), size,
+                 (math.cos(a) * 0.3, math.sin(a) * 0.3), 0.3 + 0.7 * t, rnd.choice(shades))
+    return height
+
+
+def wide(coll, rnd, x, y, ctrl, height=7.0, girth=0.6, bark="#6e5444", shades=None):
+    """An umbrella tree: a trunk that forks into long low branches, a broad flat crown of clusters."""
+    shades = shades or GREENS
+    bm = bark_mat(bark)
+    th = height * 0.45
+    _box(coll, "trunk", (girth, girth, th), (x, y, th / 2), bm, girth * 0.12)
+    nb = rnd.randint(5, 7)
+    for b in range(nb):
+        ang = b * math.tau / nb + rnd.uniform(-0.25, 0.25)
+        L = height * rnd.uniform(0.45, 0.6)
+        lift = rnd.uniform(0.25, 0.42)
+        dx, dy, dz = math.cos(ang) * math.cos(lift), math.sin(ang) * math.cos(lift), math.sin(lift)
+        bw = girth * 0.34
+        br = _box(coll, "branch", (L, bw, bw), (x + dx * L / 2, y + dy * L / 2, th + dz * L / 2), bm, bw * 0.15)
+        br.rotation_euler = (0, -lift, ang)
+        for f, k in ((1.0, 1.0), (0.6, 0.85)):
+            tip = (x + dx * L * f, y + dy * L * f, th + dz * L * f + height * 0.06)
+            _cluster(coll, rnd, ctrl, tip, height * 0.17 * k, (dx, dy), min(1.0, tip[2] / height),
+                     rnd.choice(shades))
+    _cluster(coll, rnd, ctrl, (x, y, th + height * 0.22), height * 0.22, (0.0, 0.0), 1.0, rnd.choice(shades))
+    return height
+
+
 def tree(coll, rnd, x, y, ctrl, height=9.0, girth=0.55, bark="#7a5a42", shades=None):
     """A box-trunk tree: a tapering trunk, 4-6 angled branches with clusters at the tip and along the way, and a
     full crown on top. Returns the crown height."""
@@ -332,9 +407,16 @@ def grass(coll, rnd, ctrl, points, blades=14, name="grass"):
     return ob
 
 
-def sapling(coll, rnd, x, y, ctrl, height=1.1):
-    """The small tree at the centre of the Grove: roughly Tiny's equal (Tiny is 0.35 m, the sapling about 1 m)."""
+def sapling(coll, rnd, x, y, ctrl, height=1.25):
+    """The small tree at the centre of the Grove: roughly Tiny's equal (Tiny is 0.35 m, the sapling about 1.2 m),
+    in a ring of pale stones so it reads as somebody's."""
     bm = bark_mat("#8a6a4c")
+    stone = world.tex_mat("sapling_stone", "concrete", "#d8d0bc", tile=0.6, rough=0.8)
+    ring = []
+    for k in range(14):
+        a = k * math.tau / 14 + rnd.uniform(-0.08, 0.08)
+        ring.append(((math.cos(a) * 0.95, math.sin(a) * 0.95, 0.06), (0.22, 0.17, 0.13), a + rnd.uniform(-0.3, 0.3)))
+    _merged("sapling_stones", coll, stone, ring, (x, y, 0.0))
     _box(coll, "sapling_stem", (0.06, 0.06, height * 0.75), (x, y, height * 0.375), bm, 0.01)
     for k, (ang, z) in enumerate(((0.4, 0.55), (2.6, 0.7), (4.4, 0.62))):
         L = 0.22
@@ -342,8 +424,8 @@ def sapling(coll, rnd, x, y, ctrl, height=1.1):
                   (x + math.cos(ang) * L / 2, y + math.sin(ang) * L / 2, height * z + 0.06), bm, 0.006)
         br.rotation_euler = (0, -0.5, ang)
         tip = (x + math.cos(ang) * L, y + math.sin(ang) * L, height * z + 0.12)
-        _cluster(coll, rnd, ctrl, tip, 0.2, (math.cos(ang), math.sin(ang)), 0.5, "#6fb84e")
-    _cluster(coll, rnd, ctrl, (x, y, height * 0.78), 0.26, (0.0, 0.0), 0.8, "#7cc456")
+        _cluster(coll, rnd, ctrl, tip, 0.22, (math.cos(ang), math.sin(ang)), 0.5, "#8fd45e")
+    _cluster(coll, rnd, ctrl, (x, y, height * 0.78), 0.3, (0.0, 0.0), 0.8, "#9ade62")
 
 
 def weed(coll, rnd, x, y, ctrl):
