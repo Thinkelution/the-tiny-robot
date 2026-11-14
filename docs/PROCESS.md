@@ -171,3 +171,28 @@ city. Character animation is still simple; acting is the next big piece of work.
   re-render.
 - **Released** on [thetinyrobot.online](https://thetinyrobot.online/#teaser) and in a new "Open movie" section on
   [thinkelution.com](https://thinkelution.com/#movie). Videos are hosted on the site, not in git.
+
+## Step 8 · The world: Gridhaven and the Old Grove (2026-11-15)
+- **City plan first.** The script's eight locations went onto one map before anything was built
+  (`films/the-tiny-robot/world/city.json`, drawn by `agent/citymap.py` as `world/map.png`). The Old Grove sits in the
+  middle, as the bible says. The Rooftop Nursery is on a tower right on its north edge and the Pipeworks between
+  them, so the split water valve makes physical sense. Main Square is at the end of Grove Boulevard, Quota's Fast
+  Lane stops just short of the Grove wall, the Junk Stacks are on the south-west edge and the Foundry faces east
+  for the S28 sunrise. Five outdoor sets share one city; three interiors are built on their own.
+- **Living plants** (`blender/plants.py`): every tree, sapling, bush and grass tuft follows one control value,
+  `water` from 0 to 1, through drivers. Leaves go from green through olive to brown, clusters sink, tilt out and
+  shrink, blossoms open above 0.85, and every cluster sways on its own phase. The gauge lights on the water-line
+  grates read the same value (green, amber, red). One keyframed number tells the whole drought and revival story.
+- **The Old Grove** (`blender/grove.py`): a 64 m walled clearing, about 70 box-trunk trees, the great old tree with
+  its root arching over the water line, the sapling at the centre, Mossback's worn loop, grates, bushes and
+  26,000 grass blades, with the city around it.
+- **Look-dev stills** (`blender/setshot.py`): S02 morning, S07 drought and S31 golden morning, at Tiny's eye height.
+
+Bugs worth remembering:
+- **Grass took 302 of 313 seconds to build.** Adding blades one by one with `bmesh.ops.create_cube` to a growing
+  mesh gets slower with every blade. Building plain vertex lists and calling `from_pydata` once: 11 s for the whole
+  set.
+- 8,000 separate leaf cubes were merged into one object per cluster (3,600 objects), which the droop and sway
+  drivers move as a unit.
+- A low sun behind 30 m towers leaves the whole Grove in shadow. Golden morning now comes in higher from the east,
+  and the sunrise runs straight down Grove Boulevard, the one long gap in the skyline.

@@ -31,6 +31,12 @@ TOD = {
     "morning": dict(sky=((1.0, 0.9, 0.76), (0.42, 0.63, 0.95), (0.12, 0.3, 0.78)), sky_strength=1.15,
                     sun=(9.0, (1.0, 0.84, 0.62), 24, -32), haze=(0.78, 0.84, 0.95), windows=(0.0, 0.0), lamps=0,
                     wet=False, rig=0.25, haze_amount=0.35, sun_angle=0.8),
+    "sunrise": dict(sky=((1.0, 0.55, 0.32), (0.55, 0.5, 0.62), (0.12, 0.2, 0.45)), sky_strength=0.9,
+                    sun=(6.0, (1.0, 0.6, 0.32), 6, 90), haze=(0.95, 0.7, 0.55), windows=(0.2, 0.6), lamps=0,
+                    wet=False, rig=0.25, haze_amount=0.4, sun_angle=1.0),
+    "golden_morning": dict(sky=((1.0, 0.82, 0.6), (0.5, 0.66, 0.92), (0.15, 0.32, 0.75)), sky_strength=1.1,
+                           sun=(9.0, (1.0, 0.78, 0.5), 26, 72), haze=(0.95, 0.85, 0.72), windows=(0.0, 0.0),
+                           lamps=0, wet=False, rig=0.25, haze_amount=0.35, sun_angle=0.8),
     "night": dict(sky=((0.16, 0.1, 0.08), (0.03, 0.045, 0.1), (0.005, 0.01, 0.03)), sky_strength=1.1,
                   sun=(0.35, (0.6, 0.72, 1.0), 55, 140), haze=(0.035, 0.045, 0.075), windows=(0.62, 1.4),
                   lamps=1500, wet=False, sheen=True),
@@ -181,8 +187,12 @@ def emissive(mid, color, strength):
 
 
 # ------------------------------------------------------------------ pieces
+_BOXES = [0]
+
+
 def box(coll, name, size, loc, m, bevel=0.03, rot=0.0, shape="box"):
-    ob = robot.mesh_box(name, size, shape, coll, m, bevel, 2)
+    _BOXES[0] += 1          # unique names: Blender's duplicate-name search gets slow with thousands of objects
+    ob = robot.mesh_box(f"{name}.{_BOXES[0]:05d}", size, shape, coll, m, bevel, 2)
     ob.location = loc
     ob.rotation_euler.z = rot
     return ob

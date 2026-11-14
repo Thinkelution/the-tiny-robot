@@ -14,3 +14,4 @@ films/*/teaser/*.mp4
 films/*/teaser/music*.mp3
 films/*/lookdev/*/
 site/video/
+films/*/world/lookdev/*.png

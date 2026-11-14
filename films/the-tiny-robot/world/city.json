@@ -1,0 +1,65 @@
+{
+  "name": "Gridhaven",
+  "units": "metres; +x east, +y north; ground at z = 0",
+  "notes": "One persistent city. The five outdoor locations are districts of it, so every wide shot shows the same skyline and the Old Grove sits in the middle as the bible says. The three interiors (Pipeworks, Count House, Foundry) are separate sets, each with an exterior here so the doors and windows match.",
+  "scale": {"tiny_robot_m": 0.35, "quota_m": 3.2, "storey_m": 3.6, "towers_m": [14, 60]},
+  "locations": [
+    {
+      "id": "old_grove", "kind": "exterior", "centre": [0, 0], "size": [64, 64],
+      "scenes": ["S02", "S07", "S22", "S23", "S24", "S26", "S31"],
+      "why_here": "The bible puts the Grove in the middle of the city. Every district can see its treetops.",
+      "layout": "Square clearing behind a low kerb wall with four gates. Box-trunk trees in loose rings, the great old tree on the north-east side whose root arches across the pipe route, the central sapling in a small clearing. Mossback's loop path is a worn ring 44 m across. Water-line grates run from the north-east corner (towards the Pipeworks) to the centre."
+    },
+    {
+      "id": "rooftop_nursery", "kind": "exterior", "centre": [0, 60], "size": [20, 20], "roof_z": 24,
+      "scenes": ["S04", "S06", "S20"],
+      "why_here": "On top of the old Seed Tower right on the Grove's north edge, so the roof-edge shot in S06 looks south over the Grove and the skyline, and Mossback's tank run in S20 to S22 is short and downhill.",
+      "layout": "Flat roof, rows of seedling trays running north-south towards the roof edge, a square bar-frame greenhouse, the big rooftop tank on the north side fed by a pipe climbing the tower, a ladder hatch in the south-west corner."
+    },
+    {
+      "id": "pipeworks", "kind": "interior", "centre": [48, 56], "size": [30, 22],
+      "scenes": ["S05", "S12", "S13", "S19", "S25"],
+      "why_here": "Between the Seed Tower and the Grove's north-east gate: one main runs up the tower to the Nursery, the other dives under the street to the Grove. That is the split valve behind the wall.",
+      "layout": "Exterior: a brick-and-steel block with pipes on its face and a railing Dash can hit. Interior set: tall room, pipe walls, the lever panel facing the blank wall, a crawl gap low on the wall into the valve room."
+    },
+    {
+      "id": "main_square", "kind": "exterior", "centre": [118, 0], "size": [44, 40],
+      "scenes": ["S03", "S09", "S15", "S16", "S17"],
+      "why_here": "The city's heart, east of the Grove at the end of Grove Boulevard, so a long lens down the boulevard from the stage sees the Grove's treetops.",
+      "layout": "Slab plaza, the Big Board and its stacked stage on the east side facing west, crowd space for about 200 background robots, the Fast Lane model table in front of the stage, ring roads and lit towers around it."
+    },
+    {
+      "id": "count_house", "kind": "interior", "centre": [118, 44], "size": [26, 16],
+      "scenes": ["S11", "S29"],
+      "why_here": "On the north side of Main Square, the city's records next to its vote.",
+      "layout": "Exterior: a tall narrow archive with amber slit windows. Interior set: long aisles of amber data-block shelves, the rolling ladder rail, Ledger's reading screen at the end of the main aisle."
+    },
+    {
+      "id": "foundry", "kind": "interior", "centre": [124, -96], "size": [56, 38],
+      "scenes": ["S10", "S18", "S28"],
+      "why_here": "In the south-east works district. Its great doors face east onto Foundry Yard, so in S28 the sunrise sits behind the crowd gathered in the doorway and backlights them gold, as the staging asks.",
+      "layout": "Exterior: a huge hall with chimneys and the great doors on the east face. Interior set: the Logic Press at the far west end, the rack of blank plates, Mossback's fenced holding pen, an orange under-glow."
+    },
+    {
+      "id": "fast_lane_works", "kind": "exterior", "centre": [-118, -8], "size": [164, 16], "deck_z": 2.4,
+      "scenes": ["S08", "S21", "S27"],
+      "why_here": "Quota's raised road comes in dead straight from the western industrial edge and stops at the Grove's west edge, pointing at the trees. In S27 Quota drags the barriers so the route curves south around the Grove.",
+      "layout": "A raised slab deck 16 m wide on square piers, lane bars, an abrupt end 4 m short of the Grove wall, barriers, stacked road slabs, floodlight poles, Quota's parking spot facing east at the end."
+    },
+    {
+      "id": "junk_stacks", "kind": "exterior", "centre": [-118, -124], "size": [96, 72],
+      "scenes": ["S01", "S14", "S30"],
+      "why_here": "The south-west edge of the city: crates and retired machines, Tiny's crate home. From its porch the Grove's treetops show over the stacks to the north-east, which S30 uses when Mossback heads 'toward the treetops'.",
+      "layout": "Crate mountains in uneven towers, two idle gantry cranes, a cracked slab lane with the weed, Tiny's crate with the plank porch facing east into the morning sun, the scrap pile with the First Workshop emblem."
+    }
+  ],
+  "routes": [
+    {"id": "tiny_home_to_grove", "label": "Tiny's walk", "points": [[-118, -110], [-80, -80], [-40, -46], [-32, -32]]},
+    {"id": "grove_boulevard", "label": "Grove Boulevard", "points": [[32, 0], [96, 0]]},
+    {"id": "water_main_grove", "label": "water line to the Grove", "points": [[40, 46], [24, 28], [12, 12], [0, 0]]},
+    {"id": "water_main_nursery", "label": "water main up the Seed Tower", "points": [[40, 50], [8, 60]]},
+    {"id": "fast_lane_curve", "label": "S27: the road bends around", "points": [[-60, -8], [-44, -30], [-20, -46], [10, -48]]}
+  ],
+  "time_of_day_needed": ["dawn", "pre-dawn", "sunrise", "morning", "golden morning", "day", "afternoon", "sunset", "evening", "dusk", "night", "late night"],
+  "open_questions": ["The script has rain in S18, S21 and S22. Teaser renders dropped rain; keep the film dry or add it back for those three scenes?"]
+}
