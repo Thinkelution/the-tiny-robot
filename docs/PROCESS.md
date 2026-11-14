@@ -77,3 +77,21 @@ Bugs on the way:
 | Cloud GPU for textures (about 15 minutes of an L40S) | about $0.60 |
 | Blender, rendering on a local AMD RX 7600 | $0 |
 | Claude Code session time (reviews, fixes, pipeline code) | part of the Claude plan |
+
+## Step 5 · Repo, website, teaser (2026-11-14)
+- **Repo:** this repository went public as `Thinkelution/the-tiny-robot`. Code is MIT, film content is CC BY 4.0.
+  Rendered frame sequences and the music file stay out of git.
+- **Website:** `site/` deploys to [thetinyrobot.online](https://thetinyrobot.online) from a Cloudflare R2 bucket
+  (`site/deploy.py` creates the bucket, the custom domain, a www-to-apex redirect and the folder rule). Images on
+  the page are made from the latest renders.
+- **Teaser** (`films/the-tiny-robot/teaser/teaser.json`, `agent/teaser.py`, `blender/teaser.py`): 9:16, 39.5 s.
+  1. A hook that asks the $20-plan question.
+  2. Each robot enters a pool of light on a dark stage with its name and logic.
+  3. A group shot, then "Worth a shot!".
+  4. An end card pointing to thetinyrobot.online and thinkelution.com.
+
+  It renders in Cycles at 40 samples, about 12 s per 1080x1920 frame on the RX 7600, so 3.5 hours for the reel.
+  Captions are added in post (Pillow), and the music bed comes from Eleven Music.
+  - Framing bugs fixed on the way: a 9:16 frame is narrow, so fit by the horizontal field of view; Blender's
+    vertical sensor fit uses the sensor height (24 mm by default), not 36 mm. A side-by-side lineup can't work in
+    portrait, so the closing shot is a group shot.
