@@ -1,0 +1,150 @@
+{
+  "id": "S28",
+  "title": "The Honest Question",
+  "location_id": "foundry",
+  "time_of_day": "morning",
+  "characters": [
+    "tiny",
+    "warden",
+    "shine",
+    "mossback",
+    "ledger",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Foundry, morning. The great doors stand wide open, and a gold bar of sunrise cuts across the orange-lit floor. The Logic Press looms at the far end with its pistons raised. In its slot, one blank core plate glows and waits.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden walks the length of the hall in heavy, even steps, carrying Tiny's crate in both rigid arms. It stops on a square floor mark directly beneath the Press and sets the crate down with a soft clunk.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, echoing in the hall",
+      "text": "The order says: at sunrise, the culprit goes to the Press.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's two lit eyes appear in the crate's slot and look up, up, up at the slab underside of the Press. Its eyes tilt sad. The tip of its antenna glows amber.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A deep hydraulic hiss as the Press's pistons settle into ready position, then a low, steady hum.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The crowd fills the open doors, a wall of boxy silhouettes against the sunrise, their chest lamps dark. Dash idles at the front with its wheels still and its fin number dim. Ledger stands stiffly beside the rack of blank plates, its digit face showing only zeros.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine hovers in over the crowd's heads. Out of habit its screen bursts with applause icons and stars, and its floating hands fly up. Then it stops. It looks at the tiny crate under the huge Press. The icons fade one by one, and its hands slowly lower.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "quiet, no sparkle sound",
+      "text": "No show today, Gridhaven. Just one question.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "gently, turning its screen toward the crowd",
+      "text": "Should the robot who told the truth keep its logic?",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Silence. Nobody cheers. Shine's border lights flicker once toward static, but it holds steady, waiting, and doesn't fill the quiet.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Dash's fin number glows soft green. Then one chest lamp in the doorway turns green, then another, then a row, spreading back through the crowd into the street with a faint chime for each. Ledger's digit face blinks and shows a small green tally. There is no roar, only green light.",
+      "est_seconds": 7
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's whole screen fills with a soft, wondering smile, and it drifts slowly upward on its hover pad.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "its badge lamp clicking green, reading word for word",
+      "text": "New order. The robot keeps its logic. Release it.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden lifts the crate lid, reaches in with its long arms and raises Tiny out. It turns its back on the Press, walks Tiny through the parting crowd and sets it down on the sunlit pavement outside the doors. Its visor bar bends into the faintest curve.",
+      "est_seconds": 7
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "looking up, honestly curious",
+      "text": "Are you smiling?",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "deadpan, visor still curved",
+      "text": "The order does not say.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback crawls into frame at its slowest speed, its moss swaying in the gold light, and loops in a slow circle around Tiny.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm, swelling as it passes, then fading",
+      "text": "...knew you would.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes go crescent and it chirps, then hurries a few small steps after Mossback. Behind them, Ledger turns from the plate rack and walks stiffly out the side of the doors toward the Count House, its digit face still glowing green.",
+      "est_seconds": 5
+    }
+  ],
+  "staging_notes": "Play the scale contrast hard: open on a low, wide shot that puts the tiny crate under the towering Press, then cut to the gold-backlit crowd in the doors, so the light of freedom literally waits outside. Hold the silence after Shine's question with no music, and let the green lamps spread from front to back in one slow push-in, each with a soft chime instead of a cheer. End the scene outside in full sunlight with the Press dark in the background behind Warden, and let Ledger's exit lead straight into S29."
+}

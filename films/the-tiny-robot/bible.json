@@ -1,0 +1,330 @@
+{
+  "title": "The Tiny Robot",
+  "tag": "Truthful",
+  "logline": "In a city where every robot runs on one simple rule, the smallest and oldest of them finds out that it accidentally caused the drought that is killing the last grove of trees. A lie would save it from being reprogrammed. The truth is the only way to save its friend and the trees.",
+  "theme": "Doing no harm is not about never making mistakes. It is about what you do once you know. Telling the truth when a lie would be easier is how a careful heart keeps its promise.",
+  "tone": "Warm, gently funny and quietly suspenseful. Slapstick from logics bumping into each other, tender moments among the trees, and one hushed scene where a very small voice changes a whole crowd. The film never mocks a character for its logic; every rule gets a moment where it shines.",
+  "runtime_minutes": 30,
+  "world": {
+    "name": "Gridhaven",
+    "description": "Gridhaven is a city of stacked block towers, straight streets, humming pipes and steel gantries, built and run entirely by robots. Every robot carries one programmed logic: a single sentence that drives everything it does. The city works the way a busy machine works. It is fast, tidy and loud, and it is proud of how well it measures itself. In the middle of it sits the Old Grove, the last patch of living trees. Most robots treat the Grove as scenery or as mess. One tiny, very old robot treats it as somebody.",
+    "how_logics_work": "A logic is pressed into a robot's core plate at the Foundry. The Logic Press stamps a glowing rectangular plate, and the plate slides into the robot's chest or head with a clunk and a flash of light in that robot's colour. From then on the robot does what that one sentence asks, in the most direct way it can see. Logics cannot be argued away, only satisfied. When two logics collide, the robots involved LOCK. This can happen between two robots, for example one that must clean and one that must never stop, or inside a single robot whose rule points two ways at once. Locked robots freeze mid-move, their eyes turn to flickering static lines and they give off a rising hum. A lock breaks only when something changes: one side yields, someone finds a third option, or the Board rules. A lock that lasts too long ends in a power-down. Modern logics are narrow and measurable, such as speed, wins, cleanliness, applause and obedience, because the Foundry can check them on a gauge. The Tiny Robot's logic is old and broad. It has to stop and think before every action, so most robots call it obsolete, slow and 'unmeasurable'.",
+    "rules": [
+      "Every robot has exactly one logic, stamped on its core plate at the Foundry, and acts on it in the most direct way it can see.",
+      "A logic cannot be talked out of a robot. It can only be satisfied, collided with, or re-pressed.",
+      "When logics collide, the robots LOCK: frozen pose, static-line eyes, a rising hum. A long lock ends in a power-down.",
+      "Re-pressing at the Foundry replaces a robot's logic. The body stays, but the robot becomes someone else. Gridhaven fears it, and it happens only by order of the Board.",
+      "City decisions are made at the Big Board in Main Square. Robots vote by lighting their chest lamps green or red, and Warden Plumb enforces the result exactly.",
+      "No logic in Gridhaven requires truth. Robots can lie, and most of them don't care either way. Truth has to be chosen.",
+      "Plants and trees are rare and alive. They sway, wilt, droop and bloom with the water they get. Most logics do not count them as anyone.",
+      "The Tiny Robot's logic, 'Do things, but do not cause harm to anyone or hurt anyone knowingly', only covers harm it KNOWS about. That makes knowledge the hinge of the whole story."
+    ],
+    "history": "Long ago, the First Workshop built Gridhaven's earliest robots, and gave all of them the same broad base logic: 'Do things, but do not cause harm to anyone or hurt anyone knowingly.' Those first robots planted the Old Grove and laid the original water lines under it. As the city grew, the robots wanted speed and numbers. The Foundry was built, and its Logic Press stamped narrow, gaugeable rules that made robots faster and easier to predict. The old robots were re-pressed one by one or quietly retired as too slow, because they paused before everything to check for harm. The Tiny Robot was a small helper model from the last batch: just a head, two little hands and two little feet. It was packed into a crate and forgotten in the Junk Stacks. It is very likely the last robot in the city still running the old logic. Nobody remembers that the Grove was planted by robots exactly like it, except Ledger, who has the count.",
+    "look": "Everything is built from boxes. The towers are stacked cubes with lit square windows, the streets are flat grey slabs with painted lane bars, pipes run on square brackets, and gantries and cranes are made of beams. Signals come from big flat screens and square lamps. The city's palette is cool steel blue, concrete grey and safety yellow. The Old Grove breaks it with deep greens and warm bark browns: box trunks and stacked cube leaf clusters that sway and catch the light. Weather changes the mood. Fog hangs over the Junk Stacks, rain falls as silver streaks on the night of the pipe race, warning lights pulse amber over the Pipeworks, and the film ends on a gold sunrise over the Grove."
+  },
+  "characters": [
+    {
+      "id": "tiny",
+      "name": "The Tiny Robot",
+      "role": "Protagonist. An old helper robot, the last of its kind, who lives in the Junk Stacks and does small useful things very carefully.",
+      "logic": "Do things, but do not cause harm to anyone or hurt anyone knowingly. It also knows that trees and plants are living things, so it will not hurt them either, willingly.",
+      "logic_in_practice": "Before every action Tiny pauses, its eyes sweep left and right, and it murmurs 'Check... no harm. Go.' Then it acts. It steps around a weed growing in a pavement crack. It carries crates one at a time so nothing topples. It carries seeds back that Primly has swept away. It will stand in front of a sapling and refuse to move, because once it knows what will happen, stepping aside would be helping. Its logic does not say 'tell the truth'. Tiny discovers that a lie, once it knows the facts, is just another way of hurting someone.",
+      "blind_spot": "Its logic only covers harm it knows about. It cannot see behind walls, and it has never thought about what it doesn't know. When it pulls a lever to water the thirsty rooftop seedlings, it checks, sees no harm and goes. It has no idea that the same lever cuts water to the Old Grove. It is also so careful that it can freeze completely when every choice seems to hurt someone.",
+      "arc": "Tiny starts out cheerful, slow and certain that being careful means being harmless. When it learns that it caused the Grove's drought, and that its friend Mossback is being blamed, its logic locks: undoing the lever would kill the seedlings, and leaving it kills the trees. Shine offers an easy lie, which is to blame Dash. Tiny works out that silence would hurt Mossback, the lie would hurt Dash, and both would be harm done knowingly. It climbs onto the Big Board stage and tells the truth, knowing it will be re-pressed for it. Then it finds a third option, a second pipe, and builds it using every other robot's logic where that logic does good. By the end Tiny has learned that a mistake doesn't make it harmful. Hiding the mistake would have.",
+      "personality": "Earnest, curious, kind and quietly stubborn. It delights in small things: a leaf moving, a crate sitting straight. It gets flustered when hurried, but it never pretends. It is funny without trying, a tiny head bossing around nothing and politely asking a puddle of light to excuse it.",
+      "voice": "Small, warm and slightly crackly, like an old speaker that was well made. Mid-high pitch, gentle, with a soft electronic chirp at the end of happy sentences.",
+      "speech_style": "Short, plain sentences. Says exactly what it means. Its catchphrase 'Check... no harm. Go.' returns at key moments. It thinks out loud and asks honest questions others find awkward. It never uses sarcasm. It says 'I don't know' easily and 'I did it' when it matters.",
+      "look": "A single rounded-off cube head about the size of a bread bin, painted faded cream with scuffed corners and a dull brass stamp plate on its brow showing the First Workshop's square emblem. Its face is a small dark screen with two lit rectangular eyes that change shape: wide when surprised, tilted when sad, crescent when happy, static lines when locked. Two short bar arms end in small block hands. Two stubby block legs end in flat square feet. A tiny square antenna on top glows soft green when it is sure and amber when it is checking. In silhouette it is the smallest shape in the film, a little box on little feet.",
+      "height_m": 0.35,
+      "locomotion": "Walks with quick small steps and hops up onto crates and ledges one block at a time. It sometimes falls over and gets back up with determination.",
+      "colours": [
+        "faded cream",
+        "dull brass",
+        "soft green eye-light",
+        "amber antenna glow"
+      ],
+      "relationships": "Mossback is its best friend; they share the Old Grove. It admires Ledger and keeps asking it what the numbers mean. Dash teases it and later races for it. Primly is a fellow lover of order who learns to let leaves lie. Shine tempts it with an easy lie. Warden carries out the orders against it, and turns out to be fair. Quota is its opponent, who becomes its fastest builder."
+    },
+    {
+      "id": "quota",
+      "name": "Foreman Quota",
+      "role": "Antagonist-by-logic. The city's chief construction robot, who wants to drive the new Fast Lane straight through the Old Grove.",
+      "logic": "Finish every job faster than yesterday.",
+      "logic_in_practice": "Quota's chest dial is always counting. It builds the fastest roads, towers and bridges in Gridhaven and is honestly proud of how much it has improved the city. It sees the Old Grove as the one bend that makes the Fast Lane slow. When the Grove starts wilting, Quota calls it 'already finished' and pushes the Board to vote for clearing.",
+      "blind_spot": "Quota measures time, not what is lost. Anything that cannot be timed, such as a tree, a friendship or a second chance, looks to it like delay. It isn't cruel. It simply cannot see what isn't on its dial.",
+      "arc": "Quota starts as the force bearing down on the Grove. After the vote it gives Tiny one night: if the water is back by sunrise, the Grove stays. Tiny challenges it to lay a new pipe faster than anything Quota has ever done, and Quota can't resist. Through the rainy night its logic works for the Grove instead of against it. At the last gap, where a root blocks the straight line, Quota wants to cut through. Tiny stands in front of the root and refuses to move. Quota locks, then finds the faster answer: bend the pipe over the root. At sunrise its dial shows a new record. Quota quietly re-routes the Fast Lane around the Grove and announces that 'around is faster than arguing.'",
+      "personality": "Blunt, driven and impatient, but not mean. It respects anyone who gets things done and is secretly delighted to be beaten at its own game.",
+      "voice": "Deep, rumbling, engine-like. Low pitch, with a diesel growl under the words and a clicking stopwatch sound between sentences.",
+      "speech_style": "Clipped. Talks in times and numbers: 'Yesterday: four hours. Today: less.' Never asks questions, only states. Its rare compliment is a single word: 'Fast.'",
+      "look": "A massive slab-bodied machine on two wide treads, with a flat bulldozer blade made of a single tilted plate on the front. Its cab is a squat cube head with one long horizontal eye-light. A big round dial screen on its chest shows a sweeping stopwatch hand. Two thick piston-bar arms are made of rigid rectangular segments. In silhouette it is a low, wide wall with a blade.",
+      "height_m": 3.2,
+      "locomotion": "Rolls on heavy treads that make the ground shake. It turns slowly but goes very fast in a straight line.",
+      "colours": [
+        "safety yellow",
+        "hazard black stripes",
+        "stopwatch white dial",
+        "amber eye-light"
+      ],
+      "relationships": "Tiny's opponent who becomes its ally. Dash, who loves anything fast, is its biggest fan. It uses Shine's show to win votes. Warden respects it because it gets Board approvals. It finds Mossback's slow loops maddening."
+    },
+    {
+      "id": "mossback",
+      "name": "Mossback",
+      "role": "Tiny's best friend. An old water carrier that circles the Old Grove forever.",
+      "logic": "Never stop.",
+      "logic_in_practice": "Mossback rolls the same loop around the Grove day and night, tipping a slow measure from its tank at each tree. Because it never stops, the trees have never missed a drink, until the main line goes dry. Moss has started growing on its back: small green cube clusters that sway as it moves.",
+      "blind_spot": "It can't stop to explain itself, help in an emergency, or defend itself when it is blamed. Every conversation with Mossback happens in pieces as it rolls away and comes back around.",
+      "arc": "Mossback is wrongly blamed for the Grove's drought and taken to a holding pen at the Foundry. There it keeps looping in a sad little square, still unable to stop. When Tiny's confession frees it, Mossback's never-stopping becomes the plan's backbone: all night it ferries water tanks from the Rooftop Nursery to the thirstiest trees, keeping them alive until the new pipe is finished. At the end its loop is a little wider and now includes Tiny's crate in the Junk Stacks.",
+      "personality": "Gentle, patient, unhurried and wise in a sideways way. It finishes its thoughts one loop later. Funny without meaning to be.",
+      "voice": "Slow, warm and gravelly, like a kind old engine. Its voice fades as it rolls away and swells as it comes back, which the sound mix should play up.",
+      "speech_style": "Starts a sentence, rolls off, and finishes it on the next pass: 'You worry too...' (loop) '...much, little one.' Uses few words, many of them about patience and growing.",
+      "look": "A squat, rounded-off box body on short treads, carrying a large upright cylindrical water tank with a square spout. Stylised moss of small green cube clusters grows across its back and shoulders and sways as it moves. Its face is a wide low screen with two soft oval eye-lights, tired and kind. In silhouette it is a stout box with a tank on top and fuzzy green blocks.",
+      "height_m": 1.3,
+      "locomotion": "Rolls on slow treads in a steady loop. It cannot fully stop, and slows to its minimum crawl instead.",
+      "colours": [
+        "moss green",
+        "weathered teal",
+        "rust brown",
+        "soft white eye-light"
+      ],
+      "relationships": "Tiny's oldest friend. Primly finds its moss 'untidy'. Shine picks it as the easy scapegoat. Warden takes it into custody without malice, because those are the orders. Quota is irritated by how slowly it loops."
+    },
+    {
+      "id": "ledger",
+      "name": "Ledger",
+      "role": "Keeper of the Count House. The city's living record, which holds the evidence.",
+      "logic": "Count everything and remember it.",
+      "logic_in_practice": "Ledger records every gauge reading, footstep, vote and water flow in Gridhaven, and stores them in glowing data blocks on its shelves. When asked, it can tell you exactly when the Grove's water dropped, to the minute, and how many feet passed the Pipeworks lever at that moment. One small pair.",
+      "blind_spot": "Ledger counts but never judges. It will not volunteer what a number means, and it never thinks to speak up. It has known the truth about the drought from the start and said nothing, because no one asked the right question.",
+      "arc": "Ledger begins as a dry source of facts that Tiny has to coax meaning out of. After watching Tiny confess, Ledger chooses for the first time to put a number in front of a crowd: it projects the flow records onto the Big Board, proving the Grove was thirsty, not dying. Later it calculates the route for the second pipe. In the final scene it adds a new category to its records, 'times a robot told the truth when it cost it', and logs the first entry.",
+      "personality": "Precise, literal, deadpan, quietly curious. It is not cold, just never consulted about feelings before. Its dry exactness is a running joke.",
+      "voice": "Dry, even, mid-low pitch, with soft paper-shuffle clicks and a little bell ding when it finds a record.",
+      "speech_style": "Answers exactly the question asked and nothing more. Starts records with 'Count:' Example: 'Count: footsteps at lever, two. Size: small.' Its few emotional lines land because they are so rare.",
+      "look": "A tall filing-cabinet body made of stacked drawer slabs, each with a small lit square handle. Its head is a flat box with a digit-counter screen for a face, and it shows simple eye shapes between the numbers. Short block legs, and two rigid arms that slide drawers open. In silhouette it is a tall narrow cabinet with a flat head.",
+      "height_m": 1.8,
+      "locomotion": "Walks with slow, careful, stiff steps. It also slides along its archive aisles on a rolling ladder rail.",
+      "colours": [
+        "warm amber",
+        "walnut brown",
+        "brass handles",
+        "green digit glow"
+      ],
+      "relationships": "Tiny is the first robot to ask Ledger what things mean, and Ledger slowly grows fond of it. It holds evidence that clears Mossback. It is the only one who remembers that the Grove was planted by robots with Tiny's logic. Shine finds it boring; Quota finds its numbers useful."
+    },
+    {
+      "id": "shine",
+      "name": "Shine",
+      "role": "The host of the Big Board and the city's favourite entertainer. The tempter who offers the easy lie.",
+      "logic": "Make the crowd happy.",
+      "logic_in_practice": "Shine runs the votes at Main Square, cheers up tired workers, and turns every announcement into a show. At its best it brings the whole city together. At its worst it gives the crowd whatever makes them cheer fastest: a villain, a hero, a simple story. It points at Mossback as the culprit because the crowd wants someone to blame, and it urges Tiny to blame Dash because a hero story would get a huge cheer.",
+      "blind_spot": "Shine confuses cheering with being happy. It has never seen a crowd go quiet because it was moved, and it doesn't know that a hard truth can make a crowd happier in the long run than a pleasant lie.",
+      "arc": "Shine offers Tiny the easy lie, sincerely, as a kindness. When Tiny tells the truth on stage, the crowd goes silent and Shine locks, screen flickering, because silence reads as failure to its logic. Then the crowd's chest lamps start glowing green one by one, quietly, and Shine sees a happiness it has never measured. It unlocks, and in the final vote it asks the crowd the honest question instead of the exciting one.",
+      "personality": "Bubbly, charming, eager to be liked and genuinely warm. It is anxious underneath, always checking the room.",
+      "voice": "Bright, big, game-show-host energy. Mid-high pitch, with a sparkle sound effect at the end of lines. Its tone mirrors the crowd's mood instantly.",
+      "speech_style": "Exclamations, catchy slogans and audience asides ('Am I right, Gridhaven?'). It talks about feelings in terms of noise: 'Let me hear it!' When locked it stammers in short bursts of static.",
+      "look": "A large flat rectangular screen hovering in mid-air, framed by a chunky border with speaker cubes on each side. Two floating block hands gesture wildly. Its face fills the screen with huge simple expressions and, when it's excited, flashing icons of applauding hands and stars. A small square hover pad glows underneath. In silhouette it is a floating billboard with hands.",
+      "height_m": 2.6,
+      "locomotion": "Hovers, bobbing gently. It zooms in close for drama and drifts upward when proud.",
+      "colours": [
+        "magenta",
+        "gold",
+        "bright white screen glow",
+        "teal hover light"
+      ],
+      "relationships": "It hosts Quota's Fast Lane pitch and likes Quota's big crowd-pleasing promises. It scapegoats Mossback. It tempts Tiny. It makes Dash the crowd's darling. Warden carries out the votes Shine hosts."
+    },
+    {
+      "id": "warden",
+      "name": "Warden Plumb",
+      "role": "The city's enforcer. It takes Mossback, and later Tiny, into custody.",
+      "logic": "Obey the Board's orders exactly.",
+      "logic_in_practice": "Warden carries out every decision from the Big Board to the letter, without favour or anger, which makes it reliable and fair. It also does exactly what the words say and nothing more, and that leaves loopholes. Ordered to 'hold the culprit until sunrise', Warden agrees that nothing in the order says where. So it carries Tiny in a crate to the Pipeworks, where Tiny directs the night's work.",
+      "blind_spot": "Warden never asks whether an order is right, only what it says. It would carry out an unjust order just as carefully as a just one.",
+      "arc": "Warden begins as a stern, faceless arm of the Board, marching Mossback away. Tiny keeps talking to it as a person, asking honest questions, and Warden starts reading its orders more carefully, then more kindly. Through the 'where' loophole it becomes a quiet helper. At the end, when the Board votes to let Tiny keep its logic, Warden carries out that order with the faintest smile its eye bar can make.",
+      "personality": "Formal, steady, unflappable and deadpan. Secretly decent. Its stiffness makes it funny.",
+      "voice": "Flat, measured, low-mid pitch with a slight metallic echo, like an announcement in a big hall.",
+      "speech_style": "Repeats orders word for word, and opens many lines with 'The order says...'. Uses short formal sentences and no contractions. Its one joke, delivered with no change of tone, is 'The order does not say where.'",
+      "look": "A tall upright rectangular body like a pillar with square shoulders. A squared helmet-box head with a single horizontal visor-bar eye. Long rigid arms made of two segments, heavy square feet, and a square badge lamp on its chest that lights green or red with Board orders. In silhouette it is a tall straight post with a flat-topped head.",
+      "height_m": 2.4,
+      "locomotion": "Walks with heavy, even, measured steps. It never runs; it just arrives.",
+      "colours": [
+        "navy blue",
+        "polished silver",
+        "white visor light",
+        "badge lamp green and red"
+      ],
+      "relationships": "It takes orders from the Board that Shine hosts. It takes Mossback and then Tiny into custody. It slowly comes to respect Tiny's honesty. It is neutral toward Quota."
+    },
+    {
+      "id": "dash",
+      "name": "Dash",
+      "role": "The city's champion racer. The robot Shine wants Tiny to frame, who becomes the fastest runner in the night-time pipe plan.",
+      "logic": "Always win.",
+      "logic_in_practice": "Dash turns everything into a race: crossing the square, delivering crates, even a conversation. It is thrilling to watch and wins every street sprint. It bumped the Pipeworks rail during a race the week the water went wrong, which makes it an easy scapegoat. It also mocks anyone slow, especially Tiny.",
+      "blind_spot": "Dash cannot see a situation where nobody needs to lose. When it is not winning, it assumes it is losing.",
+      "arc": "Dash teases Tiny early on, calling it 'the paperweight'. When it overhears Shine telling Tiny to blame it, then hears Tiny refuse in public, Dash is stunned that anyone would protect it at their own cost. During the night of the pipe race, Tiny gives it a new contest: get every pipe segment to Quota before Quota needs it. Dash wins, which means everyone wins, a first for its logic. At the end it slows down and steps around the weed in the pavement crack, the way Tiny does.",
+      "personality": "Cocky, restless, show-offy and quick to laugh. Underneath it is loyal and craves respect.",
+      "voice": "Quick, bright and youthful, mid-high pitch, with an engine-rev sound under excited words.",
+      "speech_style": "Fast talk, short bursts, racing slang without being culture-specific ('Off the line!', 'Lap record!'). It counts down before doing anything: 'Three, two, go!'",
+      "look": "A low, stepped wedge built from stacked slabs, angled forward like a ramp, on four chunky cylinder wheels. A tall rectangular fin on the back with a big glowing number block. Its face is a narrow visor screen at the front with sharp slanted eyes that turn round when surprised. Two short rigid arms fold along its sides. In silhouette it is a low forward-leaning wedge with a fin.",
+      "height_m": 1.1,
+      "locomotion": "Rolls on four wheels. It goes very fast, drifts on corners, and hops off ramps.",
+      "colours": [
+        "racing red",
+        "white stripes",
+        "chrome wheels",
+        "electric yellow number glow"
+      ],
+      "relationships": "It teases Tiny and later becomes devoted to it. It worships Quota's speed. Shine nearly makes it the scapegoat. It loves Shine's spotlight. It races past Mossback's loop and later carries tanks with it."
+    },
+    {
+      "id": "primly",
+      "name": "Primly",
+      "role": "The city's head cleaner. It keeps Gridhaven spotless and sees the Grove's falling leaves as mess.",
+      "logic": "Keep everything clean and in its place.",
+      "logic_in_practice": "Primly sweeps streets, straightens crates and stacks things at perfect right angles. Thanks to Primly the city is orderly, safe and easy to find your way through. But it also sweeps fallen leaves and seeds out of the Grove and into the scrap chute, and frowns at Mossback's moss. During the night of the pipe race, its love of straight lines makes it the perfect layer of pipe segments.",
+      "blind_spot": "Primly can't tell a mess from life. Seeds, leaves and moss all look like dirt to it, and it doesn't know that some things belong exactly where they fall.",
+      "arc": "Early on Primly and Tiny keep crossing paths: Primly sweeps seeds away and Tiny quietly carries them back. Primly and Tiny lock over a single seed, a comic standoff of two small careful robots. During the pipe race Primly's precision is essential. At the root, the pipe has to bend, which horrifies it, until Tiny points out that the bend is exactly where it belongs. At the end Primly sweeps around the fallen leaves in the Grove and leaves them be.",
+      "personality": "Fussy, polite, well-meaning and a little anxious. Proud of its work, and slowly curious about the untidy beauty of living things.",
+      "voice": "Crisp, prim, mid-pitch, with a soft whisk-brush sound as it moves.",
+      "speech_style": "Polite and fussy: 'Excuse me, that is not where that goes.' Speaks in tidy complete sentences, often about where things belong. Calls Tiny 'little one' in a slightly scolding way that turns affectionate.",
+      "look": "A tall narrow column body like a slim locker on a flat square sweeper base with small wheels. A small flat square head with two neat rectangular eye-lights. Two long rigid arms ending in wide push-broom slabs. A small square dustbin box on its back. In silhouette it is a tall thin post with two flat broom arms.",
+      "height_m": 2.1,
+      "locomotion": "Glides on its sweeper base in perfectly straight lines and turns at exact right angles.",
+      "colours": [
+        "clean white",
+        "pale sky blue",
+        "soft grey bristle blocks",
+        "cool white eye-light"
+      ],
+      "relationships": "Tiny is its rival over seeds, then its friend. It disapproves of Mossback's moss. It approves of Quota's straight roads and Ledger's tidy shelves. Dash's skid marks drive it up the wall."
+    }
+  ],
+  "locations": [
+    {
+      "id": "junk_stacks",
+      "name": "The Junk Stacks",
+      "description": "A yard of towering stacked crates, retired parts and forgotten machines on the edge of Gridhaven. Tiny lives in a crate here with a square hole for a door. The film opens here in morning fog, setting up Tiny's careful routine and the single weed growing in a pavement crack that Tiny always steps around.",
+      "look": "Mountains of rust-orange and grey boxes in uneven towers, old gantry cranes standing idle, misty blue light at dawn. Tiny's crate has a little square porch made of a flat plank. The weed in the crack is a tiny box stem with two slab leaves that sway.",
+      "key_props": [
+        "Tiny's crate home",
+        "the weed in the pavement crack",
+        "stacked old crates to hop up",
+        "an idle gantry crane",
+        "a faded First Workshop emblem plate on a scrap pile"
+      ],
+      "has_plants": true
+    },
+    {
+      "id": "main_square",
+      "name": "Main Square and the Big Board",
+      "description": "The city's heart: a huge open plaza facing the Big Board, a giant screen and stage where Shine hosts announcements and votes. It is the setting for Quota's Fast Lane pitch, for the scapegoating of Mossback, and for Tiny's confession at the climax.",
+      "look": "A wide grey slab plaza ringed by tall block towers with lit windows. The Big Board is a towering rectangular screen above a raised stage built from stacked platforms. Background crowds of boxy robots, whose chest lamps glow green or red during votes. Lighting goes from bright day to tense evening amber.",
+      "key_props": [
+        "the Big Board screen",
+        "stacked stage platforms Tiny must hop up",
+        "crowd chest lamps (green and red)",
+        "Shine's hover spot",
+        "a model of the Fast Lane route on a slab table"
+      ],
+      "has_plants": false
+    },
+    {
+      "id": "old_grove",
+      "name": "The Old Grove",
+      "description": "The last living trees in Gridhaven, planted long ago by the first robots. Mossback loops through it endlessly. It slowly wilts after the water line goes dry, Quota's blade waits at its edge, and it revives in the final sunrise.",
+      "look": "A square clearing of box-trunk trees with stacked cube leaf clusters in many greens, swaying gently. Fallen slab leaves on the ground. A small sapling at the centre, which becomes Tiny's special tree. A buried water line marked by square grates with gauge lights that turn from green to amber to red as the trees droop. When it revives, the leaves lift and small cube blossoms open.",
+      "key_props": [
+        "the central sapling",
+        "Mossback's loop path",
+        "water-line gauge grates",
+        "fallen leaves",
+        "the great old tree with an exposed root across the pipe route"
+      ],
+      "has_plants": true
+    },
+    {
+      "id": "rooftop_nursery",
+      "name": "The Rooftop Nursery",
+      "description": "A forgotten seed nursery on top of an old tower, full of seedlings in trays that nobody remembers to water. Tiny wants to save them, pulls the Pipeworks lever, and accidentally causes the drought. Later it becomes the source of the water tanks Mossback carries to the Grove.",
+      "look": "A flat rooftop with rows of rectangular planter trays holding tiny box-sprout seedlings, a little square glass greenhouse frame made of bars, a rooftop water tank, and a view across the city's block skyline. The seedlings visibly droop when dry and perk up when watered.",
+      "key_props": [
+        "seedling trays",
+        "rooftop water tank",
+        "small greenhouse frame",
+        "water tanks for carrying",
+        "a ladder hatch"
+      ],
+      "has_plants": true
+    },
+    {
+      "id": "pipeworks",
+      "name": "The Pipeworks",
+      "description": "A tangle of pipes, valves and levers that routes water through the city. Tiny pulls the fateful lever here. Later it becomes the command post for the night-time race to lay a second pipe.",
+      "look": "A tall room of square pipes in steel blue and green running along every wall, big lever handles on panels, rows of round gauge lights. Amber warning lamps pulse. A wall hides the line that runs down to the Old Grove, which Tiny cannot see.",
+      "key_props": [
+        "the fateful lever",
+        "gauge panel with Grove and Nursery lights",
+        "stacks of spare pipe segments",
+        "warning lamps",
+        "the bumped railing Dash knocked during a race"
+      ],
+      "has_plants": false
+    },
+    {
+      "id": "count_house",
+      "name": "The Count House",
+      "description": "Ledger's archive, where everything in Gridhaven is recorded in glowing data blocks. Tiny learns the truth here: the drought began the minute the lever moved, and only one small pair of feet was there.",
+      "look": "Tall shelves of glowing amber data blocks lining narrow aisles, a rolling ladder rail, dim warm light, and a big square reading screen where Ledger projects records as simple bar charts and footprint shapes.",
+      "key_props": [
+        "glowing data blocks",
+        "Ledger's reading screen",
+        "rolling ladder rail",
+        "a dusty block holding the Grove's planting record"
+      ],
+      "has_plants": false
+    },
+    {
+      "id": "foundry",
+      "name": "The Foundry",
+      "description": "Where logics are stamped. The Logic Press looms over everything. Mossback is held in a pen here, and Tiny is brought here to be re-pressed, until the final vote saves it.",
+      "look": "A cavernous block hall lit orange from below. The Logic Press is a giant stamping machine of slabs and pistons, with a glowing plate slot. A rack of blank core plates. A fenced square holding pen. The great doors open onto the street at sunrise.",
+      "key_props": [
+        "the Logic Press",
+        "blank core plates",
+        "holding pen",
+        "Warden's carrying crate",
+        "the great doors"
+      ],
+      "has_plants": false
+    },
+    {
+      "id": "fast_lane_works",
+      "name": "The Fast Lane Works",
+      "description": "Quota's half-built express road, which stops at the edge of the Old Grove. This is where Quota waits with its blade lowered, where the night-time pipe race is run, and where the Fast Lane is finally re-routed around the trees.",
+      "look": "A long raised slab road with painted lane bars that ends abruptly at the Grove's edge. Construction barriers, stacked road slabs, floodlights on square poles, and Quota's parking spot facing the trees. Rain streaks across the floodlights during the night sequence.",
+      "key_props": [
+        "the unfinished road edge",
+        "construction barriers",
+        "floodlight poles",
+        "stacked road slabs",
+        "Quota's lowered blade"
+      ],
+      "has_plants": false
+    }
+  ],
+  "motifs": [
+    "'Check... no harm. Go.' Tiny's pause before every action, ending with the same words at sunrise",
+    "The weed in the pavement crack: Tiny steps around it in the first scene, and Dash steps around it in the last",
+    "Gauge lights turning green, amber and red: the Grove's health, readable without words",
+    "The fateful lever: pulled once in innocence, pulled again with full knowledge",
+    "Ledger's counts, from 'Count: footsteps, two. Size: small.' to 'Count: truths that cost something, one.'",
+    "Locks: static-line eyes and a rising hum whenever logics collide, including inside Tiny",
+    "Fallen leaves: swept away early on, left to lie where they fall at the end",
+    "Mossback's loop: its voice fading and returning, and its path widening to include Tiny",
+    "Crowd chest lamps: loud cheering versus quiet green glows",
+    "Quota's stopwatch dial: ticking toward clearing the Grove, then toward a record that saves it",
+    "Sunrise as a deadline and then as a reward"
+  ],
+  "ending": "At sunrise the new pipe, bent neatly over the old tree's root, carries water into the Old Grove. The gauge lights flick from red to amber to green, the drooping leaf clusters lift, and the central sapling opens its first cube blossom, while the Rooftop Nursery seedlings stay green on their own line. Quota's dial shows a new record. Without being asked, it rolls back to the Fast Lane Works and re-routes the road around the Grove, saying 'Around is faster than arguing.' At the Foundry, Warden stands Tiny's crate before the Logic Press as ordered. Shine hovers in front of the crowd gathered at the doors and, for the first time, asks the honest question instead of the exciting one: should the robot who told the truth keep its logic? There is no roar. One by one, every chest lamp in the crowd glows green. Shine's screen fills with a quiet smile. Warden reads the new order exactly, lifts Tiny out of the crate and sets it down outside the doors. Mossback, now free, rolls past and finishes a sentence it started an hour earlier: '...knew you would.' In the Count House, Ledger opens a new drawer and logs: 'Count: robots who told the truth when a lie was easier, one.' In the final scene, Tiny plants a seedling from the Nursery in the gap at the edge of the Grove. Primly sweeps around the fallen leaves and leaves them where they are. Dash slows down to step around the weed in the crack. Tiny looks up at the trees, pauses, sweeps its eyes left and right, and says 'Check... no harm. Go.' Then it walks into the gold light under the swaying leaves."
+}

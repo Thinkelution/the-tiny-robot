@@ -1,0 +1,75 @@
+{
+  "id": "S06",
+  "title": "Perking Up",
+  "location_id": "rooftop_nursery",
+  "time_of_day": "sunset",
+  "characters": [
+    "tiny"
+  ],
+  "beats": [
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A deep gurgle climbs the dry rooftop pipe, rising in pitch, then a steady hum as water flows into the rooftop tank.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's head pops up through the ladder hatch, then the rest of it hops onto the roof. It trots to the rooftop tank and gives the side a careful knock with one block hand.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A full, solid 'tonk', not the hollow ring from before.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny turns to the nearest planter tray. One drooping box-sprout slowly lifts its two slab leaves, shifting from grey-green to bright green. Then the next one, and the next, rippling down the row. Tiny's rectangular eyes go wide.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes curve into happy crescents and its antenna glows soft green. It walks along the trays with quick small steps, stopping at each perked-up seedling to give it a tiny nod.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "softly, delighted, a chirp at the end",
+      "text": "Hello. Hello. Hello, you.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "At the end of the last row one seedling is still drooping. Tiny stops, leans in close and waits, eyes level with the sprout. With a little wobble, the seedling lifts its leaves. Tiny chirps and bounces once on its square feet.",
+      "est_seconds": 4.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks to the roof edge and sits down with its stubby legs dangling. Beyond it the block skyline glows orange and gold, and square windows light up one by one as the sun sinks.",
+      "est_seconds": 4.5
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Far across the city, the Old Grove is a small dark green square between the towers. A breeze sways the seedlings behind Tiny, but the distant trees stay still. Tiny doesn't notice. Its crescent eyes dim to a contented half-close.",
+      "est_seconds": 5
+    }
+  ],
+  "staging_notes": "Open tight on the pipe and tank so the sound of water does the work. Then pull wide to let the green ripple travel down the rows of trays toward camera as Tiny walks against it. End on a long two-plane shot from behind Tiny at the roof edge: Tiny in silhouette in the foreground, the seedlings swaying at the frame edge, and the tiny, still Grove in soft focus far off, so the audience feels the irony that Tiny cannot see. Keep the light warm and golden throughout, with the Grove's green slightly duller than the seedlings."
+}

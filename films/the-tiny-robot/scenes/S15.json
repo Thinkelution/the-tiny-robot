@@ -1,0 +1,213 @@
+{
+  "id": "S15",
+  "title": "I Did It",
+  "location_id": "main_square",
+  "time_of_day": "evening",
+  "characters": [
+    "tiny",
+    "shine",
+    "quota",
+    "dash",
+    "warden",
+    "ledger"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "COLD OPEN, OLD GROVE, AFTERNOON. Tiny hurries between drooping trees, hugging a box-sized water can almost as big as itself. It tips the can onto the central sapling's grate. The water gurgles down and is gone. The gauge light stays red.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Quick dissolves as the shadows lengthen. Tiny climbs down the Nursery ladder hatch with a full can, trots into the Grove, tips it out and trots back. Again. And again. Every time, the sapling's grate glows red.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny stops beside the sapling, holding an empty can. It turns slowly. Row after row of drooping box-trunk trees stretches away, and their red grates glow one after another into the distance. Its eyes tilt sad.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "quietly, to itself",
+      "text": "Forty trees. One me. Too small to do this alone.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny sets the can down neatly beside the sapling and turns toward the city, where the Big Board glows above the block towers. Its antenna holds steady green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "MAIN SQUARE, EVENING, under tense amber light. A dense crowd of boxy robots fills the plaza, their chest lamps dim. Quota idles beside the Fast Lane model with its blade raised and its dial ticking. Warden stands at the stage edge. Dash is parked at the front, and Ledger stands tall and still beneath a tower at the side. Shine hovers centre stage before the Big Board.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "big and bright, applause icons flashing",
+      "text": "Clearing vote tonight, Gridhaven! But first, a special guest!",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's screen winks toward the back of the square. A spotlight swings across the crowd and lands on Tiny. Robots shuffle apart, and Tiny walks up the gap with quick small steps.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "sparkle sound, floating hands spread wide",
+      "text": "Our little detective! Let me hear it!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "The crowd cheers. At the front, Dash doesn't. Its whole chassis is tense, its wheels creep back an inch, and its slanted eyes narrow on Tiny as Tiny passes.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny reaches the stacked stage platforms. The first block is taller than its head. It stops, and its eyes sweep left, then right, as its antenna glows amber.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "murmured",
+      "text": "Check... no harm. Go.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny hops up the first block, then the second. On the third its foot slips off the edge. It tumbles back down onto the second block and lands flat on its head with its little feet kicking in the air.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A ripple of friendly crowd chuckles: soft amused beeps and boops.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny rocks, rolls over and pushes itself upright, eyes set in a determined flat line. It hops again, one block, two, three, four, and arrives on top.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "deep rumble, stopwatch click",
+      "text": "Stage: forty seconds.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Tiny stands in the spotlight, the smallest shape on the stage. Behind it the Big Board shows its little face enormous. Shine floats close with its hands raised, applause and star icons lined up and ready on its screen.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "eager stage whisper",
+      "text": "Go on. Tell them about the railing!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny looks up at Shine. It looks out at the sea of dim chest lamps. Then it looks down at Dash, and Dash looks right back.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small but clear",
+      "text": "Mossback did not do it.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "still looking at Dash",
+      "text": "Dash did not do it.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash's eyes snap wide and round. Beside Tiny, Shine's grin falters, and its floating hands freeze halfway into a clap.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "steady, antenna glowing green",
+      "text": "I pulled the lever. The water stopped. I did it.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "The crowd murmur cuts off. Total silence, apart from the low electric hum of the Big Board.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Wide shot. Nobody moves and no chest lamp changes. Warden's visor bar turns slowly toward Tiny. Quota's dial hand stops mid-sweep. Ledger's digit face stops counting and goes blank.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's applause icons stutter and freeze. Its screen fills with flickering static lines as a rising hum builds, and its hover pad dips. Shine is locked mid-air.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "short bursts of static",
+      "text": "Let me h... h... hear...",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny stands alone in the spotlight beneath the frozen, humming screen, its small hands at its sides. It does not look away. Hold.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "The cold-open montage plays in warm late-afternoon light at the Old Grove, then hard-cuts to the cool amber square so the evening feels like the cost of the day's failed effort. Keep the camera low at Tiny's height for the stage climb, which makes each platform look like a cliff, then jump to a high wide shot for the confession, so Tiny is a tiny cream speck under a giant Big Board image of its own face. In the silence, the sound mix drops everything except the Board's hum and Shine's rising lock hum, and the crowd's chest lamps must stay dim and unchanged so the green wave in S16 lands."
+}

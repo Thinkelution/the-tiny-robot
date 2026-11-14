@@ -1,0 +1,1061 @@
+{
+  "id": "warden",
+  "name": "Warden Plumb",
+  "height_m": 2.4,
+  "locomotion": "walk",
+  "materials": [
+    {
+      "id": "warden_navy",
+      "kind": "painted_metal",
+      "color": "#1B2A4A",
+      "roughness": 0.42,
+      "metallic": 0.35,
+      "wear": 0.22,
+      "dirt": 0.12,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "warden_silver",
+      "kind": "bare_metal",
+      "color": "#C9CFD8",
+      "roughness": 0.24,
+      "metallic": 1,
+      "wear": 0.08,
+      "dirt": 0.08,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "warden_joint",
+      "kind": "rubber",
+      "color": "#202329",
+      "roughness": 0.75,
+      "metallic": 0,
+      "wear": 0.15,
+      "dirt": 0.2,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "warden_lamp",
+      "kind": "emissive",
+      "color": "#3DFF7A",
+      "roughness": 0.3,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 4
+    }
+  ],
+  "parts": [
+    {
+      "name": "body",
+      "role": "body",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.64,
+        0.42,
+        1
+      ],
+      "pivot": [
+        0,
+        0,
+        1
+      ],
+      "offset": [
+        0,
+        0,
+        0.5
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.02
+    },
+    {
+      "name": "pelvis",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.52,
+        0.36,
+        0.1
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.02
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_joint",
+      "bevel": 0.01
+    },
+    {
+      "name": "belt",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.66,
+        0.44,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0,
+        0.06
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.008
+    },
+    {
+      "name": "neck",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.16,
+        0.16,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0,
+        1
+      ],
+      "offset": [
+        0,
+        0,
+        0.04
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_joint",
+      "bevel": 0.008
+    },
+    {
+      "name": "head",
+      "role": "head",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.46,
+        0.44,
+        0.32
+      ],
+      "pivot": [
+        0,
+        0,
+        1.06
+      ],
+      "offset": [
+        0,
+        0,
+        0.16
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.018
+    },
+    {
+      "name": "helmet_cap",
+      "role": "extra",
+      "parent": "head",
+      "shape": "slab",
+      "size": [
+        0.5,
+        0.48,
+        0.03
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.335
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.006
+    },
+    {
+      "name": "ear_l",
+      "role": "extra",
+      "parent": "head",
+      "shape": "box",
+      "size": [
+        0.04,
+        0.2,
+        0.16
+      ],
+      "pivot": [
+        0.24,
+        0,
+        0.16
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.006
+    },
+    {
+      "name": "ear_r",
+      "role": "extra",
+      "parent": "head",
+      "shape": "box",
+      "size": [
+        0.04,
+        0.2,
+        0.16
+      ],
+      "pivot": [
+        -0.24,
+        0,
+        0.16
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.006
+    },
+    {
+      "name": "shoulder_l",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.22,
+        0.3,
+        0.16
+      ],
+      "pivot": [
+        0.39,
+        0,
+        0.92
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.012
+    },
+    {
+      "name": "shoulder_r",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.22,
+        0.3,
+        0.16
+      ],
+      "pivot": [
+        -0.39,
+        0,
+        0.92
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.012
+    },
+    {
+      "name": "arm_l",
+      "role": "arm_l",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.13,
+        0.15,
+        0.48
+      ],
+      "pivot": [
+        0.4,
+        0,
+        0.92
+      ],
+      "offset": [
+        0,
+        0,
+        -0.26
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.01
+    },
+    {
+      "name": "forearm_l",
+      "role": "forearm_l",
+      "parent": "arm_l",
+      "shape": "box",
+      "size": [
+        0.14,
+        0.16,
+        0.48
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.54
+      ],
+      "offset": [
+        0,
+        0,
+        -0.25
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.01
+    },
+    {
+      "name": "elbow_l",
+      "role": "extra",
+      "parent": "forearm_l",
+      "shape": "cylinder_x",
+      "size": [
+        0.16,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_joint",
+      "bevel": 0.006
+    },
+    {
+      "name": "hand_l",
+      "role": "hand_l",
+      "parent": "forearm_l",
+      "shape": "box",
+      "size": [
+        0.12,
+        0.16,
+        0.18
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.5
+      ],
+      "offset": [
+        0,
+        0,
+        -0.09
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.01
+    },
+    {
+      "name": "arm_r",
+      "role": "arm_r",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.13,
+        0.15,
+        0.48
+      ],
+      "pivot": [
+        -0.4,
+        0,
+        0.92
+      ],
+      "offset": [
+        0,
+        0,
+        -0.26
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.01
+    },
+    {
+      "name": "forearm_r",
+      "role": "forearm_r",
+      "parent": "arm_r",
+      "shape": "box",
+      "size": [
+        0.14,
+        0.16,
+        0.48
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.54
+      ],
+      "offset": [
+        0,
+        0,
+        -0.25
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.01
+    },
+    {
+      "name": "elbow_r",
+      "role": "extra",
+      "parent": "forearm_r",
+      "shape": "cylinder_x",
+      "size": [
+        0.16,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_joint",
+      "bevel": 0.006
+    },
+    {
+      "name": "hand_r",
+      "role": "hand_r",
+      "parent": "forearm_r",
+      "shape": "box",
+      "size": [
+        0.12,
+        0.16,
+        0.18
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.5
+      ],
+      "offset": [
+        0,
+        0,
+        -0.09
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.01
+    },
+    {
+      "name": "leg_l",
+      "role": "leg_l",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.2,
+        0.22,
+        0.9
+      ],
+      "pivot": [
+        0.17,
+        0,
+        0.02
+      ],
+      "offset": [
+        0,
+        0,
+        -0.45
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.012
+    },
+    {
+      "name": "knee_l",
+      "role": "extra",
+      "parent": "leg_l",
+      "shape": "slab",
+      "size": [
+        0.16,
+        0.03,
+        0.16
+      ],
+      "pivot": [
+        0,
+        -0.11,
+        -0.45
+      ],
+      "offset": [
+        0,
+        -0.015,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.005
+    },
+    {
+      "name": "foot_l",
+      "role": "foot_l",
+      "parent": "leg_l",
+      "shape": "box",
+      "size": [
+        0.26,
+        0.42,
+        0.12
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.9
+      ],
+      "offset": [
+        0,
+        -0.04,
+        -0.06
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.014
+    },
+    {
+      "name": "ankle_l",
+      "role": "extra",
+      "parent": "foot_l",
+      "shape": "cylinder_x",
+      "size": [
+        0.22,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.02
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_joint",
+      "bevel": 0.006
+    },
+    {
+      "name": "leg_r",
+      "role": "leg_r",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.2,
+        0.22,
+        0.9
+      ],
+      "pivot": [
+        -0.17,
+        0,
+        0.02
+      ],
+      "offset": [
+        0,
+        0,
+        -0.45
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_navy",
+      "bevel": 0.012
+    },
+    {
+      "name": "knee_r",
+      "role": "extra",
+      "parent": "leg_r",
+      "shape": "slab",
+      "size": [
+        0.16,
+        0.03,
+        0.16
+      ],
+      "pivot": [
+        0,
+        -0.11,
+        -0.45
+      ],
+      "offset": [
+        0,
+        -0.015,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.005
+    },
+    {
+      "name": "foot_r",
+      "role": "foot_r",
+      "parent": "leg_r",
+      "shape": "box",
+      "size": [
+        0.26,
+        0.42,
+        0.12
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.9
+      ],
+      "offset": [
+        0,
+        -0.04,
+        -0.06
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.014
+    },
+    {
+      "name": "ankle_r",
+      "role": "extra",
+      "parent": "foot_r",
+      "shape": "cylinder_x",
+      "size": [
+        0.22,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.02
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_joint",
+      "bevel": 0.006
+    },
+    {
+      "name": "badge_plate",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.2,
+        0.03,
+        0.2
+      ],
+      "pivot": [
+        0,
+        -0.21,
+        0.72
+      ],
+      "offset": [
+        0,
+        -0.015,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_silver",
+      "bevel": 0.006
+    },
+    {
+      "name": "badge_lamp",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.13,
+        0.03,
+        0.13
+      ],
+      "pivot": [
+        0,
+        -0.24,
+        0.72
+      ],
+      "offset": [
+        0,
+        -0.012,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "warden_lamp",
+      "bevel": 0.005
+    }
+  ],
+  "face": {
+    "part": "head",
+    "screen": [
+      0.4,
+      0.14
+    ],
+    "at": [
+      0,
+      0.03
+    ],
+    "eye_color": "#F4F8FF",
+    "eyes": 1,
+    "eye_size": [
+      0.34,
+      0.07
+    ],
+    "eye_gap": 0,
+    "glow": "#E8F0FF"
+  },
+  "details": [
+    {
+      "part": "body",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "warden_silver"
+    },
+    {
+      "part": "body",
+      "kind": "vent",
+      "side": "front",
+      "u": 0,
+      "v": -0.45,
+      "w": 0.5,
+      "h": 0.14,
+      "count": 5,
+      "material": "warden_joint"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "front",
+      "u": 0,
+      "v": 0.1,
+      "w": 0.7,
+      "h": 0.12,
+      "material": "warden_silver"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "back",
+      "u": 0,
+      "v": 0.15,
+      "w": 0.6,
+      "h": 0.7,
+      "material": "warden_navy"
+    },
+    {
+      "part": "body",
+      "kind": "vent",
+      "side": "back",
+      "u": 0,
+      "v": -0.55,
+      "w": 0.4,
+      "h": 0.15,
+      "count": 4,
+      "material": "warden_joint"
+    },
+    {
+      "part": "body",
+      "kind": "badge",
+      "side": "back",
+      "u": 0,
+      "v": 0.65,
+      "w": 0.3,
+      "h": 0.12,
+      "material": "warden_silver"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "left",
+      "u": 0,
+      "v": 0.2,
+      "w": 0.6,
+      "h": 0.5,
+      "material": "warden_navy"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "right",
+      "u": 0,
+      "v": 0.2,
+      "w": 0.6,
+      "h": 0.5,
+      "material": "warden_navy"
+    },
+    {
+      "part": "head",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "warden_silver"
+    },
+    {
+      "part": "head",
+      "kind": "vent",
+      "side": "back",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.4,
+      "count": 4,
+      "material": "warden_joint"
+    },
+    {
+      "part": "head",
+      "kind": "light",
+      "side": "left",
+      "u": 0,
+      "v": -0.6,
+      "w": 0.12,
+      "h": 0.1,
+      "color": "#FF3B30"
+    },
+    {
+      "part": "head",
+      "kind": "light",
+      "side": "right",
+      "u": 0,
+      "v": -0.6,
+      "w": 0.12,
+      "h": 0.1,
+      "color": "#FF3B30"
+    },
+    {
+      "part": "shoulder_l",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "warden_navy"
+    },
+    {
+      "part": "shoulder_r",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "warden_navy"
+    },
+    {
+      "part": "leg_l",
+      "kind": "panel",
+      "side": "left",
+      "u": 0,
+      "v": 0.3,
+      "w": 0.6,
+      "h": 0.3,
+      "material": "warden_silver"
+    },
+    {
+      "part": "leg_r",
+      "kind": "panel",
+      "side": "right",
+      "u": 0,
+      "v": 0.3,
+      "w": 0.6,
+      "h": 0.3,
+      "material": "warden_silver"
+    },
+    {
+      "part": "foot_l",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "warden_navy"
+    },
+    {
+      "part": "foot_r",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "warden_navy"
+    },
+    {
+      "part": "forearm_l",
+      "kind": "panel",
+      "side": "front",
+      "u": 0,
+      "v": -0.6,
+      "w": 0.8,
+      "h": 0.15,
+      "material": "warden_silver"
+    },
+    {
+      "part": "forearm_r",
+      "kind": "panel",
+      "side": "front",
+      "u": 0,
+      "v": -0.6,
+      "w": 0.8,
+      "h": 0.15,
+      "material": "warden_silver"
+    }
+  ],
+  "design_notes": "Warden reads as a 2.4 m upright post: a tall unbroken navy pillar body, square silver shoulder caps and a flat-topped helmet box, with long rigid two-segment arms hanging straight to mid-thigh, so its silhouette is a sign-post rather than a figure. Every shape is a right angle and every joint lines up on a straight vertical axis, expressing a mind that follows the literal text of an order and nothing beside it; the single horizontal visor bar is a ruled line that can only tilt or thin, which makes its final faint smile land. Its heavy square feet and evenly spaced knee plates set up its measured, arriving walk. The colour story is the uniform of Gridhaven authority: deep navy paint with polished silver trim that echoes the city's steel blue, a cold white visor, and a square chest badge lamp that is the only place the Board's verdict shows, switching between green and red."
+}

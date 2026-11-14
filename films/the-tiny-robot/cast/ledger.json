@@ -1,0 +1,961 @@
+{
+  "id": "ledger",
+  "name": "Ledger",
+  "height_m": 1.8,
+  "locomotion": "walk",
+  "materials": [
+    {
+      "id": "ledger_walnut",
+      "kind": "painted_metal",
+      "color": "#5A3A22",
+      "roughness": 0.55,
+      "metallic": 0.3,
+      "wear": 0.4,
+      "dirt": 0.3,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "ledger_amber",
+      "kind": "painted_metal",
+      "color": "#D08A2A",
+      "roughness": 0.45,
+      "metallic": 0.35,
+      "wear": 0.45,
+      "dirt": 0.25,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "ledger_brass",
+      "kind": "bare_metal",
+      "color": "#B8913A",
+      "roughness": 0.35,
+      "metallic": 1,
+      "wear": 0.3,
+      "dirt": 0.35,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "ledger_glow",
+      "kind": "emissive",
+      "color": "#7CFF9A",
+      "roughness": 0.3,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 3
+    },
+    {
+      "id": "ledger_rubber",
+      "kind": "rubber",
+      "color": "#2A2420",
+      "roughness": 0.85,
+      "metallic": 0,
+      "wear": 0.3,
+      "dirt": 0.5,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    }
+  ],
+  "parts": [
+    {
+      "name": "body",
+      "role": "body",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.56,
+        0.48,
+        1.1
+      ],
+      "pivot": [
+        0,
+        0,
+        0.4
+      ],
+      "offset": [
+        0,
+        0,
+        0.55
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_walnut",
+      "bevel": 0.02
+    },
+    {
+      "name": "plinth",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.6,
+        0.52,
+        0.05
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.025
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_brass",
+      "bevel": 0.01
+    },
+    {
+      "name": "top_cap",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.62,
+        0.54,
+        0.04
+      ],
+      "pivot": [
+        0,
+        0,
+        1.1
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_brass",
+      "bevel": 0.01
+    },
+    {
+      "name": "drawer_1",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.5,
+        0.04,
+        0.235
+      ],
+      "pivot": [
+        0,
+        -0.25,
+        0.1775
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_amber",
+      "bevel": 0.008
+    },
+    {
+      "name": "drawer_2",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.5,
+        0.04,
+        0.235
+      ],
+      "pivot": [
+        0,
+        -0.25,
+        0.4325
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_amber",
+      "bevel": 0.008
+    },
+    {
+      "name": "drawer_3",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.5,
+        0.04,
+        0.235
+      ],
+      "pivot": [
+        0,
+        -0.25,
+        0.6875
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_amber",
+      "bevel": 0.008
+    },
+    {
+      "name": "drawer_4",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.5,
+        0.04,
+        0.235
+      ],
+      "pivot": [
+        0,
+        -0.25,
+        0.9425
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_amber",
+      "bevel": 0.008
+    },
+    {
+      "name": "handle_1",
+      "role": "extra",
+      "parent": "drawer_1",
+      "shape": "box",
+      "size": [
+        0.1,
+        0.025,
+        0.045
+      ],
+      "pivot": [
+        0,
+        -0.03,
+        -0.02
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_glow",
+      "bevel": 0.005
+    },
+    {
+      "name": "handle_2",
+      "role": "extra",
+      "parent": "drawer_2",
+      "shape": "box",
+      "size": [
+        0.1,
+        0.025,
+        0.045
+      ],
+      "pivot": [
+        0,
+        -0.03,
+        -0.02
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_glow",
+      "bevel": 0.005
+    },
+    {
+      "name": "handle_3",
+      "role": "extra",
+      "parent": "drawer_3",
+      "shape": "box",
+      "size": [
+        0.1,
+        0.025,
+        0.045
+      ],
+      "pivot": [
+        0,
+        -0.03,
+        -0.02
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_glow",
+      "bevel": 0.005
+    },
+    {
+      "name": "handle_4",
+      "role": "extra",
+      "parent": "drawer_4",
+      "shape": "box",
+      "size": [
+        0.1,
+        0.025,
+        0.045
+      ],
+      "pivot": [
+        0,
+        -0.03,
+        -0.02
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_glow",
+      "bevel": 0.005
+    },
+    {
+      "name": "neck",
+      "role": "extra",
+      "parent": "body",
+      "shape": "cylinder_z",
+      "size": [
+        0.16,
+        0.16,
+        0.05
+      ],
+      "pivot": [
+        0,
+        0,
+        1.12
+      ],
+      "offset": [
+        0,
+        0,
+        0.02
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_brass",
+      "bevel": 0.006
+    },
+    {
+      "name": "head",
+      "role": "head",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.64,
+        0.4,
+        0.24
+      ],
+      "pivot": [
+        0,
+        0,
+        1.14
+      ],
+      "offset": [
+        0,
+        0,
+        0.14
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_amber",
+      "bevel": 0.02
+    },
+    {
+      "name": "bell",
+      "role": "antenna",
+      "parent": "head",
+      "shape": "cylinder_z",
+      "size": [
+        0.06,
+        0.06,
+        0.04
+      ],
+      "pivot": [
+        0.22,
+        0.05,
+        0.26
+      ],
+      "offset": [
+        0,
+        0,
+        0.02
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_brass",
+      "bevel": 0.01
+    },
+    {
+      "name": "arm_l",
+      "role": "arm_l",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.08,
+        0.09,
+        0.34
+      ],
+      "pivot": [
+        0.32,
+        0,
+        1.0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.17
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_walnut",
+      "bevel": 0.012
+    },
+    {
+      "name": "forearm_l",
+      "role": "forearm_l",
+      "parent": "arm_l",
+      "shape": "box",
+      "size": [
+        0.075,
+        0.08,
+        0.3
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.34
+      ],
+      "offset": [
+        0,
+        0,
+        -0.15
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_amber",
+      "bevel": 0.01
+    },
+    {
+      "name": "hand_l",
+      "role": "hand_l",
+      "parent": "forearm_l",
+      "shape": "box",
+      "size": [
+        0.09,
+        0.06,
+        0.1
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.3
+      ],
+      "offset": [
+        0,
+        0,
+        -0.05
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_brass",
+      "bevel": 0.01
+    },
+    {
+      "name": "arm_r",
+      "role": "arm_r",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.08,
+        0.09,
+        0.34
+      ],
+      "pivot": [
+        -0.32,
+        0,
+        1.0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.17
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_walnut",
+      "bevel": 0.012
+    },
+    {
+      "name": "forearm_r",
+      "role": "forearm_r",
+      "parent": "arm_r",
+      "shape": "box",
+      "size": [
+        0.075,
+        0.08,
+        0.3
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.34
+      ],
+      "offset": [
+        0,
+        0,
+        -0.15
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_amber",
+      "bevel": 0.01
+    },
+    {
+      "name": "hand_r",
+      "role": "hand_r",
+      "parent": "forearm_r",
+      "shape": "box",
+      "size": [
+        0.09,
+        0.06,
+        0.1
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.3
+      ],
+      "offset": [
+        0,
+        0,
+        -0.05
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_brass",
+      "bevel": 0.01
+    },
+    {
+      "name": "leg_l",
+      "role": "leg_l",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.16,
+        0.18,
+        0.32
+      ],
+      "pivot": [
+        0.14,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.16
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_walnut",
+      "bevel": 0.015
+    },
+    {
+      "name": "foot_l",
+      "role": "foot_l",
+      "parent": "leg_l",
+      "shape": "box",
+      "size": [
+        0.2,
+        0.28,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.32
+      ],
+      "offset": [
+        0,
+        -0.03,
+        -0.04
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_rubber",
+      "bevel": 0.012
+    },
+    {
+      "name": "leg_r",
+      "role": "leg_r",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.16,
+        0.18,
+        0.32
+      ],
+      "pivot": [
+        -0.14,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.16
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_walnut",
+      "bevel": 0.015
+    },
+    {
+      "name": "foot_r",
+      "role": "foot_r",
+      "parent": "leg_r",
+      "shape": "box",
+      "size": [
+        0.2,
+        0.28,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.32
+      ],
+      "offset": [
+        0,
+        -0.03,
+        -0.04
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_rubber",
+      "bevel": 0.012
+    },
+    {
+      "name": "rail_bracket",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.14,
+        0.08,
+        0.1
+      ],
+      "pivot": [
+        0,
+        0.24,
+        0.95
+      ],
+      "offset": [
+        0,
+        0.04,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_brass",
+      "bevel": 0.008
+    },
+    {
+      "name": "rail_roller",
+      "role": "extra",
+      "parent": "rail_bracket",
+      "shape": "cylinder_x",
+      "size": [
+        0.16,
+        0.07,
+        0.07
+      ],
+      "pivot": [
+        0,
+        0.11,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "ledger_rubber",
+      "bevel": 0.006
+    }
+  ],
+  "face": {
+    "part": "head",
+    "screen": [
+      0.54,
+      0.18
+    ],
+    "at": [
+      0,
+      0
+    ],
+    "eye_color": "#7CFF9A",
+    "eyes": 2,
+    "eye_size": [
+      0.11,
+      0.09
+    ],
+    "eye_gap": 0.24,
+    "glow": "#7CFF9A"
+  },
+  "details": [
+    {
+      "part": "drawer_1",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0.55,
+      "w": 0.3,
+      "h": 0.2,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "drawer_2",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0.55,
+      "w": 0.3,
+      "h": 0.2,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "drawer_3",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0.55,
+      "w": 0.3,
+      "h": 0.2,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "drawer_4",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0.55,
+      "w": 0.3,
+      "h": 0.2,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "body",
+      "kind": "bolts",
+      "side": "left",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "body",
+      "kind": "bolts",
+      "side": "right",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "left",
+      "u": 0,
+      "v": 0.1,
+      "w": 0.6,
+      "h": 0.7,
+      "material": "ledger_amber"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "right",
+      "u": 0,
+      "v": 0.1,
+      "w": 0.6,
+      "h": 0.7,
+      "material": "ledger_amber"
+    },
+    {
+      "part": "body",
+      "kind": "vent",
+      "side": "back",
+      "u": 0,
+      "v": -0.4,
+      "w": 0.5,
+      "h": 0.25,
+      "count": 6,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "head",
+      "kind": "vent",
+      "side": "left",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.5,
+      "count": 4,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "head",
+      "kind": "vent",
+      "side": "right",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.5,
+      "count": 4,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "head",
+      "kind": "light",
+      "side": "top",
+      "u": -0.6,
+      "v": 0,
+      "w": 0.08,
+      "h": 0.08,
+      "count": 1,
+      "color": "#FFB347"
+    },
+    {
+      "part": "head",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "ledger_brass"
+    },
+    {
+      "part": "plinth",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "w": 0.4,
+      "h": 0.6,
+      "material": "ledger_walnut"
+    }
+  ],
+  "design_notes": "Ledger reads as a tall, narrow filing cabinet topped by a wide flat lid of a head, the only vertical rectangle in the cast that has no curves at all. Its body is literally its memory: four evenly spaced amber drawers, each with a brass label plate and a lit green square handle, stacked like rows in a ledger, while short block legs and rigid straight arms make every movement look deliberate and counted. The wide head is a counter display where green eye shapes sit between digits, and a tiny brass bell on top dings when a record is found, with a rubber roller on its back for gliding along the archive's ladder rail. The colour story is warm walnut casing, worn amber drawer fronts and brass fittings, so it feels like an old library inside the cold steel city, and the soft green glow of its handles and digits ties it to data and to the Grove it quietly remembers."
+}

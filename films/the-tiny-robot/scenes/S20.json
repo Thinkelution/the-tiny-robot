@@ -1,0 +1,118 @@
+{
+  "id": "S20",
+  "title": "Tanks Away",
+  "location_id": "rooftop_nursery",
+  "time_of_day": "night",
+  "characters": [
+    "mossback",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Rain hisses on the flat roof. A deep, full gurgle comes from the rooftop tank.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Silver rain streaks fall across the Rooftop Nursery. Row after row of box-sprout seedlings stand green and upright, their little slab leaves bobbing as the drops hit. Beside the greenhouse frame, five square carrying tanks wait under the spout of the brimming rooftop tank.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback crawls up a builder's ramp of stacked slabs from the lower roof next door, at its slowest possible speed. Rain beads on its moss cubes. It rolls onto the roof and starts a slow loop around the trays without stopping.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash shoots up the same ramp, launches off the top and lands hard on the roof. It skids sideways toward the seedling trays and thunks into Mossback's slow, steady side, which stops it dead a hand's width from the first tray. Dash's slanted eyes go round. Mossback doesn't even wobble.",
+      "est_seconds": 5.0
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "revving, pretending that was the plan",
+      "text": "Roof record! Okay, tanks. Hold still, Mossback.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "gently, already rolling past",
+      "text": "Can't...",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Mossback's voice fades as it rolls on around the loop. Dash watches it go, and its visor eyes narrow into a racer's squint at the moving target.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash grabs a full square tank under the spout, swings in beside Mossback at exactly its crawl, and sets the tank down on Mossback's back between the moss clusters with a heavy clunk and a slosh.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "coming back around, unbothered",
+      "text": "...stop.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "engine rev building",
+      "text": "Moving target? Easy. Three, two, load!",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash makes it a race. It darts to the spout and back, again and again, and stacks a second tank, then a third, neatly beside the first. Its fin number blinks with every load. Mossback's treads sink a little under the weight.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback's soft oval eyes curve into crescents. Heavy with water, it turns toward the ramp and starts down at its steady crawl. Dash zips past it and shoves a stray crate off the ramp's edge to clear the way.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "calling back over its fin, grinning",
+      "text": "Race you to the Grove! I'll wait at the finish. A lot.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm, voice fading as it rolls down",
+      "text": "Slow is also...",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The camera rises past the green seedlings and over the roof edge. Far below, along a rainy street, Dash's red streak races ahead while Mossback's stout tank silhouette crawls after it. Both head toward a dark patch of trees where red gauge lights blink through the rain.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Keep the camera low among the green seedling trays at first so they frame the action, which reminds us the water that caused the drought is now plentiful here. Play the comedy of Mossback's unstoppable loop by having Dash match its speed side by side in a two-shot, with Mossback's voice fading and swelling as it circles past the camera. End on a high crane shot over the roof edge, linking the Nursery to the distant red gauges of the Grove and handing off the rainy night energy to the floodlit pipe race."
+}

@@ -1,0 +1,877 @@
+{
+  "id": "mossback",
+  "name": "Mossback",
+  "height_m": 1.3,
+  "locomotion": "treads",
+  "materials": [
+    {
+      "id": "mossback_teal",
+      "kind": "painted_metal",
+      "color": "#3E7A74",
+      "roughness": 0.65,
+      "metallic": 0.4,
+      "wear": 0.7,
+      "dirt": 0.6,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "mossback_tank",
+      "kind": "painted_metal",
+      "color": "#5A948C",
+      "roughness": 0.6,
+      "metallic": 0.45,
+      "wear": 0.65,
+      "dirt": 0.55,
+      "pattern": "stripes",
+      "pattern_color": "#B8963A",
+      "emission": 0
+    },
+    {
+      "id": "mossback_rust",
+      "kind": "bare_metal",
+      "color": "#7A4A2A",
+      "roughness": 0.8,
+      "metallic": 0.85,
+      "wear": 0.6,
+      "dirt": 0.7,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "mossback_rubber",
+      "kind": "rubber",
+      "color": "#2B2A27",
+      "roughness": 0.9,
+      "metallic": 0,
+      "wear": 0.5,
+      "dirt": 0.75,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "mossback_moss",
+      "kind": "plastic",
+      "color": "#4E7F2C",
+      "roughness": 0.9,
+      "metallic": 0,
+      "wear": 0.1,
+      "dirt": 0.3,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    }
+  ],
+  "parts": [
+    {
+      "name": "body",
+      "role": "body",
+      "parent": "root",
+      "shape": "rounded_box",
+      "size": [
+        0.7,
+        0.8,
+        0.5
+      ],
+      "pivot": [
+        0,
+        0,
+        0.22
+      ],
+      "offset": [
+        0,
+        0,
+        0.25
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_teal",
+      "bevel": 0.04
+    },
+    {
+      "name": "tread_l",
+      "role": "tread",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.18,
+        0.92,
+        0.28
+      ],
+      "pivot": [
+        0.42,
+        0,
+        0.14
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rubber",
+      "bevel": 0.03
+    },
+    {
+      "name": "tread_r",
+      "role": "tread",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.18,
+        0.92,
+        0.28
+      ],
+      "pivot": [
+        -0.42,
+        0,
+        0.14
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rubber",
+      "bevel": 0.03
+    },
+    {
+      "name": "wheel_lf",
+      "role": "wheel",
+      "parent": "tread_l",
+      "shape": "cylinder_x",
+      "size": [
+        0.04,
+        0.2,
+        0.2
+      ],
+      "pivot": [
+        0.1,
+        -0.32,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.008
+    },
+    {
+      "name": "wheel_lb",
+      "role": "wheel",
+      "parent": "tread_l",
+      "shape": "cylinder_x",
+      "size": [
+        0.04,
+        0.2,
+        0.2
+      ],
+      "pivot": [
+        0.1,
+        0.32,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.008
+    },
+    {
+      "name": "wheel_rf",
+      "role": "wheel",
+      "parent": "tread_r",
+      "shape": "cylinder_x",
+      "size": [
+        0.04,
+        0.2,
+        0.2
+      ],
+      "pivot": [
+        -0.1,
+        -0.32,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.008
+    },
+    {
+      "name": "wheel_rb",
+      "role": "wheel",
+      "parent": "tread_r",
+      "shape": "cylinder_x",
+      "size": [
+        0.04,
+        0.2,
+        0.2
+      ],
+      "pivot": [
+        -0.1,
+        0.32,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.008
+    },
+    {
+      "name": "head",
+      "role": "head",
+      "parent": "body",
+      "shape": "rounded_box",
+      "size": [
+        0.6,
+        0.22,
+        0.24
+      ],
+      "pivot": [
+        0,
+        -0.3,
+        0.42
+      ],
+      "offset": [
+        0,
+        -0.06,
+        0.04
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_teal",
+      "bevel": 0.04
+    },
+    {
+      "name": "bumper",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.72,
+        0.08,
+        0.1
+      ],
+      "pivot": [
+        0,
+        -0.41,
+        0.08
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.015
+    },
+    {
+      "name": "tank",
+      "role": "extra",
+      "parent": "body",
+      "shape": "cylinder_z",
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "pivot": [
+        0,
+        0.1,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.25
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_tank",
+      "bevel": 0.02
+    },
+    {
+      "name": "tank_band_low",
+      "role": "extra",
+      "parent": "tank",
+      "shape": "cylinder_z",
+      "size": [
+        0.53,
+        0.53,
+        0.04
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.1
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.008
+    },
+    {
+      "name": "tank_band_high",
+      "role": "extra",
+      "parent": "tank",
+      "shape": "cylinder_z",
+      "size": [
+        0.53,
+        0.53,
+        0.04
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.4
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.008
+    },
+    {
+      "name": "tank_cap",
+      "role": "extra",
+      "parent": "tank",
+      "shape": "cylinder_z",
+      "size": [
+        0.2,
+        0.2,
+        0.03
+      ],
+      "pivot": [
+        0,
+        0,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.015
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.006
+    },
+    {
+      "name": "spout",
+      "role": "tool",
+      "parent": "tank",
+      "shape": "box",
+      "size": [
+        0.26,
+        0.09,
+        0.09
+      ],
+      "pivot": [
+        0.24,
+        -0.08,
+        0.1
+      ],
+      "offset": [
+        0.12,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.01
+    },
+    {
+      "name": "spout_nozzle",
+      "role": "extra",
+      "parent": "spout",
+      "shape": "box",
+      "size": [
+        0.1,
+        0.1,
+        0.12
+      ],
+      "pivot": [
+        0.24,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.05
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "mossback_rust",
+      "bevel": 0.01
+    },
+    {
+      "name": "moss_shoulder_l1",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.14,
+        0.14,
+        0.1
+      ],
+      "pivot": [
+        0.26,
+        0.05,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.05
+      ],
+      "rotate": [
+        0,
+        0,
+        8
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.012
+    },
+    {
+      "name": "moss_shoulder_l2",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.1,
+        0.1,
+        0.08
+      ],
+      "pivot": [
+        0.3,
+        0.22,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.04
+      ],
+      "rotate": [
+        0,
+        0,
+        15
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.01
+    },
+    {
+      "name": "moss_shoulder_r1",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.16,
+        0.12,
+        0.1
+      ],
+      "pivot": [
+        -0.27,
+        0.15,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.05
+      ],
+      "rotate": [
+        0,
+        0,
+        -10
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.012
+    },
+    {
+      "name": "moss_back_top",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.2,
+        0.12,
+        0.1
+      ],
+      "pivot": [
+        0,
+        0.38,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.04
+      ],
+      "rotate": [
+        0,
+        0,
+        5
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.012
+    },
+    {
+      "name": "moss_back_l",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.18,
+        0.1,
+        0.16
+      ],
+      "pivot": [
+        0.1,
+        0.4,
+        0.38
+      ],
+      "offset": [
+        0,
+        0.04,
+        0
+      ],
+      "rotate": [
+        0,
+        6,
+        0
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.012
+    },
+    {
+      "name": "moss_back_r",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.12,
+        0.08,
+        0.12
+      ],
+      "pivot": [
+        -0.14,
+        0.4,
+        0.3
+      ],
+      "offset": [
+        0,
+        0.03,
+        0
+      ],
+      "rotate": [
+        0,
+        -8,
+        0
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.01
+    },
+    {
+      "name": "moss_tank_top",
+      "role": "extra",
+      "parent": "tank",
+      "shape": "box",
+      "size": [
+        0.14,
+        0.14,
+        0.08
+      ],
+      "pivot": [
+        -0.08,
+        0.06,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.04
+      ],
+      "rotate": [
+        0,
+        0,
+        20
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.01
+    },
+    {
+      "name": "moss_tank_back",
+      "role": "extra",
+      "parent": "tank",
+      "shape": "box",
+      "size": [
+        0.12,
+        0.08,
+        0.14
+      ],
+      "pivot": [
+        0.1,
+        0.25,
+        0.3
+      ],
+      "offset": [
+        0,
+        0.03,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        10
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.01
+    },
+    {
+      "name": "moss_tank_side",
+      "role": "extra",
+      "parent": "tank",
+      "shape": "box",
+      "size": [
+        0.08,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        -0.24,
+        0.1,
+        0.4
+      ],
+      "offset": [
+        -0.03,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        -12
+      ],
+      "material": "mossback_moss",
+      "bevel": 0.01
+    }
+  ],
+  "face": {
+    "part": "head",
+    "screen": [
+      0.52,
+      0.17
+    ],
+    "at": [
+      0,
+      0
+    ],
+    "eye_color": "#F4F1E1",
+    "eyes": 2,
+    "eye_size": [
+      0.13,
+      0.09
+    ],
+    "eye_gap": 0.24,
+    "glow": "#F4F1E1"
+  },
+  "details": [
+    {
+      "part": "body",
+      "kind": "vent",
+      "side": "front",
+      "u": 0,
+      "v": -0.35,
+      "w": 0.5,
+      "h": 0.22,
+      "count": 5,
+      "material": "mossback_rust"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "left",
+      "u": 0.1,
+      "v": 0.1,
+      "w": 0.6,
+      "h": 0.5,
+      "material": "mossback_teal"
+    },
+    {
+      "part": "body",
+      "kind": "bolts",
+      "side": "left",
+      "u": 0,
+      "v": 0,
+      "w": 0.8,
+      "h": 0.7,
+      "count": 4,
+      "material": "mossback_rust"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "right",
+      "u": -0.1,
+      "v": 0.1,
+      "w": 0.6,
+      "h": 0.5,
+      "material": "mossback_teal"
+    },
+    {
+      "part": "body",
+      "kind": "bolts",
+      "side": "right",
+      "u": 0,
+      "v": 0,
+      "w": 0.8,
+      "h": 0.7,
+      "count": 4,
+      "material": "mossback_rust"
+    },
+    {
+      "part": "body",
+      "kind": "light",
+      "side": "back",
+      "u": 0.6,
+      "v": -0.4,
+      "w": 0.08,
+      "h": 0.06,
+      "color": "#FFB347"
+    },
+    {
+      "part": "body",
+      "kind": "light",
+      "side": "back",
+      "u": -0.6,
+      "v": -0.4,
+      "w": 0.08,
+      "h": 0.06,
+      "color": "#FFB347"
+    },
+    {
+      "part": "tank",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0.0,
+      "w": 0.4,
+      "h": 0.2,
+      "material": "mossback_rust"
+    },
+    {
+      "part": "head",
+      "kind": "antenna",
+      "side": "top",
+      "u": -0.6,
+      "v": 0,
+      "length": 0.16,
+      "color": "#A8E07A"
+    },
+    {
+      "part": "head",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "w": 0.85,
+      "h": 0.7,
+      "count": 4,
+      "material": "mossback_rust"
+    },
+    {
+      "part": "spout",
+      "kind": "light",
+      "side": "top",
+      "u": 0.5,
+      "v": 0,
+      "w": 0.05,
+      "h": 0.05,
+      "color": "#7FD7E8"
+    }
+  ],
+  "design_notes": "Mossback reads as a low, stout box on two long treads with a fat upright drum on its back and a fringe of green cubes breaking its outline, so even in fog its silhouette is a slow, heavy pack animal. Everything is long, low and continuous: the treads run the full body length with no sharp front or back, the head sits forward and low like a tortoise, and the square spout juts sideways toward the trees on its loop, because this machine is built to keep moving and pour without ever turning to face anything. It has no arms, which is its blind spot made literal: it cannot stop, reach or defend itself, it can only carry and roll on. Weathered teal paint worn through to rust-brown straps and bare metal tells decades of rain, a faded safety-yellow stripe on the tank ties it back to Gridhaven's city order, and the moss green cubes show the Grove slowly claiming it. Soft white oval eyes in a wide low screen give it the tired, kind gaze of an old engine, with small amber tail lights that the camera sees as it rolls away mid-sentence."
+}

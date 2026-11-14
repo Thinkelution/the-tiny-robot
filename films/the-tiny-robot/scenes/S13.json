@@ -1,0 +1,182 @@
+{
+  "id": "S13",
+  "title": "The Easy Lie",
+  "location_id": "pipeworks",
+  "time_of_day": "late night",
+  "characters": [
+    "tiny",
+    "shine",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny is still frozen at the lever, both block hands gripping the handle. Its eyes are flickering static lines and its antenna gives a faint, failing amber pulse. The hum climbs as the warning lamps throb amber across the pipes.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "A teal glow spills through the doorway with a soft sparkle chime. Shine hovers in low, ducking its billboard frame under a pipe. Its screen shows a big worried face with eyebrows tipped up.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "hushed, alarmed, still catching up",
+      "text": "I could hear that hum from the Square! Oh no, no, no. That is not a happy sound.",
+      "est_seconds": 4.5
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's two floating block hands close gently around Tiny's tiny hand and ease it off the lever, one careful lift at a time.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "The lock breaks with an electric sputter. The hum drains away to silence.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's static clears into two small rectangles, tilted sad. Its legs wobble and it tips over backwards. A floating hand catches it and sets it upright on its square feet.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, a little crackly",
+      "text": "Thank you.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "zooming in close, screen filling with a huge concerned face",
+      "text": "Rough night, little star? Talk to Shine.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Behind them, Dash's red nose creeps silently into the doorway. It has come back alone to look at the railing it dented in the race, the one thing it has been trying not to think about since the Square. Hearing voices, it brakes behind a stack of spare pipe segments. Only its glowing number fin pokes above the stack.",
+      "est_seconds": 5.0
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "plain, quiet, looking at the lever",
+      "text": "I pulled the lever. For the seedlings on the roof. It took the Grove's water. I did not know.",
+      "est_seconds": 6
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "smaller",
+      "text": "Mossback is in the pen. Because of me.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's face melts into droopy sympathy under a little rain-cloud icon, and its speakers let out a soft 'awww.' Then the cloud pops into a flashing star. Shine zips to the bent railing and frames the dent with both floating hands.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "excited, pointing",
+      "text": "Wait! Look! Dash bumped this rail. The whole city saw that race!",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "building like a show, applause icons flashing, a canned crowd roar swelling from its speakers",
+      "text": "So, Dash did it! Mossback goes free, you crack the case, you're the hero! Huge cheer!",
+      "est_seconds": 6
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "simply",
+      "text": "But Dash did not do it.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "The canned roar cuts off. Shine's screen softens to a gentle face, and it sinks down until it is eye level with Tiny.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "tender, completely sincere",
+      "text": "Little star. Confess, and the Board re-presses you. New logic, same box. No more you.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "A simple picture of the Logic Press stamping down flickers across Shine's screen. Tiny reaches up and touches the dull brass plate on its own brow.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "warm",
+      "text": "I want everybody happy. That includes you.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes sweep slowly from the bent railing to the lever to the green Nursery light. Its antenna blinks amber, unsure.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "quiet",
+      "text": "I need to check.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "brightening, drifting upward",
+      "text": "Sleep on it! Tomorrow, big show! You and me!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Shine floats out in a trail of sparkles. Tiny turns and walks the other way with small, slow steps, a little box shrinking between towering pipes and pulsing amber lamps.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Behind the pipe stack Dash hasn't moved a wheel. Its sharp slanted eyes have gone completely round. It looks at its dent, then at the doorway where Tiny left. Its engine gives one tiny uncertain rev and goes quiet.",
+      "est_seconds": 5
+    }
+  ],
+  "staging_notes": "Open on a tight shot of Tiny's static eyes lit only by amber pulses, so that Shine's teal glow entering feels like rescue. Keep Shine looming and close during the pitch, then bring it down to Tiny's eye level for the sincere warning so it reads as kindness, not villainy. Plant Dash in the background behind the pipe stack early, soft-focus but readable by its glowing fin, so the audience knows it hears everything. End on a lone close-up of Dash's round eyes in the emptied room."
+}

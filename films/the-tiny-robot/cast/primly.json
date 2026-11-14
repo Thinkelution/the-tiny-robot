@@ -1,0 +1,941 @@
+{
+  "id": "primly",
+  "name": "Primly",
+  "height_m": 2.1,
+  "locomotion": "wheels",
+  "materials": [
+    {
+      "id": "primly_white",
+      "kind": "painted_metal",
+      "color": "#F2F4F1",
+      "roughness": 0.35,
+      "metallic": 0.2,
+      "wear": 0.1,
+      "dirt": 0.05,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "primly_blue",
+      "kind": "painted_metal",
+      "color": "#A8D3EE",
+      "roughness": 0.4,
+      "metallic": 0.25,
+      "wear": 0.12,
+      "dirt": 0.08,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "primly_bristle",
+      "kind": "rubber",
+      "color": "#9A9FA5",
+      "roughness": 0.9,
+      "metallic": 0,
+      "wear": 0.2,
+      "dirt": 0.3,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "primly_glass",
+      "kind": "glass",
+      "color": "#0F1B26",
+      "roughness": 0.15,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0.03,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "primly_eye",
+      "kind": "emissive",
+      "color": "#EAF6FF",
+      "roughness": 0.3,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 4
+    }
+  ],
+  "parts": [
+    {
+      "name": "base",
+      "role": "extra",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.7,
+        0.7,
+        0.14
+      ],
+      "pivot": [
+        0,
+        0,
+        0.12
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.03
+    },
+    {
+      "name": "bristle_front",
+      "role": "extra",
+      "parent": "base",
+      "shape": "box",
+      "size": [
+        0.62,
+        0.08,
+        0.06
+      ],
+      "pivot": [
+        0,
+        -0.3,
+        -0.09
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.01
+    },
+    {
+      "name": "bristle_back",
+      "role": "extra",
+      "parent": "base",
+      "shape": "box",
+      "size": [
+        0.62,
+        0.08,
+        0.06
+      ],
+      "pivot": [
+        0,
+        0.3,
+        -0.09
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.01
+    },
+    {
+      "name": "wheel_fl",
+      "role": "wheel",
+      "parent": "base",
+      "shape": "cylinder_x",
+      "size": [
+        0.05,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        0.3,
+        -0.18,
+        -0.06
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.008
+    },
+    {
+      "name": "wheel_fr",
+      "role": "wheel",
+      "parent": "base",
+      "shape": "cylinder_x",
+      "size": [
+        0.05,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        -0.3,
+        -0.18,
+        -0.06
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.008
+    },
+    {
+      "name": "wheel_bl",
+      "role": "wheel",
+      "parent": "base",
+      "shape": "cylinder_x",
+      "size": [
+        0.05,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        0.3,
+        0.18,
+        -0.06
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.008
+    },
+    {
+      "name": "wheel_br",
+      "role": "wheel",
+      "parent": "base",
+      "shape": "cylinder_x",
+      "size": [
+        0.05,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        -0.3,
+        0.18,
+        -0.06
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.008
+    },
+    {
+      "name": "column",
+      "role": "body",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.38,
+        0.32,
+        1.35
+      ],
+      "pivot": [
+        0,
+        0,
+        0.19
+      ],
+      "offset": [
+        0,
+        0,
+        0.675
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_white",
+      "bevel": 0.03
+    },
+    {
+      "name": "waist_band",
+      "role": "extra",
+      "parent": "column",
+      "shape": "slab",
+      "size": [
+        0.4,
+        0.34,
+        0.06
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.12
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.01
+    },
+    {
+      "name": "collar_band",
+      "role": "extra",
+      "parent": "column",
+      "shape": "slab",
+      "size": [
+        0.4,
+        0.34,
+        0.05
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        1.32
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.01
+    },
+    {
+      "name": "neck",
+      "role": "extra",
+      "parent": "column",
+      "shape": "cylinder_z",
+      "size": [
+        0.12,
+        0.12,
+        0.06
+      ],
+      "pivot": [
+        0,
+        0,
+        1.35
+      ],
+      "offset": [
+        0,
+        0,
+        0.03
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.008
+    },
+    {
+      "name": "head",
+      "role": "head",
+      "parent": "column",
+      "shape": "box",
+      "size": [
+        0.44,
+        0.26,
+        0.44
+      ],
+      "pivot": [
+        0,
+        0,
+        1.41
+      ],
+      "offset": [
+        0,
+        0,
+        0.22
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_white",
+      "bevel": 0.03
+    },
+    {
+      "name": "head_crest",
+      "role": "extra",
+      "parent": "head",
+      "shape": "slab",
+      "size": [
+        0.3,
+        0.1,
+        0.04
+      ],
+      "pivot": [
+        0,
+        0,
+        0.44
+      ],
+      "offset": [
+        0,
+        0,
+        0.02
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.01
+    },
+    {
+      "name": "shoulder_cap_l",
+      "role": "extra",
+      "parent": "column",
+      "shape": "cylinder_x",
+      "size": [
+        0.08,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        0.23,
+        0,
+        1.23
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.01
+    },
+    {
+      "name": "shoulder_cap_r",
+      "role": "extra",
+      "parent": "column",
+      "shape": "cylinder_x",
+      "size": [
+        0.08,
+        0.12,
+        0.12
+      ],
+      "pivot": [
+        -0.23,
+        0,
+        1.23
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.01
+    },
+    {
+      "name": "arm_l",
+      "role": "arm_l",
+      "parent": "column",
+      "shape": "box",
+      "size": [
+        0.08,
+        0.08,
+        0.44
+      ],
+      "pivot": [
+        0.27,
+        0,
+        1.23
+      ],
+      "offset": [
+        0,
+        0,
+        -0.22
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_white",
+      "bevel": 0.015,
+      "rest_rot": [
+        -25,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "arm_r",
+      "role": "arm_r",
+      "parent": "column",
+      "shape": "box",
+      "size": [
+        0.08,
+        0.08,
+        0.44
+      ],
+      "pivot": [
+        -0.27,
+        0,
+        1.23
+      ],
+      "offset": [
+        0,
+        0,
+        -0.22
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_white",
+      "bevel": 0.015,
+      "rest_rot": [
+        -25,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "forearm_l",
+      "role": "forearm_l",
+      "parent": "arm_l",
+      "shape": "box",
+      "size": [
+        0.07,
+        0.07,
+        0.994
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.44
+      ],
+      "offset": [
+        0,
+        0,
+        -0.497
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.012
+    },
+    {
+      "name": "forearm_r",
+      "role": "forearm_r",
+      "parent": "arm_r",
+      "shape": "box",
+      "size": [
+        0.07,
+        0.07,
+        0.994
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.44
+      ],
+      "offset": [
+        0,
+        0,
+        -0.497
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.012
+    },
+    {
+      "name": "broom_l",
+      "role": "hand_l",
+      "parent": "forearm_l",
+      "shape": "slab",
+      "size": [
+        0.36,
+        0.1,
+        0.07
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.994
+      ],
+      "offset": [
+        0,
+        0,
+        -0.035
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_white",
+      "bevel": 0.015,
+      "rest_rot": [
+        25,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "broom_r",
+      "role": "hand_r",
+      "parent": "forearm_r",
+      "shape": "slab",
+      "size": [
+        0.36,
+        0.1,
+        0.07
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.994
+      ],
+      "offset": [
+        0,
+        0,
+        -0.035
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_white",
+      "bevel": 0.015,
+      "rest_rot": [
+        25,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "broom_bristle_l",
+      "role": "tool",
+      "parent": "broom_l",
+      "shape": "box",
+      "size": [
+        0.34,
+        0.08,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.07
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.008
+    },
+    {
+      "name": "broom_bristle_r",
+      "role": "tool",
+      "parent": "broom_r",
+      "shape": "box",
+      "size": [
+        0.34,
+        0.08,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.07
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_bristle",
+      "bevel": 0.008
+    },
+    {
+      "name": "dustbin",
+      "role": "extra",
+      "parent": "column",
+      "shape": "box",
+      "size": [
+        0.3,
+        0.22,
+        0.32
+      ],
+      "pivot": [
+        0,
+        0.16,
+        0.55
+      ],
+      "offset": [
+        0,
+        0.11,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_blue",
+      "bevel": 0.02
+    },
+    {
+      "name": "dustbin_lid",
+      "role": "extra",
+      "parent": "dustbin",
+      "shape": "slab",
+      "size": [
+        0.32,
+        0.24,
+        0.03
+      ],
+      "pivot": [
+        0,
+        0.11,
+        0.16
+      ],
+      "offset": [
+        0,
+        0,
+        0.015
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "primly_white",
+      "bevel": 0.008
+    }
+  ],
+  "face": {
+    "part": "head",
+    "screen": [
+      0.36,
+      0.28
+    ],
+    "at": [
+      0,
+      0.03
+    ],
+    "eye_color": "#EAF6FF",
+    "eyes": 2,
+    "eye_size": [
+      0.1,
+      0.12
+    ],
+    "eye_gap": 0.17,
+    "glow": "#DDEEFF"
+  },
+  "details": [
+    {
+      "part": "column",
+      "kind": "panel",
+      "side": "front",
+      "u": 0,
+      "v": 0.05,
+      "w": 0.8,
+      "h": 0.8,
+      "material": "primly_white"
+    },
+    {
+      "part": "column",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0.62,
+      "w": 0.4,
+      "h": 0.06,
+      "material": "primly_blue"
+    },
+    {
+      "part": "column",
+      "kind": "vent",
+      "side": "front",
+      "u": 0,
+      "v": -0.72,
+      "w": 0.5,
+      "h": 0.1,
+      "count": 4,
+      "material": "primly_blue"
+    },
+    {
+      "part": "column",
+      "kind": "bolts",
+      "side": "back",
+      "u": 0,
+      "v": 0.5,
+      "w": 0.7,
+      "h": 0.3,
+      "count": 4,
+      "material": "primly_blue"
+    },
+    {
+      "part": "head",
+      "kind": "light",
+      "side": "left",
+      "u": 0,
+      "v": 0.3,
+      "w": 0.2,
+      "h": 0.1,
+      "color": "#EAF6FF"
+    },
+    {
+      "part": "head",
+      "kind": "light",
+      "side": "right",
+      "u": 0,
+      "v": 0.3,
+      "w": 0.2,
+      "h": 0.1,
+      "color": "#EAF6FF"
+    },
+    {
+      "part": "head",
+      "kind": "bolts",
+      "side": "back",
+      "u": 0,
+      "v": 0,
+      "w": 0.7,
+      "h": 0.7,
+      "count": 4,
+      "material": "primly_blue"
+    },
+    {
+      "part": "dustbin",
+      "kind": "vent",
+      "side": "back",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.5,
+      "count": 3,
+      "material": "primly_white"
+    },
+    {
+      "part": "base",
+      "kind": "light",
+      "side": "front",
+      "u": 0.7,
+      "v": 0,
+      "w": 0.08,
+      "h": 0.4,
+      "color": "#FFC23A"
+    },
+    {
+      "part": "base",
+      "kind": "light",
+      "side": "front",
+      "u": -0.7,
+      "v": 0,
+      "w": 0.08,
+      "h": 0.4,
+      "color": "#FFC23A"
+    },
+    {
+      "part": "base",
+      "kind": "panel",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "w": 0.85,
+      "h": 0.85,
+      "material": "primly_white"
+    },
+    {
+      "part": "column",
+      "kind": "vent",
+      "side": "front",
+      "u": 0,
+      "v": 0.78,
+      "count": 4
+    },
+    {
+      "part": "column",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0
+    }
+  ],
+  "design_notes": "Primly reads as a tall white post on a flat square plate: a slim locker column 1.35 m high with a small square head, flanked by two long rigid arms that end in flat push-broom slabs, so from any distance it is a ruler with two brooms. Every shape is square, centred and symmetric, with crisp bevels, straight trim bands and a neatly lidded dustbin on its back, so its body literally performs its logic of keeping everything at right angles and in its place. The wide low sweeper base with hidden wheels lets it glide in perfectly straight lines, and the grey bristle skirts make even its movement look like tidying. Its palette is near-spotless clean white and pale sky blue with almost no wear or dirt, a cool white eye-light, and tiny safety-yellow lamps that tie it to Gridhaven's street language, which makes it pop sharply against the deep greens and bark browns of the Old Grove it keeps trying to tidy."
+}

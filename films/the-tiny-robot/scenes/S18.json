@@ -1,0 +1,140 @@
+{
+  "id": "S18",
+  "title": "The Order Does Not Say Where",
+  "location_id": "foundry",
+  "time_of_day": "night",
+  "characters": [
+    "tiny",
+    "warden",
+    "mossback"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Foundry hall glows orange from below. The Logic Press looms over everything, its glowing plate slot pulsing. Through the great open doors, the first silver streaks of rain begin to fall across the dark street, drumming softly on the roof.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden walks in with heavy, even steps, carrying a plain wooden crate level in both rigid arms. Through a narrow square slot in the crate's side, two small rectangular eyes peek out: Tiny, tilted and tired.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Inside the fenced holding pen, Mossback rolls its tight, sad little square at minimum crawl. Its moss cubes hang still and its oval eye-lights are dim.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden sets the crate down on the floor facing the Logic Press. Its chest badge lamp glows green. It walks to the pen, lifts the latch bar and swings the gate wide.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, formal, echoing in the big hall",
+      "text": "The order says release the water carrier.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls out through the gate and its square loop opens into a slow, wide, happy circle around the hall. Its eye-lights curve up and its moss cubes sway again. Its path brushes past Tiny's crate.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm, gravelly, fading as it rolls away",
+      "text": "You told them the...",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Logic Press stamps a blank plate: a deep CLUNK and a flash of orange light across the hall.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "The crate jolts as Tiny flinches inside. Through the slot its eyes go wide and look up at the Press. Then they slide over to the rain at the open doors. A thin amber glow from its antenna leaks through a crack in the crate lid. Its eyes sweep left, then right.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, plain, a real question",
+      "text": "Warden. Does the order say where you must hold me?",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden stops mid-step. Its visor bar flickers and scrolls as it re-reads the order, and its badge lamp blinks once for each word.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "reciting, word for word",
+      "text": "Hold the culprit until sunrise.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "A long pause. The visor flicker settles into a steady line. Warden's helmet turns slowly toward the rain-streaked doors.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "no change of tone at all",
+      "text": "The order does not say where.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "antenna brightening to green, a soft chirp at the end",
+      "text": "The Pipeworks, please. I will not run. I promise.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden picks up the crate in both arms and carries it straight out through the great doors into the night. Rain streaks bounce off its square helmet, and its pace stays heavy and exactly even.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "voice swelling as it rolls back around",
+      "text": "...truth, little one.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback bends its loop out through the doors and rolls into the rain behind Warden, tank sloshing. Behind them the Logic Press glows alone in the empty hall.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Open wide and low so the Logic Press dwarfs everyone, with the doorway's rain and cool blue night as the only escape from the orange hall. Play Tiny almost entirely through the crate slot: eyes plus the antenna glow leaking through the lid crack, shifting from amber to green on its question. Hold a still medium shot on Warden's flickering visor for the re-read, then cut to a wide back shot of Warden, crate and Mossback leaving the Press behind through the doors into the rain, which leads into the Pipeworks in S19."
+}

@@ -1,0 +1,923 @@
+{
+  "id": "shine",
+  "name": "Shine",
+  "height_m": 2.6,
+  "locomotion": "hover",
+  "materials": [
+    {
+      "id": "shine_magenta",
+      "kind": "painted_metal",
+      "color": "#D61F8C",
+      "roughness": 0.32,
+      "metallic": 0.3,
+      "wear": 0.12,
+      "dirt": 0.04,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "shine_gold",
+      "kind": "painted_metal",
+      "color": "#F2B42E",
+      "roughness": 0.28,
+      "metallic": 0.75,
+      "wear": 0.1,
+      "dirt": 0.04,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "shine_glow",
+      "kind": "emissive",
+      "color": "#FFF4DE",
+      "roughness": 0.3,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 3.5
+    },
+    {
+      "id": "shine_teal",
+      "kind": "emissive",
+      "color": "#2EE8D2",
+      "roughness": 0.3,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 2.8
+    },
+    {
+      "id": "shine_rubber",
+      "kind": "rubber",
+      "color": "#2A2232",
+      "roughness": 0.82,
+      "metallic": 0,
+      "wear": 0.05,
+      "dirt": 0.08,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    }
+  ],
+  "parts": [
+    {
+      "name": "body",
+      "role": "body",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        2.2,
+        0.32,
+        1.5
+      ],
+      "pivot": [
+        0,
+        0,
+        1.75
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_magenta",
+      "bevel": 0.04
+    },
+    {
+      "name": "trim_top",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        1.98,
+        0.03,
+        0.06
+      ],
+      "pivot": [
+        0,
+        -0.165,
+        0.6
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.008
+    },
+    {
+      "name": "trim_bottom",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        1.98,
+        0.03,
+        0.06
+      ],
+      "pivot": [
+        0,
+        -0.165,
+        -0.6
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.008
+    },
+    {
+      "name": "trim_left",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.06,
+        0.03,
+        1.26
+      ],
+      "pivot": [
+        0.96,
+        -0.165,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.008
+    },
+    {
+      "name": "trim_right",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.06,
+        0.03,
+        1.26
+      ],
+      "pivot": [
+        -0.96,
+        -0.165,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.008
+    },
+    {
+      "name": "marquee",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        1.3,
+        0.24,
+        0.1
+      ],
+      "pivot": [
+        0,
+        0,
+        0.75
+      ],
+      "offset": [
+        0,
+        0,
+        0.05
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.015
+    },
+    {
+      "name": "speaker_l",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.36,
+        0.38,
+        0.6
+      ],
+      "pivot": [
+        1.28,
+        0,
+        0.1
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.03
+    },
+    {
+      "name": "speaker_r",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.36,
+        0.38,
+        0.6
+      ],
+      "pivot": [
+        -1.28,
+        0,
+        0.1
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.03
+    },
+    {
+      "name": "woofer_l",
+      "role": "extra",
+      "parent": "speaker_l",
+      "shape": "cylinder_y",
+      "size": [
+        0.24,
+        0.04,
+        0.24
+      ],
+      "pivot": [
+        0,
+        -0.19,
+        0.08
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_rubber",
+      "bevel": 0.01
+    },
+    {
+      "name": "woofer_r",
+      "role": "extra",
+      "parent": "speaker_r",
+      "shape": "cylinder_y",
+      "size": [
+        0.24,
+        0.04,
+        0.24
+      ],
+      "pivot": [
+        0,
+        -0.19,
+        0.08
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_rubber",
+      "bevel": 0.01
+    },
+    {
+      "name": "tweeter_l",
+      "role": "extra",
+      "parent": "speaker_l",
+      "shape": "cylinder_y",
+      "size": [
+        0.1,
+        0.04,
+        0.1
+      ],
+      "pivot": [
+        0,
+        -0.19,
+        -0.18
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_rubber",
+      "bevel": 0.006
+    },
+    {
+      "name": "tweeter_r",
+      "role": "extra",
+      "parent": "speaker_r",
+      "shape": "cylinder_y",
+      "size": [
+        0.1,
+        0.04,
+        0.1
+      ],
+      "pivot": [
+        0,
+        -0.19,
+        -0.18
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_rubber",
+      "bevel": 0.006
+    },
+    {
+      "name": "hand_l",
+      "role": "hand_l",
+      "parent": "body",
+      "shape": "rounded_box",
+      "size": [
+        0.3,
+        0.24,
+        0.34
+      ],
+      "pivot": [
+        1.78,
+        -0.25,
+        -0.3
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_magenta",
+      "bevel": 0.04
+    },
+    {
+      "name": "hand_r",
+      "role": "hand_r",
+      "parent": "body",
+      "shape": "rounded_box",
+      "size": [
+        0.3,
+        0.24,
+        0.34
+      ],
+      "pivot": [
+        -1.78,
+        -0.25,
+        -0.3
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_magenta",
+      "bevel": 0.04
+    },
+    {
+      "name": "cuff_l",
+      "role": "extra",
+      "parent": "hand_l",
+      "shape": "slab",
+      "size": [
+        0.32,
+        0.26,
+        0.06
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.2
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.01
+    },
+    {
+      "name": "cuff_r",
+      "role": "extra",
+      "parent": "hand_r",
+      "shape": "slab",
+      "size": [
+        0.32,
+        0.26,
+        0.06
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.2
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.01
+    },
+    {
+      "name": "thumb_l",
+      "role": "extra",
+      "parent": "hand_l",
+      "shape": "rounded_box",
+      "size": [
+        0.1,
+        0.12,
+        0.16
+      ],
+      "pivot": [
+        -0.08,
+        0,
+        0.2
+      ],
+      "offset": [
+        0,
+        0,
+        0.02
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_magenta",
+      "bevel": 0.02
+    },
+    {
+      "name": "thumb_r",
+      "role": "extra",
+      "parent": "hand_r",
+      "shape": "rounded_box",
+      "size": [
+        0.1,
+        0.12,
+        0.16
+      ],
+      "pivot": [
+        0.08,
+        0,
+        0.2
+      ],
+      "offset": [
+        0,
+        0,
+        0.02
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_magenta",
+      "bevel": 0.02
+    },
+    {
+      "name": "emitter",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.5,
+        0.24,
+        0.14
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.82
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_gold",
+      "bevel": 0.02
+    },
+    {
+      "name": "emitter_glow",
+      "role": "extra",
+      "parent": "emitter",
+      "shape": "slab",
+      "size": [
+        0.36,
+        0.16,
+        0.02
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.08
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_teal",
+      "bevel": 0.004
+    },
+    {
+      "name": "hover_ring_upper",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.42,
+        0.42,
+        0.03
+      ],
+      "pivot": [
+        0,
+        0,
+        -1.09
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_teal",
+      "bevel": 0.006
+    },
+    {
+      "name": "hover_ring_lower",
+      "role": "extra",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        0.52,
+        0.52,
+        0.03
+      ],
+      "pivot": [
+        0,
+        0,
+        -1.31
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_teal",
+      "bevel": 0.006
+    },
+    {
+      "name": "hover_pad",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.64,
+        0.64,
+        0.14
+      ],
+      "pivot": [
+        0,
+        0,
+        -1.62
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_magenta",
+      "bevel": 0.025
+    },
+    {
+      "name": "pad_glow",
+      "role": "extra",
+      "parent": "hover_pad",
+      "shape": "slab",
+      "size": [
+        0.5,
+        0.5,
+        0.06
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.1
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "shine_teal",
+      "bevel": 0.008
+    }
+  ],
+  "face": {
+    "part": "body",
+    "screen": [
+      1.84,
+      1.14
+    ],
+    "at": [
+      0,
+      0.02
+    ],
+    "eye_color": "#FFF6E6",
+    "eyes": 2,
+    "eye_size": [
+      0.47840000000000005,
+      0.7068
+    ],
+    "eye_gap": 0.6624,
+    "glow": "#FFF0D8"
+  },
+  "details": [
+    {
+      "part": "marquee",
+      "kind": "light",
+      "side": "front",
+      "u": -0.75,
+      "v": 0,
+      "w": 0.08,
+      "h": 0.5,
+      "color": "#FFF2C0"
+    },
+    {
+      "part": "marquee",
+      "kind": "light",
+      "side": "front",
+      "u": -0.25,
+      "v": 0,
+      "w": 0.08,
+      "h": 0.5,
+      "color": "#FFF2C0"
+    },
+    {
+      "part": "marquee",
+      "kind": "light",
+      "side": "front",
+      "u": 0.25,
+      "v": 0,
+      "w": 0.08,
+      "h": 0.5,
+      "color": "#FFF2C0"
+    },
+    {
+      "part": "marquee",
+      "kind": "light",
+      "side": "front",
+      "u": 0.75,
+      "v": 0,
+      "w": 0.08,
+      "h": 0.5,
+      "color": "#FFF2C0"
+    },
+    {
+      "part": "body",
+      "kind": "light",
+      "side": "front",
+      "u": 0.93,
+      "v": 0.9,
+      "w": 0.04,
+      "h": 0.06,
+      "color": "#2EE8D2"
+    },
+    {
+      "part": "body",
+      "kind": "light",
+      "side": "front",
+      "u": -0.93,
+      "v": 0.9,
+      "w": 0.04,
+      "h": 0.06,
+      "color": "#2EE8D2"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "back",
+      "u": 0,
+      "v": 0.1,
+      "w": 0.7,
+      "h": 0.6,
+      "material": "shine_gold"
+    },
+    {
+      "part": "body",
+      "kind": "vent",
+      "side": "back",
+      "u": 0,
+      "v": -0.7,
+      "w": 0.5,
+      "h": 0.2,
+      "count": 6
+    },
+    {
+      "part": "body",
+      "kind": "bolts",
+      "side": "back",
+      "u": 0,
+      "v": 0,
+      "w": 0.9,
+      "h": 0.9,
+      "count": 4
+    },
+    {
+      "part": "speaker_l",
+      "kind": "antenna",
+      "side": "top",
+      "u": 0.2,
+      "v": 0,
+      "length": 0.28,
+      "color": "#2EE8D2"
+    },
+    {
+      "part": "speaker_l",
+      "kind": "vent",
+      "side": "left",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.6,
+      "count": 4
+    },
+    {
+      "part": "speaker_r",
+      "kind": "vent",
+      "side": "right",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.6,
+      "count": 4
+    },
+    {
+      "part": "speaker_l",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "w": 0.85,
+      "h": 0.9,
+      "count": 4
+    },
+    {
+      "part": "speaker_r",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "w": 0.85,
+      "h": 0.9,
+      "count": 4
+    },
+    {
+      "part": "hover_pad",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "w": 0.4,
+      "h": 0.5,
+      "material": "shine_gold"
+    },
+    {
+      "part": "hover_pad",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "w": 0.85,
+      "h": 0.85,
+      "count": 4
+    }
+  ],
+  "design_notes": "Shine reads in silhouette as a wide floating billboard: a 2.2 m magenta screen frame flanked by gold speaker cubes, crowned by a bulb-lit marquee, with two big detached block hands hovering out at the sides for wild game-show gestures. Everything about the shape faces outward to an audience: the giant screen is the face, the speakers broadcast, and the gold trim around the screen frames it like a stage. The body is held up by nothing but a stack of teal hover rings over a small glowing pad, so its whole existence visibly floats on the crowd's attention. The magenta and gold showbiz palette pops hard against Gridhaven's steel blue and concrete grey. Its bright white screen glow makes it the warmest light in Main Square, while the teal under-glow ties it to the city's signal lamps."
+}

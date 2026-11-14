@@ -1,0 +1,1052 @@
+{
+  "id": "quota",
+  "name": "Foreman Quota",
+  "height_m": 3.2,
+  "locomotion": "treads",
+  "materials": [
+    {
+      "id": "quota_yellow",
+      "kind": "painted_metal",
+      "color": "#F2B705",
+      "roughness": 0.55,
+      "metallic": 0.3,
+      "wear": 0.45,
+      "dirt": 0.4,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "quota_hazard",
+      "kind": "painted_metal",
+      "color": "#F2B705",
+      "roughness": 0.5,
+      "metallic": 0.3,
+      "wear": 0.6,
+      "dirt": 0.5,
+      "pattern": "hazard",
+      "pattern_color": "#161616",
+      "emission": 0
+    },
+    {
+      "id": "quota_steel",
+      "kind": "bare_metal",
+      "color": "#3A3E44",
+      "roughness": 0.65,
+      "metallic": 0.9,
+      "wear": 0.5,
+      "dirt": 0.55,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "quota_dial",
+      "kind": "plastic",
+      "color": "#F4F1E8",
+      "roughness": 0.3,
+      "metallic": 0,
+      "wear": 0.15,
+      "dirt": 0.2,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "quota_amber",
+      "kind": "emissive",
+      "color": "#FFA21A",
+      "roughness": 0.3,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0.1,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 4
+    }
+  ],
+  "parts": [
+    {
+      "name": "tread_l",
+      "role": "tread",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.5,
+        2.2,
+        0.7
+      ],
+      "pivot": [
+        1.0,
+        0,
+        0.35
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.04
+    },
+    {
+      "name": "tread_r",
+      "role": "tread",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.5,
+        2.2,
+        0.7
+      ],
+      "pivot": [
+        -1.0,
+        0,
+        0.35
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.04
+    },
+    {
+      "name": "wheel_lf",
+      "role": "wheel",
+      "parent": "tread_l",
+      "shape": "cylinder_x",
+      "size": [
+        0.54,
+        0.6,
+        0.6
+      ],
+      "pivot": [
+        0,
+        -0.8,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "wheel_lb",
+      "role": "wheel",
+      "parent": "tread_l",
+      "shape": "cylinder_x",
+      "size": [
+        0.54,
+        0.6,
+        0.6
+      ],
+      "pivot": [
+        0,
+        0.8,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "wheel_rf",
+      "role": "wheel",
+      "parent": "tread_r",
+      "shape": "cylinder_x",
+      "size": [
+        0.54,
+        0.6,
+        0.6
+      ],
+      "pivot": [
+        0,
+        -0.8,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "wheel_rb",
+      "role": "wheel",
+      "parent": "tread_r",
+      "shape": "cylinder_x",
+      "size": [
+        0.54,
+        0.6,
+        0.6
+      ],
+      "pivot": [
+        0,
+        0.8,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "body",
+      "role": "body",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        1.9,
+        1.4,
+        1.7
+      ],
+      "pivot": [
+        0,
+        0,
+        0.6
+      ],
+      "offset": [
+        0,
+        0,
+        0.85
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.04
+    },
+    {
+      "name": "belly_pan",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        1.5,
+        1.6,
+        0.25
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.12
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.02
+    },
+    {
+      "name": "head",
+      "role": "head",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        1.05,
+        0.95,
+        0.75
+      ],
+      "pivot": [
+        0,
+        0,
+        1.7
+      ],
+      "offset": [
+        0,
+        -0.1,
+        0.375
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.035
+    },
+    {
+      "name": "visor",
+      "role": "extra",
+      "parent": "head",
+      "shape": "slab",
+      "size": [
+        1.12,
+        0.2,
+        0.07
+      ],
+      "pivot": [
+        0,
+        -0.6,
+        0.71
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_hazard",
+      "bevel": 0.01
+    },
+    {
+      "name": "beacon",
+      "role": "antenna",
+      "parent": "head",
+      "shape": "cylinder_z",
+      "size": [
+        0.2,
+        0.2,
+        0.15
+      ],
+      "pivot": [
+        0,
+        -0.1,
+        0.75
+      ],
+      "offset": [
+        0,
+        0,
+        0.075
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_amber",
+      "bevel": 0.015
+    },
+    {
+      "name": "dial_bezel",
+      "role": "extra",
+      "parent": "body",
+      "shape": "cylinder_y",
+      "size": [
+        0.92,
+        0.05,
+        0.92
+      ],
+      "pivot": [
+        0,
+        -0.7,
+        1.05
+      ],
+      "offset": [
+        0,
+        -0.025,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.01
+    },
+    {
+      "name": "dial_face",
+      "role": "extra",
+      "parent": "dial_bezel",
+      "shape": "cylinder_y",
+      "size": [
+        0.8,
+        0.06,
+        0.8
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        -0.05,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_dial",
+      "bevel": 0.008
+    },
+    {
+      "name": "dial_hand",
+      "role": "extra",
+      "parent": "dial_face",
+      "shape": "slab",
+      "size": [
+        0.045,
+        0.02,
+        0.34
+      ],
+      "pivot": [
+        0,
+        -0.09,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0.14
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.004
+    },
+    {
+      "name": "blade",
+      "role": "tool",
+      "parent": "body",
+      "shape": "slab",
+      "size": [
+        2.7,
+        0.08,
+        0.9
+      ],
+      "pivot": [
+        0,
+        -1.35,
+        -0.1
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        12,
+        0,
+        0
+      ],
+      "material": "quota_hazard",
+      "bevel": 0.02
+    },
+    {
+      "name": "push_arm_l",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.14,
+        0.6,
+        0.14
+      ],
+      "pivot": [
+        0.6,
+        -1.0,
+        -0.05
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.012
+    },
+    {
+      "name": "push_arm_r",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.14,
+        0.6,
+        0.14
+      ],
+      "pivot": [
+        -0.6,
+        -1.0,
+        -0.05
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.012
+    },
+    {
+      "name": "shoulder_cap_l",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.5,
+        0.5,
+        0.4
+      ],
+      "pivot": [
+        1.12,
+        0,
+        1.42
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_hazard",
+      "bevel": 0.025
+    },
+    {
+      "name": "shoulder_cap_r",
+      "role": "extra",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.5,
+        0.5,
+        0.4
+      ],
+      "pivot": [
+        -1.12,
+        0,
+        1.42
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_hazard",
+      "bevel": 0.025
+    },
+    {
+      "name": "arm_l",
+      "role": "arm_l",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.3,
+        0.34,
+        0.7
+      ],
+      "pivot": [
+        1.25,
+        0,
+        1.4
+      ],
+      "offset": [
+        0,
+        0,
+        -0.3
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "arm_r",
+      "role": "arm_r",
+      "parent": "body",
+      "shape": "box",
+      "size": [
+        0.3,
+        0.34,
+        0.7
+      ],
+      "pivot": [
+        -1.25,
+        0,
+        1.4
+      ],
+      "offset": [
+        0,
+        0,
+        -0.3
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "forearm_l",
+      "role": "forearm_l",
+      "parent": "arm_l",
+      "shape": "box",
+      "size": [
+        0.28,
+        0.3,
+        0.62
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.62
+      ],
+      "offset": [
+        0,
+        0,
+        -0.3
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "forearm_r",
+      "role": "forearm_r",
+      "parent": "arm_r",
+      "shape": "box",
+      "size": [
+        0.28,
+        0.3,
+        0.62
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.62
+      ],
+      "offset": [
+        0,
+        0,
+        -0.3
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_yellow",
+      "bevel": 0.02
+    },
+    {
+      "name": "piston_l",
+      "role": "extra",
+      "parent": "forearm_l",
+      "shape": "cylinder_z",
+      "size": [
+        0.07,
+        0.07,
+        0.55
+      ],
+      "pivot": [
+        0,
+        -0.18,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.3
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.006
+    },
+    {
+      "name": "piston_r",
+      "role": "extra",
+      "parent": "forearm_r",
+      "shape": "cylinder_z",
+      "size": [
+        0.07,
+        0.07,
+        0.55
+      ],
+      "pivot": [
+        0,
+        -0.18,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        -0.3
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.006
+    },
+    {
+      "name": "hand_l",
+      "role": "hand_l",
+      "parent": "forearm_l",
+      "shape": "box",
+      "size": [
+        0.36,
+        0.42,
+        0.26
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.6
+      ],
+      "offset": [
+        0,
+        -0.04,
+        -0.12
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.02
+    },
+    {
+      "name": "hand_r",
+      "role": "hand_r",
+      "parent": "forearm_r",
+      "shape": "box",
+      "size": [
+        0.36,
+        0.42,
+        0.26
+      ],
+      "pivot": [
+        0,
+        0,
+        -0.6
+      ],
+      "offset": [
+        0,
+        -0.04,
+        -0.12
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.02
+    },
+    {
+      "name": "exhaust_l",
+      "role": "extra",
+      "parent": "body",
+      "shape": "cylinder_z",
+      "size": [
+        0.14,
+        0.14,
+        0.5
+      ],
+      "pivot": [
+        0.6,
+        0.55,
+        1.7
+      ],
+      "offset": [
+        0,
+        0,
+        0.25
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.008
+    },
+    {
+      "name": "exhaust_r",
+      "role": "extra",
+      "parent": "body",
+      "shape": "cylinder_z",
+      "size": [
+        0.14,
+        0.14,
+        0.5
+      ],
+      "pivot": [
+        -0.6,
+        0.55,
+        1.7
+      ],
+      "offset": [
+        0,
+        0,
+        0.25
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "quota_steel",
+      "bevel": 0.008
+    }
+  ],
+  "face": {
+    "part": "head",
+    "screen": [
+      0.85,
+      0.4
+    ],
+    "at": [
+      0,
+      0.02
+    ],
+    "eye_color": "#FFB238",
+    "eyes": 1,
+    "eye_size": [
+      0.62,
+      0.16
+    ],
+    "eye_gap": 0,
+    "glow": "#FFA21A"
+  },
+  "details": [
+    {
+      "part": "body",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "quota_steel"
+    },
+    {
+      "part": "body",
+      "kind": "vent",
+      "side": "front",
+      "u": 0,
+      "v": -0.72,
+      "w": 0.5,
+      "h": 0.16,
+      "count": 5,
+      "material": "quota_steel"
+    },
+    {
+      "part": "body",
+      "kind": "light",
+      "side": "front",
+      "u": 0.82,
+      "v": 0.85,
+      "w": 0.08,
+      "h": 0.06,
+      "count": 1,
+      "color": "#FFA21A"
+    },
+    {
+      "part": "body",
+      "kind": "light",
+      "side": "front",
+      "u": -0.82,
+      "v": 0.85,
+      "w": 0.08,
+      "h": 0.06,
+      "count": 1,
+      "color": "#FFA21A"
+    },
+    {
+      "part": "body",
+      "kind": "badge",
+      "side": "front",
+      "u": -0.7,
+      "v": 0.62,
+      "w": 0.16,
+      "h": 0.08,
+      "material": "quota_steel"
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "left",
+      "u": 0,
+      "v": -0.2,
+      "w": 0.6,
+      "h": 0.5
+    },
+    {
+      "part": "body",
+      "kind": "panel",
+      "side": "right",
+      "u": 0,
+      "v": -0.2,
+      "w": 0.6,
+      "h": 0.5
+    },
+    {
+      "part": "body",
+      "kind": "vent",
+      "side": "back",
+      "u": 0,
+      "v": 0.1,
+      "w": 0.6,
+      "h": 0.35,
+      "count": 7,
+      "material": "quota_steel"
+    },
+    {
+      "part": "head",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "quota_steel"
+    },
+    {
+      "part": "head",
+      "kind": "vent",
+      "side": "left",
+      "u": 0,
+      "v": 0,
+      "w": 0.5,
+      "h": 0.4,
+      "count": 4,
+      "material": "quota_steel"
+    },
+    {
+      "part": "head",
+      "kind": "vent",
+      "side": "right",
+      "u": 0,
+      "v": 0,
+      "w": 0.5,
+      "h": 0.4,
+      "count": 4,
+      "material": "quota_steel"
+    },
+    {
+      "part": "head",
+      "kind": "panel",
+      "side": "back",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.5
+    },
+    {
+      "part": "blade",
+      "kind": "bolts",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "quota_steel"
+    },
+    {
+      "part": "tread_l",
+      "kind": "bolts",
+      "side": "left",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "quota_steel"
+    },
+    {
+      "part": "tread_r",
+      "kind": "bolts",
+      "side": "right",
+      "u": 0,
+      "v": 0,
+      "count": 4,
+      "material": "quota_steel"
+    }
+  ],
+  "design_notes": "Quota reads as a low, wide wall: a 2.7 m hazard-striped blade out front, a broad slab body planted between two heavy treads, and a squat cab head that barely rises above its shoulders, so in silhouette it is pure forward pressure. Every shape is a straight line or a right angle, rigid piston-bar arms, a flat tilted blade, a single long horizontal eye-slit, because Quota's logic only knows the shortest path from here to done. The one circle on its body is the white stopwatch dial set dead-centre in its chest, making time literally the heart of the machine and the first thing the audience reads. Safety yellow paint worn to dark steel at the edges says it has worked hard and proudly for years, the black hazard stripes on blade, visor and shoulders mark it as a danger to anything in its way, and the amber eye and roof beacon tie it to the pulsing warning lights of the Pipeworks until those same ambers warm into the gold sunrise over the Grove."
+}

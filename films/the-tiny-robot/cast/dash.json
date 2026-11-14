@@ -1,0 +1,953 @@
+{
+  "id": "dash",
+  "name": "Dash",
+  "height_m": 1.1,
+  "locomotion": "wheels",
+  "materials": [
+    {
+      "id": "dash_red",
+      "kind": "painted_metal",
+      "color": "#B80F18",
+      "roughness": 0.32,
+      "metallic": 0.35,
+      "wear": 0.15,
+      "dirt": 0.1,
+      "pattern": "stripes",
+      "pattern_color": "#F4F4F0",
+      "emission": 0
+    },
+    {
+      "id": "dash_white",
+      "kind": "painted_metal",
+      "color": "#F2F2EE",
+      "roughness": 0.38,
+      "metallic": 0.25,
+      "wear": 0.12,
+      "dirt": 0.08,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "dash_chrome",
+      "kind": "bare_metal",
+      "color": "#D8DCE0",
+      "roughness": 0.2,
+      "metallic": 1,
+      "wear": 0.05,
+      "dirt": 0.1,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "dash_rubber",
+      "kind": "rubber",
+      "color": "#1C1C1E",
+      "roughness": 0.85,
+      "metallic": 0,
+      "wear": 0.3,
+      "dirt": 0.3,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 0
+    },
+    {
+      "id": "dash_glow",
+      "kind": "emissive",
+      "color": "#FFE21A",
+      "roughness": 0.4,
+      "metallic": 0,
+      "wear": 0,
+      "dirt": 0,
+      "pattern": "none",
+      "pattern_color": "",
+      "emission": 4
+    }
+  ],
+  "parts": [
+    {
+      "name": "chassis",
+      "role": "body",
+      "parent": "root",
+      "shape": "box",
+      "size": [
+        0.6,
+        1,
+        0.16
+      ],
+      "pivot": [
+        0,
+        0,
+        0.3
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.02
+    },
+    {
+      "name": "cockpit",
+      "role": "head",
+      "parent": "chassis",
+      "shape": "box",
+      "size": [
+        0.48,
+        0.26,
+        0.2
+      ],
+      "pivot": [
+        0,
+        -0.29,
+        0.08
+      ],
+      "offset": [
+        0,
+        0,
+        0.1
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.025
+    },
+    {
+      "name": "tier2",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.56,
+        0.66,
+        0.14
+      ],
+      "pivot": [
+        0,
+        0.17,
+        0.15
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.018
+    },
+    {
+      "name": "tier3",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.5,
+        0.52,
+        0.14
+      ],
+      "pivot": [
+        0,
+        0.24,
+        0.29
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.016
+    },
+    {
+      "name": "tier4",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.44,
+        0.3,
+        0.1
+      ],
+      "pivot": [
+        0,
+        0.35,
+        0.41
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_white",
+      "bevel": 0.014
+    },
+    {
+      "name": "fin",
+      "role": "tail",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.07,
+        0.32,
+        0.5
+      ],
+      "pivot": [
+        0,
+        0.36,
+        0.38
+      ],
+      "offset": [
+        0,
+        0,
+        0.21
+      ],
+      "rotate": [
+        -10,
+        0,
+        0
+      ],
+      "material": "dash_white",
+      "bevel": 0.012
+    },
+    {
+      "name": "number_block",
+      "role": "extra",
+      "parent": "fin",
+      "shape": "box",
+      "size": [
+        0.11,
+        0.22,
+        0.22
+      ],
+      "pivot": [
+        0,
+        0,
+        0.24
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_glow",
+      "bevel": 0.01
+    },
+    {
+      "name": "splitter",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.58,
+        0.1,
+        0.04
+      ],
+      "pivot": [
+        0,
+        -0.5,
+        -0.06
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_white",
+      "bevel": 0.008
+    },
+    {
+      "name": "wheel_fl",
+      "role": "wheel",
+      "parent": "chassis",
+      "shape": "cylinder_x",
+      "size": [
+        0.13,
+        0.28,
+        0.28
+      ],
+      "pivot": [
+        0.37,
+        -0.38,
+        -0.16
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_rubber",
+      "bevel": 0.02
+    },
+    {
+      "name": "wheel_fr",
+      "role": "wheel",
+      "parent": "chassis",
+      "shape": "cylinder_x",
+      "size": [
+        0.13,
+        0.28,
+        0.28
+      ],
+      "pivot": [
+        -0.37,
+        -0.38,
+        -0.16
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_rubber",
+      "bevel": 0.02
+    },
+    {
+      "name": "wheel_rl",
+      "role": "wheel",
+      "parent": "chassis",
+      "shape": "cylinder_x",
+      "size": [
+        0.16,
+        0.4,
+        0.4
+      ],
+      "pivot": [
+        0.37,
+        0.38,
+        -0.1
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_rubber",
+      "bevel": 0.02
+    },
+    {
+      "name": "wheel_rr",
+      "role": "wheel",
+      "parent": "chassis",
+      "shape": "cylinder_x",
+      "size": [
+        0.16,
+        0.4,
+        0.4
+      ],
+      "pivot": [
+        -0.37,
+        0.38,
+        -0.1
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_rubber",
+      "bevel": 0.02
+    },
+    {
+      "name": "hub_fl",
+      "role": "extra",
+      "parent": "wheel_fl",
+      "shape": "cylinder_x",
+      "size": [
+        0.14,
+        0.17,
+        0.17
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_chrome",
+      "bevel": 0.01
+    },
+    {
+      "name": "hub_fr",
+      "role": "extra",
+      "parent": "wheel_fr",
+      "shape": "cylinder_x",
+      "size": [
+        0.14,
+        0.17,
+        0.17
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_chrome",
+      "bevel": 0.01
+    },
+    {
+      "name": "hub_rl",
+      "role": "extra",
+      "parent": "wheel_rl",
+      "shape": "cylinder_x",
+      "size": [
+        0.17,
+        0.24,
+        0.24
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_chrome",
+      "bevel": 0.01
+    },
+    {
+      "name": "hub_rr",
+      "role": "extra",
+      "parent": "wheel_rr",
+      "shape": "cylinder_x",
+      "size": [
+        0.17,
+        0.24,
+        0.24
+      ],
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_chrome",
+      "bevel": 0.01
+    },
+    {
+      "name": "fender_fl",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.16,
+        0.36,
+        0.04
+      ],
+      "pivot": [
+        0.37,
+        -0.38,
+        0.03
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.008
+    },
+    {
+      "name": "fender_fr",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.16,
+        0.36,
+        0.04
+      ],
+      "pivot": [
+        -0.37,
+        -0.38,
+        0.03
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.008
+    },
+    {
+      "name": "fender_rl",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.18,
+        0.44,
+        0.04
+      ],
+      "pivot": [
+        0.37,
+        0.38,
+        0.13
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.008
+    },
+    {
+      "name": "fender_rr",
+      "role": "extra",
+      "parent": "chassis",
+      "shape": "slab",
+      "size": [
+        0.18,
+        0.44,
+        0.04
+      ],
+      "pivot": [
+        -0.37,
+        0.38,
+        0.13
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.008
+    },
+    {
+      "name": "arm_left",
+      "role": "arm_l",
+      "parent": "chassis",
+      "shape": "box",
+      "size": [
+        0.06,
+        0.26,
+        0.08
+      ],
+      "pivot": [
+        0.32,
+        -0.1,
+        0.16
+      ],
+      "offset": [
+        0,
+        0.12,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_white",
+      "bevel": 0.01
+    },
+    {
+      "name": "forearm_left",
+      "role": "forearm_l",
+      "parent": "arm_left",
+      "shape": "box",
+      "size": [
+        0.06,
+        0.2,
+        0.07
+      ],
+      "pivot": [
+        0,
+        0.24,
+        0
+      ],
+      "offset": [
+        0,
+        0.1,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.01
+    },
+    {
+      "name": "hand_left",
+      "role": "hand_l",
+      "parent": "forearm_left",
+      "shape": "rounded_box",
+      "size": [
+        0.08,
+        0.08,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0.2,
+        0
+      ],
+      "offset": [
+        0,
+        0.04,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_chrome",
+      "bevel": 0.02
+    },
+    {
+      "name": "arm_right",
+      "role": "arm_r",
+      "parent": "chassis",
+      "shape": "box",
+      "size": [
+        0.06,
+        0.26,
+        0.08
+      ],
+      "pivot": [
+        -0.32,
+        -0.1,
+        0.16
+      ],
+      "offset": [
+        0,
+        0.12,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_white",
+      "bevel": 0.01
+    },
+    {
+      "name": "forearm_right",
+      "role": "forearm_r",
+      "parent": "arm_right",
+      "shape": "box",
+      "size": [
+        0.06,
+        0.2,
+        0.07
+      ],
+      "pivot": [
+        0,
+        0.24,
+        0
+      ],
+      "offset": [
+        0,
+        0.1,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_red",
+      "bevel": 0.01
+    },
+    {
+      "name": "hand_right",
+      "role": "hand_r",
+      "parent": "forearm_right",
+      "shape": "rounded_box",
+      "size": [
+        0.08,
+        0.08,
+        0.08
+      ],
+      "pivot": [
+        0,
+        0.2,
+        0
+      ],
+      "offset": [
+        0,
+        0.04,
+        0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "material": "dash_chrome",
+      "bevel": 0.02
+    }
+  ],
+  "face": {
+    "part": "cockpit",
+    "screen": [
+      0.42,
+      0.13
+    ],
+    "at": [
+      0,
+      0.01
+    ],
+    "eye_color": "#FFE21A",
+    "eyes": 2,
+    "eye_size": [
+      0.12,
+      0.075
+    ],
+    "eye_gap": 0.21,
+    "glow": "#FFE21A",
+    "rest": {
+      "squint": 0.35,
+      "angry": 0.3
+    }
+  },
+  "details": [
+    {
+      "part": "chassis",
+      "kind": "light",
+      "side": "front",
+      "u": -0.72,
+      "v": 0,
+      "w": 0.14,
+      "h": 0.45,
+      "color": "#FFF6D0"
+    },
+    {
+      "part": "chassis",
+      "kind": "light",
+      "side": "front",
+      "u": 0.72,
+      "v": 0,
+      "w": 0.14,
+      "h": 0.45,
+      "color": "#FFF6D0"
+    },
+    {
+      "part": "chassis",
+      "kind": "badge",
+      "side": "front",
+      "u": 0,
+      "v": 0,
+      "w": 0.25,
+      "h": 0.5,
+      "material": "dash_chrome"
+    },
+    {
+      "part": "chassis",
+      "kind": "light",
+      "side": "back",
+      "u": -0.7,
+      "v": 0,
+      "w": 0.18,
+      "h": 0.4,
+      "color": "#FF3020"
+    },
+    {
+      "part": "chassis",
+      "kind": "light",
+      "side": "back",
+      "u": 0.7,
+      "v": 0,
+      "w": 0.18,
+      "h": 0.4,
+      "color": "#FF3020"
+    },
+    {
+      "part": "tier2",
+      "kind": "vent",
+      "side": "left",
+      "u": 0.3,
+      "v": 0,
+      "w": 0.4,
+      "h": 0.55,
+      "count": 4
+    },
+    {
+      "part": "tier2",
+      "kind": "vent",
+      "side": "right",
+      "u": -0.3,
+      "v": 0,
+      "w": 0.4,
+      "h": 0.55,
+      "count": 4
+    },
+    {
+      "part": "tier3",
+      "kind": "panel",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "w": 0.6,
+      "h": 0.5,
+      "material": "dash_white"
+    },
+    {
+      "part": "cockpit",
+      "kind": "bolts",
+      "side": "top",
+      "u": 0,
+      "v": 0,
+      "w": 0.8,
+      "h": 0.7,
+      "count": 4
+    },
+    {
+      "part": "fin",
+      "kind": "bolts",
+      "side": "left",
+      "u": 0,
+      "v": -0.7,
+      "w": 0.8,
+      "h": 0.25,
+      "count": 4
+    },
+    {
+      "part": "tier4",
+      "kind": "antenna",
+      "side": "top",
+      "u": -0.6,
+      "v": 0.4,
+      "length": 0.12,
+      "color": "#FFE21A"
+    },
+    {
+      "part": "chassis",
+      "kind": "panel",
+      "side": "left",
+      "u": 0,
+      "v": 0,
+      "w": 0.3,
+      "h": 0.6,
+      "material": "dash_white"
+    },
+    {
+      "part": "chassis",
+      "kind": "panel",
+      "side": "right",
+      "u": 0,
+      "v": 0,
+      "w": 0.3,
+      "h": 0.6,
+      "material": "dash_white"
+    }
+  ],
+  "design_notes": "Dash is a low stepped ramp of stacked red slabs that rises from a narrow visor nose to a tall white fin, so even standing still its silhouette reads as already launching forward, and the 1.1 m fin with its glowing number block is the one vertical note shouting 'look at me'. Every tier steps back and up like a podium, which is its logic in a nutshell: always climbing to first place. The short rigid arms fold back along its flanks like side pods, so it would rather be aerodynamic than reach out to anyone, which makes the moment it finally opens them for Tiny land harder. Racing red with white stripes and chrome hubs sets it apart from Gridhaven's steel blue and concrete, while the electric yellow number and eyes tie it to the city's safety yellow and make it readable as a streak of light on the rainy night of the pipe race."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "S27",
+  "title": "Around Is Faster",
+  "location_id": "fast_lane_works",
+  "time_of_day": "morning",
+  "characters": [
+    "quota",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Morning sun glints on the wet road slabs of the Fast Lane Works. The unfinished road edge points straight at the Old Grove, where green leaf clusters sway and the gauge grates glow green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota rolls up alone, its treads shaking puddles into ripples, and stops at its old parking spot facing the trees. Its blade is raised high, not lowered. Its long eye-light sweeps slowly across the green gauges.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A single loud stopwatch click from Quota's dial.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota turns ninety degrees, hooks a striped construction barrier with one piston arm and drags it with a scraping screech into a new angle. It grabs another, then another, and they form a smooth curve that bends away from the Grove's edge.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash zooms in, brakes hard and skids to a stop. Its slanted visor eyes go perfectly round as it looks from the curved barriers to Quota and back.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "stunned, engine sputtering",
+      "text": "You're going AROUND? That's a bend!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota sets the last barrier down with a heavy clunk. The hand on its chest dial snaps back to zero.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "deep rumble, a stopwatch click between sentences",
+      "text": "Bend: six. Acceptable. Around is faster than arguing.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash's eyes curve into delighted crescents. The number block on its fin flares bright yellow and its wheels spin in place.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "revving, thrilled",
+      "text": "New track! Three, two, go!",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash tears along the new curve, drifting neatly beside the barriers, and the Grove's leaves sway in its wind. Quota's dial ticks along, timing it. Quota gives one small approving nod.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "At the end of the curve Dash spots robots streaming down a street toward the Foundry's tall chimney. Its eyes go serious, and it swerves off after them.",
+      "est_seconds": 3
+    }
+  ],
+  "staging_notes": "Open on a wide shot down the length of the road so the straight line pointing at the Grove reads clearly, then hold a high top-down shot as Quota drags the barriers into a curve, so the shape change is unmistakable without words. Keep Quota's blade visibly raised the whole scene as a silent contrast to S08. End by following Dash around the curve and tilting toward the Foundry chimney to lead into S28."
+}

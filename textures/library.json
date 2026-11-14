@@ -1,0 +1,65 @@
+{
+  "note": "Texture library prompts. Generated with FLUX.2 klein 4B on the GPU server, made tileable and turned into PBR maps by textures/build.py. 'tint' textures are neutral grey so a material's colour can be applied on top.",
+  "defaults": {
+    "size": 1024,
+    "steps": 4,
+    "n": 3
+  },
+  "style": "Flat orthographic top-down photograph of a material surface filling the whole frame edge to edge, even soft diffuse lighting, no shadows, no perspective, no objects, no text, no logos, high detail, seamless texture.",
+  "jobs": [
+    {
+      "id": "paint_clean",
+      "tint": true,
+      "seed": 21,
+      "prompt": "Smooth light grey enamel paint on metal. Very subtle orange-peel texture, faint polishing swirls, almost clean. Neutral grey colour only."
+    },
+    {
+      "id": "metal_brushed",
+      "tint": false,
+      "seed": 31,
+      "prompt": "Brushed stainless steel plate. Fine straight horizontal brushing lines, a few small random scratches, faint smudges."
+    },
+    {
+      "id": "brass_old",
+      "tint": false,
+      "seed": 41,
+      "prompt": "Old brass plate with warm golden tone. Uneven darker patina, fingerprints, fine scratches, slightly dull."
+    },
+    {
+      "id": "rubber",
+      "tint": false,
+      "seed": 51,
+      "prompt": "Matte black rubber surface. Fine grainy texture, faint scuffs and dust."
+    },
+    {
+      "id": "grime",
+      "tint": false,
+      "seed": 61,
+      "prompt": "Dirt and grime streaks running vertically down a plain light grey wall, brown rust stains, oil drips and water stains, soft edges, mostly light grey background."
+    },
+    {
+      "id": "scratches",
+      "tint": false,
+      "seed": 71,
+      "prompt": "Many fine thin white scratches and scuff marks on a smooth flat black surface, random directions, varied lengths, mostly black."
+    },
+    {
+      "id": "glass_smudge",
+      "tint": false,
+      "seed": 81,
+      "prompt": "Fingerprints, smudges and faint dust on a flat black glass surface, mostly black, subtle grey marks."
+    },
+    {
+      "id": "paint_worn",
+      "tint": true,
+      "seed": 111,
+      "prompt": "Heavily used light grey painted machine panel. Visible orange-peel paint, many fine scuffs and scratches, small chipped spots showing dark steel, soft dirt smudges, faint repaint patches in a slightly different grey. Neutral grey colour only, even lighting."
+    },
+    {
+      "id": "chips",
+      "tint": false,
+      "seed": 121,
+      "prompt": "Chipped and flaking white paint on dark grey steel: irregular small and medium chips and flakes scattered across the surface, crisp jagged chip edges, mostly intact white paint."
+    }
+  ]
+}

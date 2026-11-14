@@ -1,0 +1,98 @@
+{
+  "id": "S22",
+  "title": "Keep Them Drinking",
+  "location_id": "old_grove",
+  "time_of_day": "night",
+  "characters": [
+    "mossback",
+    "tiny",
+    "warden"
+  ],
+  "beats": [
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Steady rain hissing on leaf clusters. Far off, the muffled clank and rumble of pipe-laying.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Grove in rainy darkness. Silver streaks fall through the drooping cube leaf clusters. The gauge grates glow red along the path. The great old tree hangs lowest of all, its thick root arching out of the ground beside it.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls in on its loop, the tank on its back full of Nursery water and its moss blocks swaying. At the great old tree's red grate it slows to its minimum crawl and tips its square spout. A short pour of blue streaks falls onto the grate, then Mossback keeps moving.",
+      "est_seconds": 6
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "At the Grove's edge Warden stands perfectly still, holding Tiny's crate at chest height. Rain runs off its helmet. Through the crate's slot we see Tiny's two eyes, tilted with worry, and a faint amber glow from its antenna.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, through the slot",
+      "text": "Is it enough? It is so dry.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm, rolling past the crate, voice fading away",
+      "text": "You worry too...",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Mossback disappears into the dark around the loop. Without a word, Warden slowly turns the crate so its slot faces the great old tree. Tiny's eyes widen a little in thanks.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Close on the great old tree. Its grate still glows red, but one low leaf cluster trembles, then lifts very slightly into the rain.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Mossback's slow treads swell back out of the dark.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "returning, gentle, finishing the thought",
+      "text": "...much, little one.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "In the slot, Tiny's eyes curve into small crescents. Its antenna flickers from amber to green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Wide shot: beyond the trees, floodlights creep closer as the pipe advances toward the Grove. At the top of the frame the black sky begins to turn grey. The great root lies directly across the pipe's path.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Keep the camera low and slow, mostly at Tiny's eye level from the crate slot, so the trees loom and Mossback's passes sweep across the frame. Mix Mossback's voice so it fades out as it rolls away and swells as it returns, with rain as the bed and no music until the leaf lifts. The final wide shot deliberately frames the exposed root between the approaching floodlights and the great tree to set up S23."
+}

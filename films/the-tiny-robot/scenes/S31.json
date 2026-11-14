@@ -1,0 +1,114 @@
+{
+  "id": "S31",
+  "title": "Check... No Harm. Go.",
+  "location_id": "old_grove",
+  "time_of_day": "golden morning",
+  "characters": [
+    "tiny",
+    "primly",
+    "mossback",
+    "dash",
+    "quota"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Gold morning light slants through the revived Old Grove. Every gauge grate glows green, the leaf clusters sway, and the central sapling holds its first cube blossom. At the edge, Tiny trots in with quick small steps, a seedling tray held over its head that is wider than it is.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny sets the tray down beside the bent elbow of the new pipe, next to the bare gap at the Grove's edge. It lifts one sprout in its little soil block, hugs it to its chest and lowers it into the gap. The sprout's two slab leaves wobble, then settle upright. Tiny's eyes go crescent.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly glides into frame in a perfectly straight line, broom arms sweeping. It stops dead at a scatter of fallen slab leaves and its brooms hover just above them. Its neat eye-lights flick from the leaves to Tiny, then back to the leaves.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "softly, to itself, a little surprised",
+      "text": "Those are exactly where they belong.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly turns at a crisp right angle and sweeps a tidy square path around the fallen leaves, leaving every one where it fell. It gives a small satisfied nod.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls in on its loop, the moss on its back swaying, and tips a slow splash from its tank onto the new sprout. At the Grove's edge, Dash waits with its engine off, watching, eyes round and content.",
+      "est_seconds": 4.0
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm, voice fading as it rolls away",
+      "text": "Grow slow, little...",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Beyond the trees, on the new curve of the Fast Lane, Quota idles with its blade raised high and clear of the ground. Its dial ticks calmly. Its long eye-light rests on the Grove.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny tilts its whole head back and looks up at the great old tree. The leaf clusters sway far above it. Tiny is a tiny box at the foot of a giant. It holds very still.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes sweep left, then right. Its antenna doesn't go amber this time. It glows a steady soft green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "quiet, warm, unhurried",
+      "text": "Check... no harm.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "with a happy chirp",
+      "text": "Go.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks into the gold light under the leaves with small, sure steps. A single slab leaf drifts down and lands in front of it. Tiny steps carefully around it and keeps going, its little silhouette shrinking among the swaying trees.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Leaves rustle, Mossback's engine hums distantly around the loop, and a last soft chirp fades into birdlike electronic notes as the light swells to gold.",
+      "est_seconds": 2
+    }
+  ],
+  "staging_notes": "Open wide on the fully green Grove so the gauges, blossom and bent pipe all read in one frame, then go low to Tiny's height for the planting so the trees tower overhead. Keep Primly, Mossback, Dash and Quota as brief, gentle cameos in the background layers so the scene stays Tiny's. For the catchphrase, hold a centred close-up of Tiny's face screen and antenna, then crane up and back as Tiny walks into the light, ending on the swaying canopy and gold sunlight. The film ends there."
+}

@@ -1,0 +1,184 @@
+{
+  "id": "S23",
+  "title": "The Root",
+  "location_id": "old_grove",
+  "time_of_day": "pre-dawn",
+  "characters": [
+    "tiny",
+    "quota",
+    "warden",
+    "primly",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Grey pre-dawn light seeps into the Grove. The rain has thinned to sparse silver streaks. A straight line of new square pipe segments runs in from the dark between the box trunks.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash skids up with one straight segment on its back. Primly glides behind it and nudges the last joint square with a broom arm. Then both stop. The line ends a short step from the great old tree's exposed root, a thick bark-brown bar that arches out of the mud straight across the path.",
+      "est_seconds": 6
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "panting, engine revving down",
+      "text": "Last lap! Uh... there's a tree in the lap.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota rolls up behind them on squelching treads, its dial sweeping. Its long amber eye-light scans the root from end to end.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "flat rumble, stopwatch click",
+      "text": "Root. In the line. Cut: ninety seconds.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "With a long hydraulic hiss, Quota tilts its blade down until the edge hangs just above the root. Overhead, the drooping leaf clusters shiver.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "At the Grove's edge, Warden's visor bar turns from the blade to the crate in its arms. With heavy, even steps it walks to the root and sets the crate down in the mud beside it.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, exact, no change of tone",
+      "text": "The order says hold the culprit until sunrise. The order does not say how close.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "The crate flap swings open. Tiny climbs out onto the mud and its little square feet sink slightly. It looks up at the root, then up at the blade.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Antenna glowing amber, Tiny sweeps its eyes left and right. Its gaze stops on the bark of the root, then on the blade's edge.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "quietly, to itself",
+      "text": "Check... harm.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks along the root, carefully steps around its end where it dips into the mud, and never touches it. It plants itself in the narrow gap between the root and the blade, with its back to the bark and its feet square. Its head barely reaches the blade's lower edge. Its antenna turns steady green.",
+      "est_seconds": 6
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, steady, looking up",
+      "text": "This is somebody. I will not move.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "The blade inches forward until it is a hand's width from Tiny's face. Tiny trembles all over but does not step back. Behind it, Primly's broom arm hovers mid-air and Dash's visor eyes go round.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A two-tone hum rises, low and engine-deep from Quota and thin and crackly from Tiny.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "They LOCK. Quota's eye-light and Tiny's eyes fill with flickering static lines. Quota's dial hand freezes mid-sweep. Rain streaks keep falling around the two frozen shapes, one huge and one tiny.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The sky behind the trees pales a shade. The red gauge grate beside the root blinks. The hum climbs higher. Warden stands motionless with its visor flickering.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "The static in Quota's eye-light shifts and rearranges. Its dial hand twitches backward, then forward, calculating. Its gaze lifts from the root to the empty air above it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "slow, working it out, clicks between words",
+      "text": "Cut, then repair tree: slow. Over: forty seconds.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Quota's stopwatch snaps with one loud click. The hum cuts out.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "The lock breaks. Tiny's eyes and Quota's eye-light clear at the same instant. Quota hisses its blade up high and away from Tiny, and its dial starts sweeping again.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "decisive",
+      "text": "Over.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes go crescent. It sags with relief, wobbles, and catches itself with one block hand on the mud, still standing beside the root and not on it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota swings a piston arm to the pile on Dash's back and lifts out an angled elbow segment. It turns the elbow toward Primly, whose neat eye-lights stretch wide at the bend.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Shoot the standoff from Tiny's height, low in the mud, so the blade fills the top of frame and the root's bark sits behind Tiny's back. Then cut wide to show the little cream box against the yellow wall of Quota. Keep the root's arch clearly visible, and make Tiny's careful step around its end a deliberate, readable moment in a side-on shot. During the lock the rain keeps falling and the sky behind the trees visibly lightens, so time is running out while nobody moves."
+}

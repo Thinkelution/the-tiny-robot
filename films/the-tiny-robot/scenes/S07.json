@@ -1,0 +1,189 @@
+{
+  "id": "S07",
+  "title": "Amber Lights",
+  "location_id": "old_grove",
+  "time_of_day": "morning, days later",
+  "characters": [
+    "tiny",
+    "mossback",
+    "primly"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Wide on the Old Grove, days later. The cool light is flat. The cube leaf clusters hang low on their box trunks, and fallen slab leaves cover the ground in a dull brown layer. Nothing sways.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Close on a water-line grate beside the central sapling. Its gauge light flickers from amber to red with a weak electric tick.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny trots in on its quick little feet and stops dead at the edge of the clearing. Its rectangular eyes go wide, and its antenna glows amber.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls past on its endless loop and tips its square spout at a tree. Nothing comes out, only a hollow clank from the empty tank.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, worried",
+      "text": "Mossback? The trees look tired.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "slow and gravelly, fading as it rolls away",
+      "text": "The water is...",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks to the central sapling and gently lifts one drooping slab leaf with its block hand. The leaf sags straight back down. Tiny's eyes tilt sad.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly glides in along a perfectly straight line and turns at an exact right angle. Its neat eye-lights brighten at the sea of fallen leaves.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "delighted, crisp",
+      "text": "Oh, wonderful. So much to put in its place.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly sweeps the leaves into tidy rows with its broom arms, whisk, whisk, and herds them toward the scrap chute.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "swelling back in as it comes around the loop",
+      "text": "...gone.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly's broom slides toward the small brown seed resting beside the sapling. Tiny spots it and its eyes go wide.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "all in one rushed breath, already running",
+      "text": "Check-no-harm-go!",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny dives and grabs the seed with both hands just as the edge of Primly's broom closes on the other side. Primly bends low, and the two of them are face to face over one tiny seed.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "politely scolding",
+      "text": "Excuse me, little one. That is not where that goes.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "quiet, stubborn",
+      "text": "It goes here. It is alive.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Neither one lets go. Both freeze mid-tug. Their eyes snap to flickering static lines, Tiny's antenna stutters, and Primly's broom trembles in place.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Two rising hums, one high and small, one crisp and prim, climbing together and clashing.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback's loop carries it straight at them. It cannot stop, so it slows to its minimum crawl and squeezes between the two locked robots. The seed pops free of both grips and drops into the green cube moss on its back.",
+      "est_seconds": 6
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Both hums cut off at once with a soft double pop.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Tiny and Primly blink as their eyes come back. Both stare at the seed nestled snugly in the moss.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "puzzled, then satisfied",
+      "text": "Well. It is put away.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "happy chirp",
+      "text": "And it is kept.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Close on Mossback's back as it rolls on. The seed sits among the moss clusters, which sway gently. It is the only thing in the Grove still moving softly.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's smile fades. It turns back to the red gauge by the sapling, then looks past the trees to the Grove's edge, where a deep engine rumble rolls in and the fallen leaves tremble on the ground.",
+      "est_seconds": 5
+    }
+  ],
+  "staging_notes": "Open on a wide, desaturated master that mirrors S02's green Grove shot, so the drought reads instantly through the drooping clusters and the amber-to-red gauges. Stage the lock in a low two-shot with Primly bent down to Tiny's height, then hold the camera still so Mossback's slow crawl through the middle of the frame lands as the comic third option. Make the seed a distinct, readable prop (a small brown cube with a pale stripe) and give it a clear close-up resting in the moss: in S31 it returns sprouted as a two-leaf shoot, and Tiny plants it in the Grove gap while Primly watches without reaching for it. End on the engine rumble shaking the leaves to hand off to Quota in S08."
+}

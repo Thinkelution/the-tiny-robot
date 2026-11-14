@@ -1,0 +1,124 @@
+{
+  "id": "S14",
+  "title": "Thinking It Through",
+  "location_id": "junk_stacks",
+  "time_of_day": "dawn",
+  "characters": [
+    "tiny"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Blue dawn fog drifts between the rust-orange crate towers. Tiny trudges home along the slab path with small, slow steps. Its antenna flickers a weak amber.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny climbs onto its plank porch and sits down heavily. Three little scrap cubes lie beside it on the plank, each about as big as its hand. Its eyes tilt sad.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny pushes the first cube forward to the edge of the plank and looks hard at it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "quietly, thinking out loud",
+      "text": "Stay quiet: Mossback is hurt.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "It pushes the second cube up beside the first.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Blame Dash: Dash is hurt.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Its hand hovers over the third cube. Its eyes flicker, then it slowly pushes the cube into the row.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, steadier",
+      "text": "Tell the truth: only I am hurt. I can choose that.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny looks from the first two cubes down to the pavement crack, where the little two-leaf weed sways in the fog beside Dash's old skid mark.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "working it out",
+      "text": "Quiet is harm. A lie is harm. I know both.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Its gaze drifts to the scrap pile beside the crate and the faded plate stamped with the First Workshop's square emblem. Tiny hops down, walks over and looks up at it for a long moment. Then it lifts one block hand and touches the brass stamp plate on its own brow.",
+      "est_seconds": 6
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A soft, hollow tap of a block hand on brass.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's antenna glow shifts slowly from flickering amber to a steady green. Its eyes level out from sad to calm.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "simply",
+      "text": "I did not know before. I know now.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny turns toward the city, where block towers rise out of the thinning fog. It steps carefully around the weed and walks off down the path with quick small steps, a little box heading toward the lit skyline.",
+      "est_seconds": 6
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Far off, the Big Board's announcement chime echoes across the city.",
+      "est_seconds": 2
+    }
+  ],
+  "staging_notes": "Keep the camera low at Tiny's height on the porch so the three scrap cubes read large and deliberate. Each push of a cube is a held, separate beat. The emblem moment plays wordless in a quiet two-shot of plate and Tiny, then cuts close on the antenna as the colour shifts. End on a wide shot as the fog lifts and Tiny walks small into the city, with the weed sharp in the foreground."
+}

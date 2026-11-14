@@ -1,0 +1,119 @@
+{
+  "id": "S08",
+  "title": "Already Finished",
+  "location_id": "fast_lane_works",
+  "time_of_day": "day",
+  "characters": [
+    "quota",
+    "dash",
+    "tiny"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Wide shot. The raised slab road of the Fast Lane runs straight and grey, then stops dead at the Grove's edge. Beyond it the box-trunk trees sag, and their cube leaf clusters hang low. Quota sits parked at the very end of the road, facing the trees.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A low diesel idle under a steady stopwatch tick.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash drifts a tight circle around Quota's treads, tyres squealing. Its slanted visor eyes stay locked on Quota's chest dial, wide and starstruck.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "breathless, revving",
+      "text": "Fastest road in the city! Three, two, wow!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota's long amber eye-light sweeps across the Grove and stops on the gauge grates. Every one of them glows red. The stopwatch hand on its dial ticks forward.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "flat rumble, a click between each phrase",
+      "text": "Yesterday: wilting. Today: more. Already finished.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "With a pneumatic hiss Quota tilts its blade down. The great plate stops a hand's width above the ground.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Under a drooping leaf cluster, a small cream box steps out. Tiny pauses with its antenna amber and sweeps its eyes left and right. Then it walks with quick small steps into the gap between the blade and the trees. The top of its head barely reaches the bottom edge of the blade.",
+      "est_seconds": 6
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, plain, looking straight up",
+      "text": "They are not finished. They are thirsty.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "laughing, rolling back and forth",
+      "text": "Paperweight versus blade! Easy call!",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota's eye-light tilts down to find Tiny. Tiny does not move. The dial ticks once, twice, three times.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "rumbling, unbothered",
+      "text": "Waiting: slow. Board: faster.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota lifts its blade and pivots heavily on its treads, then rolls away up the road toward Main Square. The ground shakes and Tiny wobbles on its square feet, but it keeps its place. A dry slab leaf drops beside it.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash spins its wheels and tears off after Quota, number block blazing.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Alone now, Tiny turns to the wilting trees. Its eyes tilt sad and its antenna flickers amber. The trembling under its feet fades into the distance.",
+      "est_seconds": 3
+    }
+  ],
+  "staging_notes": "Use low angles from Tiny's height so the blade fills the top of frame like a wall, and save one wide two-shot to show the scale gap: a little box against a yellow slab. Quota's red-gauge scan should be a POV pan across the grates so the drought reads without words. End on Tiny small in the centre of a wide frame, with the road pointing away toward Main Square as the hand-off to the evening vote."
+}

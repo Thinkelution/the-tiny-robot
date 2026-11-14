@@ -1,0 +1,181 @@
+{
+  "title": "The Tiny Robot: meet the cast",
+  "fps": 30,
+  "size": [
+    1080,
+    1920
+  ],
+  "shots": [
+    {
+      "id": "hook",
+      "mode": "hook",
+      "robot": "tiny",
+      "frames": 135,
+      "captions": [
+        {
+          "from": 8,
+          "to": 135,
+          "kind": "question",
+          "text": "Can a studio-quality animated film be made with a $20 Claude plan?"
+        },
+        {
+          "from": 72,
+          "to": 135,
+          "kind": "sub",
+          "text": "Blender + Claude?"
+        }
+      ]
+    },
+    {
+      "id": "quota",
+      "mode": "intro",
+      "robot": "quota",
+      "frames": 90,
+      "name": "Foreman Quota",
+      "logic": "Finish every job faster than yesterday."
+    },
+    {
+      "id": "shine",
+      "mode": "intro",
+      "robot": "shine",
+      "frames": 90,
+      "name": "Shine",
+      "logic": "Make the crowd happy."
+    },
+    {
+      "id": "warden",
+      "mode": "intro",
+      "robot": "warden",
+      "frames": 90,
+      "name": "Warden Plumb",
+      "logic": "Obey the Board's orders exactly."
+    },
+    {
+      "id": "primly",
+      "mode": "intro",
+      "robot": "primly",
+      "frames": 90,
+      "name": "Primly",
+      "logic": "Keep everything clean and in its place."
+    },
+    {
+      "id": "ledger",
+      "mode": "intro",
+      "robot": "ledger",
+      "frames": 90,
+      "name": "Ledger",
+      "logic": "Count everything and remember it."
+    },
+    {
+      "id": "mossback",
+      "mode": "intro",
+      "robot": "mossback",
+      "frames": 90,
+      "name": "Mossback",
+      "logic": "Never stop."
+    },
+    {
+      "id": "dash",
+      "mode": "intro",
+      "robot": "dash",
+      "frames": 90,
+      "name": "Dash",
+      "logic": "Always win."
+    },
+    {
+      "id": "tiny",
+      "mode": "intro",
+      "robot": "tiny",
+      "frames": 120,
+      "name": "The Tiny Robot",
+      "logic": "Do things, but do not cause harm to anyone or hurt anyone knowingly."
+    },
+    {
+      "id": "lineup",
+      "mode": "lineup",
+      "robots": [
+        "tiny",
+        "mossback",
+        "quota",
+        "ledger",
+        "shine",
+        "warden",
+        "dash",
+        "primly"
+      ],
+      "frames": 180,
+      "captions": [
+        {
+          "from": 6,
+          "to": 96,
+          "kind": "question",
+          "text": "One city. Eight robots. One logic each."
+        },
+        {
+          "from": 104,
+          "to": 180,
+          "kind": "big",
+          "text": "Worth a shot!"
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "mode": "card",
+      "frames": 120,
+      "captions": [
+        {
+          "from": 0,
+          "to": 120,
+          "kind": "end",
+          "text": "Visit us at thetinyrobot.online or thinkelution.com!"
+        },
+        {
+          "from": 0,
+          "to": 120,
+          "kind": "credit",
+          "text": "The Tiny Robot · an open movie project by Thinkelution"
+        }
+      ]
+    }
+  ],
+  "music": [
+    [
+      "mysterious intro",
+      4.5,
+      [
+        "soft music-box plucks",
+        "low warm pad",
+        "curious, hushed"
+      ]
+    ],
+    [
+      "meet the cast",
+      29.5,
+      [
+        "playful bouncy synth bass and marimba",
+        "light claps",
+        "a new little flourish every three seconds",
+        "cheeky, warm"
+      ]
+    ],
+    [
+      "lineup swell and worth a shot",
+      35.5,
+      [
+        "the groove opens into warm strings and bells",
+        "uplifting",
+        "ends on a confident hit and a playful button"
+      ]
+    ],
+    [
+      "end card",
+      null,
+      [
+        "gentle warm outro",
+        "music box returns",
+        "final soft chord"
+      ]
+    ]
+  ]
+}

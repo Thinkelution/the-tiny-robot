@@ -1,0 +1,178 @@
+{
+  "id": "S21",
+  "title": "The Pipe Race",
+  "location_id": "fast_lane_works",
+  "time_of_day": "night",
+  "characters": [
+    "quota",
+    "dash",
+    "primly",
+    "shine",
+    "tiny",
+    "warden"
+  ],
+  "beats": [
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Rain hisses on slab road. Floodlights buzz. Under it all, the steady tick of Quota's stopwatch.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "High wide shot: floodlights on square poles cut cones through silver rain streaks. A fresh line of square pipe runs off the end of the unfinished road toward the dark Grove, with a long stretch of bare ground still ahead.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "At the head of the line Quota churns forward on its treads, chest dial sweeping. It swings one piston arm back, open and empty, without looking.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash drifts around a striped construction barrier with three pipe segments stacked on its back, sprays a sheet of rain streaks and skids to a stop exactly as Quota's hand arrives.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "revving, breathless",
+      "text": "Two, one, delivered!",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota grabs a segment and slams it down onto the line with a heavy clunk. Its dial hand jumps forward.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "deep rumble, stopwatch click after",
+      "text": "Last one: twelve seconds. This one: eight.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash peels away and is back in a blink. Too fast now, it dumps two segments at once, before the first joint is lined up. One rolls off crooked into the mud.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly glides in at a sharp right angle and stops dead. Its broom arms flap, and its neat rectangular eyes go wobbly with alarm.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "crisp, scandalised",
+      "text": "Excuse me! That is not where that goes!",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "calling from the crate slot, calm and clear",
+      "text": "Dash! Win to Quota's hand. Not past it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash's slanted visor eyes blink once and it nods. On the next run it rolls in, waits a single beat while Primly's broom taps the joint straight, then darts off.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly nudges the crooked segment back into a perfect line. Its eyes settle into calm, even rectangles. Clunk, tap, vroom: the three of them fall into a rhythm.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Overhead, Shine hovers with its screen turned to full white like a living floodlight, and flashes cartoon stars down on the dripping workers.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "big and sparkling",
+      "text": "Soggy and speedy! Let me hear it!",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "At the edge of the light Warden stands perfectly still in the rain, holding Tiny's crate. Through the slot, Tiny's eyes are happy crescents and its antenna glows green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "skidding past, pumping its arms",
+      "text": "Lap record! Wait...",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash slows and looks around: Quota's dial sweeping toward a record, Primly glowing, Shine sparkling. Nobody is behind. Its visor eyes go wide and round.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "amazed, then delighted",
+      "text": "...everybody's on the lap!",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny turns in its crate toward the dark Grove beyond the floodlights, where a wet water tank glints as Mossback rolls between the drooping trees.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "softly",
+      "text": "Warden. Can we see the trees?",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, measured",
+      "text": "The order says hold you. I will hold you there.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden walks off into the rain toward the Grove with measured steps. Behind them the pipe line clunks one segment longer under the floodlights.",
+      "est_seconds": 3
+    }
+  ],
+  "staging_notes": "Stage the work as a relay running left to right along the pipe: Dash enters from the stacked slabs, hands off to Quota, Quota slams the segment down and Primly taps it straight. Repeat the handoff three times in matching framing so the stumble and the fix read clearly. Shine stays as an overhead key light that bathes everyone in white and gold against the cool blue rain. Keep Warden and Tiny's crate on the edge of frame as a calm, still anchor, and end on their backs walking into the dark Grove to lead into S22."
+}

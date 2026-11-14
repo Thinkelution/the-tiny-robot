@@ -1,0 +1,119 @@
+{
+  "id": "S25",
+  "title": "The Lever Again",
+  "location_id": "pipeworks",
+  "time_of_day": "pre-dawn",
+  "characters": [
+    "tiny",
+    "ledger",
+    "warden"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Pipeworks at pre-dawn. Amber warning lamps pulse along the square pipes, and the high window has gone from black to grey with silver rain streaks. Warden steps in with heavy, even steps, carrying the dripping crate. Tiny's two rectangular eyes glow in the slot.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger stands at the gauge panel. It reaches into a low hatch with one rigid arm and turns a new square valve wheel where the fresh pipe joins the main line. A third light on the panel glows white: ready.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A soft paper-shuffle click, then Ledger's little bell: ding.",
+      "est_seconds": 1
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "dry, even",
+      "text": "Count: route complete. Valve set. Lever up feeds both lines.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden sets the crate on the floor and swings the lid open. Without a word it lifts Tiny out in both rigid hands and raises it up to the big lever. The lever still hangs at the bottom of its slot, exactly where Tiny pulled it days ago.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's small block hands close around the lever handle. It pauses, antenna glowing amber. Its eyes sweep left to the Nursery light, which is steady green. Then they sweep right to the blank wall.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The camera slides through the wall to the hidden gauge with the tree shape, glowing red. Then it drifts back past the new white light and returns to Tiny's face.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "slowly, softly, looking at each light in turn",
+      "text": "Check... no harm.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Its antenna shifts to steady green. Tiny pushes the lever UP with its whole little body. Warden raises its arms in perfect step, so Tiny rises with the handle all the way to the top.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A deep CLUNK, then a rush and gurgle of water racing through the pipes overhead.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "On the panel, the Nursery light holds green. Through the wall, the hidden tree gauge flickers and then catches green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "with a happy chirp",
+      "text": "Go.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Tiny's eyes go crescent and it looks up at Warden. Warden's visor bar holds steady. It lowers Tiny gently back into the crate, closes the lid so Tiny's eyes peek through the slot, lifts the crate and turns toward the grey doorway.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger stays at the panel. On its digit-counter face a small bar climbs, and a tiny pair of eyes appears between the numbers.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "almost a whisper, a faint ding",
+      "text": "Count: flow... rising.",
+      "est_seconds": 3
+    }
+  ],
+  "staging_notes": "Mirror S05 exactly: same lever, same panel and the same through-the-wall camera slide to the hidden tree gauge. This time the slide comes BEFORE the action, because Tiny now sees everything. Frame the push UP low and heroic, with Warden's long arms rising in sync so it reads as one motion and a reversal of the S05 pull-down. Keep it hushed: amber lamp pulses and grey window light, warming as both panel lights turn green, ending on Ledger's lit face as the water sound swells into S26."
+}

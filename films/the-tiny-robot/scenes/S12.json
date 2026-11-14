@@ -1,0 +1,131 @@
+{
+  "id": "S12",
+  "title": "Behind the Wall",
+  "location_id": "pipeworks",
+  "time_of_day": "late night",
+  "characters": [
+    "tiny"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "The Pipeworks at night: dark steel-blue pipes, amber warning lamps pulsing slowly. Tiny hops down from the entry ledge, a small cream box in a huge room, and walks straight past the lever toward the blank wall.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks along the base of the wall, antenna glowing amber, looking up and down. Low on the wall it finds a narrow square gap where a pipe runs through, and stops.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny pushes sideways into the gap. Its head sticks halfway, its little feet paddle the floor, it wiggles, then pops through and tumbles onto its back. It rolls over and gets up.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Behind the wall is a cramped dark space. The lever's linkage bar runs through the wall into a big valve that splits the water two ways: one pipe up toward the Nursery, one pipe down into the floor. Beside the down pipe, a square gauge with a tree shape glows red.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks up to the red gauge. Red light fills its face screen. Its eyes go wide, then slowly tilt sad as it follows the down pipe with its gaze, down into the floor, toward the Grove.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "whispering",
+      "text": "You were here the whole time.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "very small",
+      "text": "I did not look behind.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny squeezes back out through the gap, hurries across the floor, hops onto the panel ledge and grabs the big lever handle with both block hands.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny braces its square feet against the panel and pushes up with its whole body. The lever creaks up a notch. On the gauge panel, the Nursery light flickers from green to amber.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A long metal creak, then a soft warning blip from the Nursery light.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny looks at the Nursery light. For a moment its face screen shows a simple picture instead of eyes: a row of little box sprouts drooping grey. The picture fades back to sad eyes. Its arms go slack, and the lever sinks back down. The Nursery light turns green again.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "starting its habit, voice catching",
+      "text": "Check...",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Its eyes sweep left to the blank wall and the hidden Grove behind it, then right to the Nursery light. Left. Right. Faster and faster.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "barely audible, the word 'no' missing",
+      "text": "...harm. Check... harm.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny freezes mid-push, hands on the lever, one foot lifted off the ledge. Its eyes break into flickering static lines.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A thin hum rises from Tiny, climbing in pitch, while the warning lamps pulse in time with it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The camera pulls slowly back. Tiny hangs frozen on the giant lever, smaller with every step back, its antenna flickering amber, then weaker, then barely lit. The hum fills the empty room.",
+      "est_seconds": 5
+    }
+  ],
+  "staging_notes": "Keep the room dark and huge so Tiny reads as tiny. The amber warning lamps are the main light, and later they pulse in sync with the lock hum. Behind the wall, light the space only with the red tree gauge, so its red spills onto Tiny's face. At the lever, frame the Nursery light and the blank wall on opposite sides of Tiny so its left-right eye sweeps read clearly as a choice between two harms. End on a slow pull-back with Tiny still locked and the hum unresolved, which hands off directly to Shine's arrival in S13."
+}

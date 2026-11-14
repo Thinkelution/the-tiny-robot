@@ -1,0 +1,137 @@
+{
+  "id": "S26",
+  "title": "Sunrise",
+  "location_id": "old_grove",
+  "time_of_day": "sunrise",
+  "characters": [
+    "tiny",
+    "mossback",
+    "quota",
+    "primly",
+    "dash",
+    "shine",
+    "warden"
+  ],
+  "beats": [
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A deep, rising gurgle rolls through the new pipe, getting louder as it nears the Grove.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Gold light spills over the block skyline into the Grove. The last silver rain streaks thin out and stop. The soaked robots stand in a ragged line along the bent pipe, dripping and still.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden stands at the Grove's edge holding Tiny's crate at chest height. Through the slot, Tiny's two rectangular eyes peek out, wide.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The gauge grate under the great old tree flicks from red to amber to green with a soft chime. Then the next grate, and the next, a run of chimes travelling down the line until every grate glows green.",
+      "est_seconds": 6
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "All around the clearing, drooping cube leaf clusters lift and begin to sway. The great old tree raises its lowest branch high above the root and the neat elbow of pipe.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden turns slightly, angling the crate so the slot faces the centre. On the central sapling, a small cube bud swells, splits and opens into its first blossom.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Behind the slot, Tiny's eyes curve into happy crescents. Its little antenna pokes up through a gap in the crate lid, glowing steady green. A soft chirp.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly glides to the elbow joint and gives it one tiny, satisfied nod. Dash revs, then catches itself and hushes its engine. Shine dims from floodlight to a soft glow, and a single small star blooms on its screen. There are no applause icons.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A sharp stopwatch CLICK.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota's dial hand stops dead and its white face flashes once: a new record. Quota rolls forward slowly, treads rumbling, and lowers its cab until its long amber eye-light is level with the crate slot.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "low rumble, one word, almost gentle",
+      "text": "Fast.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small and sincere, with a chirp",
+      "text": "You too.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, formal, a beat slower than usual",
+      "text": "Sunrise. The order says return the culprit to the Foundry.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden lifts the crate higher and turns toward the city. Tiny's eyes tilt for a moment, then settle calm as it keeps looking back at the green trees. Dash's slanted eyes go round, and it rolls half a wheel forward, then stops.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback comes around its loop, moss blocks swaying, and slows to its minimum crawl as it passes the crate.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm and gravelly, already rolling on",
+      "text": "I always...",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls away between the trees and its voice fades into the loop, leaving the sentence unfinished. Tiny watches it go. Behind them, Quota swings its blade away from the trees, and its eye-light settles on the unfinished road beyond the Grove's edge.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Open wide and low from the bent pipe as the sunrise wipes across the Grove, then track the gauge grates turning green one after another like a fuse burning in reverse. Keep the soaked crew still and quiet; the reactions are small, with the trees and the sapling blossom as the stars. Frame Quota's approach so its huge cab fills the screen opposite the tiny crate slot, and push in on 'Fast.' End on Warden carrying the crate out of the warm light toward the cool city while Mossback's voice fades. Quota's eye-light finds the road to lead into S27."
+}

@@ -1,0 +1,74 @@
+{
+  "overall": "A warm, well-built script. The cause and effect is clear, the motifs pay off, every character's logic gets a moment to shine, and the climax lands. Most of it is producible inside the limits. Before production, three things need fixing. First, the Board's rules: who decided re-pressing, and who authorised clearing. Second, a lever continuity error at the climax. Third, a few gatherings and character movements that happen without a reason. Tiny also briefly stands on a living root, which breaks its own careful character. The ending runs long, with several short codas, and a couple of repeated beats can go.",
+  "issues": [
+    {
+      "scene_id": "S09",
+      "problem": "The re-press penalty for 'the culprit' is never established. Shine's temptation in S13 ('Confess, and the Board re-presses you') and the S17 order both rely on it. Mossback's own stakes in the pen are also vague: it is only 'held'.",
+      "fix": "Extend Warden's order in S09: 'The order says hold the water carrier. After the clearing vote, the culprit is re-pressed.' On the word 're-pressed', cut to Tiny's antenna flaring amber. Mossback now faces the Press, the S10 stamping scene becomes a real threat to it, and Tiny's confession in S15 visibly trades Tiny's fate for Mossback's."
+    },
+    {
+      "scene_id": "S17",
+      "problem": "Two authority problems. (1) The order to re-press Tiny appears on the Board straight after the whole crowd lit green for Tiny, with no vote, against the bible rule that the Board decides by vote. (2) The clearing vote promised for 'tonight' in S15 never happens. Quota's ultimatum ('No water: I clear') has no authority, because S03 established that no living grove may be cleared and Ledger has just proved the trees are alive.",
+      "fix": "Have Warden read the re-press order as the S09 order transferring to the confessed culprit, not as a new ruling. Then let Shine call the clearing vote honestly. The crowd's lamps split red and green. Ledger states the rule: 'Count: a grove without water at sunrise is not living. Order: clear.' Quota's 'Water back by sunrise: Grove stays' now enforces a real Board condition."
+    },
+    {
+      "scene_id": "S25",
+      "problem": "Continuity error. The lever has been down since S05: in S12 Tiny pushed it up a notch and it sank back down. Tiny 'pulls the lever down with its whole weight' here, which the lever cannot do. It also weakens the motif of a lever pulled once in innocence and pulled again with full knowledge.",
+      "fix": "Have Ledger set the new valve so that the lever's UP position feeds both lines. Tiny pushes the lever UP, reversing its S05 action, with Warden lifting in step. The Nursery light stays green and the Grove light catches green. Keep the 'Check... no harm. Go.' beat as written."
+    },
+    {
+      "scene_id": "S19",
+      "problem": "Ledger, Primly, Shine, Dash and Quota are already waiting at the Pipeworks, but only Warden heard Tiny ask to go there, and only in S18. Primly has been absent since S07 and was never seen at the confession.",
+      "fix": "In S16, place Primly in the crowd with its lamp turning green and its brooms lowered. In S17, as Warden lowers the crate, have Tiny call through the slot: 'Pipeworks. Everyone. Please.' Show the five of them glance at each other. Alternatively, have Shine broadcast the meeting place from the Board as the crate leaves."
+    },
+    {
+      "scene_id": "S23",
+      "problem": "Tiny 'hops down onto the root' and in S24 'hops onto the thick root and plants its square feet.' The same robot walks around fallen leaves and weeds, and the line 'This is somebody' is about this very root, so standing on it breaks character and its logic.",
+      "fix": "Tiny climbs out of the crate onto the mud BESIDE the root, pauses to step around it, and plants itself between the root and the blade. In S24 Tiny stands next to the root and points at it, at the gap and at the bend. Primly's final line becomes 'It is in its place, little one,' said looking down at Tiny beside the root."
+    },
+    {
+      "scene_id": "S07",
+      "problem": "The seed Tiny rescued in S02 and fought over in S07 drops into Mossback's moss and is never seen again. This is a setup without a payoff.",
+      "fix": "In S28 or S31, show that the seed has sprouted a tiny two-leaf shoot in Mossback's moss. In S31, Tiny plants it in the Grove gap next to the Nursery seedling, and Primly watches without reaching for it. Alternatively, Primly lifts it out of the moss and sets it 'where it belongs'."
+    },
+    {
+      "scene_id": "S14",
+      "problem": "The emblem plate re-reveals what S11 already showed: the planting record with Tiny's series. Tiny's line 'Same as me. The ones who planted the trees' repeats information the audience already has, in an already long thinking scene. The line 'Tell the truth: I am hurt. But I choose that one. Nobody else does' is muddled.",
+      "fix": "Plant the plate in the scrap pile in S01. In S14, have Tiny simply look at it and touch its own brow, with no dialogue, then move on. Trim the scene to about 1.0 min. Rewrite the line as: 'Tell the truth: only I am hurt. I can choose that.'"
+    },
+    {
+      "scene_id": "S15",
+      "problem": "From S12 onward Tiny KNOWS the Grove is dying because of the lever, yet it spends the whole next day (S14 dawn to S15 evening) doing nothing for the trees while Mossback is penned. Under its logic, idle knowing is harm.",
+      "fix": "Add a short opening montage to S15, or a closing beat to S14. Tiny shuttles back and forth from the Nursery tank, hugging a box-sized can, and tips it onto the sapling's grate. The grate stays red. Tiny looks at the forty trees and realises it is too small to do this alone. This also seeds the Mossback tank plan in S19."
+    },
+    {
+      "scene_id": "S13",
+      "problem": "Shine's and Dash's arrivals at the Pipeworks in the middle of the night have no reason behind them.",
+      "fix": "Have Shine say on entry: 'I could hear that hum from the Square!' Its logic draws it to any unhappy sound. For Dash, add a beat in S09 where Dash's eyes flick round and it glances toward the Pipeworks when Shine says 'wore out the line'. Dash then sneaks in to check its dent out of guilt."
+    },
+    {
+      "scene_id": "S19",
+      "problem": "The timeline numbers clash. In S17 Ledger counts 612 minutes (about ten hours) until sunrise, but here, shortly after, Quota says 'Sunrise: six hours.'",
+      "fix": "Change Quota's line to 'Sunrise: nine hours. Talking: slow.' Alternatively, have Ledger give a smaller count in S17. Keep all later countdown references consistent."
+    },
+    {
+      "scene_id": "S25",
+      "problem": "Warden's 'The order does not say...' joke appears five times (S18 where, S23 how close, S25 how high, S25 where we watch the sunrise, S28 are you smiling), which wears down the bible's 'one joke'. In addition, S25 ends with Tiny carried out in Warden's hands while the crate is left on the floor, yet in S26 Tiny is back inside the crate.",
+      "fix": "Cut the 'how high' line: Warden simply lifts Tiny in silence. Also cut the sunrise exchange and end S25 on Ledger's 'flow... rising.' Keep S18, S23 and S28. Show Warden placing Tiny back into the crate before it leaves the Pipeworks."
+    },
+    {
+      "scene_id": "S30",
+      "problem": "The ending stacks four short codas after the sunrise (S27, S29, S30, S31). S30 has neither Tiny nor dialogue, and it slows the finish. Dash's step around the weed is also partly pre-empted by S20, where Dash already steers around a seedling.",
+      "fix": "Merge S30 into S31. Open S31 in the Junk Stacks: Dash brakes and steers around the weed, and Mossback's widened loop passes Tiny's crate and waters the weed. Then cut to the Grove. In S20, play Dash's near-miss as a skid that Mossback's slow crawl blocks, so the deliberate slowdown in the finale is a clean first."
+    }
+  ],
+  "resolved": {
+    "by": "Claude in session (API limit reached)",
+    "date": "2026-11-14",
+    "notes": [
+      "S13: Shine heard the hum from the Square; Dash came back to look at its dent (planted in S09).",
+      "S20: Dash's near-miss is now a skid stopped by Mossback's side, so its finale slowdown is a first.",
+      "S30: kept as its own scene (one location per scene) but cut to a 20-second wordless bridge; Dash's duplicate cameo removed from S31."
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "S03",
+  "title": "The Fast Lane Pitch",
+  "location_id": "main_square",
+  "time_of_day": "day",
+  "characters": [
+    "shine",
+    "quota",
+    "dash",
+    "warden",
+    "tiny"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Wide shot of Main Square in bright daylight. A background crowd of boxy robots fills the grey slab plaza and faces the towering Big Board and its stacked stage. A slab table at the front holds a model of the Fast Lane: a long grey bar road with one bend around a small cluster of green cubes.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "swooping down from above the Big Board, hands spread wide, applause icons flashing on its screen",
+      "text": "Good morning, Gridhaven! Who wants to go faster?",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A roar from the crowd. Chest lamps blink on and off across the square like a light show.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "bobbing higher, stars bursting on its screen, sparkle sound",
+      "text": "Am I right, Gridhaven?",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota rolls through a gap in the crowd on heavy treads. Each tread-step makes the slabs shake. It stops at the model table, and its stopwatch dial sweeps on its chest.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota lifts one thick piston arm and points a rigid block finger at the bend, where the road curves around the little cluster of green cubes.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "deep diesel rumble, a stopwatch click between each phrase",
+      "text": "Straight: four minutes. Bend: six. Unacceptable.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "spinning a tight circle at the front of the crowd, engine revving, number block blazing",
+      "text": "Four minutes! Lap record! Yeah!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "At the very back of the crowd, Tiny's view is nothing but robot legs, wheels and treads. It tilts its head one way, then the other. Its eyes narrow into flat, puzzled bars.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "politely, to the wheel in front of it, which does not answer",
+      "text": "Excuse me. I cannot see.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "turning to a stack of old crates against a tower wall, eyes sweeping left and right, antenna glowing amber",
+      "text": "Check... no harm. Go.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny hops up the crate stack one block at a time, with a little bounce and a wobble on each one. On top it rises just above the crowd's heads, and its antenna turns green.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's view finds the model table and the little green cubes inside the bend. Its eyes go wide and square.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, to itself",
+      "text": "That bend is the Grove.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "glancing back over its fin, grinning visor",
+      "text": "That bend is slow, paperweight!",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "zooming in close over the model, hands pumping",
+      "text": "So let's straighten it out! Let me hear it!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Before the cheer can build, Warden Plumb steps onto the stage with heavy, even steps. Its badge lamp glows red, and the crowd's lamps go dim and quiet.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, echoing, reading word for word",
+      "text": "The order says no living grove may be cleared.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's stars fizzle out. Its huge smile shrinks to a flat line, and it drifts down a little.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota's long eye-light slides from Warden to the green cubes on the model. Its dial hand keeps sweeping. Click. Click.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "low, patient, final",
+      "text": "Then I wait.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Quota turns and rumbles away, and Tiny's crate stack trembles under it. Tiny holds on, then looks out over the rooftops. One loose slab leaf drifts past its face on the wind, heading up toward an old tower. Tiny's eyes follow it.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Play the scene on scale: low, looming angles on Quota and Shine, and Tiny shot from the crowd's knee height until it climbs. After that the camera rises with it to an over-the-shoulder view of the model, where the green cubes read clearly as the Grove. Warden's entrance should drain the colour and noise from the square in one beat: the crowd lamps dim and Shine's icons fizzle. Hold on Quota's ticking dial so 'Then I wait' lands as a threat. End on the drifting leaf, which hands off directly to Tiny following it to the Rooftop Nursery in S04."
+}

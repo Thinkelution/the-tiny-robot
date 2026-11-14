@@ -1,0 +1,119 @@
+{
+  "id": "S24",
+  "title": "Where It Belongs",
+  "location_id": "old_grove",
+  "time_of_day": "pre-dawn",
+  "characters": [
+    "primly",
+    "tiny",
+    "quota"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "In the grey pre-dawn drizzle, Quota's piston arm lifts an angled elbow segment off the pipe stack, a square pipe bent at a sharp corner, and swings it across to Primly, who waits at the last gap over the great root.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Quota's stopwatch clicks, loud in the hush.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly takes the elbow between its broom arms and holds it up at eye level. Its neat rectangular eyes stretch wide. The whole slim column trembles, and the bristle blocks rattle.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "aghast, a flustered whisk of brushes",
+      "text": "Excuse me. That is not straight.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "clipped, diesel growl",
+      "text": "Over: forty seconds. Now: thirty-six.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny hops onto the thick root and plants its square feet. It points down at the root, then across at the empty gap between the two pipe ends. Its antenna glows steady green.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "plain and patient",
+      "text": "The root is here. The gap is here. The bend goes exactly here.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "gently, a soft chirp",
+      "text": "That is where it belongs.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly's head turns in three exact right angles: to the elbow, to the root, to the gap. Its eyes narrow to thin lines while it thinks, then slowly widen.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly lowers the elbow over the root and nudges it with one broom slab, a hair left, a hair right, until the corner sits flush above the bark without touching it.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A deep, satisfying CLUNK as the last segment locks into place.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly straightens. Its rectangular eyes curve into small crescents, and it looks down at Tiny standing on the root.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "quietly, surprised at itself",
+      "text": "It is in its place, little one.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota's dial hand sweeps on. Its long eye-light swings toward the city skyline, where the sky is paling. Tiny follows its gaze.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "rumbling, one click",
+      "text": "Pipe: done. Lever: next.",
+      "est_seconds": 2
+    }
+  ],
+  "staging_notes": "Start low and wide, with the pale grey sky behind the great tree and the finished pipe running toward the last gap, so the bend reads at once as the missing piece. Play Primly's trembling in a medium close-up with the crooked elbow filling the frame, then cut to an overhead shot as Tiny points root-gap-here, so the audience sees the geometry make sense. Finish on a close shot of the elbow sitting flush over the bark, then tilt up to Quota's eye-light swinging toward the city, which hands off to the Pipeworks."
+}

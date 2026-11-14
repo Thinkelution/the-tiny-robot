@@ -1,0 +1,182 @@
+{
+  "id": "S02",
+  "title": "Mossback's Loop",
+  "location_id": "old_grove",
+  "time_of_day": "morning",
+  "characters": [
+    "tiny",
+    "mossback",
+    "primly"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The fog thins into clear morning light over the Old Grove. Box-trunk trees with stacked cube leaf clusters in many greens sway gently. Fallen slab leaves dot the ground, and every square gauge grate along the buried water line glows a steady green.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny trots in from the grey street and stops at the exact line where pavement meets grass. Its antenna glows amber, and its rectangular eyes sweep left, then right.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "murmured, to itself",
+      "text": "Check... no harm. Go.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Its antenna flicks green. Tiny steps onto the grass and walks carefully around a fallen slab leaf instead of over it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls into frame on its loop path, moss cube clusters swaying on its back. At the nearest tree it tilts its tank, and the square spout gives a slow measure. The tree's gauge grate brightens a shade of green.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A soft, deep gurgle from Mossback's tank under the slow grind of its treads.",
+      "est_seconds": 1
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm, slowing to its minimum crawl as it passes Tiny",
+      "text": "Good morning, little...",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback keeps rolling, unable to stop. Its voice fades as it disappears behind the box trunks. Tiny turns its whole head to follow it, then waits patiently beside the small central sapling and looks it up and down.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback trundles back around from the far side of the Grove, eye-lights soft and kind.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "voice swelling as it nears",
+      "text": "...one. The sapling grew.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "eyes crescent, a happy chirp at the end",
+      "text": "I saw! It reaches my eyes now.",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A crisp, rhythmic whisk-whisk of brushes, coming closer.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly glides in along a perfectly straight line, turns at an exact right angle and sweeps with both broom arms. Fallen slab leaves and a small cube seed slide in a neat row toward the scrap chute at the Grove's edge.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "politely fussy, to a leaf",
+      "text": "Excuse me, that is not where that goes.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Mossback rolls past Primly. Primly's square head swivels to the swaying moss on its back, and its neat eye-lights narrow.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "disapproving",
+      "text": "And that moss is not tidy.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "unbothered, fading away",
+      "text": "Moss is not...",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly pushes the row into the chute with a final sweep. The cube seed catches on the chute's lip and stays there. Primly turns at a crisp right angle and glides away, still sweeping.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny tiptoes to the chute. Its eyes sweep left, right, then toward Primly's back. It hugs the seed with both block hands. The seed is nearly as big as its head.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny waddles back with the seed, stepping around each fallen leaf, and sets it down gently beside the sapling. It gives the seed one little pat.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "rolling past again, finishing the thought",
+      "text": "...mess. It is growing.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "primly",
+      "parenthetical": "",
+      "text": "Primly's head snaps around at a right angle. Tiny freezes beside the seed with its hands behind its back and its eyes perfectly round and innocent. Primly stares, its eye-lights flicker, and it turns back to its sweeping.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "From far across the city comes a bright, echoing fanfare chime from the Big Board.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's antenna turns amber as it looks toward the towers. Primly straightens up and glides off toward the sound in a perfect line. Tiny gives the sapling one last look and hurries after it on quick small steps.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Keep the camera low at Tiny's height, so the trees tower like friendly giants and the sapling reads as Tiny's equal. Stage Mossback's loop as a wide circle that crosses the frame, with its voice fading out and swelling back in the mix so the split sentences play as a rhythm. Primly always moves in straight lines and hard right-angle turns, in contrast to Mossback's curve and Tiny's careful zigzag around the leaves. Keep the green gauge grates clearly visible in wide shots, because S07 needs the audience to remember them glowing healthy."
+}

@@ -1,0 +1,157 @@
+{
+  "id": "S16",
+  "title": "Quiet Green",
+  "location_id": "main_square",
+  "time_of_day": "evening",
+  "characters": [
+    "tiny",
+    "shine",
+    "dash",
+    "ledger",
+    "mossback",
+    "warden"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The silence holds. Wide shot: Tiny stands alone in the spotlight on the top stage platform, a little cream box. Above it, Shine hangs frozen, its screen crawling with static lines. The crowd below is motionless, and every chest lamp is dark.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Shine's lock hum rises thinly over an evening breeze. No other sound.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's rectangular eyes tilt down, sad but steady. Its antenna glows a calm, solid green. It does not step back from the edge.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "At the front of the crowd, Dash's visor eyes stay round and fixed on Tiny. The big number block on its fin flickers, then fades from electric yellow to a soft green.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Far at the back of the square, one robot's chest lamp clicks on green. Then a second lamp a few rows over. Then a third.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Soft, separate chimes as each lamp lights. No cheer, no voices.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Green spreads row by row across the plaza in total quiet until the whole square glows. The green light washes up the stacked platforms and onto Tiny's faded cream face.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's static thins and clears. Its huge screen eyes open wide in wonder as it drifts slowly down and sweeps its gaze across the silent green crowd. Its floating hands hang still.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "hushed, with a crackle of static and no sparkle",
+      "text": "They're not... cheering. They're... happy?",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "A small, soft smile fills Shine's whole screen. There are no applause icons and no stars. Its teal hover light steadies, and the lock hum fades to nothing.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "At the side of the stage, Ledger takes one stiff step forward, then another. Its drawers click and its digit-face blinks. Heads in the crowd turn toward it.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "dry, a little quieter than usual",
+      "text": "No one asked. I am saying it anyway.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger slides out a glowing amber data block and raises it. The Big Board fills with a bar chart: a tall green bar drops suddenly to a red stub, right where a lever icon and two small footprints appear.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "even, exact, with a little bell ding at the end",
+      "text": "Count: Grove water stopped the minute the lever moved. Railing bump: no change. Trees: thirsty. Not dying.",
+      "est_seconds": 6
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes go wide. It looks up at the Board, then across at Ledger. Ledger's digit-face shows two small eyes between the numbers and gives one slow blink back.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Big Board switches to a live view of the Foundry holding pen. Mossback is still looping its sad little square, but its oval eye-lights lift toward the screen.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "At the foot of the stage, the square badge lamp on Warden's chest flicks from red to green with a crisp click.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, metallic echo, exact",
+      "text": "The order to hold the water carrier is lifted.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "faint through the Board speakers, fading as it rolls away round the pen",
+      "text": "Thank you, little...",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny gives a tiny happy chirp. Then the top edge of the Big Board pulses amber. Warden's visor bar turns slowly from the screen and settles down on Tiny, and Tiny looks back up at it, antenna still green.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Hold the opening on a locked-off wide so the silence feels long, then let the green spread from the deep background toward camera like a slow tide, with no music swell, only single chimes. Light the scene with the lamps themselves: the square goes from dark amber to green, and that green finally reaches Tiny's face. Keep Shine large and high at first, then drift it down to Tiny's level as it unlocks. End on the low angle of Warden's visor turning down to tiny Tiny under the amber-pulsing Board to hand off into S17's verdict."
+}

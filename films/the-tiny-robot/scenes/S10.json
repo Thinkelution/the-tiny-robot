@@ -1,0 +1,168 @@
+{
+  "id": "S10",
+  "title": "The Sad Little Square",
+  "location_id": "foundry",
+  "time_of_day": "night",
+  "characters": [
+    "tiny",
+    "warden",
+    "mossback"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Foundry at night: a cavernous block hall lit orange from below. The Logic Press looms over everything, its slabs and pistons black against the glow. A rack of blank core plates gleams beside it.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Inside a small fenced holding pen, Mossback rolls a tight square. It crawls forward, turns sharply at a corner, crawls again and turns again. Its moss clusters sway, and its oval eye-lights tilt low and tired.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden walks away from the pen with heavy, even steps. Tiny trots behind it, taking three quick steps for each of Warden's, and hops over a seam in the floor slabs to keep up.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "hurrying, a little breathless",
+      "text": "Is Mossback the culprit?",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, not breaking stride",
+      "text": "The order does not say.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "hopping in front of Warden's foot, looking straight up, simply",
+      "text": "Is the order right?",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden stops with one heavy foot still raised, then sets it down beside Tiny. Its visor bar flickers, dims and flickers again. There is a long silence, filled only by the low hum of the Foundry.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "slower, the metallic echo hanging in the air",
+      "text": "That is not a question the order answers.",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A hiss of pistons, then the Logic Press slams down: a deep CLUNK that shakes the floor.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny flinches so hard it sits down with a bump. Its antenna flares amber and its eyes go wide.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "At the Press, a grey worker robot stands still while a glowing plate slides into its chest with an orange flash. Its round blue eyes snap into narrow yellow bars. It turns sharply and marches off in a new, stiff rhythm without looking back.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "very small",
+      "text": "It is... someone else now.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, plain",
+      "text": "The body stays. The robot changes.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny scrambles up, turns toward the pen and runs to the bars just as Mossback rounds the corner toward it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "warm and gravelly, passing close",
+      "text": "Find the...",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback crawls on along the far side of the pen as its voice fades. Tiny presses its face screen to the bars and follows it with its eyes, round one corner, then the next, then the next.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "swelling back as it returns",
+      "text": "...water, little one.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny nods firmly. It looks up at the square pipes running along the Foundry wall and out through the great doors into the city.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "turning to Warden, an honest question",
+      "text": "Who knows where the water goes?",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, after a beat",
+      "text": "Ledger counts all water. That is not an order. It is a fact.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "eyes sweeping left and right, antenna amber, then green",
+      "text": "Check... no harm. Go.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny trots out through the great doors into the dark street. Warden's visor bar stays turned toward the doorway a moment longer. Behind it, Mossback keeps circling its sad little square.",
+      "est_seconds": 3
+    }
+  ],
+  "staging_notes": "Play scale throughout: low angles from Tiny's height make Warden a pillar and the Press a cliff, and Tiny's quick trot cuts against Warden's slow, heavy stride. Keep Mossback's pen softly in the background of every Tiny–Warden shot so the endless square loop never leaves the frame, and pan the sound with Mossback so its voice fades and swells as it goes round. The re-pressing of the grey worker should be one clean, unhurried wide shot lit by the orange flash, with Tiny small in the foreground. End on the open doors framing the night city, with Warden's lingering visor glow as the first hint that it is starting to think."
+}

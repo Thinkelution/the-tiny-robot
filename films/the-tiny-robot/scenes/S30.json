@@ -1,0 +1,48 @@
+{
+  "id": "S30",
+  "title": "Around the Weed",
+  "location_id": "junk_stacks",
+  "time_of_day": "morning",
+  "characters": [
+    "dash",
+    "mossback"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Morning sun on the crate towers. Tiny's crate sits empty. In the pavement crack, the two-leaf weed sways in a patch of light.",
+      "est_seconds": 3.0
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A fast engine rev rises from behind the stacks.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash drifts around a crate tower, fin blazing, aimed straight at the crack. Its eyes snap round. It brakes hard, a hand's width from the weed.",
+      "est_seconds": 4.0
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash glances stiffly left, then right, in a clumsy copy of Tiny's eye sweep. At walking pace it steers wide around the crack, then gives one soft rev like a chirp and is gone.",
+      "est_seconds": 6.0
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls past on a loop wider than before, tips a thin silver streak of water onto the weed without stopping, and crawls on toward the green treetops of the Grove beyond the stacks.",
+      "est_seconds": 5.5
+    }
+  ],
+  "staging_notes": "A short wordless bridge into the finale. Mirror S01's low ground-level framing on the weed, but in warm clear light. Dash's approach is a straight push-in that ends in a stop instead of a streak past. Follow Mossback out of frame toward the treetops so the cut to the golden Grove in S31 feels like one movement."
+}

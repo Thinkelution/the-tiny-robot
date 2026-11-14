@@ -1,0 +1,227 @@
+{
+  "id": "S09",
+  "title": "A Villain for the Crowd",
+  "location_id": "main_square",
+  "time_of_day": "evening",
+  "characters": [
+    "shine",
+    "quota",
+    "mossback",
+    "warden",
+    "tiny",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Main Square under tense amber evening light. A background crowd of boxy robots packs the plaza, chest lamps dark. On the Big Board, a giant picture of the Old Grove shows its gauge grates glowing red.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota rolls in beside the slab-table model of the Fast Lane, treads shaking the ground. It parks with its long eye-light fixed on the one bend around the Grove. Its chest dial ticks.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "At the back of the crowd, Tiny arrives on quick small steps. It hops up the same crate stack as before, one block at a time, and peeks over a sea of shoulders, antenna glowing amber.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine drifts low over the crowd. Its screen face turns grave, eyes big and sad.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "hushed, stage-whisper drama",
+      "text": "Our Grove is drying up, Gridhaven. Somebody did this.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "cupping a floating hand to a speaker cube",
+      "text": "Who? Who could it be?",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A low crowd murmur builds and swells.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Each time the murmur rises, Shine's screen brightens a notch and it bobs a little higher. Its eyes scan the square, looking for something to give them.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Along the edge of the plaza, Mossback crawls its slow loop, empty tank tilted, moss clusters swaying. Robots step aside to let it pass. Shine's eyes lock onto it.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "pointing with both hands, sudden and thrilled",
+      "text": "It never stops! Round and round, day and night! It wore out the line!",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "A white spotlight beams from Shine's screen onto Mossback. Mossback's soft oval eyes widen, but its treads keep crawling forward.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "In the front row, Dash's slanted eyes flick round for a moment. It glances over its fin toward the dark street that leads to the Pipeworks, where its last race clipped a railing. Then the crowd surges and Dash revs to cover it.",
+      "est_seconds": 4.0
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "slow, turning its face to the stage as it rolls",
+      "text": "It wasn't...",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Mossback rolls on behind a row of crowd robots. Its voice fades away, and the noise of the crowd rushes in to fill the gap.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Red chest lamps flare on in a wave that spreads across the whole square, until it glows red from edge to edge.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A big roar from the crowd, topped by Shine's sparkle chime.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine's screen bursts into flashing applause icons and stars. It floats upward, glowing.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "delighted, sincerely",
+      "text": "Now THAT is a happy Gridhaven!",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "revving, an arm punched up from the front row",
+      "text": "Pit stop forever, old tank!",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "rumbling, unmoved, dial clicking",
+      "text": "Culprit: found. Grove: still dry.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden steps off the stage with heavy, even steps, its badge lamp red. It falls in beside the crawling Mossback, matches its slow pace exactly, sets one rigid hand on the tank and steers it toward the Foundry street.",
+      "est_seconds": 6
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, echoing",
+      "text": "The order says hold the water carrier.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "bright, to the crowd",
+      "text": "Clearing vote, tomorrow evening!",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "no change of tone",
+      "text": "After the clearing vote, the culprit is re-pressed.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Close on Tiny atop the crates. On the word 're-pressed' its antenna flares bright amber and its eyes snap wide.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, crackly, both hands waving",
+      "text": "Stop! Mossback waters the trees! Ask it!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Nobody turns. The roar swallows Tiny's voice whole. It hops down and vanishes among towering crowd legs.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "mossback",
+      "parenthetical": "",
+      "text": "Far across the square, Mossback is steered out of the light. It turns its face back over its mossy shoulder, eyes soft and tired, searching the crowd for one small shape.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny squeezes out between two big robots and trots after Warden and Mossback toward the dark Foundry street, its amber antenna bobbing. Behind it the red lamps glow on.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Quota's stopwatch clicks once, loud, over the fading crowd.",
+      "est_seconds": 2
+    }
+  ],
+  "staging_notes": "Play the scene as a wide shot of a show turning into a verdict. Shine's brightness and height track the crowd noise, and the red lamp wave sweeps the frame from back to front. Keep Tiny tiny: shoot it from behind and below, with crowd legs and shoulders blocking it, so its voice is visually swallowed. Hard cut to a tight close-up of Tiny's antenna flaring amber on the word 're-pressed'. Warden walking at Mossback's crawl should read as gently absurd but never cruel, and Mossback's backward glance should carry the emotion without any more words."
+}

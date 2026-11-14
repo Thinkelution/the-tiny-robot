@@ -1,0 +1,82 @@
+{
+  "id": "S29",
+  "title": "A New Drawer",
+  "location_id": "count_house",
+  "time_of_day": "morning",
+  "characters": [
+    "ledger"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Morning sunlight slants through a high square window into the Count House and lies in a long gold bar across the aisle. Ledger walks in with slow, stiff steps, and the amber data blocks glow warm on the shelves on either side.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger steps onto the rolling ladder rail and glides down the aisle. As it passes the reading screen, the screen flickers on by itself and shows two small square footprints, then fades. Ledger's digit-face turns to look at it, but the ladder keeps rolling.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "The ladder stops at the end of the last shelf. Ledger slides open a bottom drawer. It is completely empty and dark inside. Ledger's digit-face spins through numbers, stops, and shows two plain eye shapes that blink once.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A soft shuffle of paper-clicks, then a rising hum as a new data block forms.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger lifts a blank block from the drawer and holds it in both rigid hands. The block glows from dull grey to warm amber, and a faint green light runs around its edges, a colour that appears nowhere else on the shelves. On Ledger's face, a small pair of eyes sits between the digits.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "dry and even, exactly as always",
+      "text": "Count: robots who told the truth when a lie was easier. One.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger pauses. Its head tilts a few degrees, and the little eyes on its screen curve upward very slightly.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "quieter, almost fond",
+      "text": "Size: small.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger sets the block in the drawer and slides it shut with care. The drawer's square handle lights soft green, the only green handle in a wall of amber.",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A small, bright, satisfied bell ding.",
+      "est_seconds": 1
+    }
+  ],
+  "staging_notes": "Keep the camera low and close on Ledger's digit-face and hands so the new block feels precious, then pull back for the final shot: one green handle among hundreds of amber ones, with the gold morning light on the aisle floor. The footprint flicker on the reading screen should be quick and quiet, a memory and not a flashback. Play the ding and the green handle as the end of the scene, then cut straight to the bright, fast energy of Dash in the Junk Stacks."
+}

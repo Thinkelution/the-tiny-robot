@@ -1,0 +1,153 @@
+{
+  "id": "S01",
+  "title": "A Little Box in the Fog",
+  "location_id": "junk_stacks",
+  "time_of_day": "dawn",
+  "characters": [
+    "tiny",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Misty blue dawn. Fog drifts slowly between towering stacks of rust-orange and grey crates. An idle gantry crane stands half-hidden in the haze. Nothing moves.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "The far-off hum of the city waking up: pipes, motors, a low steady drone.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "At the foot of one stack, the square doorway of a small crate glows. Two rectangular eye-lights blink on inside. Tiny steps out onto its little plank porch, a cream box on stubby feet, the smallest thing in frame.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny stops at the edge of the plank. Its eyes slide left, then right. The square antenna on its head glows amber.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "murmured, to itself, unhurried",
+      "text": "Check... no harm. Go.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "The antenna flicks to green. Tiny hops down off the porch, wobbles on landing and steadies. Then it looks up: beside its door, a stack of small crates leans, and the top one tilts out over the path.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny hops up the stack one block at a time. It lifts the top crate, which is about its own size, high over its head, hops down with it and sets it on the ground. It goes back for the next one, pausing each time to sweep its eyes left and right before moving.",
+      "est_seconds": 7
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny nudges the two crates until they sit perfectly square, side by side. It steps back. Its eyes curve into happy crescents and it gives a small chirp.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "politely, to a square patch of sunlight lying across its path",
+      "text": "Excuse me.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks on through the patch of light and stops at a crack in the pavement. A tiny weed grows there: one box stem and two slab leaves, swaying gently. Tiny leans down close and its eyes soften.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "softly, to the weed",
+      "text": "Good morning. I will go around.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny takes a careful little arc of steps around the weed, never taking its eyes off it.",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "An engine rev rises sharply, echoing off the crate towers.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash bursts around the corner of a crate tower: a red wedge on chrome wheels, its fin number glowing yellow, drifting sideways through the fog. Tiny spins toward the noise with its eyes wide.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "fast, grinning, engine revving under the words",
+      "text": "Out of the way, paperweight! Three, two, gone!",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash drifts past. A black skid mark slashes across the slab right beside the weed. The gust spins Tiny around and tips it onto its back. Dash vanishes into the fog and its rev fades.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny rocks on its back, pushes up with its little block hands and stands up again, its eyes set in a determined flat line.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny hurries back to the crack with quick small steps and leans in close. The weed trembles, then sways back upright, both leaves whole. Tiny's eyes go crescent.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "sound",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "A bright, happy electronic chirp.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny turns toward a gap between the crate towers, where the fog is thinning and a glimpse of green leaf clusters sways in early light. It pauses, sweeps its eyes left and right, then trots off toward the green.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Open wide and low so the crate towers loom like mountains, then find Tiny's glowing doorway as the only warm light in the blue fog. Keep the camera at Tiny's eye height for the routine and the weed, so the audience shares its scale, and let Dash enter huge and blurred in the foreground, with the skid mark landing in a tight shot right beside the weed. End on a wide shot with Tiny small in frame, walking toward the green glimpse of the Grove, to hand off into S02."
+}

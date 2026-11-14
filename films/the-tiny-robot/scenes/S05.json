@@ -1,0 +1,167 @@
+{
+  "id": "S05",
+  "title": "The Lever",
+  "location_id": "pipeworks",
+  "time_of_day": "afternoon",
+  "characters": [
+    "tiny",
+    "dash"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The Pipeworks. Square steel-blue and green pipes climb every wall on square brackets. Amber warning lamps pulse slowly. In the middle stands a gauge panel with rows of round lights and one big lever handle, guarded by a waist-high railing. Behind the panel is a flat, blank grey wall.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "An engine rev, growing louder fast, echoing off the pipes.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash bursts through a side door, drifts sideways between two stacks of spare pipe segments, and skims past the gauge panel with its fin number blazing yellow.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "(revving, delighted with itself)",
+      "text": "Shortcut! Off the line!",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Its rear corner clips the railing with a loud CLANG. The bar bends into a crooked angle. Dash spins a full circle, eyes round for one beat, then slanted and grinning again.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "(laughing, already rolling)",
+      "text": "Didn't even slow down! Three, two, gone!",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash rockets out the far door. The bent railing wobbles, hums, and goes still. The room settles back to its pulsing amber quiet.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "High on the wall, where the rooftop pipe enters, a small square hatch creaks open. Tiny squeezes out and shuffles along the top of the pipe, then hops down onto a crate, then onto the floor, one block at a time.",
+      "est_seconds": 6
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny follows the pipe along the wall to the gauge panel and tips its whole head back to look up. Among the round lights, one with a little sprout shape glows red.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "(softly, pointing up at it)",
+      "text": "There you are.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny notices the crooked railing. Its eyes tilt, puzzled. It gives the bar a gentle pat, then steps carefully around it.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Its antenna glows amber. Its eyes sweep left: humming pipes, no one. Right: pulsing lamps, no one. Ahead: the blank grey wall, nothing at all. Nothing living anywhere it can see.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "(murmured, careful)",
+      "text": "Check... no harm. Go.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "The antenna flicks to green. Tiny hops at the lever and misses. It hops again, catches the handle with both block hands and dangles there, little feet kicking.",
+      "est_seconds": 4.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "It swings its whole weight. The lever creaks slowly down and lands with a deep CLUNK. Tiny drops, falls over onto its back, then gets up determinedly.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A rushing gurgle of water climbs through the pipes toward the ceiling.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "On the panel, the sprout light flicks from red to green. Tiny's eyes go crescent and its antenna glows bright green.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "(happy chirp at the end)",
+      "text": "Drink up, little ones.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny trots back toward the crate and the hatch, following the gurgle upward, quick and pleased.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The camera slides away from Tiny, straight through the blank grey wall into the dark behind it. Here a hidden pipe drops down toward the city floor, and beside the lever's linkage sits a small gauge with a tree shape.",
+      "est_seconds": 5
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Behind the wall, a soft falling tone as a steady trickle sound dies away.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "The tree gauge flicks from green to amber and pulses alone in the dark. Faintly, through the wall, Tiny's happy chirp fades away.",
+      "est_seconds": 3.5
+    }
+  ],
+  "staging_notes": "Play Dash's crash as a fast, wide, tracking gag, then let the room go still so Tiny's entrance feels small and slow by contrast. Shoot Tiny low and looking up at the huge panel and lever to sell its size, and frame its eye-sweep check so the blank wall sits squarely in view: the audience sees exactly what Tiny sees, and nothing behind it. The final move is one unbroken camera push through the wall into darkness, revealing the hidden tree gauge turning amber while Tiny's chirp fades, so the audience knows the cost and Tiny does not."
+}

@@ -1,0 +1,117 @@
+{
+  "id": "S04",
+  "title": "The Forgotten Nursery",
+  "location_id": "rooftop_nursery",
+  "time_of_day": "afternoon",
+  "characters": [
+    "tiny"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Afternoon wind over the block skyline. A single green slab leaf, blown all the way from the distant Grove, tumbles up the side of an old tower and skids to rest on a flat, empty rooftop beside a square ladder hatch.",
+      "est_seconds": 4
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A rusty creak as the hatch lifts, then a small metallic grunt.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "The hatch lid tips up a crack. Tiny's cream head pushes it open from below, eyes wide and searching. It spots the leaf, hops out onto the roof, wobbles, falls on its back and gets straight up again.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny trots to the leaf and leans over it, eyes crescent. A gust nudges the leaf a few blocks further, and it stops against the side of a long rectangular planter tray. Tiny's eyes follow it, then lift.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Wide reveal: rows of planter trays stretch across the roof, full of tiny box-sprout seedlings, all grey-green and bent over. A bare greenhouse frame of bars stands behind them, and a tall rooftop water tank looms at the far end. Nothing moves except the wind.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks slowly along the first row, its antenna glowing amber. It stops at the smallest sprout and gently touches it with one block hand. The sprout's two slab leaves sag even lower.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's rectangular eyes tilt down at the corners, sad.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny crosses to the big water tank, a cliff of steel beside it, and knocks on it with its little fist.",
+      "est_seconds": 3
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A deep, hollow BONG that echoes inside the empty tank.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny looks down at the dry pipe leaving the tank's base and follows it across the roof, hopping over each square bracket one at a time, until it reaches the roof edge.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny peers over the edge. The pipe drops down the tower wall and disappears into a far-off tangle of city pipes, where amber lamps blink faintly.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny turns back to face the rows of drooping seedlings. Its eyes straighten from sad to square and steady.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "softly, to the seedlings",
+      "text": "You are thirsty. I can help.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "a small pause, honest",
+      "text": "I think.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny pats the edge of the nearest tray, then hurries to the hatch, takes one last look back at the rows, and drops through with a soft thunk. The lid falls shut, and the little leaf stays resting against the tray.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Keep the camera low at Tiny's height so the trays feel like long fields and the tank feels huge; the only wide shot is the reveal of the drooping rows. Play the scene almost silent under a thin wind ambience so the hollow BONG of the tank lands hard. The tilt down over the roof edge must clearly show the pipe heading toward the distant Pipeworks lamps, which hands the audience straight into S05. The Grove leaf resting against the tray in the final frame quietly ties the Nursery to the trees."
+}

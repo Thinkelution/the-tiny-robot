@@ -1,0 +1,208 @@
+{
+  "id": "S19",
+  "title": "Every Logic a Job",
+  "location_id": "pipeworks",
+  "time_of_day": "night",
+  "characters": [
+    "tiny",
+    "warden",
+    "ledger",
+    "quota",
+    "dash",
+    "primly",
+    "mossback",
+    "shine"
+  ],
+  "beats": [
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "Rain drums on the Pipeworks roof. Amber warning lamps hum and pulse.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Inside, five robots wait in a loose ring around the gauge panel. Ledger stands stiffly by the panel. Primly is parked at a perfect right angle to the wall. Shine bobs near the ceiling and casts magenta light on the pipes. Dash idles beside its own bent railing. Quota fills the doorway end of the room with its blade raised, and its dial ticks.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden steps in with heavy, even steps. Rain streaks glint on its silver shoulders, and it holds Tiny's crate level against its chest. Mossback rolls in behind it, shakes rain off its moss blocks and starts a slow loop around the stacks of spare pipe.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Two small rectangular eyes appear in the crate's slot. They go wide as they move from face to face, then curve into crescents.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "softly, amazed",
+      "text": "You came. All of you.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "zooming close, sparkle",
+      "text": "You said please! Nobody says please!",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "stopwatch click",
+      "text": "Sunrise: nine hours. Talking: slow.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "turning its eyes to Ledger",
+      "text": "Ledger. Where can water go?",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger slides a drawer open with a paper-shuffle click. A bell dings. The gauge panel lights up with a simple map: the main pipe, the Nursery's line glowing green and left untouched, and a new dotted line that branches off and runs to a tree shape.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "deadpan",
+      "text": "Count: second line, main pipe to Grove. Segments needed, three hundred. Nursery line: untouched.",
+      "est_seconds": 5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's antenna glows amber. Its eyes sweep left and right across every robot in the room, as if it is checking each one. Then the antenna settles to green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "plainly",
+      "text": "Quota. Lay pipe faster than yesterday.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "dial sweeping, a low pleased growl",
+      "text": "Yesterday: zero pipe. Today: more.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Primly. Every piece straight. Every joint in its place.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "primly",
+      "parenthetical": "broom arms lifting, eye-lights brightening",
+      "text": "Little one, that is exactly where I belong.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Mossback. Do not stop. Carry Nursery water to the reddest trees.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "rolling past, voice fading behind the pipe stack",
+      "text": "Not stopping is...",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "mossback",
+      "parenthetical": "swinging back into view, voice swelling",
+      "text": "...what I'm for.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Shine. It will be cold and wet. Keep everyone going.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "drifting proudly upward, screen full of stars",
+      "text": "A night show! In the rain! I love it!",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash rolls back and forth with a bored rev, slanted eyes half-closed, and turns its fin away.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "scoffing",
+      "text": "Carrying pipes? That's not a race. Where's the finish line?",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "leaning its eyes up to the slot, earnest",
+      "text": "Get every pipe to Quota before it needs one. If you win, everyone wins.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash's visor eyes go round. It looks at Quota's ticking dial, at Primly, at Mossback looping past, and back at the crate. The number block on its fin flickers bright yellow.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "dash",
+      "parenthetical": "revving hard",
+      "text": "Everyone wins? Three, two, go!",
+      "est_seconds": 2
+    },
+    {
+      "type": "sound",
+      "character": "",
+      "parenthetical": "",
+      "text": "A screaming engine rev, a tyre squeal, and one loud stopwatch click.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "dash",
+      "parenthetical": "",
+      "text": "Dash peels out the door into the rain and drifts out of sight. Primly winces at the skid mark, then glides after it in a perfect straight line. Quota turns and rumbles out, shaking the pipes. Mossback rolls out toward the Nursery ladder. Warden follows last, holding the crate up so Tiny can see.",
+      "est_seconds": 4
+    }
+  ],
+  "staging_notes": "Open wide and low under the amber pulse so all five waiting robots read as a ring around the gauge panel, then make Warden's entrance the camera's anchor: the crate stays at the centre of frame for the whole briefing, with Tiny's eyes in the slot as the focus. Each job assignment cuts to a clean single on that robot as its eye-screen brightens, so the logics 'light up' one after another like a switchboard. Shine's hovering magenta glow and the rain streaks in the open door keep the room alive. The final exit is one continuous shot from the panel as the robots pour out into the rain in the order of their jobs."
+}

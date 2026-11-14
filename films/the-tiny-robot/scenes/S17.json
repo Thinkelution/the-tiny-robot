@@ -1,0 +1,142 @@
+{
+  "id": "S17",
+  "title": "One Night",
+  "location_id": "main_square",
+  "time_of_day": "dusk",
+  "characters": [
+    "tiny",
+    "quota",
+    "warden",
+    "shine",
+    "ledger"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Dusk settles over Main Square. The crowd's green chest lamps fade back to dark one by one. Tiny stands alone at the top of the stacked stage platforms. Warden climbs the platforms with heavy, even steps and stops beside it. Its square badge lamp flicks from green to red.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat, reading word for word",
+      "text": "The order says: hold the culprit, re-press at sunrise. The culprit has changed. The order has not.",
+      "est_seconds": 6
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny tilts its whole head back to look up at Warden's visor. Its eyes tilt sad for a moment, then it gives one small nod. Its antenna stays steady green.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "rolling forward on its treads, the ground trembling, its stopwatch clicking",
+      "text": "Clearing vote. Now. As set.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "shine",
+      "parenthetical": "",
+      "text": "Shine drifts up in front of the Big Board, and applause icons and stars start flashing across its screen out of habit. It glances down at Tiny. The icons blink out one by one, leaving its face a plain, calm screen.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "shine",
+      "parenthetical": "plainly, no sparkle sound",
+      "text": "Gridhaven. Keep the Grove, light green. Clear it, light red.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "",
+      "parenthetical": "",
+      "text": "Chest lamps light up across the square in a patchwork of green and red, roughly half and half. On the Big Board, two bars rise and stop almost level. Nobody cheers.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "measured, metallic echo",
+      "text": "Split. The old rule stands. No living grove may be cleared.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "stepping stiffly forward as a drawer slides open with a soft ding; the Big Board shows a red Grove gauge beside a sun shape",
+      "text": "Count: a grove without water at sunrise is not living. Order: clear.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "low rumble, dial ticking",
+      "text": "Water back by sunrise: Grove stays. No water: I clear.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny walks with quick small steps to the very edge of the stage. Quota's tilted blade looms level with the platform, filling the frame. Tiny tips its head all the way back to find Quota's long amber eye-light.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "small, steady, no chirp",
+      "text": "Then I will bring it back. With a new pipe. Faster than anything you have ever done.",
+      "est_seconds": 6
+    },
+    {
+      "type": "sound",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "A single loud stopwatch CLICK from Quota's chest dial cuts through the silent square.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "quota",
+      "parenthetical": "",
+      "text": "Quota holds still. Its eye-light narrows to a thin bar while the white stopwatch hand on its dial sweeps once all the way around.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "quota",
+      "parenthetical": "diesel growl",
+      "text": "Accepted.",
+      "est_seconds": 2
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden lowers an empty wooden crate over Tiny with both long arms. Tiny's two lit eyes peer out through a square slot in the side. Warden lifts the crate level and steady.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "warden",
+      "parenthetical": "flat",
+      "text": "The order says hold the culprit until sunrise.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "warden",
+      "parenthetical": "",
+      "text": "Warden carries the crate down the platforms and off across the square toward the Foundry. Dark clouds roll over the tower tops, and the last of the dusk light fades behind them.",
+      "est_seconds": 3
+    }
+  ],
+  "staging_notes": "Keep Tiny tiny: shoot most of the scene from low angles on the stage so Warden's pillar body, Shine's screen and Quota's blade tower over it. The split vote plays as a wide overhead shot of the square, a quilt of red and green lamps, then cuts to the Big Board's two almost-level bars. Hold the face-off as a two-shot of Quota's blade against Tiny's small head, and let the dial click land in total silence. Exit on a wide shot as the crate shrinks across the dimming plaza, setting up the rain at the Foundry."
+}

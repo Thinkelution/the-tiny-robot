@@ -1,0 +1,502 @@
+{
+  "acts": [
+    {
+      "act": 1,
+      "title": "Check... No Harm. Go.",
+      "summary": "In the boxy, fast city of Gridhaven, the tiny, slow, old robot lives by a careful rule and loves the Old Grove, where its best friend Mossback loops forever. Wanting to help, Tiny finds a forgotten rooftop nursery of thirsty seedlings and pulls a Pipeworks lever to water them, never seeing that the same lever cuts off the Grove. As the trees wilt, Foreman Quota circles with its Fast Lane, and Shine gives the crowd an easy villain: Mossback, who cannot stop long enough to defend itself, is taken away."
+    },
+    {
+      "act": 2,
+      "title": "What Tiny Knows",
+      "summary": "Tiny sets out to clear its friend and coaxes the truth out of literal-minded Ledger: one small pair of feet was at the lever. Knowing it caused the harm, Tiny locks. Undoing the lever kills the seedlings, and leaving it kills the trees. Shine kindly offers an easy lie that would blame Dash and make Tiny a hero. Alone, Tiny works out that silence and lies are both harm done knowingly. On the Big Board stage it says 'I did it.' The crowd goes silent, Shine locks, then green lamps glow one by one and Ledger speaks up for the first time. Tiny will be re-pressed at sunrise, but it wins one night to bring the water back."
+    },
+    {
+      "act": 3,
+      "title": "The Night of the Pipe Race",
+      "summary": "Through a loophole in Warden's orders, Tiny directs a rainy all-night race to lay a second pipe, giving each robot's logic a job where it does good. At the great root, Tiny refuses to move, and Quota finds a faster answer than cutting: it bends the pipe over the root. Tiny pulls the lever again, this time knowing everything. At sunrise both the Grove and the Nursery turn green, Quota re-routes its road, the crowd quietly votes for Tiny to keep its logic, and every robot's rule ends a little kinder."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S01",
+      "act": 1,
+      "title": "A Little Box in the Fog",
+      "location_id": "junk_stacks",
+      "time_of_day": "dawn",
+      "characters": [
+        "tiny",
+        "dash"
+      ],
+      "summary": "Morning fog rolls through towers of rust-orange crates. A square hole in one crate lights up, and Tiny steps onto its plank porch. Before each move it sweeps its eyes left and right while its antenna glows amber, then murmurs 'Check... no harm. Go.' It carries old crates down one at a time so nothing topples, and it steps carefully around a two-leaf weed in a pavement crack. Dash screeches past, revving and drifting: 'Out of the way, paperweight! Three, two, gone!' Its skid mark streaks right beside the weed. Tiny hurries over, checks the weed is still swaying, and gives a happy chirp.",
+      "purpose": "Establishes Tiny's careful logic, its catchphrase, its size and its delight in small living things. Sets up the weed motif and Dash's teasing.",
+      "est_seconds": 60
+    },
+    {
+      "id": "S02",
+      "act": 1,
+      "title": "Mossback's Loop",
+      "location_id": "old_grove",
+      "time_of_day": "morning",
+      "characters": [
+        "tiny",
+        "mossback",
+        "primly"
+      ],
+      "summary": "Tiny walks into the green, swaying Old Grove, where Mossback rolls its endless loop and tips a slow measure of water at each box-trunk tree. All the gauge grates glow green. They talk in pieces as Mossback passes: 'Good morning, little...' (loop) '...one. The sapling grew.' Primly glides in at perfect right angles and sweeps fallen leaves and seeds toward the scrap chute: 'Excuse me, that is not where that goes.' Once Primly turns away, Tiny quietly carries a seed back and sets it beside the central sapling.",
+      "purpose": "Shows the friendship, Mossback's never-stopping logic and the healthy Grove with its green gauges. Starts the running seed rivalry with Primly.",
+      "est_seconds": 65
+    },
+    {
+      "id": "S03",
+      "act": 1,
+      "title": "The Fast Lane Pitch",
+      "location_id": "main_square",
+      "time_of_day": "day",
+      "characters": [
+        "shine",
+        "quota",
+        "dash",
+        "warden",
+        "tiny"
+      ],
+      "summary": "Shine hovers before the Big Board, flashing applause icons: 'Am I right, Gridhaven?' Quota rolls up to a slab-table model of the Fast Lane and points at the one bend around the Grove: 'Straight: four minutes. Bend: six. Unacceptable.' Dash cheers louder than anyone. At the back, Tiny can't see, so it hops up a stack of crates one block at a time. Warden reads the old Board rule in a flat voice: 'The order says no living grove may be cleared.' Quota's stopwatch clicks: 'Then I wait.'",
+      "purpose": "Introduces the antagonist-by-logic, the Board, Shine and Warden. Sets the stakes: the Grove is safe only while it is alive.",
+      "est_seconds": 65
+    },
+    {
+      "id": "S04",
+      "act": 1,
+      "title": "The Forgotten Nursery",
+      "location_id": "rooftop_nursery",
+      "time_of_day": "afternoon",
+      "characters": [
+        "tiny"
+      ],
+      "summary": "Tiny follows a drifting leaf up a ladder hatch onto a forgotten rooftop. Rows of planter trays hold tiny box-sprout seedlings, all drooping and grey-green, and the rooftop tank sounds hollow when Tiny knocks on it. Tiny touches a wilted sprout and its eyes tilt sad. It traces the dry pipe from the tank to the roof edge, where it runs down into the city. 'You are thirsty. I can help. I think.'",
+      "purpose": "Gives Tiny its want: to help living things nobody else counts. Sets up the Nursery as the source of both the mistake and the rescue. Nearly wordless.",
+      "est_seconds": 45
+    },
+    {
+      "id": "S05",
+      "act": 1,
+      "title": "The Lever",
+      "location_id": "pipeworks",
+      "time_of_day": "afternoon",
+      "characters": [
+        "tiny",
+        "dash"
+      ],
+      "summary": "Dash races through the Pipeworks on a shortcut, clips a railing and bends it with a clang, then speeds off laughing. Moments later Tiny climbs in following the rooftop pipe, finds the gauge panel and sees the Nursery light glowing red. Its eyes sweep the room: pipes, lamps, a blank wall. It finds no harm. 'Check... no harm. Go.' It hops, grabs the big lever and pulls it down with its whole weight. The Nursery light turns green, and the camera slides through the wall to a hidden gauge marked with a tree shape, which flicks from green to amber.",
+      "purpose": "The inciting mistake, shown so the audience knows and Tiny does not. Sets up the bumped railing as Dash's frame-up and the lever motif.",
+      "est_seconds": 65
+    },
+    {
+      "id": "S06",
+      "act": 1,
+      "title": "Perking Up",
+      "location_id": "rooftop_nursery",
+      "time_of_day": "sunset",
+      "characters": [
+        "tiny"
+      ],
+      "summary": "Water gurgles into the rooftop tank. Row by row, the seedlings lift their little slab leaves. Tiny's eyes go crescent and it chirps, walking along the trays as if greeting each one. It sits on the roof edge and watches the sun set over the block skyline. Far off, the Grove looks tiny and quiet.",
+      "purpose": "A wordless moment of earned joy that makes the coming discovery hurt more. Tiny's good deed is real.",
+      "est_seconds": 35
+    },
+    {
+      "id": "S07",
+      "act": 1,
+      "title": "Amber Lights",
+      "location_id": "old_grove",
+      "time_of_day": "morning, days later",
+      "characters": [
+        "tiny",
+        "mossback",
+        "primly"
+      ],
+      "summary": "The Grove has gone dull. Leaf clusters droop, slab leaves cover the ground, and the gauge grates glow amber, then red. Mossback's tank tips out nothing at each tree: 'The water is...' (loop) '...gone.' Primly happily sweeps the extra leaves, then reaches for the seed by the sapling just as Tiny grabs it. They lock nose to nose, static-line eyes and a rising hum, a comic standoff between two small careful robots. Mossback rolls between them, and the seed lodges in its moss, so it is both tidied and kept. The lock breaks, and both robots blink.",
+      "purpose": "Shows the drought through the gauge motif. Tests Primly's logic. Shows what a lock looks like and plants the idea that a third option breaks it.",
+      "est_seconds": 70
+    },
+    {
+      "id": "S08",
+      "act": 1,
+      "title": "Already Finished",
+      "location_id": "fast_lane_works",
+      "time_of_day": "day",
+      "characters": [
+        "quota",
+        "dash",
+        "tiny"
+      ],
+      "summary": "The half-built road ends at the Grove's edge, where Quota sits with its blade lowered and its dial ticking. Dash circles it, starstruck. Quota's eye-light scans the red gauges: 'Yesterday: wilting. Today: more. Already finished.' Tiny steps between the blade and the trees, its head barely reaching the bottom of the blade. Quota turns and rumbles off toward Main Square, and the ground trembles under Tiny's feet.",
+      "purpose": "Escalates the threat. The drought gives Quota its opening, and Tiny's quiet stubbornness meets Quota's speed for the first time.",
+      "est_seconds": 45
+    },
+    {
+      "id": "S09",
+      "act": 1,
+      "title": "A Villain for the Crowd",
+      "location_id": "main_square",
+      "time_of_day": "evening",
+      "characters": [
+        "shine",
+        "quota",
+        "mossback",
+        "warden",
+        "tiny",
+        "dash"
+      ],
+      "summary": "Under tense amber light, Shine asks the crowd who dried up the Grove and lets the murmuring rise. It points at Mossback, who is looping the square because it cannot stop: 'It never stops! It wore out the line!' Mossback tries to answer as it passes, 'It wasn't...', and its voice fades as it rolls away. A wave of red chest lamps fills the square, and Shine glows with the cheer. Warden marches Mossback off to the Foundry: 'The order says hold the water carrier. Clearing vote tomorrow evening.' Tiny calls out from the crowd, but its small voice is lost under the roar.",
+      "purpose": "End of Act One. The wrong robot is blamed and the clearing vote is set. Tests Shine's and Mossback's logics, and gives Tiny a concrete goal: clear its friend.",
+      "est_seconds": 80
+    },
+    {
+      "id": "S10",
+      "act": 2,
+      "title": "The Sad Little Square",
+      "location_id": "foundry",
+      "time_of_day": "night",
+      "characters": [
+        "tiny",
+        "warden",
+        "mossback"
+      ],
+      "summary": "In the orange glow of the Foundry, Mossback loops a tight, sad square inside the holding pen. Tiny trots after Warden and keeps asking it honest questions: 'Is Mossback the culprit?' 'The order does not say.' 'Is the order right?' Warden's visor flickers, and there is a long pause. Behind them, the Logic Press stamps a glowing plate with a deep clunk, and Tiny flinches. Mossback passes the bars: 'Find the...' (loop) '...water, little one.'",
+      "purpose": "Shows the cost of re-pressing and the menace of the Press. Begins Tiny's habit of talking to Warden as a person and testing Warden's logic.",
+      "est_seconds": 65
+    },
+    {
+      "id": "S11",
+      "act": 2,
+      "title": "Count: Footsteps, Two",
+      "location_id": "count_house",
+      "time_of_day": "night",
+      "characters": [
+        "tiny",
+        "ledger"
+      ],
+      "summary": "Among shelves of glowing amber data blocks, Tiny asks Ledger why the Grove went dry. Ledger answers, deadpan: 'Cause is not a count.' Tiny tries again and again until a little bell dings: the water stopped at a precise minute, when a lever moved at the Pipeworks. 'Who was there?' Ledger's screen shows two small footprints: 'Count: footsteps at lever, two. Size: small.' Tiny looks down at its own square feet. Then it pulls out a dusty block, and Ledger adds quietly that the Grove was planted by robots of Tiny's series. 'Why did you not tell anyone?' 'No one asked.'",
+      "purpose": "The discovery. Knowledge is the hinge, and now Tiny knows. Tests Ledger's logic and roots Tiny's identity in the Grove's history.",
+      "est_seconds": 80
+    },
+    {
+      "id": "S12",
+      "act": 2,
+      "title": "Behind the Wall",
+      "location_id": "pipeworks",
+      "time_of_day": "late night",
+      "characters": [
+        "tiny"
+      ],
+      "summary": "Tiny squeezes through a gap behind the blank wall and finds the hidden Grove gauge glowing red beside the lever's linkage. It walks back to the lever and grips it to push it up, then sees the Nursery light and pictures the seedlings drooping again. Its hand freezes and its eyes fill with static lines. A hum rises as amber warning lamps pulse. Its antenna flickers weaker and weaker. Tiny is locked inside its own rule.",
+      "purpose": "The low point. Tiny's logic seems to fail it, because every choice causes harm. Nearly wordless.",
+      "est_seconds": 65
+    },
+    {
+      "id": "S13",
+      "act": 2,
+      "title": "The Easy Lie",
+      "location_id": "pipeworks",
+      "time_of_day": "late night",
+      "characters": [
+        "tiny",
+        "shine",
+        "dash"
+      ],
+      "summary": "Drawn by the hum, Shine hovers in and gently lifts Tiny's hand off the lever with its floating block hands. The lock breaks with a sputter. Tiny tells Shine everything. Shine's face melts into sympathy, then lights up with an idea, and it points to the bent railing: 'Dash bumped this! Say Dash did it, and you're the hero who solved it! Huge cheer! Confess, and the Board re-presses you.' It means every word kindly. Hidden behind a pipe stack, Dash, who had come back to look at its dent, hears all of it, and its eyes go round.",
+      "purpose": "The temptation, offered sincerely, which shows the flaw in Shine's logic. Dash's overhearing sets up its turn.",
+      "est_seconds": 80
+    },
+    {
+      "id": "S14",
+      "act": 2,
+      "title": "Thinking It Through",
+      "location_id": "junk_stacks",
+      "time_of_day": "dawn",
+      "characters": [
+        "tiny"
+      ],
+      "summary": "Back at its crate in the fog, Tiny sits on the porch and thinks out loud, moving three small pebble-blocks as it goes. 'Quiet: Mossback is hurt. Blame Dash: Dash is hurt. I know both.' It looks at the weed in the crack. On a scrap pile it spots a faded plate carrying the First Workshop emblem, the same mark as on its own brow, and holds it up to compare. Its antenna slowly shifts from amber to steady green. 'I did not know before. I know now.'",
+      "purpose": "Quiet turning point. Tiny realises a lie is just another way of hurting someone, and chooses truth on its own.",
+      "est_seconds": 60
+    },
+    {
+      "id": "S15",
+      "act": 2,
+      "title": "I Did It",
+      "location_id": "main_square",
+      "time_of_day": "evening",
+      "characters": [
+        "tiny",
+        "shine",
+        "quota",
+        "dash",
+        "warden",
+        "ledger"
+      ],
+      "summary": "The clearing vote begins, and Shine winks at Tiny and calls up 'our little detective!' Tiny hops up the stacked stage platforms one block at a time, slips, falls over and gets back up while the crowd chuckles. Dash watches with its whole chassis tense. In the spotlight, Tiny says plainly: 'Mossback did not do it. Dash did not do it. I pulled the lever. I did it.' There is no cheer, only silence. Shine's screen stutters and freezes, and it locks with a flicker of static.",
+      "purpose": "The emotional climax. Tiny's truthfulness, chosen at great cost, overturns the scapegoating. Silence tests Shine's logic.",
+      "est_seconds": 90
+    },
+    {
+      "id": "S16",
+      "act": 2,
+      "title": "Quiet Green",
+      "location_id": "main_square",
+      "time_of_day": "evening",
+      "characters": [
+        "tiny",
+        "shine",
+        "dash",
+        "ledger",
+        "mossback",
+        "warden"
+      ],
+      "summary": "In the hush, the number block on Dash's fin glows soft green. Then one chest lamp in the crowd turns green, then another, until the whole square glows green without a sound. Shine's frozen screen slowly clears into a wondering smile, a happiness it has never measured. Ledger steps forward for the first time and projects the flow records onto the Big Board: the water dropped the minute the lever moved, the railing bump changed nothing, and the trees are thirsty, not dying. Warden's badge flicks green as Mossback's hold is lifted.",
+      "purpose": "Payoff of the chest-lamp motif. Shine unlocks and grows. Ledger chooses to speak up. Mossback is cleared.",
+      "est_seconds": 70
+    },
+    {
+      "id": "S17",
+      "act": 2,
+      "title": "One Night",
+      "location_id": "main_square",
+      "time_of_day": "dusk",
+      "characters": [
+        "tiny",
+        "quota",
+        "warden",
+        "shine",
+        "ledger"
+      ],
+      "summary": "The Board still rules: the culprit is to be held until sunrise and then re-pressed. Quota rumbles that the Grove will be cleared at sunrise unless the water is back. Tiny looks up at the giant blade: 'Then I will bring it back. With a new pipe. Faster than anything you have ever done.' Quota's dial clicks loudly. A long beat, then: 'Accepted.' Warden lowers a crate over Tiny and lifts it: 'The order says hold the culprit until sunrise.'",
+      "purpose": "End of Act Two. Tiny faces re-pressing, but has turned Quota's logic into a challenge. Sunrise becomes the deadline.",
+      "est_seconds": 70
+    },
+    {
+      "id": "S18",
+      "act": 3,
+      "title": "The Order Does Not Say Where",
+      "location_id": "foundry",
+      "time_of_day": "night",
+      "characters": [
+        "tiny",
+        "warden",
+        "mossback"
+      ],
+      "summary": "Rain begins to streak past the great doors. Warden swings the pen open for Mossback, who rolls out in a slow, happy circle. From inside its crate Tiny asks, 'Does the order say where you must hold me?' Warden's visor bar flickers as it re-reads the order word for word. 'The order does not say where.' It carries the crate out into the rain, and Mossback follows.",
+      "purpose": "Warden's logic yields a loophole and Warden becomes a quiet helper. Mossback is free to become the plan's backbone.",
+      "est_seconds": 60
+    },
+    {
+      "id": "S19",
+      "act": 3,
+      "title": "Every Logic a Job",
+      "location_id": "pipeworks",
+      "time_of_day": "night",
+      "characters": [
+        "tiny",
+        "warden",
+        "ledger",
+        "quota",
+        "dash",
+        "primly",
+        "mossback",
+        "shine"
+      ],
+      "summary": "Amber lamps pulse as the robots crowd into the Pipeworks, with Tiny directing from its crate in Warden's arms. Ledger lights up a route on the gauge panel: a second line from the main pipe to the Grove, so the Nursery keeps its own. Tiny gives each robot a job that suits its logic. Quota must lay pipe faster than yesterday. Primly must place every segment perfectly straight. Mossback must never stop, ferrying Nursery water to the thirstiest trees. Shine must keep the workers' spirits up. Dash scoffs until Tiny says, 'Get every pipe to Quota before it needs one. If you win, everyone wins.' Dash revs: 'Three, two, go!'",
+      "purpose": "Tiny finds the third option and turns every rule toward good. Sets up each robot's test for the night.",
+      "est_seconds": 75
+    },
+    {
+      "id": "S20",
+      "act": 3,
+      "title": "Tanks Away",
+      "location_id": "rooftop_nursery",
+      "time_of_day": "night",
+      "characters": [
+        "mossback",
+        "dash"
+      ],
+      "summary": "In the rain on the roof, the seedlings stand green and perky. Dash hops a ramp to the roof edge and helps load big water tanks from the rooftop tank onto Mossback's back. Mossback rolls off at its steady pace while Dash zooms ahead to clear the path, and the two make a race of it. The water that once caused the drought now heads for the Grove.",
+      "purpose": "A short, playful beat. The Nursery becomes the rescue's source, and Dash and Mossback team up.",
+      "est_seconds": 40
+    },
+    {
+      "id": "S21",
+      "act": 3,
+      "title": "The Pipe Race",
+      "location_id": "fast_lane_works",
+      "time_of_day": "night",
+      "characters": [
+        "quota",
+        "dash",
+        "primly",
+        "shine",
+        "tiny",
+        "warden"
+      ],
+      "summary": "Floodlights cut through the silver streaks of rain. Dash drifts around barriers with pipe segments stacked on its back and skids to a stop just as Quota reaches out for each one. Quota slams the segments down at full speed, its dial sweeping toward a record. Primly nudges each joint into a perfect line with its broom arms. Shine floats overhead as a living floodlight, flashing stars at the soggy workers: 'Let me hear it!' Dash pumps its arms: 'Lap record! Wait, everybody's on the lap!'",
+      "purpose": "The energetic heart of Act Three. Dash's and Quota's logics work for the Grove, and Dash wins without anyone losing.",
+      "est_seconds": 65
+    },
+    {
+      "id": "S22",
+      "act": 3,
+      "title": "Keep Them Drinking",
+      "location_id": "old_grove",
+      "time_of_day": "night",
+      "characters": [
+        "mossback",
+        "tiny",
+        "warden"
+      ],
+      "summary": "Mossback rolls through the rainy dark of the Grove, tipping tank water at the reddest gauge, where the great old tree hangs lowest. Warden stands still at the edge, holding Tiny's crate so Tiny can watch through the slot. As Mossback passes they speak in pieces: 'You worry too...' (loop) '...much, little one.' A drooping leaf cluster lifts very slightly.",
+      "purpose": "A tender, nearly wordless breath. Mossback's never-stopping keeps the trees alive while the pipe is built.",
+      "est_seconds": 45
+    },
+    {
+      "id": "S23",
+      "act": 3,
+      "title": "The Root",
+      "location_id": "old_grove",
+      "time_of_day": "pre-dawn",
+      "characters": [
+        "tiny",
+        "quota",
+        "warden",
+        "primly",
+        "dash"
+      ],
+      "summary": "As the sky greys, the pipe reaches the last gap, where a thick exposed root of the great old tree crosses the straight line. Quota lowers its blade: 'Cut: ninety seconds.' Warden sets the crate down beside the root ('The order does not say how close'), and Tiny climbs out and stands in front of the root, tiny against the blade. 'This is somebody. I will not move.' Quota and Tiny lock, with static eyes, a rising hum and the dial frozen mid-sweep. Then Quota's eye-light flickers: 'Cut, then repair the tree: slow. Over: forty seconds. Over.'",
+      "purpose": "The physical climax. Tiny's logic holds firm, and Quota's speed logic finds the kinder, faster answer. Tests Quota's logic.",
+      "est_seconds": 85
+    },
+    {
+      "id": "S24",
+      "act": 3,
+      "title": "Where It Belongs",
+      "location_id": "old_grove",
+      "time_of_day": "pre-dawn",
+      "characters": [
+        "primly",
+        "tiny",
+        "quota"
+      ],
+      "summary": "Quota hands Primly an angled elbow segment, and Primly trembles at the idea of a bend: 'That is not straight.' Tiny points to the root, then the gap: 'The bend goes exactly here. That is where it belongs.' Primly considers it, then sets the elbow in perfectly over the root. The last segment clunks into place.",
+      "purpose": "Primly's logic stretches to see that some things belong right where they are. The pipe is complete.",
+      "est_seconds": 40
+    },
+    {
+      "id": "S25",
+      "act": 3,
+      "title": "The Lever Again",
+      "location_id": "pipeworks",
+      "time_of_day": "pre-dawn",
+      "characters": [
+        "tiny",
+        "ledger",
+        "warden"
+      ],
+      "summary": "Ledger stands at the panel, where the new line's light glows ready: 'Count: route complete.' Warden lifts Tiny up to the same lever. This time Tiny looks at everything it now knows: the Nursery light, the hidden Grove gauge and the new pipe. 'Check... no harm.' It pulls, and both lights glow green. 'Go.'",
+      "purpose": "Payoff of the lever motif. The same action, now taken with full knowledge.",
+      "est_seconds": 50
+    },
+    {
+      "id": "S26",
+      "act": 3,
+      "title": "Sunrise",
+      "location_id": "old_grove",
+      "time_of_day": "sunrise",
+      "characters": [
+        "tiny",
+        "mossback",
+        "quota",
+        "primly",
+        "dash",
+        "shine",
+        "warden"
+      ],
+      "summary": "Gold light spills into the Grove as water gurgles through the bent pipe. The gauge grates flick from red to amber to green, drooping leaf clusters lift and sway, and the central sapling opens its first cube blossom. Quota's dial shows a new record, and it turns to Tiny: 'Fast.' Warden lifts the crate to carry Tiny back as ordered. Mossback rolls past it and begins, 'I always...', before fading away around the loop.",
+      "purpose": "The rescue pays off visually through the gauge, sunrise and sapling motifs. Plants Mossback's unfinished sentence.",
+      "est_seconds": 60
+    },
+    {
+      "id": "S27",
+      "act": 3,
+      "title": "Around Is Faster",
+      "location_id": "fast_lane_works",
+      "time_of_day": "morning",
+      "characters": [
+        "quota",
+        "dash"
+      ],
+      "summary": "Without being asked, Quota rolls back to the unfinished road and drags construction barriers into a new line that curves around the Grove. Dash gapes. Quota's stopwatch clicks: 'Around is faster than arguing.' Dash revs happily and races the new curve.",
+      "purpose": "Completes Quota's arc. The antagonist's logic now protects what it once threatened.",
+      "est_seconds": 35
+    },
+    {
+      "id": "S28",
+      "act": 3,
+      "title": "The Honest Question",
+      "location_id": "foundry",
+      "time_of_day": "morning",
+      "characters": [
+        "tiny",
+        "warden",
+        "shine",
+        "mossback",
+        "ledger",
+        "dash"
+      ],
+      "summary": "Warden stands Tiny's crate before the looming Logic Press as ordered, while a crowd fills the great open doors. Shine hovers up and, instead of a show, asks quietly: 'Should the robot who told the truth keep its logic?' There is no roar. One by one, every chest lamp glows green, and Shine's screen fills with a soft smile. Warden reads the new order exactly and, with the faintest curve of its visor bar, lifts Tiny out and sets it down in the sunlight outside the doors. Mossback rolls past: '...knew you would.'",
+      "purpose": "Resolution of the re-pressing threat. Shine, Warden and Mossback complete their arcs.",
+      "est_seconds": 75
+    },
+    {
+      "id": "S29",
+      "act": 3,
+      "title": "A New Drawer",
+      "location_id": "count_house",
+      "time_of_day": "morning",
+      "characters": [
+        "ledger"
+      ],
+      "summary": "Ledger slides open an empty drawer and creates a new glowing data block. Its digit-face shows a small pair of eyes between the numbers. 'Count: robots who told the truth when a lie was easier. One.' It files the block with a satisfied ding.",
+      "purpose": "Payoff of Ledger's counts motif. The city now has a measure for something that used to be unmeasurable.",
+      "est_seconds": 30
+    },
+    {
+      "id": "S30",
+      "act": 3,
+      "title": "Around the Weed",
+      "location_id": "junk_stacks",
+      "time_of_day": "morning",
+      "characters": [
+        "dash",
+        "mossback"
+      ],
+      "summary": "Dash tears through the Junk Stacks, then brakes hard at the crack in the pavement. It slows right down and steers carefully around the two-leaf weed. Mossback's loop, now a little wider, rolls past Tiny's empty crate, and Mossback tips a tiny splash of water onto the weed as it goes.",
+      "purpose": "Payoff of the weed motif and of Mossback's widened loop. Tiny's care has spread to others. Wordless.",
+      "est_seconds": 35
+    },
+    {
+      "id": "S31",
+      "act": 3,
+      "title": "Check... No Harm. Go.",
+      "location_id": "old_grove",
+      "time_of_day": "golden morning",
+      "characters": [
+        "tiny",
+        "primly",
+        "mossback",
+        "dash",
+        "quota"
+      ],
+      "summary": "Tiny carries a seedling tray from the Nursery and plants a sprout in the gap at the Grove's edge, beside the bent pipe. Primly glides through sweeping, then stops at the fallen leaves and sweeps neatly around them, leaving them where they fell. Mossback loops by, and Quota idles at the new curve in the road. Tiny looks up at the swaying trees, pauses, sweeps its eyes left and right, antenna green: 'Check... no harm. Go.' It walks into the gold light under the leaves.",
+      "purpose": "Closing image. The fallen-leaves motif pays off, and the catchphrase returns transformed, from a careful habit into a promise kept.",
+      "est_seconds": 45
+    }
+  ]
+}

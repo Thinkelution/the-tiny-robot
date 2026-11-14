@@ -1,0 +1,230 @@
+{
+  "id": "S11",
+  "title": "Count: Footsteps, Two",
+  "location_id": "count_house",
+  "time_of_day": "night",
+  "characters": [
+    "tiny",
+    "ledger"
+  ],
+  "beats": [
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Night in the Count House. Tall shelves of glowing amber data blocks hum in narrow aisles. High up, Ledger rides its rolling ladder rail and slides a block into a drawer. Click. Shut.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny hurries in on quick small steps, a tiny cream box at the foot of the towering shelves. It hops up onto a low step block so Ledger can see it. Its antenna glows amber.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "a little out of breath, earnest",
+      "text": "Ledger. Why did the Grove go dry?",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger rolls down the rail and stops in front of Tiny. Numbers tick across its digit-face, then settle into two flat, blank eyes.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "deadpan",
+      "text": "Cause is not a count.",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "tilting its head, trying again",
+      "text": "Mossback said find the water. Where did the water go?",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "exactly",
+      "text": "Water does not go. It flows. Or it does not.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "patient, eyes narrowing in thought",
+      "text": "Then count the flow. To the Grove.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "sound",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Soft paper-shuffle clicks, then a bright little bell: ding.",
+      "est_seconds": 1
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger slides a drawer open and lifts out a glowing block. The big reading screen lights up with a row of tall, even green bars that drop suddenly to nothing.",
+      "est_seconds": 4
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "flat",
+      "text": "Count: Grove flow, steady for many years. Then zero.",
+      "est_seconds": 3
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "quieter",
+      "text": "When did it stop?",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Nine days ago. Afternoon. Minute forty-one.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "What else happened in that minute?",
+      "est_seconds": 2
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "after a tiny ding",
+      "text": "Count: one lever moved. Pipeworks. Down.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes snap into wide rectangles. Its antenna flickers amber, on and off.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "barely a whisper",
+      "text": "Who was there?",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "The bar chart wipes away. Two small square footprints glow side by side in the middle of the big screen.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "deadpan, unaware",
+      "text": "Count: footsteps at lever, two. Size: small.",
+      "est_seconds": 3
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny looks at the footprints, then slowly down at its own flat square feet. It lifts one foot and holds it up against the glow on the screen. It is an exact match.",
+      "est_seconds": 4.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny's eyes tilt sad. It steps back off the step block and bumps a low shelf. A dusty block slides out and lands with a thump and a puff of dust. On its face is a faded square emblem.",
+      "est_seconds": 4
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny picks the block up in both hands. It looks at the emblem, then touches the dull brass plate on its own brow. It is the same square mark.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "holding it up",
+      "text": "What is this one?",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "ledger",
+      "parenthetical": "",
+      "text": "Ledger bends stiffly, takes the block and slots it into the reading screen. Rows of little tree shapes appear, each with a small box-shaped figure standing beside it.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "quieter than before; small eyes appear between its digits and look at Tiny's brow",
+      "text": "Count: Old Grove planting. Trees, forty. Planters, twelve. Series... yours.",
+      "est_seconds": 5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "looking up at Ledger, very still",
+      "text": "You knew. About the lever. Why did you not tell anyone?",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "simply, a little puzzled",
+      "text": "No one asked.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Silence. Tiny lowers its head. It takes the dusty block back and sets it on its shelf, carefully and perfectly straight. Then it turns toward the door.",
+      "est_seconds": 3.5
+    },
+    {
+      "type": "dialogue",
+      "character": "tiny",
+      "parenthetical": "to itself, small",
+      "text": "I have to see it.",
+      "est_seconds": 1.5
+    },
+    {
+      "type": "action",
+      "character": "tiny",
+      "parenthetical": "",
+      "text": "Tiny hurries out between the towering shelves, its little feet pattering, and is gone into the dark street.",
+      "est_seconds": 2.5
+    },
+    {
+      "type": "dialogue",
+      "character": "ledger",
+      "parenthetical": "deadpan, to the empty aisle; its eyes linger on the door",
+      "text": "Count: footsteps leaving. Small. Fast.",
+      "est_seconds": 3
+    }
+  ],
+  "staging_notes": "Shoot Ledger from Tiny's low eye level so the amber shelves and the cabinet-tall archivist tower over it, then cut to wide shots where Tiny is a speck in the aisle. The reading screen is the scene's second face: keep it big in the frame behind the two of them, so the bar drop, the glowing footprints and the planting rows read without words. Play the footprint reveal in a single held shot, with Tiny's raised foot silhouetted against the glowing print, and hold the silence after 'No one asked' for a full beat before Tiny moves. End on Ledger alone in the aisle, small eyes visible between its digits, still facing the door Tiny ran through toward the Pipeworks."
+}
