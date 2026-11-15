@@ -280,3 +280,21 @@ Bugs worth remembering:
 **All eight sets are now built**, each with four look-dev frames in `films/the-tiny-robot/world/lookdev/`. Next:
 animation (walk cycles, the eye and antenna language, the drivers that make plants and gauges tell the story),
 then shots.
+
+## Step 9 · Animation: first test (2026-11-15)
+- **`blender/anim.py`**: an `Actor` around any robot built from its spec.
+  - `walk(points, start, speed)`: follows a path; the feet, the head bob, the step roll and the hand swing are
+    all timed by the distance covered (a stride per 0.32 x height), so feet never skate; corners swing round eased.
+  - `expr`, `blink`, `look`: the eye shape keys and the eye group sliding across the face screen.
+  - `antenna`: Tiny's antenna tip keyed amber (thinking) or green (go).
+  - `check`: Tiny's routine before every action: antenna amber, eyes left, eyes right, back, blink, antenna
+    green, a small happy squint. About two seconds.
+  - `idle`: breathing bob and blinks wherever nothing else is moving the body.
+- **`blender/animshot.py`**: animated shots built on the same `setshot.stage()` as the stills (rim lights now
+  ride with their robot), with `--stills` to check a few frames before rendering all of them.
+- **First test, S02 beats 2-4**: Tiny trots in through the Grove's north gate, stops exactly where the pavement
+  meets the grass, checks, steps onto the grass and walks round a fallen slab leaf instead of over it. 264 frames
+  at 24 fps (11 s), rendered at preview size.
+  Bugs: the idle pass used Tiny's last position for the frames before it first moved (it now starts from where
+  the robot was placed); and facing the low morning sun from inside the south gate left everything dark and teal,
+  so the entrance moved to the north gate with the sun behind the camera.

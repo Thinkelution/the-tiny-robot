@@ -279,8 +279,8 @@ def seen(sc, cam, point):
     return not hit
 
 
-def shoot(name):
-    sh = SHOTS[name]
+def stage(sh):
+    """Build a shot's scene (set, camera, robots, haze, grade, rims) without rendering. Returns (sc, cam, roots)."""
     sc = setup()
     if sh["set"] == "square":
         parts = mainsquare.build(sc, tod=sh["tod"], lamps=sh.get("lamps", "off"), board=sh.get("board", "fastlane"),
@@ -352,11 +352,22 @@ def shoot(name):
     for (r, spec) in roots:
         lo, hi = robot.bounds(r)
         if sh.get("rim", 0.8) > 0:
-            look.rim(sc, r, hi.z - lo.z, sh.get("rim", 0.8))
+            lights = look.rim(sc, r, hi.z - lo.z, sh.get("rim", 0.8))
+            for lt in lights:                      # rims travel with their robot when it moves
+                mw = lt.matrix_world.copy()
+                lt.parent = r
+                lt.matrix_parent_inverse = r.matrix_world.inverted()
+                lt.matrix_world = mw
+    return sc, cam, roots
+
+
+def shoot(name):
+    sc, cam, roots = stage(SHOTS[name])
     sc.render.filepath = str(OUT / f"{name}.png")
     bpy.ops.render.render(write_still=True)
     print("shot", name, "->", sc.render.filepath, flush=True)
 
 
-for a in args[1:]:
-    shoot(a)
+if __name__ == "__main__":
+    for a in args[1:]:
+        shoot(a)

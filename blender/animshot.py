@@ -1,0 +1,91 @@
+"""Animated shots (runs inside Blender): a set and its robots from setshot, then the performance from anim.py.
+
+  blender -b --factory-startup -P blender/animshot.py -- <out_dir> <shot> [--samples N] [--res WxH] [--preview]
+            [--stills 1,60,120] [--start F] [--device HIP|OPTIX]
+
+Writes <out_dir>/<shot>/####.png. --stills renders only those frames, for a quick check before a full render.
+"""
+import math
+import sys
+from pathlib import Path
+
+import bpy
+from mathutils import Vector
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import anim  # noqa: E402
+import robot  # noqa: E402
+import setshot  # noqa: E402
+
+opts, args = setshot.opts, setshot.args
+OUT = Path(args[0]).resolve()
+
+
+def s02_grove_entry(sc, cam, roots):
+    """S02, beats 2-4: Tiny trots in from the street, stops exactly where the pavement meets the grass, checks
+    (antenna amber, eyes left, right), "Check... no harm. Go.", antenna green, steps onto the grass and walks round a
+    fallen slab leaf instead of over it. Through the north gate, so the morning sun is behind the camera."""
+    tiny = anim.Actor(next(r for r, spec in roots if spec["id"] == "tiny"))
+    f = tiny.walk([(0.0, 33.6), (0.0, 32.55)], start=10, speed=0.5)
+    f = tiny.check(f + 6)
+    f = tiny.walk([(0.0, 32.55), (0.0, 31.6), (0.45, 30.9), (0.45, 30.2), (0.0, 29.6)], start=f + 4, speed=0.5)
+    tiny.idle(1, sc.frame_end)
+    # the camera: low at Tiny's height inside the gate, drifting back a little as Tiny comes on
+    cam.keyframe_insert("location", frame=1)
+    cam.location += Vector((0.1, -1.1, 0.02))
+    cam.keyframe_insert("location", frame=sc.frame_end)
+    return f
+
+
+ANIM = {
+    "s02_grove_entry": dict(
+        frames=264, action=s02_grove_entry, leaf=(0.0, 30.55), apron=(0.0, 33.6),
+        stage=dict(set="grove", tod="morning", water=0.85, haze=0.0012, clear=[(0.9, 28.0, 2.5), (0.0, 30.5, 2.5)],
+                   cam=((0.85, 28.2, 0.3), (-0.1, 33.0, 0.42), 34, 2.8),
+                   robots=[("tiny", 0.0, 33.6, 0)])),
+}
+
+
+def leaf(sc, x, y, apron):
+    """The fallen slab leaf Tiny walks round (S02), and the paved apron outside the south gate: the grey street
+    Tiny trots in from, level with the grass, so "where the pavement meets the grass" is one clean line."""
+    import world
+    m = world.mat("s02_leaf", "plastic", "#8a7038", wear=0.0, dirt=0.2, tile=1.0)
+    ob = world.box(sc.collection, "s02_leaf", (0.26, 0.18, 0.018), (x, y, 0.012), m, 0.004, rot=0.5)
+    pave = world.tex_mat("gate_apron", "concrete", "#9a958a", tile=1.5, rough=0.85)
+    world.box(sc.collection, "gate_apron", (3.4, 3.2, 0.2), (apron[0], apron[1], -0.1), pave, 0.02)
+    return ob
+
+
+def main():
+    name = args[1]
+    shot = ANIM[name]
+    sc, cam, roots = setshot.stage(shot["stage"])
+    sc.frame_start, sc.frame_end = 1, shot["frames"]
+    sc.render.fps = anim.FPS
+    if "leaf" in shot:
+        leaf(sc, *shot["leaf"], shot["apron"])
+    shot["action"](sc, cam, roots)
+    # keep focus on the first robot as it moves
+    if cam.data.dof.use_dof:
+        cam.data.dof.focus_object = roots[0][0]
+    sc.render.use_motion_blur = True
+    sc.render.motion_blur_shutter = 0.4
+    sc.render.use_persistent_data = True
+    out = OUT / name
+    out.mkdir(parents=True, exist_ok=True)
+    if "stills" in opts:
+        for f in [int(v) for v in opts["stills"].split(",")]:
+            sc.frame_set(f)
+            sc.render.filepath = str(out / f"still_{f:04d}.png")
+            bpy.ops.render.render(write_still=True)
+        print("stills ->", out, flush=True)
+        return
+    if "start" in opts:
+        sc.frame_start = int(opts["start"])
+    sc.render.filepath = str(out) + "/"
+    bpy.ops.render.render(animation=True)
+    print("rendered", name, "->", out, flush=True)
+
+
+main()
