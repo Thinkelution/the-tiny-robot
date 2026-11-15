@@ -475,3 +475,50 @@ def weed(coll, rnd, x, y, ctrl):
     stem = _box(coll, "weed_stem", (0.012, 0.012, 0.09), (x, y, 0.045), leaf, 0.003)
     tip = _cluster(coll, rnd, ctrl, (x, y, 0.08), 0.05, (0.0, 0.0), 0.3, "#6fb84e")
     return stem, tip
+
+
+def press_grass(grass_objs, feet, radius=0.17, depth=0.16):
+    """Grass that gives under feet: every blade within `radius` of a foot is pushed down, the tip most and the
+    root not at all, and springs back as the foot moves on.
+
+    Built from modifiers so it is live on every frame: a "tip" vertex group (0 at the root, 1 at the tip), one
+    VertexWeightProximity per foot writing how close that foot is, a mix that keeps the nearest foot, a multiply by
+    "tip", and a Displace that lowers the result. Runs after the wind's shape key, so a gust and a step add up."""
+    for ob in grass_objs:
+        me = ob.data
+        n = len(me.vertices)
+        zs = [v.co.z for v in me.vertices]
+        tip = ob.vertex_groups.new(name="tip")
+        for i, z in enumerate(zs):
+            tip.add([i], min(1.0, z / 0.22), "REPLACE")
+        groups = []
+        for k, ft in enumerate(feet):
+            g = ob.vertex_groups.new(name=f"press_{k}")
+            g.add(list(range(n)), 0.0, "REPLACE")
+            m = ob.modifiers.new(f"near_{k}", "VERTEX_WEIGHT_PROXIMITY")
+            m.vertex_group = g.name
+            m.target = ft
+            # GEOMETRY: each grass vertex's distance to the foot's mesh ("OBJECT" would be the distance between
+            # the two objects' origins: one weight for the whole patch)
+            m.proximity_mode = "GEOMETRY"
+            m.proximity_geometry = {"VERTEX", "FACE"}
+            m.min_dist = radius                # weight 1 at the foot, 0 at `radius` and beyond
+            m.max_dist = 0.0
+            m.falloff_type = "SMOOTH"
+            groups.append(g.name)
+        for g in groups[1:]:
+            mx = ob.modifiers.new(f"nearest_{g}", "VERTEX_WEIGHT_MIX")
+            mx.vertex_group_a = groups[0]
+            mx.vertex_group_b = g
+            mx.mix_mode = "ADD"
+            mx.mix_set = "ALL"
+        mt = ob.modifiers.new("by_tip", "VERTEX_WEIGHT_MIX")
+        mt.vertex_group_a = groups[0]
+        mt.vertex_group_b = "tip"
+        mt.mix_mode = "MUL"
+        mt.mix_set = "ALL"
+        d = ob.modifiers.new("pressed", "DISPLACE")
+        d.vertex_group = groups[0]
+        d.direction = "Z"
+        d.mid_level = 0.0
+        d.strength = -depth

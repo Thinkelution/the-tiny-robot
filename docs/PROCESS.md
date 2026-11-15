@@ -306,3 +306,11 @@ then shots.
   - give: the grass is now built in 5 m patches, each with a "sway" shape key that leans every blade from its
     root (tips move, roots stay planted), driven by two gust waves that travel down-wind across the Grove.
   - light: the morning sun 9 -> 13 and warmer, the sky brighter, less haze.
+- **Footsteps in the grass** (`plants.press_grass`, hooked in by `animshot.press`): blades within 0.85 x height of
+  a walking robot's foot are pushed down, the tip most and the root not at all, and spring back when the foot
+  moves on. Modifiers, so it is live every frame and adds to the wind: a "tip" vertex group, a
+  VertexWeightProximity per foot, a mix, a multiply and a Displace. A dense meadow is laid along each walking
+  robot's path in the shot so the feet have grass to push through.
+  Bug worth remembering: VertexWeightProximity's "OBJECT" mode is the distance between the two objects' origins
+  (one weight for a whole grass patch); it only seemed to work in a test whose blade sat at the world origin.
+  "GEOMETRY" mode measures every vertex to the foot's mesh. With it, blades at Tiny's feet drop from 18 cm to 4 cm.

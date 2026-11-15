@@ -57,6 +57,50 @@ def leaf(sc, x, y, apron):
     return ob
 
 
+def press(sc, roots):
+    """Grass gives under every walking robot's feet, in the grass patches its path crosses."""
+    import plants
+    grass = [o for o in bpy.data.objects if o.name.startswith("grass_") and o.type == "MESH"]
+    if not grass:
+        return
+    for (r, spec) in roots:
+        if spec.get("locomotion", "walk") not in ("walk", "hop"):
+            continue
+        feet = [o for o in r.children_recursive if o.type == "MESH" and ":foot_" in o.name]
+        # only the patches near where this robot goes during the shot
+        xs, ys = [], []
+        for f in range(sc.frame_start, sc.frame_end + 1, 6):
+            sc.frame_set(f)
+            xs.append(r.matrix_world.translation.x)
+            ys.append(r.matrix_world.translation.y)
+        # a dense meadow along the path, so the feet have grass to give (the Grove's own grass is sparse);
+        # kept off hard ground (the gate apron) and the props named in the shot
+        ctrl = bpy.data.objects.get("grove_water")
+        if ctrl is not None:
+            import random
+            rnd = random.Random(7)
+            keep = [tuple(k) for k in sc.get("keep_clear", [])]
+            pts = []
+            x0, x1, y0, y1 = min(xs) - 1.6, max(xs) + 1.6, min(ys) - 1.2, max(ys) + 1.2
+            n = int((x1 - x0) * (y1 - y0) * 7)
+            for _ in range(n):
+                px, py = rnd.uniform(x0, x1), rnd.uniform(y0, y1)
+                if abs(py) > 31.9 or any(abs(px - kx) < kr and abs(py - ky) < kr for (kx, ky, kr) in keep):
+                    continue
+                pts.append((px, py, rnd.uniform(0.7, 1.15)))
+            grass += plants.grass(sc.collection, rnd, ctrl, pts, blades=7, name="grass_meadow", chunk=2.5)
+        near = []
+        for g in grass:
+            lo = [min(v.co[i] for v in g.data.vertices) for i in (0, 1)]
+            hi = [max(v.co[i] for v in g.data.vertices) for i in (0, 1)]
+            if lo[0] - 1 < max(xs) and hi[0] + 1 > min(xs) and lo[1] - 1 < max(ys) and hi[1] + 1 > min(ys):
+                near.append(g)
+        if "nopress" not in opts:
+            plants.press_grass(near, feet, radius=spec.get("height_m", 1.0) * 0.85)
+        print(f"press: {len(near)} grass patches give under {spec['id']}'s {len(feet)} feet", flush=True)
+    sc.frame_set(sc.frame_start)
+
+
 def main():
     name = args[1]
     shot = ANIM[name]
@@ -65,7 +109,9 @@ def main():
     sc.render.fps = anim.FPS
     if "leaf" in shot:
         leaf(sc, *shot["leaf"], shot["apron"])
+        sc["keep_clear"] = [(shot["leaf"][0], shot["leaf"][1], 0.22)]
     shot["action"](sc, cam, roots)
+    press(sc, roots)
     # keep focus on the first robot as it moves
     if cam.data.dof.use_dof:
         cam.data.dof.focus_object = roots[0][0]
