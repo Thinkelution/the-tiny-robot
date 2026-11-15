@@ -25,8 +25,8 @@ texture library and the renders, plus a production diary with what each step cos
 | Robot characters (8, with their logics) | Done: [cast.md](films/the-tiny-robot/cast.md) |
 | Studio texture library | Done: [textures/](textures/) |
 | Teaser reel (40.9 s, 16:9 + 9:16) | Done: [watch on thetinyrobot.online](https://thetinyrobot.online/#teaser) |
-| World (boxy city, the Old Grove) | Next |
-| Shots, animation, voices, music | Later |
+| World: Gridhaven and all 8 sets | Done: [city plan](films/the-tiny-robot/world/plan.md), [look-dev frames](films/the-tiny-robot/world/lookdev/) |
+| Shots, animation, voices, music | Next |
 | Final film | Later |
 
 ## The cast

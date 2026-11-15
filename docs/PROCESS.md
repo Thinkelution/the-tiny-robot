@@ -266,3 +266,17 @@ Bugs worth remembering:
   before rendering would catch that.
 - Look-dev frames: S10 the Press and Warden from Tiny's height, S18 the orange hall and the night through the
   doors with the crate, S28 the crate under the Press, S28 the crowd in the sunrise.
+- **The Count House** (`blender/counthouse.py`), the last set: a 26 x 16 x 14 m archive, the main aisle down the
+  middle between 10 m shelves of data blocks (about 3,500 block fronts in one mesh: bright amber, dim amber and
+  dark empty drawers, set back into the shelves), narrow side aisles, the rolling ladder on its rail, the big
+  square reading screen on the west wall (bars dropping, the two footprints, the Grove's planting rows, drawn by
+  `agent/boardart.py`), the low step block, the dusty emblem block, warm pendant lamps at night, and a high square
+  window in the east wall so the S29 sun lies along the aisle. One green handle among the amber ones (S29).
+  Lesson: glowing blocks at strength 2 turned every wall into a flat amber sheet; at 0.2-0.55 with a fifth of the
+  drawers dark, the shelves read as an archive and the screen and the green handle stand out.
+- Look-dev frames: S11 Tiny and Ledger at the screen, S11 the wide aisle, S29 the gold morning bar, S29 the green
+  handle.
+
+**All eight sets are now built**, each with four look-dev frames in `films/the-tiny-robot/world/lookdev/`. Next:
+animation (walk cycles, the eye and antenna language, the drivers that make plants and gauges tell the story),
+then shots.

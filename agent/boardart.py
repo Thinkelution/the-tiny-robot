@@ -92,12 +92,59 @@ def vote(out):
     glow(img).save(out)
 
 
+def screen_bars(out):
+    """S11: Ledger's record: a row of tall, even green bars that drop suddenly to nothing."""
+    img = Image.new("RGB", (1200, 1200), (26, 18, 8))
+    d = ImageDraw.Draw(img)
+    for y in range(0, 1200, 6):
+        d.line([(0, y), (1200, y)], fill=(32, 22, 10))
+    for k in range(14):
+        x = 90 + k * 75
+        h = 640 if k < 10 else (90 if k == 10 else 8)
+        d.rectangle([x, 980 - h, x + 50, 980], fill=(120, 230, 120))
+    d.line([(60, 990), (1140, 990)], fill=(255, 190, 90), width=6)
+    glow(img).save(out)
+
+
+def screen_footprints(out, faint=False):
+    """S11 / S29: two small square footprints side by side."""
+    img = Image.new("RGB", (1200, 1200), (26, 18, 8))
+    d = ImageDraw.Draw(img)
+    for y in range(0, 1200, 6):
+        d.line([(0, y), (1200, y)], fill=(32, 22, 10))
+    col = (150, 110, 60) if faint else (255, 200, 110)
+    for x in (430, 650):
+        d.rounded_rectangle([x, 470, x + 120, 700], radius=14, fill=col)
+        for k in range(3):
+            d.rectangle([x + 14 + k * 34, 440, x + 38 + k * 34, 462], fill=col)
+    glow(img).save(out)
+
+
+def screen_trees(out):
+    """S11: the Grove's planting record: rows of little tree shapes, each with a small box figure beside it."""
+    img = Image.new("RGB", (1200, 1200), (26, 18, 8))
+    d = ImageDraw.Draw(img)
+    for y in range(0, 1200, 6):
+        d.line([(0, y), (1200, y)], fill=(32, 22, 10))
+    for r in range(4):
+        for c in range(6):
+            x, y = 130 + c * 170, 220 + r * 240
+            d.rectangle([x + 18, y + 60, x + 30, y + 120], fill=(200, 150, 90))
+            d.rounded_rectangle([x - 10, y, x + 58, y + 66], radius=12, fill=(120, 220, 110))
+            d.rectangle([x + 72, y + 84, x + 104, y + 120], fill=(255, 220, 160))
+    glow(img).save(out)
+
+
 def main(film):
     out = Path(film) / "world" / "textures"
     out.mkdir(parents=True, exist_ok=True)
     fastlane(out / "board_fastlane.png")
     grove_red(out / "board_grove_red.png")
     vote(out / "board_vote.png")
+    screen_bars(out / "screen_bars.png")
+    screen_footprints(out / "screen_footprints.png")
+    screen_footprints(out / "screen_footprints_faint.png", faint=True)
+    screen_trees(out / "screen_trees.png")
     print("board pictures ->", out)
 
 

@@ -17,6 +17,7 @@ from mathutils import Vector
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import grove  # noqa: E402
 import look  # noqa: E402
+import counthouse  # noqa: E402
 import foundry  # noqa: E402
 import junk  # noqa: E402
 import mainsquare  # noqa: E402
@@ -186,6 +187,24 @@ SHOTS = {
                          cam=((-8.0, -3.5, 1.4), (28.0, 0.5, 4.0), 30, None),
                          robots=[("dash", 25.0, -0.5, -90), ("shine", 22.0, 2.5, -90, 4.0),
                                  ("ledger", -7.0, -8.6, ("cam", 20))]),
+    # ---- The Count House (local coordinates: hall |x| < 13, |y| < 8; main aisle along x, the screen on the west wall)
+    # S11 "Count: Footsteps, Two": from Tiny's eye level, Ledger towering, the reading screen big behind them
+    "ch_s11_low": dict(set="counthouse", mood="night", screen="footprints", ladder_x=3.0, dusty=True, haze=0.006,
+                       cam=((-2.6, -0.75, 0.3), (-10.5, 0.4, 3.2), 20, None),
+                       robots=[("ledger", -7.4, 0.55, ("cam", 15)), ("tiny", -8.6, -0.5, 80, 0.3)]),
+    # S11: a wide down the aisle, Tiny a speck at the foot of the shelves, Ledger up on the ladder
+    "ch_s11_wide": dict(set="counthouse", mood="night", screen="bars", ladder_x=-2.0, haze=0.006,
+                        cam=((12.4, 0.0, 6.0), (-8.0, 0.2, 1.4), 24, None),
+                        robots=[("tiny", 3.0, -0.2, ("cam", 20)), ("ledger", -2.0, 0.55, ("cam", 0), 3.3)]),
+    # S29 "A New Drawer": morning sun through the high window lying in a gold bar along the aisle
+    "ch_s29_morning": dict(set="counthouse", mood="morning", screen="footprints_faint", ladder_x=10.4,
+                           green_handle=True, haze=0.008,
+                           cam=((-11.2, -0.5, 1.5), (10.0, 0.3, 2.6), 24, None),
+                           robots=[("ledger", 10.0, 0.3, ("cam", 10))]),
+    # S29: the last shot: one green handle among hundreds of amber ones, gold light on the floor
+    "ch_s29_handle": dict(set="counthouse", mood="morning", screen="off", ladder_x=6.0, green_handle=True,
+                          haze=0.006, cam=((5.6, -1.0, 1.3), (11.2, 1.1, 0.5), 28, None),
+                          robots=[("ledger", 10.4, -0.7, ("cam", 40))]),
 }
 
 
@@ -275,6 +294,9 @@ def shoot(name):
     elif sh["set"] == "fastlane":
         parts = grove.build(sc, tod=sh["tod"], water=sh["water"], fast_lane=sh.get("fast_lane", "straight"),
                            pipe_line=sh.get("pipe_line", False))
+    elif sh["set"] == "counthouse":
+        parts = counthouse.build(sc, mood=sh["mood"], screen=sh.get("screen", "off"), ladder_x=sh.get("ladder_x", 0.0),
+                                 dusty=sh.get("dusty", False), green_handle=sh.get("green_handle", False))
     elif sh["set"] == "foundry":
         parts = foundry.build(sc, mood=sh["mood"], pen_open=sh.get("pen_open", False), crowd_n=sh.get("crowd", 0),
                               plate=sh.get("plate", False),
@@ -314,6 +336,9 @@ def shoot(name):
         if sh.get("haze", 0) > 0 and "nohaze" not in opts:
             look.atmosphere(sc, density=sh["haze"], color=(0.9, 0.88, 0.84), anisotropy=0.6, centre=(0, -1.0, 0),
                             size=(29.6, 19.6, 11.8))
+    elif sh["set"] == "counthouse":
+        look.atmosphere(sc, density=sh.get("haze", 0.006), color=(0.95, 0.85, 0.72), anisotropy=0.6, centre=(0, 0, 0),
+                        size=(25.6, 15.6, 13.8))
     elif sh["set"] == "foundry":
         look.atmosphere(sc, density=sh.get("haze", 0.01), color=(0.95, 0.88, 0.8), anisotropy=0.6, centre=(0, 0, 0),
                         size=(55.6, 37.6, 19.8))

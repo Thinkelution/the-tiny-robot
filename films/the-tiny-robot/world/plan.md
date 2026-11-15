@@ -30,7 +30,7 @@ The city layout is in [city.json](city.json), drawn as [map.png](map.png) by `ag
 | 5 | Junk Stacks (built) | S01 S14 S30 | dawn, morning |
 | 6 | Fast Lane Works (built) | S08 S21 S27 | day, night, morning |
 | 7 | Foundry (interior, built) | S10 S18 S28 | night, morning |
-| 8 | Count House (interior) | S11 S29 | night, morning |
+| 8 | Count House (interior, built) | S11 S29 | night, morning |
 
 Each set is reviewed the same way as the teaser: three hero frames from the staging notes, at Tiny's eye height,
 in the scene's time of day, before it is called done.
