@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import grove  # noqa: E402
 import look  # noqa: E402
 import mainsquare  # noqa: E402
+import pipeworks  # noqa: E402
 import robot  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -86,6 +87,25 @@ SHOTS = {
     "square_s17_overhead": dict(set="square", tod="dusk", lamps="mixed", board="vote", grove_water=0.15,
                                 haze=0.0012, exposure=1.0, cam=((-8.0, -30.0, 32.0), (4.0, 0.0, 0.0), 28, None),
                                 robots=[("tiny", 20.4, -0.4, -90, 1.8), ("warden", 20.4, -2.0, -90, 1.8)]),
+    # ---- The Pipeworks (local coordinates: room |x| < 15, |y| < 11; panel at (0, 6.2) facing south)
+    # S05 "The Lever": low at Tiny's height, the huge panel and lever above it, the blank wall square behind
+    "pw_s05_afternoon": dict(set="pipeworks", mood="afternoon", lever="up", bent=True, tree_gauge=0.85,
+                             haze=0.012, cam=((-2.4, -1.4, 0.32), (0.6, 6.2, 2.3), 20, 4.0),
+                             robots=[("tiny", -0.5, 2.7, 200)]),
+    # S12 "Behind the Wall": the dark, huge room; Tiny frozen at the lever, small, amber lamps the only light
+    "pw_s12_wide": dict(set="pipeworks", mood="late_night", lever="down", bent=True, tree_gauge=0.1, nursery=1.0,
+                        haze=0.02, cam=((-9.0, -8.5, 3.0), (0.6, 5.4, 2.0), 24, None),
+                        robots=[("tiny", 1.45, 5.25, 180, 0.35)]),
+    # S12: the cramped valve room behind the wall, lit only by the red tree gauge
+    "pw_s12_valve": dict(set="pipeworks", mood="late_night", lever="down", bent=True, tree_gauge=0.1, haze=0.0,
+                         cam=((1.5, 8.85, 0.3), (-0.6, 9.3, 0.45), 18, 2.8), rim=0.0,
+                         robots=[("tiny", -0.75, 8.95, 125)]),
+    # S19 "Every Logic a Job": five robots in a loose ring round the panel, Quota filling the doorway
+    "pw_s19_night": dict(set="pipeworks", mood="night", lever="down", bent=True, tree_gauge=0.1, haze=0.014,
+                         cam=((11.8, 4.2, 3.0), (-3.0, -3.2, 1.6), 20, None),
+                         robots=[("ledger", 3.0, 4.8, ("cam", 10)), ("primly", -3.8, 2.8, 180),
+                                 ("shine", -0.6, 1.4, ("cam", 0), 3.4), ("dash", 2.6, 2.4, ("cam", 35)),
+                                 ("quota", 0.0, -9.6, ("cam", 0)), ("warden", -1.8, -1.6, ("cam", 25))]),
 }
 
 
@@ -166,6 +186,9 @@ def shoot(name):
     if sh["set"] == "square":
         parts = mainsquare.build(sc, tod=sh["tod"], lamps=sh.get("lamps", "off"), board=sh.get("board", "fastlane"),
                                  grove_water=sh.get("grove_water", 0.85), wave=sh.get("wave"))
+    elif sh["set"] == "pipeworks":
+        parts = pipeworks.build(sc, mood=sh["mood"], lever=sh.get("lever", "down"), bent=sh.get("bent", True),
+                                tree_gauge=sh.get("tree_gauge", 0.5), nursery=sh.get("nursery", 1.0))
     else:
         parts = grove.build(sc, tod=sh["tod"], water=sh["water"], pipe=sh.get("pipe", False),
                            clear=sh.get("clear", []))
@@ -191,13 +214,19 @@ def shoot(name):
         r0 = roots[0][0]
         lo, hi = robot.bounds(r0)
         cam.data.dof.focus_distance = (cam.location - (lo + hi) / 2).length
-    look.atmosphere(sc, density=sh.get("haze", 0.0015), color=(0.98, 0.92, 0.84), anisotropy=0.75,
-                    centre=(-40 if sh["set"] == "square" else 0, 0, 0), size=(380, 380, 18))
+    if sh["set"] == "pipeworks":
+        if sh.get("haze", 0) > 0 and "nohaze" not in opts:
+            look.atmosphere(sc, density=sh["haze"], color=(0.9, 0.88, 0.84), anisotropy=0.6, centre=(0, -1.0, 0),
+                            size=(29.6, 19.6, 11.8))
+    else:
+        look.atmosphere(sc, density=sh.get("haze", 0.0015), color=(0.98, 0.92, 0.84), anisotropy=0.75,
+                        centre=(-40 if sh["set"] == "square" else 0, 0, 0), size=(380, 380, 18))
     look.grade(sc)
     sc.view_settings.exposure = sh.get("exposure", 0.0)
     for (r, spec) in roots:
         lo, hi = robot.bounds(r)
-        look.rim(sc, r, hi.z - lo.z, 0.8)
+        if sh.get("rim", 0.8) > 0:
+            look.rim(sc, r, hi.z - lo.z, sh.get("rim", 0.8))
     sc.render.filepath = str(OUT / f"{name}.png")
     bpy.ops.render.render(write_still=True)
     print("shot", name, "->", sc.render.filepath, flush=True)

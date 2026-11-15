@@ -212,3 +212,13 @@ Bugs worth remembering:
   on the front.
 - Look-dev frames: S03 day wide, S03 reverse down the boulevard to the Grove, S09 evening red wave, S17 overhead vote.
 - New light presets: day and evening.
+- **The Pipeworks** (`blender/pipeworks.py`), the first interior: a 30 x 22 x 12 m room of steel-blue and green
+  square pipes, the gauge panel with its rows of round lights (the sprout and Nursery lights follow their own water
+  controls), the big lever (up or down), Tiny's 0.35 m ledge, the waist-high railing with Dash's dent, the blank
+  grey wall with the narrow square gap, and behind it the cramped valve room: the linkage bar, the valve that
+  splits the water up to the Nursery and down toward the Grove, and the tree gauge that lights the room on its
+  own. Amber warning lamps, a high window over the south doorway, Tiny's hatch, spare pipe stacks.
+  Lessons: the high window was first built with opaque glass, so no sun came in; then the roof fill was about
+  three times the sun on the floor, so the window patch vanished. Indoors the window is now the key light (sun
+  x3, dim cool fill), and at night a hanging work lamp pools light on the lever.
+- Look-dev frames: S05 afternoon, S12 wide, S12 valve room, S19 the ring of robots round the panel.
