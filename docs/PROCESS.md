@@ -298,3 +298,11 @@ then shots.
   Bugs: the idle pass used Tiny's last position for the frames before it first moved (it now starts from where
   the robot was placed); and facing the low morning sun from inside the south gate left everything dark and teal,
   so the entrance moved to the north gate with the sun behind the camera.
+- **Owner's note on the first test: "the floor is very static... shouldn't it be wet, with give? and lighting is
+  dull."** Changes:
+  - dew: a thin wet clear coat over the turf (wetter in the leaf hollows, none on bare soil, less as the ground
+    dries) with fine droplets that sparkle in a low sun; a light dew coat on the grass blades. The first try
+    (coat 0.85, roughness 0.06) mirrored the wall like a flood; dew is a soft sheen (coat 0.32, roughness 0.3).
+  - give: the grass is now built in 5 m patches, each with a "sway" shape key that leans every blade from its
+    root (tips move, roots stay planted), driven by two gust waves that travel down-wind across the Grove.
+  - light: the morning sun 9 -> 13 and warmer, the sky brighter, less haze.

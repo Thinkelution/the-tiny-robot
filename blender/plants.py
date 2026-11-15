@@ -104,7 +104,7 @@ def leaf_mat(shade, ctrl):
     return world._haze(m)
 
 
-def turf_mat(ctrl, shade="#86ad56", soil="#8a7350"):
+def turf_mat(ctrl, shade="#93bd5c", soil="#8a7350"):
     """Ground: clover-like ground cover with bare soil patches; dries to straw and dust with the water."""
     name = f"p_turf_{ctrl.name}"
     if name in bpy.data.materials:
@@ -129,10 +129,21 @@ def turf_mat(ctrl, shade="#86ad56", soil="#8a7350"):
     scol = texmat._img(g, "concrete", "color", sco).outputs["Color"]
     dirt = texmat._mul(g, materials.hex_rgb(soil), texmat._detail(g, scol, "concrete", 3.0))
     g.set(bsdf.inputs["Base Color"], g.mix(patch, green, dirt))
-    g.set(bsdf.inputs["Roughness"], g.mixf(patch, 0.6, 0.92))
+    # morning dew: a thin wet coat over the leaves (less on bare soil and as the ground dries), glossier in the
+    # hollows of the leaf texture, plus fine droplets that sparkle when the sun is low
+    wet = g.math("MULTIPLY", g.math("ADD", 0.35, g.math("MULTIPLY", w, 0.65)), g.math("SUBTRACT", 1.0, patch))
+    hollow = g.math("SUBTRACT", 1.0, texmat._lum(g, col))
+    g.set(bsdf.inputs["Roughness"], g.mixf(patch, g.math("SUBTRACT", 0.5, g.math("MULTIPLY", hollow, 0.25)), 0.92))
+    g.set(bsdf.inputs["Coat Weight"], g.math("MULTIPLY", wet, 0.32))
+    bsdf.inputs["Coat Roughness"].default_value = 0.3            # dew is a soft sheen, not a mirror
+    drops = g.node("ShaderNodeTexVoronoi", Vector=g.node("ShaderNodeTexCoord").outputs["Object"], Scale=55.0)
+    sparkle = g.math("MULTIPLY", g.ramp(g.math("SUBTRACT", 1.0, drops.outputs["Distance"]), 0.93, 0.99), wet)
+    g.set(bsdf.inputs["Specular IOR Level"], g.math("ADD", 0.45, g.math("MULTIPLY", sparkle, 2.5)))
+    g.set(bsdf.inputs["Roughness"], g.mixf(sparkle, g.mixf(patch, 0.5, 0.92), 0.08))
     nm = g.node("ShaderNodeNormalMap", Color=texmat._img(g, "leaves", "normal", co, True).outputs["Color"],
-                Strength=0.5)
+                Strength=0.9)
     g.set(bsdf.inputs["Normal"], nm.outputs[0])
+    g.set(bsdf.inputs["Coat Normal"], nm.outputs[0])
     return world._haze(m)
 
 
@@ -279,13 +290,15 @@ def grass_mat(ctrl):
     ramp = g.node("ShaderNodeValToRGB", Fac=w)
     cr = ramp.color_ramp
     cr.elements[0].position, cr.elements[0].color = 0.0, materials.hex_rgb("#9a8048")
-    cr.elements[1].position, cr.elements[1].color = 0.7, materials.hex_rgb("#6aa448")
+    cr.elements[1].position, cr.elements[1].color = 0.7, materials.hex_rgb("#7cbd52")
     pos = g.node("ShaderNodeTexCoord").outputs["Object"]
     nz = g.node("ShaderNodeTexNoise", Vector=pos, Scale=1.3, Detail=2.0).outputs["Fac"]
     tip = g.node("ShaderNodeSeparateXYZ", Vector=pos).outputs["Z"]
     shade = g.math("ADD", 0.7, g.math("ADD", g.math("MULTIPLY", nz, 0.4), g.math("MULTIPLY", tip, 1.2)))
     g.set(bsdf.inputs["Base Color"], texmat._mul(g, ramp.outputs["Color"], shade))
-    bsdf.inputs["Roughness"].default_value = 0.55
+    bsdf.inputs["Roughness"].default_value = 0.42
+    bsdf.inputs["Coat Weight"].default_value = 0.3
+    bsdf.inputs["Coat Roughness"].default_value = 0.22
     bsdf.inputs["Subsurface Weight"].default_value = 0.3
     bsdf.inputs["Subsurface Radius"].default_value = (0.2, 0.4, 0.1)
     bsdf.inputs["Subsurface Scale"].default_value = 0.02
@@ -380,31 +393,59 @@ def bush(coll, rnd, x, y, ctrl, size=1.0):
     _cluster(coll, rnd, ctrl, (x, y, size * 0.25), size, (0.0, 0.0), 0.15, rnd.choice(GREENS))
 
 
-def grass(coll, rnd, ctrl, points, blades=14, name="grass"):
-    """Grass tufts as ONE mesh built from plain vertex lists (thousands of thin tapered boxes stay cheap)."""
-    verts, faces = [], []
+WIND = (0.83, 0.56)      # the wind blows toward +X, a little +Y
+
+
+def grass(coll, rnd, ctrl, points, blades=14, name="grass", chunk=5.0, wind=0.22):
+    """Grass tufts from plain vertex lists (thousands of thin tapered boxes stay cheap), split into chunk x chunk m
+    patches. Each patch has a "sway" shape key that leans every blade along the wind in proportion to its height,
+    so the roots stay planted and the tips move; a driver runs a gust wave that travels across the ground."""
     box_f = [(0, 1, 2, 3), (4, 7, 6, 5), (0, 4, 5, 1), (1, 5, 6, 2), (2, 6, 7, 3), (3, 7, 4, 0)]
-    for (px, py, s) in points:
-        for _ in range(blades):
-            h = rnd.uniform(0.08, 0.26) * s
-            w = rnd.uniform(0.012, 0.022) * s
-            bx, by = px + rnd.uniform(-0.12, 0.12) * s, py + rnd.uniform(-0.12, 0.12) * s
-            lx, ly = rnd.uniform(-0.3, 0.3) * h, rnd.uniform(-0.3, 0.3) * h
-            rot = rnd.uniform(0, 3.14)
-            c, s_ = math.cos(rot), math.sin(rot)
-            base = len(verts)
-            for (z, k) in ((0.0, 1.0), (h, 0.25)):                # the blade tapers to a quarter at the tip
-                for (u, v) in ((-1, -1), (1, -1), (1, 1), (-1, 1)):
-                    x0, y0 = u * w / 2 * k, v * w * 0.2 * k
-                    t = z / h
-                    verts.append((bx + x0 * c - y0 * s_ + lx * t, by + x0 * s_ + y0 * c + ly * t, z))
-            faces += [tuple(base + i for i in f) for f in box_f]
-    me = bpy.data.meshes.new(name)
-    me.from_pydata(verts, [], faces)
-    me.materials.append(grass_mat(ctrl))
-    ob = bpy.data.objects.new(name, me)
-    coll.objects.link(ob)
-    return ob
+    cells = {}
+    for (px, py, s_) in points:
+        cells.setdefault((math.floor(px / chunk), math.floor(py / chunk)), []).append((px, py, s_))
+    mat = grass_mat(ctrl)
+    obs = []
+    for (cx, cy), pts in cells.items():
+        verts, sway, faces = [], [], []
+        for (px, py, s) in pts:
+            for _ in range(blades):
+                h = rnd.uniform(0.08, 0.26) * s
+                w = rnd.uniform(0.012, 0.022) * s
+                bx, by = px + rnd.uniform(-0.12, 0.12) * s, py + rnd.uniform(-0.12, 0.12) * s
+                lx, ly = rnd.uniform(-0.3, 0.3) * h, rnd.uniform(-0.3, 0.3) * h
+                rot = rnd.uniform(0, 3.14)
+                c, s_ = math.cos(rot), math.sin(rot)
+                flex = rnd.uniform(0.7, 1.3)
+                base = len(verts)
+                for (z, k) in ((0.0, 1.0), (h, 0.25)):            # the blade tapers to a quarter at the tip
+                    for (u, v) in ((-1, -1), (1, -1), (1, 1), (-1, 1)):
+                        x0, y0 = u * w / 2 * k, v * w * 0.2 * k
+                        t = z / h
+                        p = (bx + x0 * c - y0 * s_ + lx * t, by + x0 * s_ + y0 * c + ly * t, z)
+                        verts.append(p)
+                        # the leaned pose: the tip pushed down-wind and a little lower (a blade bends, it does
+                        # not stretch)
+                        lean = t * t * h * wind * flex
+                        sway.append((p[0] + WIND[0] * lean * 1.6, p[1] + WIND[1] * lean * 1.6, p[2] - lean * 0.5))
+                faces += [tuple(base + i for i in f) for f in box_f]
+        me = bpy.data.meshes.new(f"{name}_{cx}_{cy}")
+        me.from_pydata(verts, [], faces)
+        me.materials.append(mat)
+        ob = bpy.data.objects.new(f"{name}_{cx}_{cy}", me)
+        coll.objects.link(ob)
+        ob.shape_key_add(name="Basis")
+        sk = ob.shape_key_add(name="sway")
+        sk.slider_min = -0.4
+        for i, v in enumerate(sway):
+            sk.data[i].co = v
+        # gusts travel down-wind: the phase is the patch's position along the wind; two waves for variety
+        ph = (cx * WIND[0] + cy * WIND[1]) * chunk * 0.12
+        fc = sk.driver_add("value")
+        fc.driver.type = "SCRIPTED"
+        fc.driver.expression = (f"0.35 + 0.45 * sin(frame * 0.09 - {ph:.3f}) + 0.2 * sin(frame * 0.23 - {ph * 1.7:.3f})")
+        obs.append(ob)
+    return obs
 
 
 def sapling(coll, rnd, x, y, ctrl, height=1.25):
