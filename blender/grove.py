@@ -20,7 +20,7 @@ import plants
 import world
 
 HALF = 32.0                 # the clearing: |x|, |y| < 32
-LOOP_R = 22.0               # Mossback's loop radius
+LOOP_R = 10.0               # Mossback's loop radius (20 m across: S02 needs it near the sapling)
 SAPLING = (0.0, 0.0)
 GREAT_TREE = (15.0, 19.0)
 PIPE_LINE = [(30.0, 30.0), (0.6, 0.6)]      # water line from the north-east corner to the sapling

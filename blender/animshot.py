@@ -37,7 +37,21 @@ def s02_grove_entry(sc, cam, roots):
     return f
 
 
+def s02_full(sc, cam, roots):
+    import s02
+    return s02.build(sc, roots)
+
+
 ANIM = {
+    "s02_full": dict(
+        frames=1900, action=s02_full,
+        stage=dict(set="grove", tod="morning", water=0.85, haze=0.0012,
+                   clear=[(1.2, 26.6, 2.5), (0.0, 30.0, 2.5), (3.3, 15.6, 2.0), (0.6, 13.0, 1.5), (2.9, 15.0, 1.5),
+                          (2.2, 0.9, 1.0), (-0.6, -6.6, 2.5), (1.2, -4.6, 1.5), (-0.4, -6.2, 2.0), (5.8, -5.5, 1.5),
+                          (2.3, -3.4, 1.0), (-0.6, -3.4, 1.0), (-1.8, -4.6, 1.5), (-2.6, -3.4, 1.5),
+                          (-15.0, -15.5, 3.0), (-13.2, -13.4, 3.0), (1.6, 7.5, 2.5), (8.0, 7.5, 2.5)],
+                   cam=((0.85, 28.2, 0.3), (-0.1, 33.0, 0.42), 34, None),
+                   robots=[("tiny", 0.0, 33.6, 0), ("mossback", 9.4, 3.4, 0), ("primly", 30.0, -30.0, 0)])),
     "s02_grove_entry": dict(
         frames=264, action=s02_grove_entry, leaf=(0.0, 30.55), apron=(0.0, 33.6),
         stage=dict(set="grove", tod="morning", water=0.85, haze=0.0012, clear=[(0.9, 28.0, 2.5), (0.0, 30.5, 2.5)],
@@ -69,7 +83,7 @@ def press(sc, roots):
         feet = [o for o in r.children_recursive if o.type == "MESH" and ":foot_" in o.name]
         # only the patches near where this robot goes during the shot
         xs, ys = [], []
-        for f in range(sc.frame_start, sc.frame_end + 1, 6):
+        for f in range(sc.frame_start, sc.frame_end + 1, 3):
             sc.frame_set(f)
             xs.append(r.matrix_world.translation.x)
             ys.append(r.matrix_world.translation.y)
@@ -81,13 +95,16 @@ def press(sc, roots):
             rnd = random.Random(7)
             keep = [tuple(k) for k in sc.get("keep_clear", [])]
             pts = []
-            x0, x1, y0, y1 = min(xs) - 1.6, max(xs) + 1.6, min(ys) - 1.2, max(ys) + 1.2
+            path = list(zip(xs, ys))
+            x0, x1, y0, y1 = min(xs) - 1.6, max(xs) + 1.6, min(ys) - 1.6, max(ys) + 1.6
             n = int((x1 - x0) * (y1 - y0) * 7)
             for _ in range(n):
                 px, py = rnd.uniform(x0, x1), rnd.uniform(y0, y1)
                 if abs(py) > 31.9 or any(abs(px - kx) < kr and abs(py - ky) < kr for (kx, ky, kr) in keep):
                     continue
-                pts.append((px, py, rnd.uniform(0.7, 1.15)))
+                if min((px - a) ** 2 + (py - b) ** 2 for (a, b) in path) > 1.5 ** 2:
+                    continue                                   # only near where the robot actually walks
+                pts.append((px, py, rnd.uniform(0.45, 0.75)))       # lawn height: blades under Tiny's eyes
             grass += plants.grass(sc.collection, rnd, ctrl, pts, blades=7, name="grass_meadow", chunk=2.5)
         near = []
         for g in grass:
@@ -110,7 +127,9 @@ def main():
     if "leaf" in shot:
         leaf(sc, *shot["leaf"], shot["apron"])
         sc["keep_clear"] = [(shot["leaf"][0], shot["leaf"][1], 0.22)]
-    shot["action"](sc, cam, roots)
+    end = shot["action"](sc, cam, roots)
+    if isinstance(end, int):
+        sc.frame_end = end
     press(sc, roots)
     # keep focus on the first robot as it moves
     if cam.data.dof.use_dof:

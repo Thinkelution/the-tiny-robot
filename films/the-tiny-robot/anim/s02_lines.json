@@ -1,0 +1,59 @@
+{
+ "fps": 24,
+ "lines": [
+  [
+   190,
+   "TINY",
+   "Check... no harm. Go."
+  ],
+  [
+   470,
+   "MOSSBACK",
+   "Good morning, little..."
+  ],
+  [
+   690,
+   "MOSSBACK",
+   "...one. The sapling grew."
+  ],
+  [
+   745,
+   "TINY",
+   "I saw! It reaches my eyes now."
+  ],
+  [
+   965,
+   "PRIMLY",
+   "Excuse me, that is not where that goes."
+  ],
+  [
+   1058,
+   "PRIMLY",
+   "And that moss is not tidy."
+  ],
+  [
+   1110,
+   "MOSSBACK",
+   "Moss is not..."
+  ],
+  [
+   1540,
+   "MOSSBACK",
+   "...mess. It is growing."
+  ]
+ ],
+ "sounds": [
+  [
+   410,
+   "a deep gurgle from Mossback's tank"
+  ],
+  [
+   800,
+   "whisk-whisk, whisk-whisk"
+  ],
+  [
+   1690,
+   "a bright fanfare from the Big Board, far away"
+  ]
+ ]
+}

@@ -54,7 +54,7 @@ class Actor:
         return next((o for o in self.parts if o.get("role") == "eyes"), None)
 
     # ------------------------------------------------------------------ locomotion
-    def walk(self, points, start, speed=0.5, turn=0.35, stride=None, settle=6):
+    def walk(self, points, start, speed=0.5, turn=0.35, stride=None, settle=6, swing=True):
         """Move along a polyline at `speed` m/s from frame `start`; feet, bob and sway are timed by distance.
         Turns are eased (`turn` = seconds to swing round a corner). Returns the frame it arrives."""
         pts = [Vector((p[0], p[1], self.root.location.z)) for p in points]
@@ -84,16 +84,16 @@ class Actor:
             yaw = prev_yaw + dy * min(1.0, step * 3.0)
             prev_yaw = yaw
             phase = d / (2 * S) * 2 * math.pi
-            self._pose_moving(f, pos, yaw, phase, min(1.0, k / 4, (frames - k) / 4))
+            self._pose_moving(f, pos, yaw, phase, min(1.0, k / 4, (frames - k) / 4), swing)
             self.track[f] = (pos.x, pos.y, yaw)
         # settle: feet back under the body
         end = start + frames
         for k in range(1, settle + 1):
-            self._pose_moving(end + k, pos, prev_yaw, 0.0, 0.0)
+            self._pose_moving(end + k, pos, prev_yaw, 0.0, 0.0, swing)
         self.busy.append((start, end + settle))
         return end + settle
 
-    def _pose_moving(self, f, pos, yaw, phase, amt):
+    def _pose_moving(self, f, pos, yaw, phase, amt, swing=True):
         r = self.root
         h = self.h
         z = pos.z
@@ -113,13 +113,18 @@ class Actor:
                 lift = max(0.0, math.sin(p)) * h * 0.09 * amt
                 ft.delta_location = (0.0, -fwd, lift)
                 ft.keyframe_insert("delta_location", frame=f)
-        for role, ph in (("hand_l", math.pi), ("hand_r", 0.0)):
+        for role, ph in (("hand_l", math.pi), ("hand_r", 0.0)) if swing else ():
             for hd in self.joints(role):
                 hd.delta_location = (0.0, math.cos(phase + ph) * h * 0.05 * amt, 0.0)
                 hd.keyframe_insert("delta_location", frame=f)
-        # a little side-to-side roll with each step (head for Tiny, body for the rest)
+        # a little side-to-side roll with each step (head for Tiny, body for the rest); treads rumble instead
         for b in (self.joints("body") or self.joints("head"))[:1]:
-            b.delta_rotation_euler = (0.0, math.sin(phase) * 0.06 * amt, 0.0)
+            if self.loco in ("walk", "hop"):
+                b.delta_rotation_euler = (0.0, math.sin(phase) * 0.06 * amt, 0.0)
+            elif self.loco == "treads":
+                b.delta_rotation_euler = (math.sin(f * 1.7) * 0.004 * amt, math.sin(f * 2.3) * 0.004 * amt, 0.0)
+            else:
+                continue
             b.keyframe_insert("delta_rotation_euler", frame=f)
         for w in self.joints("wheel"):
             w.delta_rotation_euler = (-phase * 0.5, 0.0, 0.0)
@@ -214,3 +219,126 @@ class Actor:
         for f in range(f0 + 40, f1, 77):
             if not any(a <= f <= b for (a, b) in self.busy):
                 self.blink(f)
+
+
+    # ------------------------------------------------------------------ staging across cuts
+    def _hold(self, f):
+        """Key the root's current animated transform at frame f (so a later jump does not drift earlier frames)."""
+        r = self.root
+        ad = r.animation_data
+        if not ad or not ad.action:
+            return
+        for fc in _fcurves(ad.action):
+            if fc.data_path in ("location", "rotation_euler"):
+                fc.keyframe_points.insert(f, fc.evaluate(f), options={"FAST"})
+
+    def _trim(self, f):
+        """Drop motion keyed earlier for frames >= f (a walk that ran past a cut), on the root and its joints."""
+        objs = [self.root] + [o for o in self.parts if o.type == "EMPTY"]
+        for ob in objs:
+            ad = ob.animation_data
+            if not ad or not ad.action:
+                continue
+            for fc in _fcurves(ad.action):
+                if fc.data_path not in ("location", "rotation_euler", "delta_location", "delta_rotation_euler"):
+                    continue
+                if ob is not self.root and fc.data_path in ("location", "rotation_euler"):
+                    continue
+                pts = [k for k in fc.keyframe_points if k.co.x >= f]
+                for k in reversed(pts):
+                    fc.keyframe_points.remove(k)
+        for k in [k for k in self.track if k >= f]:
+            del self.track[k]
+        self.busy = [(a, min(b, f - 1)) for (a, b) in self.busy if a < f]
+
+    def place(self, f, x, y, yaw_deg=None, z=None):
+        """Put the robot somewhere new at frame f (hidden by a camera cut): the frames before keep their pose, and
+        any motion still queued from an earlier action after f is dropped."""
+        self._hold(f - 1)
+        self._trim(f)
+        # feet, hands and body back to rest at the cut
+        for o in self.parts:
+            if o.type == "EMPTY" and o.get("role") in ("foot_l", "foot_r", "hand_l", "hand_r", "body", "head"):
+                o.delta_location = (0.0, 0.0, 0.0)
+                o.keyframe_insert("delta_location", frame=f)
+        r = self.root
+        yaw = r.rotation_euler.z if yaw_deg is None else math.radians(yaw_deg)
+        r.location = (x, y, self.base_z if z is None else z)
+        r.rotation_euler.z = yaw
+        r.keyframe_insert("location", frame=f)
+        r.keyframe_insert("rotation_euler", index=2, frame=f)
+        self.track[f] = (x, y, yaw)
+        return f
+
+    # ------------------------------------------------------------------ parts
+    def joint(self, name):
+        return bpy.data.objects.get(f"{self.rid}:{name}")
+
+    def rotate(self, f, name, deg, frames=6, axis=2):
+        """Ease a joint's extra rotation (degrees, about one axis) to a value by frame f + frames."""
+        j = self.joint(name)
+        if not j:
+            return f
+        a0 = j.delta_rotation_euler[axis]
+        j.keyframe_insert("delta_rotation_euler", index=axis, frame=f)
+        for k in range(1, frames + 1):
+            j.delta_rotation_euler[axis] = a0 + (math.radians(deg) - a0) * _ease(k / frames)
+            j.keyframe_insert("delta_rotation_euler", index=axis, frame=f + k)
+        return f + frames
+
+    def sweep(self, f0, f1, amp=24, rate=0.42):
+        """Primly's brooms: the arms swing forward and back, opposite each other."""
+        for f in range(f0, f1 + 1):
+            fade = min(1.0, (f - f0) / 6, (f1 - f) / 6)
+            for role, ph in (("arm_l", 0.0), ("arm_r", math.pi)):
+                for j in self.joints(role):
+                    j.delta_rotation_euler[0] = math.sin(f * rate + ph) * math.radians(amp) * fade
+                    j.keyframe_insert("delta_rotation_euler", index=0, frame=f)
+
+    def hands(self, f, pose="rest", frames=6):
+        """Tiny's block hands: rest, hug (in front, together, a little up) or behind (tucked behind its back)."""
+        offs = {"rest": (0.0, 0.0, 0.0), "hug": (0.07, -0.09, 0.03), "behind": (0.03, 0.11, -0.01),
+                "up": (0.0, -0.02, 0.12)}[pose]
+        for role, side in (("hand_l", -1), ("hand_r", 1)):
+            for j in self.joints(role):
+                j.keyframe_insert("delta_location", frame=f)
+                j.delta_location = (side * offs[0], offs[1], offs[2])
+                j.keyframe_insert("delta_location", frame=f + frames)
+        return f + frames
+
+    def carry(self, ob, f0, f1, fwd=0.17, up=0.17):
+        """Hold a prop in front of the robot from f0 to f1, following its walk."""
+        for f in range(f0, f1 + 1):
+            known = [k for k in self.track if k <= f]
+            x, y, yaw = self.track[max(known)] if known else self.start
+            ob.location = (x + math.sin(yaw) * fwd, y - math.cos(yaw) * fwd, self.base_z + up)
+            ob.rotation_euler.z = yaw
+            ob.keyframe_insert("location", frame=f)
+            ob.keyframe_insert("rotation_euler", index=2, frame=f)
+
+
+def _fcurves(action):
+    """F-curves of an action (Blender 5 keeps them in layers / strips / channel bags)."""
+    if hasattr(action, "fcurves") and action.fcurves is not None:
+        try:
+            return list(action.fcurves)
+        except Exception:
+            pass
+    out = []
+    for layer in getattr(action, "layers", []):
+        for strip in layer.strips:
+            for bag in getattr(strip, "channelbags", []):
+                out += list(bag.fcurves)
+    return out
+
+
+def key_prop(ob, f, loc=None, rot_z=None, scale=None):
+    if loc is not None:
+        ob.location = loc
+        ob.keyframe_insert("location", frame=f)
+    if rot_z is not None:
+        ob.rotation_euler.z = rot_z
+        ob.keyframe_insert("rotation_euler", index=2, frame=f)
+    if scale is not None:
+        ob.scale = scale
+        ob.keyframe_insert("scale", frame=f)

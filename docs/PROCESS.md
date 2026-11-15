@@ -314,3 +314,32 @@ then shots.
   Bug worth remembering: VertexWeightProximity's "OBJECT" mode is the distance between the two objects' origins
   (one weight for a whole grass patch); it only seemed to work in a test whose blade sat at the world origin.
   "GEOMETRY" mode measures every vertex to the foot's mesh. With it, blades at Tiny's feet drop from 18 cm to 4 cm.
+
+## Step 10 · The whole of S02 in one take (2026-11-15)
+
+The full scene, B1-B17, built as one timeline in `blender/s02.py`: one Blender scene, one set, three robots,
+fourteen cameras switched by timeline markers. 2,059 frames at 24 fps (about 86 s), 1280x720, 28 samples.
+
+- **The beats**: the Grove from overhead with Mossback on its loop; Tiny at the gate, its check, the leaf;
+  Mossback tips its tank to water a tree ("Good morning, little..."); Tiny waits by the sapling, Mossback comes
+  round again ("...one. The sapling grew." / "I saw! It reaches my eyes now."); Primly glides in on straight lines
+  and right-angle turns and sweeps the leaves and the cube seed toward the scrap chute; the seed catches on the
+  chute's lip, Tiny tiptoes over, checks, hugs it, waddles back and sets it beside the sapling with a pat
+  ("...mess. It is growing."); Primly's head snaps round, Tiny freezes, hands behind its back; the fanfare, and
+  everyone leaves for Main Square.
+- **New in the animation library** (`blender/anim.py`):
+  - `place()`: put a robot somewhere new on a cut (across the Grove, further round the loop). It also trims every
+    key, walk segment and busy range queued after that frame, so an earlier walk cannot drag the robot back.
+    Without the trim Tiny vanished from the B3 shot: its B2 walk keys outlived the cut.
+  - `rotate` (Mossback's tank tilt, Primly's head snap), `sweep` (Primly's brooms), `hands` (rest, hug, behind the
+    back, up) and `carry` (a prop rides with the hands while the robot walks).
+  - Blender 5 actions keep their F-curves in layers, strips and channel bags; `_fcurves()` finds them.
+- **The Grove**: Mossback's loop was tightened from 44 m to 20 m across so it passes the sapling in frame; the
+  look-dev frames from Step 8 have a slightly wider loop than the film now.
+- **The meadow** laid along the walked paths was as tall as Tiny; it is now lawn height (blades under its eyes).
+- **Encoding on the server** (`gpu-worker/worker/encode.py`): frames never come down to this PC. The worker
+  pulls them from S3, draws the dialogue and sound cues as subtitles (no voices yet), encodes the MP4 with ffmpeg
+  and uploads only the video.
+  Lesson: the render ran on, but this PC lost its internet while it was waiting on the job, so the chained encode
+  never started. Every step is a separate job, so the encode was simply run again on the frames already in S3.
+- Render: about 8 s a frame on the L40S, roughly 4.5 hours for the scene.
