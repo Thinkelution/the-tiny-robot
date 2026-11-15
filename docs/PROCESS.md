@@ -234,3 +234,12 @@ Bugs worth remembering:
   the camera reads as a black band (it now always reaches 12 m above the camera); and from 1.5 m above the roof
   the edge hides the Grove right below, so the S06 shot is a crane over Tiny's shoulder.
 - Look-dev frames: S04 reveal, S04 low among the trays, S06 sunset over the Grove, S20 night.
+- **The Junk Stacks** (`blender/junk.py`): Tiny's 0.9 m crate home with a square doorway glowing warm inside and a
+  plank porch facing the morning sun, the small leaning stack by the door, the slab lane east past the weed in its
+  pavement crack (and Dash's skid mark, from S14 on), the scrap pile with the First Workshop's square emblem plate,
+  three scrap cubes on the porch for S14, two idle gantry cranes, about 95 uneven crate towers up to 18 m kept clear
+  of the clearing, the lane and the corridor toward the Grove, and the Grove's treetops far to the north-east. All
+  2,000+ crates are one merged mesh with eight paint slots (`junk.boxes_mesh`). New light preset: dawn, with blue
+  fog from the haze box at 20x the city density.
+- Look-dev frames: S01 wide in the fog, S01 the weed at Tiny's height, S14 the porch and the scrap cubes, S30 Dash
+  stopped beside the weed.

@@ -27,7 +27,7 @@ The city layout is in [city.json](city.json), drawn as [map.png](map.png) by `ag
 | 2 | Main Square (built) | S03 S09 S15 S16 S17 | day, evening, dusk |
 | 3 | Pipeworks (interior, built) | S05 S12 S13 S19 S25 | afternoon, late night, night, pre-dawn |
 | 4 | Rooftop Nursery (built) | S04 S06 S20 | afternoon, sunset, night |
-| 5 | Junk Stacks | S01 S14 S30 | dawn, morning |
+| 5 | Junk Stacks (built) | S01 S14 S30 | dawn, morning |
 | 6 | Fast Lane Works | S08 S21 S27 | day, night, morning |
 | 7 | Foundry (interior) | S10 S18 S28 | night, morning |
 | 8 | Count House (interior) | S11 S29 | night, morning |

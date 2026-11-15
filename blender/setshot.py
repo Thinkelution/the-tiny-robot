@@ -17,6 +17,7 @@ from mathutils import Vector
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import grove  # noqa: E402
 import look  # noqa: E402
+import junk  # noqa: E402
 import mainsquare  # noqa: E402
 import nursery  # noqa: E402
 import pipeworks  # noqa: E402
@@ -124,6 +125,24 @@ SHOTS = {
     "nursery_s20_night": dict(set="nursery", tod="night", water=1.0, grove_water=0.15, haze=0.004,
                               cam=((2.6, -1.8, 0.6), (-1.2, 5.0, 1.0), 20, None),
                               robots=[("mossback", -1.8, 3.4, ("cam", 60)), ("dash", 1.2, 4.6, ("cam", 40))]),
+    # ---- The Junk Stacks (local coordinates: Tiny's crate at the origin, door and porch facing east; weed at
+    # (2.6, 0.45); the gap toward the Grove to the north-east)
+    # S01 "A Little Box in the Fog": wide and low, crate towers like mountains, Tiny's doorway the only warm light
+    "junk_s01_wide": dict(set="junk", tod="dawn", haze=0.03, exposure=0.6, haze_color=(0.62, 0.7, 0.85),
+                          cam=((9.5, -7.5, 0.55), (-1.0, 1.5, 3.2), 20, None),
+                          robots=[("tiny", 0.78, 0.0, ("cam", 15), 0.05)]),
+    # S01: Tiny's eye height at the weed
+    "junk_s01_weed": dict(set="junk", tod="dawn", haze=0.03, exposure=0.5, haze_color=(0.62, 0.7, 0.85),
+                          cam=((3.55, -0.75, 0.13), (2.45, 0.6, 0.12), 32, 2.8),
+                          robots=[("tiny", 2.05, 0.85, ("cam", 55))]),
+    # S14 "Thinking It Through": low on the porch, three scrap cubes in a row, the emblem plate behind
+    "junk_s14_porch": dict(set="junk", tod="dawn", haze=0.035, exposure=0.5, haze_color=(0.6, 0.68, 0.84), skid=True, scraps=True,
+                           cam=((2.1, -1.25, 0.32), (0.55, 0.35, 0.35), 26, 4.0),
+                           robots=[("tiny", 0.64, 0.2, ("cam", 10), 0.05)]),
+    # S30 "Around the Weed": warm morning, the S01 framing mirrored; Dash stopped a hand's width from the weed
+    "junk_s30_morning": dict(set="junk", tod="morning", haze=0.004, skid=True,
+                             cam=((2.3, -1.9, 0.16), (3.0, 0.7, 0.32), 28, 4.0),
+                             robots=[("dash", 3.45, 0.45, -90), ("mossback", 9.0, 6.0, ("cam", 80))]),
 }
 
 
@@ -210,6 +229,8 @@ def shoot(name):
         loc, tgt, lens, fs = sh["cam"]
         sh = dict(sh, cam=((loc[0] + ox, loc[1] + oy, loc[2] + oz), (tgt[0] + ox, tgt[1] + oy, tgt[2] + oz), lens, fs),
                   robots=[(r[0], r[1] + ox, r[2] + oy, r[3], (r[4] if len(r) > 4 else 0.0) + oz) for r in sh["robots"]])
+    elif sh["set"] == "junk":
+        parts = junk.build(sc, tod=sh["tod"], skid=sh.get("skid", False), scraps=sh.get("scraps", False))
     elif sh["set"] == "pipeworks":
         parts = pipeworks.build(sc, mood=sh["mood"], lever=sh.get("lever", "down"), bent=sh.get("bent", True),
                                 tree_gauge=sh.get("tree_gauge", 0.5), nursery=sh.get("nursery", 1.0))
@@ -245,8 +266,8 @@ def shoot(name):
     else:
         # the haze box must contain the camera: seen from above, its top face reads as a dark band
         top = max(18.0, sh["cam"][0][2] + 12.0)
-        look.atmosphere(sc, density=sh.get("haze", 0.0015), color=(0.98, 0.92, 0.84), anisotropy=0.75,
-                        centre=(-40 if sh["set"] == "square" else 0, 0, 0), size=(380, 380, top))
+        look.atmosphere(sc, density=sh.get("haze", 0.0015), color=sh.get("haze_color", (0.98, 0.92, 0.84)),
+                        anisotropy=0.75, centre=(-40 if sh["set"] == "square" else 0, 0, 0), size=(380, 380, top))
     look.grade(sc)
     sc.view_settings.exposure = sh.get("exposure", 0.0)
     for (r, spec) in roots:
