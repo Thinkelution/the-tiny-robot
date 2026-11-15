@@ -255,3 +255,14 @@ Bugs worth remembering:
   race, S27 top-down on the curve.
 - Continuity to settle: S21 lays the new pipe from the Fast Lane's end (west gate), while S24 has it cross the
   great tree's root on the north-east side, nearer the Pipeworks.
+- **The Foundry** (`blender/foundry.py`): a 56 x 38 x 20 m hall lit orange from below by molten channels along the
+  walls and a glowing pit round the Logic Press (area lights turned to face up). The Press is a cliff of slabs:
+  base, anvil, four columns, crown and a raised ram on brass pistons, with a glowing plate slot (and in S28 a blank
+  plate waiting in it) and a painted square floor mark. Also the rack of blank core plates, Mossback's fenced
+  square pen with its worn square track and a gate that opens, floor seams, pipes along the walls, and the great
+  doors in the east wall, so the S28 sunrise comes straight in as a gold bar across the floor and backlights the
+  crowd in the doorway. Warden's crate with Tiny's eyes in its slot is a shared prop (`foundry.crate_with_tiny`).
+  Lessons: two cameras landed inside solid geometry (a black frame both times); a quick ray test from each camera
+  before rendering would catch that.
+- Look-dev frames: S10 the Press and Warden from Tiny's height, S18 the orange hall and the night through the
+  doors with the crate, S28 the crate under the Press, S28 the crowd in the sunrise.

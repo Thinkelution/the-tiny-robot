@@ -17,6 +17,7 @@ from mathutils import Vector
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import grove  # noqa: E402
 import look  # noqa: E402
+import foundry  # noqa: E402
 import junk  # noqa: E402
 import mainsquare  # noqa: E402
 import nursery  # noqa: E402
@@ -163,6 +164,28 @@ SHOTS = {
     "fl_s27_top": dict(set="fastlane", tod="morning", water=0.95, fast_lane="curve", haze=0.0006,
                        cam=((-50.0, -32.0, 54.0), (-40.0, -20.0, 0.0), 30, None),
                        robots=[("quota", -47.0, -21.0, 140, 0.35), ("dash", -36.0, -38.0, 90)]),
+    # ---- The Foundry (local coordinates: hall |x| < 28, |y| < 19; the Press at x = -19, the great doors east)
+    # S10 "The Sad Little Square": low from Tiny's height, Warden a pillar, the Press a cliff, the pen behind
+    "fd_s10_night": dict(set="foundry", mood="night", pen_open=False, haze=0.01,
+                         cam=((7.0, -7.5, 0.35), (-16.0, 3.0, 7.5), 20, None),
+                         robots=[("warden", 2.4, -3.2, ("cam", 30)), ("tiny", 4.2, -4.9, ("cam", 35)),
+                                 ("mossback", -4.0, 7.9, ("cam", 80))]),
+    # S18 "The Order Does Not Say Where": wide and low from beside the Press toward the doors and the blue night;
+    # the crate set down facing the Press, Warden at the open pen gate, Mossback leaving the pen
+    "fd_s18_night": dict(set="foundry", mood="night", pen_open=True, crate=(-6.8, -3.4, "amber", 0.0, math.pi),
+                         haze=0.01, cam=((-11.8, -5.8, 1.0), (24.0, 3.0, 3.5), 22, None),
+                         robots=[("warden", 1.2, 8.6, ("cam", 40)), ("mossback", 3.0, 4.2, ("cam", 70))]),
+    # S28 "The Honest Question": low and wide, the tiny crate under the towering Press, a gold bar of sunrise
+    "fd_s28_crate": dict(set="foundry", mood="morning", pen_open=True, plate=True,
+                         crate=(-12.2, 0.0, "amber", 0.0, math.pi), haze=0.0025,
+                         cam=((-4.5, -5.5, 0.35), (-19.0, 0.5, 8.5), 18, None),
+                         robots=[("warden", -10.6, 3.8, ("cam", 20))]),
+    # S28: the crowd in the doors, a wall of silhouettes against the sunrise; Dash at the front, Shine over them
+    "fd_s28_doors": dict(set="foundry", mood="morning", pen_open=True, plate=True, crowd=60,
+                         crate=(-12.2, 0.0, "green", 0.0, math.pi), haze=0.0022,
+                         cam=((-8.0, -3.5, 1.4), (28.0, 0.5, 4.0), 30, None),
+                         robots=[("dash", 25.0, -0.5, -90), ("shine", 22.0, 2.5, -90, 4.0),
+                                 ("ledger", -7.0, -8.6, ("cam", 20))]),
 }
 
 
@@ -252,6 +275,11 @@ def shoot(name):
     elif sh["set"] == "fastlane":
         parts = grove.build(sc, tod=sh["tod"], water=sh["water"], fast_lane=sh.get("fast_lane", "straight"),
                            pipe_line=sh.get("pipe_line", False))
+    elif sh["set"] == "foundry":
+        parts = foundry.build(sc, mood=sh["mood"], pen_open=sh.get("pen_open", False), crowd_n=sh.get("crowd", 0),
+                              plate=sh.get("plate", False),
+                              crate=(sh["crate"][0], sh["crate"][1], sh["crate"][2], sh["crate"][3], sh["crate"][4])
+                              if sh.get("crate") else None)
     elif sh["set"] == "junk":
         parts = junk.build(sc, tod=sh["tod"], skid=sh.get("skid", False), scraps=sh.get("scraps", False))
     elif sh["set"] == "pipeworks":
@@ -286,6 +314,9 @@ def shoot(name):
         if sh.get("haze", 0) > 0 and "nohaze" not in opts:
             look.atmosphere(sc, density=sh["haze"], color=(0.9, 0.88, 0.84), anisotropy=0.6, centre=(0, -1.0, 0),
                             size=(29.6, 19.6, 11.8))
+    elif sh["set"] == "foundry":
+        look.atmosphere(sc, density=sh.get("haze", 0.01), color=(0.95, 0.88, 0.8), anisotropy=0.6, centre=(0, 0, 0),
+                        size=(55.6, 37.6, 19.8))
     else:
         # the haze box must contain the camera: seen from above, its top face reads as a dark band
         top = max(18.0, sh["cam"][0][2] + 12.0)
