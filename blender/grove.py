@@ -212,7 +212,7 @@ def _undergrowth(coll, rnd, ctrl, spots):
     plants.grass(coll, rnd, ctrl, pts, blades=10)
 
 
-def _city(coll, rnd, seed_tower=True):
+def _city(coll, rnd, seed_tower=True, fast_lane="straight", pipe_line=False):
     """Ring road, sidewalks and the towers around the Grove, with the Seed Tower, the Pipeworks block, Grove
     Boulevard to the east and the end of the Fast Lane deck to the west."""
     asphalt = world.tex_mat("asphalt", "asphalt", tile=3.0, rough=0.85, bump=0.5)
@@ -249,8 +249,8 @@ def _city(coll, rnd, seed_tower=True):
             u += (w if side in "ns" else d) + rnd.uniform(3.0, 5.0)
             if side == "e" and abs(y) < 12:
                 continue                                   # Grove Boulevard
-            if side == "w" and -22 < y < 6:
-                continue                                   # the Fast Lane deck
+            if side == "w" and abs(y) < 16:
+                continue                                   # the Fast Lane
             if side == "n" and (abs(x) < 14 or 32 < x < 66):
                 continue                                   # Seed Tower, Pipeworks
             lots.append((x, y, w, d))
@@ -287,23 +287,13 @@ def _city(coll, rnd, seed_tower=True):
     for xb in range(int(WALK_OUT) + 6, 140, 14):
         for s in (-1, 1):
             world.lamp(coll, xb, s * 8.5, math.pi / 2 if s < 0 else -math.pi / 2)
-    # the Fast Lane deck: raised slab on piers, stopping short of the wall
-    deck = world.tex_mat("deck", "concrete", "#b9b2a4", tile=3.0, rough=0.8)
-    yel = world.mat("lane_bar", "plastic", "#e8c22a", wear=0.4, dirt=0.4, tile=1.0)
-    x_end = -(HALF + 4.0)
-    L = 200
-    world.box(coll, "fast_lane_deck", (L, 16, 0.8), (x_end - L / 2, -8, 2.4), deck, 0.06)
-    for px in range(int(x_end) - 6, int(x_end) - L, -14):
-        for py in (-13, -3):
-            world.box(coll, "pier", (1.4, 1.4, 2.0), (px, py, 1.0), deck, 0.05)
-    for px in range(int(x_end) - 3, int(x_end) - L, -6):
-        world.box(coll, "lane_bar", (3.0, 0.25, 0.03), (px, -8, 2.81), yel, 0.01)
-    barrier = world.mat("barrier", "painted_metal", "#e05a2a", wear=0.5, dirt=0.4, tile=1.0)
-    for py in range(-14, -1, 3):
-        world.box(coll, "barrier", (0.5, 2.6, 1.0), (x_end - 0.8, py + 0.5, 3.3), barrier, 0.05)
+    # the Fast Lane: straight along y = 0 to the west gate (see fastlane.py)
+    import fastlane
+    fastlane.road(coll, state=fast_lane, night=world.CFG["lamps"] > 0, pipe_line=pipe_line)
 
 
-def build(sc, tod="morning", water=1.0, seed=11, city=True, pipe=False, clear=(), seed_tower=True):
+def build(sc, tod="morning", water=1.0, seed=11, city=True, pipe=False, clear=(), seed_tower=True,
+          fast_lane="straight", pipe_line=False):
     world.CFG = world.TOD[tod]
     world.HAZE = world.CFG["haze"]
     rnd = random.Random(seed)
@@ -321,6 +311,6 @@ def build(sc, tod="morning", water=1.0, seed=11, city=True, pipe=False, clear=()
     plants.sapling(coll, rnd, SAPLING[0], SAPLING[1], ctrl)
     _undergrowth(coll, rnd, ctrl, spots)
     if city:
-        _city(coll, rnd, seed_tower)
+        _city(coll, rnd, seed_tower, fast_lane, pipe_line)
     print(f"old_grove: {len(spots) + 1} trees, water={water}, tod={tod}")
     return {"coll": coll, "water": ctrl, "trees": spots}

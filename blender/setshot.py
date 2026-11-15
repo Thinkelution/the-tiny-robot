@@ -143,6 +143,26 @@ SHOTS = {
     "junk_s30_morning": dict(set="junk", tod="morning", haze=0.004, skid=True,
                              cam=((2.3, -1.9, 0.16), (3.0, 0.7, 0.32), 28, 4.0),
                              robots=[("dash", 3.45, 0.45, -90), ("mossback", 9.0, 6.0, ("cam", 80))]),
+    # ---- Fast Lane Works (Grove coordinates: the road runs along y = 0 and ends at x = -34.3, 2 m short of the
+    # Grove's west wall and gate)
+    # S08 "Already Finished": wide down the road, Quota parked at the end facing the drooping trees, Tiny in the gap
+    "fl_s08_wide": dict(set="fastlane", tod="day", water=0.15, fast_lane="straight", haze=0.0009,
+                        cam=((-74.0, -5.5, 2.4), (-30.0, 0.5, 2.0), 30, None),
+                        robots=[("quota", -38.6, 0.0, 90, 0.35), ("dash", -45.0, -4.2, 30, 0.35),
+                                ("tiny", -33.2, 0.6, -90, -0.15)]),
+    # S08: from Tiny's height, the blade a wall across the top of the frame
+    "fl_s08_low": dict(set="fastlane", tod="day", water=0.15, fast_lane="straight", haze=0.0009,
+                       cam=((-32.9, 2.5, 0.02), (-37.0, -0.4, 1.5), 20, 4.0),
+                       robots=[("tiny", -33.7, 0.9, ("cam", 60), -0.15), ("quota", -38.6, 0.0, 90, 0.35)]),
+    # S21 "The Pipe Race": high wide at night, floodlight cones, the new pipe running off the road toward the Grove
+    "fl_s21_night": dict(set="fastlane", tod="night", water=0.15, fast_lane="straight", pipe_line=True, haze=0.012,
+                         cam=((-60.0, -22.0, 13.0), (-32.0, 1.0, 0.0), 28, None),
+                         robots=[("quota", -24.0, 1.4, 90), ("dash", -40.0, -4.0, 60, 0.35), ("primly", -29.0, 3.6, 0),
+                                 ("shine", -30.0, -0.5, 0, 4.5), ("warden", -47.0, 7.0, ("cam", 30), 0.35)]),
+    # S27 "Around Is Faster": high top-down as the barriers form the curve, Quota's blade raised, Dash arriving
+    "fl_s27_top": dict(set="fastlane", tod="morning", water=0.95, fast_lane="curve", haze=0.0006,
+                       cam=((-50.0, -32.0, 54.0), (-40.0, -20.0, 0.0), 30, None),
+                       robots=[("quota", -47.0, -21.0, 140, 0.35), ("dash", -36.0, -38.0, 90)]),
 }
 
 
@@ -229,6 +249,9 @@ def shoot(name):
         loc, tgt, lens, fs = sh["cam"]
         sh = dict(sh, cam=((loc[0] + ox, loc[1] + oy, loc[2] + oz), (tgt[0] + ox, tgt[1] + oy, tgt[2] + oz), lens, fs),
                   robots=[(r[0], r[1] + ox, r[2] + oy, r[3], (r[4] if len(r) > 4 else 0.0) + oz) for r in sh["robots"]])
+    elif sh["set"] == "fastlane":
+        parts = grove.build(sc, tod=sh["tod"], water=sh["water"], fast_lane=sh.get("fast_lane", "straight"),
+                           pipe_line=sh.get("pipe_line", False))
     elif sh["set"] == "junk":
         parts = junk.build(sc, tod=sh["tod"], skid=sh.get("skid", False), scraps=sh.get("scraps", False))
     elif sh["set"] == "pipeworks":

@@ -243,3 +243,15 @@ Bugs worth remembering:
   fog from the haze box at 20x the city density.
 - Look-dev frames: S01 wide in the fog, S01 the weed at Tiny's height, S14 the porch and the scrap cubes, S30 Dash
   stopped beside the weed.
+- **Fast Lane Works** (`blender/fastlane.py`, built into the Grove's city so every Grove shot sees the same road):
+  dead straight along y = 0 from the west, a raised deck on piers that ramps down to a slab road one kerb above the
+  street and stops 2 m short of the Grove's west gate, with rebar sticking out of the broken end, Quota's painted
+  parking box, striped barriers, stacked road slabs and floodlights on square poles (lit at night). Two states:
+  "straight" (S08, S21) and "curve" (S27), where the barriers are dragged into a curve that leaves the road and
+  follows the ring road round the Grove's south-west corner. S21 adds the crew's pipe line through the gate.
+  First idea, changed by the script: a viaduct ending in mid-air. S08 has Tiny step out of the Grove into the gap
+  between Quota's lowered blade and the trees, so the road had to come down to the ground at its end.
+- Look-dev frames: S08 wide down the road at the drooping Grove, S08 low with Tiny under Quota, S21 the night pipe
+  race, S27 top-down on the curve.
+- Continuity to settle: S21 lays the new pipe from the Fast Lane's end (west gate), while S24 has it cross the
+  great tree's root on the north-east side, nearer the Pipeworks.
