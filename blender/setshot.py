@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import grove  # noqa: E402
 import look  # noqa: E402
 import mainsquare  # noqa: E402
+import nursery  # noqa: E402
 import pipeworks  # noqa: E402
 import robot  # noqa: E402
 
@@ -106,6 +107,23 @@ SHOTS = {
                          robots=[("ledger", 3.0, 4.8, ("cam", 10)), ("primly", -3.8, 2.8, 180),
                                  ("shine", -0.6, 1.4, ("cam", 0), 3.4), ("dash", 2.6, 2.4, ("cam", 35)),
                                  ("quota", 0.0, -9.6, ("cam", 0)), ("warden", -1.8, -1.6, ("cam", 25))]),
+    # ---- The Rooftop Nursery (coordinates local to the roof: |x|, |y| < 10, the south edge looks over the Grove)
+    # S04 "The Forgotten Nursery": the wide reveal of drooping rows, the tank looming, the Grove beyond the edge
+    "nursery_s04_reveal": dict(set="nursery", tod="afternoon", water=0.0, grove_water=0.85, haze=0.0008,
+                               cam=((9.2, 4.0, 2.6), (-4.0, -8.0, -1.4), 22, None),
+                               robots=[("tiny", -2.0, -3.4, ("cam", 30))]),
+    # S04: low at Tiny's height, the trays like long fields and the tank a cliff
+    "nursery_s04_low": dict(set="nursery", tod="afternoon", water=0.0, grove_water=0.85, haze=0.0008,
+                            cam=((-1.9, -7.4, 0.22), (-3.6, 6.0, 2.2), 18, 4.0),
+                            robots=[("tiny", -1.8, -4.6, ("cam", 25))]),
+    # S06 "Perking Up": the green ripple halfway down the rows; Tiny at the roof edge against the sunset
+    "nursery_s06_sunset": dict(set="nursery", tod="sunset", water=0.55, grove_water=0.6, haze=0.0012,
+                               cam=((1.0, -5.6, 4.6), (-1.0, -44.0, -19.0), 28, 8.0),
+                               robots=[("tiny", 0.4, -9.45, 8)]),
+    # S20 "Tanks Away": night, every row green and upright, Mossback and Dash by the carrying tanks
+    "nursery_s20_night": dict(set="nursery", tod="night", water=1.0, grove_water=0.15, haze=0.004,
+                              cam=((2.6, -1.8, 0.6), (-1.2, 5.0, 1.0), 20, None),
+                              robots=[("mossback", -1.8, 3.4, ("cam", 60)), ("dash", 1.2, 4.6, ("cam", 40))]),
 }
 
 
@@ -186,6 +204,12 @@ def shoot(name):
     if sh["set"] == "square":
         parts = mainsquare.build(sc, tod=sh["tod"], lamps=sh.get("lamps", "off"), board=sh.get("board", "fastlane"),
                                  grove_water=sh.get("grove_water", 0.85), wave=sh.get("wave"))
+    elif sh["set"] == "nursery":
+        parts = nursery.build(sc, tod=sh["tod"], water=sh["water"], grove_water=sh.get("grove_water", 0.85))
+        ox, oy, oz = nursery.ORIGIN
+        loc, tgt, lens, fs = sh["cam"]
+        sh = dict(sh, cam=((loc[0] + ox, loc[1] + oy, loc[2] + oz), (tgt[0] + ox, tgt[1] + oy, tgt[2] + oz), lens, fs),
+                  robots=[(r[0], r[1] + ox, r[2] + oy, r[3], (r[4] if len(r) > 4 else 0.0) + oz) for r in sh["robots"]])
     elif sh["set"] == "pipeworks":
         parts = pipeworks.build(sc, mood=sh["mood"], lever=sh.get("lever", "down"), bent=sh.get("bent", True),
                                 tree_gauge=sh.get("tree_gauge", 0.5), nursery=sh.get("nursery", 1.0))
@@ -219,8 +243,10 @@ def shoot(name):
             look.atmosphere(sc, density=sh["haze"], color=(0.9, 0.88, 0.84), anisotropy=0.6, centre=(0, -1.0, 0),
                             size=(29.6, 19.6, 11.8))
     else:
+        # the haze box must contain the camera: seen from above, its top face reads as a dark band
+        top = max(18.0, sh["cam"][0][2] + 12.0)
         look.atmosphere(sc, density=sh.get("haze", 0.0015), color=(0.98, 0.92, 0.84), anisotropy=0.75,
-                        centre=(-40 if sh["set"] == "square" else 0, 0, 0), size=(380, 380, 18))
+                        centre=(-40 if sh["set"] == "square" else 0, 0, 0), size=(380, 380, top))
     look.grade(sc)
     sc.view_settings.exposure = sh.get("exposure", 0.0)
     for (r, spec) in roots:

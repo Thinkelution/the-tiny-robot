@@ -118,7 +118,7 @@ def _wall_face(bm, wl, rnd, origin, u, n, W, H, bay, storey, shop, balconies, st
                                      0.9], TRIM)
 
 
-def tier_mesh(name, w, d, h, rnd, bay=2.6, storey=3.2, shop=False, balconies=False, style="grid"):
+def tier_mesh(name, w, d, h, rnd, bay=2.6, storey=3.2, shop=False, balconies=False, style="grid", parapet=0.9):
     bm = bmesh.new()
     wl = bm.faces.layers.float.new("win")
     hw, hd = w / 2, d / 2
@@ -134,10 +134,11 @@ def tier_mesh(name, w, d, h, rnd, bay=2.6, storey=3.2, shop=False, balconies=Fal
         _wall_face(bm, wl, rnd, o, u, n, W, h, bay, storey, shop, balconies, st)
     _quad(bm, [Vector((-hw, -hd, h)), Vector((hw, -hd, h)), Vector((hw, hd, h)), Vector((-hw, hd, h))], WALL)
     # parapet ring
-    t = 0.25
-    for c, s in (((0, -hd + t / 2, h + 0.45), (w, t, 0.9)), ((0, hd - t / 2, h + 0.45), (w, t, 0.9)),
-                 ((-hw + t / 2, 0, h + 0.45), (t, d, 0.9)), ((hw - t / 2, 0, h + 0.45), (t, d, 0.9))):
-        _cube(bm, Vector(c), s, TRIM)
+    t, ph = 0.25, parapet
+    if ph > 0:
+        for c, s in (((0, -hd + t / 2, h + ph / 2), (w, t, ph)), ((0, hd - t / 2, h + ph / 2), (w, t, ph)),
+                     ((-hw + t / 2, 0, h + ph / 2), (t, d, ph)), ((hw - t / 2, 0, h + ph / 2), (t, d, ph))):
+            _cube(bm, Vector(c), s, TRIM)
     bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.0005)
     bm.normal_update()
     uv = bm.loops.layers.uv.new("UVMap")

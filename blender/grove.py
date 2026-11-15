@@ -212,7 +212,7 @@ def _undergrowth(coll, rnd, ctrl, spots):
     plants.grass(coll, rnd, ctrl, pts, blades=10)
 
 
-def _city(coll, rnd):
+def _city(coll, rnd, seed_tower=True):
     """Ring road, sidewalks and the towers around the Grove, with the Seed Tower, the Pipeworks block, Grove
     Boulevard to the east and the end of the Fast Lane deck to the west."""
     asphalt = world.tex_mat("asphalt", "asphalt", tile=3.0, rough=0.85, bump=0.5)
@@ -267,19 +267,22 @@ def _city(coll, rnd):
         h = rnd.uniform(16, 36) if not far else rnd.uniform(28, 64)
         world.tower(coll, rnd, x, y, w, d, h, rnd.choice(world.PALETTE), rnd.choice(["concrete", "concrete", "corrugated"]))
     # the Seed Tower: old, brick-coloured, 24 m, with the Nursery's greenhouse frame on the roof
-    world.tower(coll, random.Random(5), 0, front + 10, 20, 20, 24, "#9c5a48", "concrete")
-    bars = world.mat("greenhouse", "painted_metal", "#dfe6e2", wear=0.4, dirt=0.4, tile=1.0)
-    for (dx, dy) in ((-3, -3), (3, -3), (-3, 3), (3, 3)):
-        world.box(coll, "gh_post", (0.15, 0.15, 3.0), (dx - 2, front + 10 + dy, 25.5 + 0.5), bars, 0.02)
-    world.box(coll, "gh_ridge", (6.3, 6.3, 0.15), (-2, front + 10, 27.6), bars, 0.02)
-    tank = world.mat("roof_tank", "painted_metal", "#5f7f86", wear=0.5, dirt=0.6, tile=2.0)
-    world.box(coll, "nursery_tank", (4.0, 4.0, 4.2), (5, front + 15, 24.0 + 2.1), tank, 0.1, shape="cylinder_z")
+    # (a stand-in; nursery.build makes the real tower and roof and passes seed_tower=False)
+    if seed_tower:
+        world.tower(coll, random.Random(5), 0, front + 10, 20, 20, 24, "#9c5a48", "concrete")
+        bars = world.mat("greenhouse", "painted_metal", "#dfe6e2", wear=0.4, dirt=0.4, tile=1.0)
+        for (dx, dy) in ((-3, -3), (3, -3), (-3, 3), (3, 3)):
+            world.box(coll, "gh_post", (0.15, 0.15, 3.0), (dx - 2, front + 10 + dy, 25.5 + 0.5), bars, 0.02)
+        world.box(coll, "gh_ridge", (6.3, 6.3, 0.15), (-2, front + 10, 27.6), bars, 0.02)
+        tank = world.mat("roof_tank", "painted_metal", "#5f7f86", wear=0.5, dirt=0.6, tile=2.0)
+        world.box(coll, "nursery_tank", (4.0, 4.0, 4.2), (5, front + 15, 24.0 + 2.1), tank, 0.1, shape="cylinder_z")
     # the Pipeworks: a wide steel-blue block with pipes on its face
     world.tower(coll, random.Random(9), 49, front + 11, 30, 22, 14, "#5f7f86", "corrugated")
     world.pipes(coll, 35, 63, front - 0.4, 2.2)
     # the water main: a pipe climbing the Seed Tower's east face
     pm = world.mat("main_pipe", "painted_metal", "#4f7fa8", wear=0.5, dirt=0.6, tile=1.0)
-    world.box(coll, "main_up", (0.7, 0.7, 24), (10.6, front + 2.0, 12), pm, 0.08, shape="cylinder_z")
+    if seed_tower:
+        world.box(coll, "main_up", (0.7, 0.7, 24), (10.6, front + 2.0, 12), pm, 0.08, shape="cylinder_z")
     # Grove Boulevard: lamps down both sides
     for xb in range(int(WALK_OUT) + 6, 140, 14):
         for s in (-1, 1):
@@ -300,7 +303,7 @@ def _city(coll, rnd):
         world.box(coll, "barrier", (0.5, 2.6, 1.0), (x_end - 0.8, py + 0.5, 3.3), barrier, 0.05)
 
 
-def build(sc, tod="morning", water=1.0, seed=11, city=True, pipe=False, clear=()):
+def build(sc, tod="morning", water=1.0, seed=11, city=True, pipe=False, clear=(), seed_tower=True):
     world.CFG = world.TOD[tod]
     world.HAZE = world.CFG["haze"]
     rnd = random.Random(seed)
@@ -318,6 +321,6 @@ def build(sc, tod="morning", water=1.0, seed=11, city=True, pipe=False, clear=()
     plants.sapling(coll, rnd, SAPLING[0], SAPLING[1], ctrl)
     _undergrowth(coll, rnd, ctrl, spots)
     if city:
-        _city(coll, rnd)
+        _city(coll, rnd, seed_tower)
     print(f"old_grove: {len(spots) + 1} trees, water={water}, tod={tod}")
     return {"coll": coll, "water": ctrl, "trees": spots}

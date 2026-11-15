@@ -222,3 +222,15 @@ Bugs worth remembering:
   three times the sun on the floor, so the window patch vanished. Indoors the window is now the key light (sun
   x3, dim cool fill), and at night a hanging work lamp pools light on the lever.
 - Look-dev frames: S05 afternoon, S12 wide, S12 valve room, S19 the ring of robots round the panel.
+- **The Rooftop Nursery** (`blender/nursery.py`): the Seed Tower as one 20 x 20 x 24 m block on the Grove's north
+  edge, and on its roof five rows of seedling trays toward the south edge, the tall tank on legs, the dry pipe
+  over square brackets and down the wall, the spout and five carrying tanks by the bar-frame greenhouse, the
+  ladder hatch, a low kerb, the slab ramp from the roof next door, and a work lamp for the evening scenes.
+  Each tray's sprouts are one mesh with a "dry" shape key; a per-tray `health` property, driven by the water
+  value delayed by the tray's distance from the tank, drives both the key and the colour (the material reads the
+  object property). One keyframe makes the S06 green ripple run down the rows.
+  Lessons: the roof deck sat exactly on the tower's roof face and flickered red (raised 2 cm); the building
+  generator's metre-high parapet hid the Grove (`facade.tier_mesh(parapet=0)` for this tower); a haze box below
+  the camera reads as a black band (it now always reaches 12 m above the camera); and from 1.5 m above the roof
+  the edge hides the Grove right below, so the S06 shot is a crane over Tiny's shoulder.
+- Look-dev frames: S04 reveal, S04 low among the trays, S06 sunset over the Grove, S20 night.
