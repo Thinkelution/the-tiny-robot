@@ -23,8 +23,8 @@ The city layout is in [city.json](city.json), drawn as [map.png](map.png) by `ag
 ## Build order (most screen time first)
 | # | Set | Scenes | Times of day |
 |---|---|---|---|
-| 1 | Old Grove | S02 S07 S22 S23 S24 S26 S31 | morning, night, pre-dawn, sunrise, golden morning |
-| 2 | Main Square (from the teaser city) | S03 S09 S15 S16 S17 | day, evening, dusk |
+| 1 | Old Grove (built) | S02 S07 S22 S23 S24 S26 S31 | morning, night, pre-dawn, sunrise, golden morning |
+| 2 | Main Square (built) | S03 S09 S15 S16 S17 | day, evening, dusk |
 | 3 | Pipeworks (interior) | S05 S12 S13 S19 S25 | afternoon, late night, night, pre-dawn |
 | 4 | Rooftop Nursery | S04 S06 S20 | afternoon, sunset, night |
 | 5 | Junk Stacks | S01 S14 S30 | dawn, morning |

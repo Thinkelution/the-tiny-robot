@@ -201,3 +201,14 @@ Bugs worth remembering:
   pipe from S21 on, with the bend that rises over the great root; shots keep trees away from their camera, and
   background robots are moved along Mossback's loop until a ray from the camera actually reaches them. New
   frame: S26 sunrise. Flat ground-cover slabs were dropped because from Tiny's height they read as puddles.
+- **Main Square** (`blender/mainsquare.py`): slab plaza, the Big Board on two pillars above a stage of six 0.3 m
+  platforms (one Tiny hop each), the Fast Lane model table, Tiny's crate lookout, the Count House with amber slit
+  windows, ring roads and towers, and the Old Grove's treetops closing the view down Grove Boulevard. The Board
+  shows pictures drawn by `agent/boardart.py` (the Fast Lane pitch, the Grove's red gauges, the vote).
+- **Crowd** (`blender/crowd.py`): 200 boxy extras with chest lamps (off, green, red) as ONE mesh with material
+  slots, so a full square costs about as much as one hero robot. A lamp cap on the shoulders lets the vote read
+  from overhead. Lessons: very rounded extras looked like pillows on sausage legs (bevel cut from 30% to 8%,
+  sturdier legs and feet); and the red wave in S09 has to be filmed from the stage side, because chest lamps are
+  on the front.
+- Look-dev frames: S03 day wide, S03 reverse down the boulevard to the Grove, S09 evening red wave, S17 overhead vote.
+- New light presets: day and evening.
